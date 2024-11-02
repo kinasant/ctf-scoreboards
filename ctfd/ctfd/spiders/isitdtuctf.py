@@ -31,7 +31,6 @@ class TeamSpider(scrapy.Spider):
         df["Position"] = range(1,len(team)+1)
         df['points'] = points
         df['name'] = name
-        del df["Unnamed: 0"]
         url = "https://ctf.isitdtu.com/"
         challenges = []
         for i in team:
