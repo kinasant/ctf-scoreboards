@@ -1,0 +1,248 @@
+points,name,challenge
+1105,joseph,"[{'name': 'Broadcasting NTRU', 'solves': 6, 'category': 'Crypto'}, {'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+929,mti,"[{'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'Broadcasting NTRU', 'solves': 6, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}]"
+636,soon-haari,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+636,y011d4,"[{'name': 'Broadcasting NTRU', 'solves': 6, 'category': 'Crypto'}, {'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+636,utaha,"[{'name': 'Broadcasting NTRU', 'solves': 6, 'category': 'Crypto'}, {'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+636,mystiz,"[{'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}]"
+636,zrt,"[{'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+636,yu212,"[{'name': 'Anti-Fermat', 'solves': 4, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'ding-dong-ting-ping', 'solves': 6, 'category': 'Crypto'}, {'name': 'janken vs yoshiking 2', 'solves': 8, 'category': 'Crypto'}, {'name': 'brand new crypto', 'solves': 16, 'category': 'Crypto'}, {'name': '1R-AES', 'solves': 9, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}, {'name': 'SquareRNG', 'solves': 10, 'category': 'Crypto'}, {'name': 'easy_factoring', 'solves': 16, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}]"
+636,kobae964,"[{'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'janken vs yoshiking 2', 'solves': 8, 'category': 'Crypto'}, {'name': 'ding-dong-ting-ping', 'solves': 6, 'category': 'Crypto'}, {'name': 'SquareRNG', 'solves': 10, 'category': 'Crypto'}, {'name': '1R-AES', 'solves': 9, 'category': 'Crypto'}, {'name': 'brand new crypto', 'solves': 16, 'category': 'Crypto'}, {'name': 'easy_factoring', 'solves': 16, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'Rock Door', 'solves': 4, 'category': 'Crypto'}, {'name': 'Elliptic Ring RSA', 'solves': 2, 'category': 'Crypto'}]"
+636,maple3142,"[{'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+636,zayncancook,"[{'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'Rock Door', 'solves': 4, 'category': 'Crypto'}, {'name': 'janken vs yoshiking 2', 'solves': 8, 'category': 'Crypto'}, {'name': 'brand new crypto', 'solves': 16, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'easy_factoring', 'solves': 16, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}]"
+636,xrekkusu,"[{'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}]"
+416,parabola0149,"[{'name': 'Broadcasting NTRU', 'solves': 6, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': '1R-AES', 'solves': 9, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+416,hiikunz,"[{'name': 'CurveCrypto', 'solves': 1, 'category': 'Crypto'}, {'name': 'SquareRNG', 'solves': 10, 'category': 'Crypto'}, {'name': 'Anti-Fermat', 'solves': 4, 'category': 'Crypto'}, {'name': 'easy_factoring', 'solves': 16, 'category': 'Crypto'}, {'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'brand new crypto', 'solves': 16, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}, {'name': 'ding-dong-ting-ping', 'solves': 6, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+396,kusano,"[{'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+396,jp3bgy,"[{'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}]"
+396,shpark1104,"[{'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}]"
+220,elita,"[{'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}]"
+220,edwowmath,"[{'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+176,toomer,"[{'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'Iron Door', 'solves': 2, 'category': 'Crypto'}, {'name': 'Rock Door', 'solves': 4, 'category': 'Crypto'}, {'name': 'Elliptic Ring RSA', 'solves': 2, 'category': 'Crypto'}, {'name': 'ding-dong-ting-ping', 'solves': 6, 'category': 'Crypto'}, {'name': 'janken vs yoshiking 2', 'solves': 8, 'category': 'Crypto'}, {'name': 'SquareRNG', 'solves': 10, 'category': 'Crypto'}, {'name': 'brand new crypto', 'solves': 16, 'category': 'Crypto'}, {'name': '1R-AES', 'solves': 9, 'category': 'Crypto'}, {'name': 'easy_factoring', 'solves': 16, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+176,zatsu,"[{'name': 'brand new crypto', 'solves': 16, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': '1R-AES', 'solves': 9, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}, {'name': 'janken vs yoshiking 2', 'solves': 8, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}]"
+176,wrth,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}]"
+176,nanakura-rin,"[{'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}]"
+176,riantkb,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+176,neutral-b,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+176,kam1tsur3,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': '1R-AES', 'solves': 9, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+176,roaris,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'brand new crypto', 'solves': 16, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+176,tchen,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+176,onotch,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}]"
+176,zukash,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': '1R-AES', 'solves': 9, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+176,gksato,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,pipipa,[]
+0,nobu,[]
+0,mixinspace,[]
+0,catz,[]
+0,witchermoki,[]
+0,thelepi,"[{'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+0,cookie,[]
+0,lantern,[]
+0,dkidot,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,hunter07,[]
+0,rota,"[{'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,dio,[]
+0,1thr00n3r,[]
+0,small007,[]
+0,n0name,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,spidey,[]
+0,bachpc,[]
+0,amchi01,[]
+0,krako,[]
+0,aminafi,[]
+0,kitako,[]
+0,chocorusk,"[{'name': 'SchnorrLCG', 'solves': 18, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'Broadcasting NTRU', 'solves': 6, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,toku4388,"[{'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,ch1di,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}]"
+0,gentoo,[]
+0,aituglo,[]
+0,manki,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,mkss,[]
+0,personjs,[]
+0,mimamu,[]
+0,yorksyo,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,persiancats,[]
+0,no-one,[]
+0,koufu193,"[{'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+0,jk2005,[]
+0,willwam,"[{'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,ethern1ty,[]
+0,auth0r,[]
+0,macaroon,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,hakkaeason,"[{'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,voldemort,[]
+0,ax0l0tl,[]
+0,1-day,[]
+0,kristopher,[]
+0,gettnumbers,[]
+0,onei,[]
+0,seaza,"[{'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+0,nrxv0,[]
+0,shackwove,[]
+0,eggroll,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,olivermeows,[]
+0,kanon,"[{'name': 'Iron Door', 'solves': 2, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'hi yoshiking', 'solves': 1, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}]"
+0,nimonhiya,[]
+0,asdawdawd,"[{'name': 'easy_factoring', 'solves': 16, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,king,[]
+0,giapppp,"[{'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,ske,"[{'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,zehnsechs,[]
+0,luccas,[]
+0,suji19,[]
+0,nesfan,[]
+0,cocor3n4rd,[]
+0,cqbtq,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,averroes,[]
+0,honyararara,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,pppp4649,[]
+0,ri5e,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,lolipop,[]
+0,fujidana,[]
+0,torontokyo,[]
+0,theoremoon,"[{'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,wgg,[]
+0,sahuang,"[{'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,adp,"[{'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,coolguy,[]
+0,kyuridenamida,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,dhanalakshmipalle,[]
+0,quantum,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}]"
+0,hugobond,[]
+0,zack08110,[]
+0,inferiorak,[]
+0,syun0713,[]
+0,rezasi,[]
+0,sugi,[]
+0,kgrzk2024,[]
+0,ritanshu,[]
+0,obo,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,doo,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,k1suxu,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,red0,[]
+0,rogeryoungh,"[{'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}]"
+0,laika,"[{'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+0,kmsou,[]
+0,toshiconner,[]
+0,keymoon,[]
+0,siark,[]
+0,mikunyan,[]
+0,labpump,[]
+0,asdsad,[]
+0,0xseed,[]
+0,kakunge,[]
+0,zero,[]
+0,eprofymed,[]
+0,moonsolo,[]
+0,haripriya,[]
+0,levithan,[]
+0,mheidari98,[]
+0,kyarasu,[]
+0,hasuneko,"[{'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}]"
+0,bl4ck-570rm,[]
+0,kurokaze,"[{'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,dat-44,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,falcon-hunter,[]
+0,hott,[]
+0,1234,[]
+0,si1ent-hacker000,[]
+0,crownprince,[]
+0,swen,[]
+0,ladyboy,[]
+0,nourb,[]
+0,k3n3k06,[]
+0,hamayanhamayan,[]
+0,tshrt-destroyer,[]
+0,yanoosh,[]
+0,zain,[]
+0,ynatwest,[]
+0,cipherexx,[]
+0,crazyman,[]
+0,iamg,[]
+0,coderxc,[]
+0,1i4njin,[]
+0,crpnew,[]
+0,p3netr3r,[]
+0,mrp-cpu,[]
+0,esi,[]
+0,shakiliitju,[]
+0,kole,[]
+0,victordastru,[]
+0,rocket,"[{'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,zazaboon,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,rprr,[]
+0,vkvbit,[]
+0,minto,[]
+0,kakur41,"[{'name': 'Anti-Fermat', 'solves': 4, 'category': 'Crypto'}, {'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'XorshiftStream', 'solves': 37, 'category': 'Crypto'}, {'name': 'janken vs yoshiking 2', 'solves': 8, 'category': 'Crypto'}, {'name': 'brand new crypto', 'solves': 16, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'SquareRNG', 'solves': 10, 'category': 'Crypto'}, {'name': '1R-AES', 'solves': 9, 'category': 'Crypto'}, {'name': 'easy_factoring', 'solves': 16, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'Collision-DES', 'solves': 27, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+0,kazvki,[]
+0,malosdaf,"[{'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'Hat Trick', 'solves': 44, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'SquareRNG', 'solves': 10, 'category': 'Crypto'}, {'name': 'brand new crypto', 'solves': 16, 'category': 'Crypto'}, {'name': 'Reused-AES', 'solves': 24, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}, {'name': 'easy_factoring', 'solves': 16, 'category': 'Crypto'}, {'name': 'ding-dong-ting-ping', 'solves': 6, 'category': 'Crypto'}, {'name': 'janken vs yoshiking 2', 'solves': 8, 'category': 'Crypto'}, {'name': 'simple signature', 'solves': 17, 'category': 'Crypto'}]"
+0,k21,[]
+0,nbfree18,[]
+0,abil-rk,[]
+0,gggg,[]
+0,v2077,[]
+0,xfinite,[]
+0,elite101,[]
+0,iamdead,[]
+0,0xak4,[]
+0,temp1,[]
+0,harter,[]
+0,check1n,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'frozen cake', 'solves': 38, 'category': 'Crypto'}]"
+0,nanbu,[]
+0,0xmvr,[]
+0,takutakutaku,[]
+0,duff10leo,[]
+0,hihihi,[]
+0,lamentxu-typhon,[]
+0,cyry,[]
+0,aaaa,[]
+0,gkaanls,[]
+0,rsc,[]
+0,toctou,[]
+0,ohmylord,[]
+0,kamekichi,[]
+0,t1b4lk4,[]
+0,g0os3,"[{'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,matchbox,[]
+0,salma-hermak,[]
+0,mbukuzdulu,[]
+0,vandalism,[]
+0,norahamu,[]
+0,fzhshzh,[]
+0,satoki,[]
+0,ak-nahid,[]
+0,sky58,[]
+0,guts7sword,[]
+0,lab,[]
+0,qqwertyuiopp,[]
+0,shinjiroid,[]
+0,ke1,[]
+0,arunthatiparthi,[]
+0,shr3wd,[]
+0,talisman,[]
+0,cranky-dejavu,[]
+0,saba,"[{'name': 'A Dance of Add and Mul', 'solves': 49, 'category': 'Crypto'}, {'name': 'Rainbow Sweet Alchemist', 'solves': 70, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,shafahid,[]
+0,nagabonor,[]
+0,konradyn,[]
+0,epic-leet-team,[]
+0,9urple9ixel9ython,[]
+0,evbcffp1xb,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,kuraishy,[]
+0,iforx,[]
+0,striking1534,[]
+0,vinuj,[]
+0,toaru,[]
+0,zsick,[]
+0,mega-robot,[]
+0,ntr-opy,[]
+0,sp1ffy,[]
+0,a51r-cr1c65t,[]
+0,da-dou1,[]
+0,llama,[]
+0,huwi,[]
+0,tko919,"[{'name': 'NNNN', 'solves': 27, 'category': 'Crypto'}, {'name': 'qrime', 'solves': 133, 'category': 'Crypto'}]"
+0,hisaaki,"[{'name': 'qrime', 'solves': 133, 'category': 'Crypto'}, {'name': 'XOR-CBC', 'solves': 45, 'category': 'Crypto'}]"
+0,lnwhack,[]
+0,mengxinlin,[]
+0,1aadiez,[]

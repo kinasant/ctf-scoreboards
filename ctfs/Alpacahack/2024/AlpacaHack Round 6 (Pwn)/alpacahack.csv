@@ -1,0 +1,198 @@
+points,name,challenge
+753,rqda,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'Modern Rome', 'solves': 7, 'category': 'Pwn'}, {'name': 'deck', 'solves': 20, 'category': 'Pwn'}, {'name': 'bofwow', 'solves': 6, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}]"
+753,wlswotmd,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+753,kam1tsur3,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'accountant', 'solves': 1, 'category': 'Pwn'}, {'name': 'MemSafeD', 'solves': 1, 'category': 'Pwn'}, {'name': 'Modern Rome', 'solves': 7, 'category': 'Pwn'}, {'name': 'BrainJIT', 'solves': 2, 'category': 'Pwn'}, {'name': 'bofwow', 'solves': 6, 'category': 'Pwn'}, {'name': 'smal arey', 'solves': 7, 'category': 'Pwn'}, {'name': 'welkerme', 'solves': 10, 'category': 'Pwn'}, {'name': 'str.vs.cstr', 'solves': 12, 'category': 'Pwn'}, {'name': 'todo', 'solves': 13, 'category': 'Pwn'}, {'name': 'deck', 'solves': 20, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'only-read', 'solves': 10, 'category': 'Pwn'}, {'name': 'read-write', 'solves': 17, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'aush', 'solves': 9, 'category': 'Pwn'}, {'name': 'Memorial Cabbage', 'solves': 9, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}]"
+753,jt5,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'todo', 'solves': 13, 'category': 'Pwn'}, {'name': 'deck', 'solves': 20, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'qjail', 'solves': 1, 'category': 'Pwn'}, {'name': 'BrainJIT', 'solves': 2, 'category': 'Pwn'}, {'name': 'Himitsu Note', 'solves': 1, 'category': 'Pwn'}, {'name': 'only-read', 'solves': 10, 'category': 'Pwn'}, {'name': 'read-write', 'solves': 17, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+753,r0r1,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+753,linz,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+753,mora,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'deck', 'solves': 20, 'category': 'Pwn'}, {'name': 'todo', 'solves': 13, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+753,ren,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+753,zafirr,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+553,zatsu,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'smal arey', 'solves': 7, 'category': 'Pwn'}, {'name': 'welkerme', 'solves': 10, 'category': 'Pwn'}, {'name': 'str.vs.cstr', 'solves': 12, 'category': 'Pwn'}, {'name': 'deck', 'solves': 20, 'category': 'Pwn'}, {'name': 'todo', 'solves': 13, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'bofwow', 'solves': 6, 'category': 'Pwn'}, {'name': 'only-read', 'solves': 10, 'category': 'Pwn'}, {'name': 'read-write', 'solves': 17, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'Memorial Cabbage', 'solves': 9, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}]"
+476,mikanami,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'only-read', 'solves': 10, 'category': 'Pwn'}, {'name': 'read-write', 'solves': 17, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'Memorial Cabbage', 'solves': 9, 'category': 'Pwn'}, {'name': 'welkerme', 'solves': 10, 'category': 'Pwn'}, {'name': 'smal arey', 'solves': 7, 'category': 'Pwn'}, {'name': 'bofwow', 'solves': 6, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}]"
+476,ktranowl,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+476,kyr04i,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+476,sulaidat,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+476,blin00,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'todo', 'solves': 13, 'category': 'Pwn'}, {'name': 'deck', 'solves': 20, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}]"
+476,caffeine,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+476,vilex1337,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+476,yaru,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'deck', 'solves': 20, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+476,tan90909090,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'Modern Rome', 'solves': 7, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'aush', 'solves': 9, 'category': 'Pwn'}, {'name': 'welkerme', 'solves': 10, 'category': 'Pwn'}]"
+476,bsomyd,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+476,satoki,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}]"
+328,shunt,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}]"
+276,narpruot,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+276,doo,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+276,mn1,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+276,0den,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+276,4n0nym4u5,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}]"
+276,akiym,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+276,kobae964,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'decryptyou', 'solves': 2, 'category': 'Pwn'}]"
+276,5unsetpln,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'only-read', 'solves': 10, 'category': 'Pwn'}, {'name': 'str.vs.cstr', 'solves': 12, 'category': 'Pwn'}, {'name': 'Modern Rome', 'solves': 7, 'category': 'Pwn'}, {'name': 'aush', 'solves': 9, 'category': 'Pwn'}, {'name': 'todo', 'solves': 13, 'category': 'Pwn'}, {'name': 'read-write', 'solves': 17, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'deck', 'solves': 20, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}]"
+276,toomer,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'decryptyou', 'solves': 2, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'smal arey', 'solves': 7, 'category': 'Pwn'}, {'name': 'Memorial Cabbage', 'solves': 9, 'category': 'Pwn'}, {'name': 'str.vs.cstr', 'solves': 12, 'category': 'Pwn'}, {'name': 'aush', 'solves': 9, 'category': 'Pwn'}, {'name': 'read-write', 'solves': 17, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+276,onotch,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+276,ham4,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+276,hhc0null,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+276,suica,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'welkerme', 'solves': 10, 'category': 'Pwn'}, {'name': 'str.vs.cstr', 'solves': 12, 'category': 'Pwn'}]"
+276,kuvee,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+276,ylz,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+276,ciesle,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+276,roaris,"[{'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'read-write', 'solves': 17, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+276,pprr,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}]"
+276,elvis,"[{'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+276,wan04,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+128,b1nd1fftr1y,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+128,k0080,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'smal arey', 'solves': 7, 'category': 'Pwn'}, {'name': 'Memorial Cabbage', 'solves': 9, 'category': 'Pwn'}, {'name': 'Memorial Cabbage', 'solves': 9, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}, {'name': 'welkerme', 'solves': 10, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'str.vs.cstr', 'solves': 12, 'category': 'Pwn'}]"
+128,tchen,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'read-write', 'solves': 17, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+128,yu212,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'Modern Rome', 'solves': 7, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'read-write', 'solves': 17, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}]"
+128,aaaa,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+128,takahashi,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+128,siunam,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+128,t9gmn,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+128,kakur41,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'Modern Rome', 'solves': 7, 'category': 'Pwn'}, {'name': 'welkerme', 'solves': 10, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'aush', 'solves': 9, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}]"
+128,kyuridenamida,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+128,tk555,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+128,relster,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}]"
+128,sgwr,"[{'name': 'ideabook', 'solves': 15, 'category': 'Pwn'}, {'name': 'wall', 'solves': 29, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+128,azod002,"[{'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+128,koufu193,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+0,zazaboon,[]
+0,evilsun,[]
+0,nobu,[]
+0,mixinspace,[]
+0,fujidana,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,small,[]
+0,evbcffp1xb,[]
+0,kgrzk2024,[]
+0,zikei,[]
+0,vendetta01,[]
+0,1thr00n3r,[]
+0,kyarasu,[]
+0,seaza,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,dhanalakshmipalle,[]
+0,asiek,[]
+0,w8-74d,[]
+0,rydzze,[]
+0,asdiml,[]
+0,mkss,[]
+0,yorksyo,[]
+0,pwn,[]
+0,m1t0,[]
+0,ynatwest,[]
+0,macaroon,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,osome,[]
+0,shackwove,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,haripriya,[]
+0,olbo,[]
+0,nithin,[]
+0,transistor-tikler,[]
+0,xswordc,[]
+0,voldemort,[]
+0,eri,[]
+0,abhay,[]
+0,cybercrow,[]
+0,ecottea,[]
+0,termux1,[]
+0,mrc666,[]
+0,kamekichi,[]
+0,kizuna365,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,yousif,[]
+0,laler,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,icecreamman,[]
+0,codeaj,[]
+0,simoni,[]
+0,0xpb,[]
+0,b4tmite,[]
+0,maxphantom,[]
+0,mbukuzdulu,[]
+0,shoaibbshaikhh,[]
+0,sugi,"[{'name': 'deck', 'solves': 20, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'todo', 'solves': 13, 'category': 'Pwn'}]"
+0,amgoda,[]
+0,zeromarea,"[{'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+0,cocor3n4rd,[]
+0,0x3z,[]
+0,fzhshzh,[]
+0,alexander,[]
+0,edwowmath,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,athenix,[]
+0,kelazote,[]
+0,lkron,[]
+0,bkhunter,[]
+0,cbrgrdnr,[]
+0,tennousu,[]
+0,m1kasha,"[{'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,bj7000,[]
+0,aeruu,[]
+0,k1r4,[]
+0,comego69,[]
+0,harter,[]
+0,chocorusk,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,noice,[]
+0,p3g4su5,[]
+0,yanoosh,[]
+0,cyberjesus,[]
+0,hamim-24,[]
+0,spektre,[]
+0,lactobasilus,[]
+0,iamdead,[]
+0,salma-hermak,[]
+0,k31-hrd4,[]
+0,ohmylord,[]
+0,swasy,[]
+0,b4d33e,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+0,takutakutaku,[]
+0,grieffox,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}, {'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,hajiahmadahmadzada,[]
+0,minto,[]
+0,erge,[]
+0,crazyman,[]
+0,thedarkav3ng3r,[]
+0,230103269,[]
+0,0xbk,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,kikituxx,[]
+0,sud0su,[]
+0,kusano,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,mjrock1507,[]
+0,chewzhichao,[]
+0,shr3wd,[]
+0,amchi01,[]
+0,tenne-2am,[]
+0,w1nt3r5,[]
+0,gksato,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,brehiton-2,[]
+0,buddurid,[]
+0,kev32b,[]
+0,ilupii,"[{'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+0,th3h4ckt1v15t5,[]
+0,kryptos,[]
+0,auth0r,[]
+0,yyy,"[{'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,usupek,[]
+0,n0name,"[{'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'aush', 'solves': 9, 'category': 'Pwn'}, {'name': 'vtable4b', 'solves': 25, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+0,nayu,[]
+0,darkmatter,[]
+0,pwnboy,[]
+0,ikd,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+0,zack08110,[]
+0,sankantsu,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}]"
+0,samuraiblack,[]
+0,keymoon,"[{'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'bofww', 'solves': 21, 'category': 'Pwn'}]"
+0,loonatic,[]
+0,at3mba,[]
+0,lantern,[]
+0,slephy,[]
+0,qupa,[]
+0,siro317,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,h1i0ka,[]
+0,alenezi,[]
+0,mor,[]
+0,mulattohat,[]
+0,tana,[]
+0,veritas,"[{'name': 'inbound', 'solves': 74, 'category': 'Pwn'}]"
+0,raghuvaran1729,[]
+0,cqbtq,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,ppppp,[]
+0,romc,"[{'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,puzzledcoder,"[{'name': 'write', 'solves': 35, 'category': 'Pwn'}, {'name': 'hexecho', 'solves': 53, 'category': 'Pwn'}, {'name': 'catcpy', 'solves': 58, 'category': 'Pwn'}, {'name': 'before-write', 'solves': 70, 'category': 'Pwn'}, {'name': 'inbound', 'solves': 74, 'category': 'Pwn'}, {'name': 'echo', 'solves': 159, 'category': 'Pwn'}]"
+0,mizore-fuyu,[]
+0,wanui,[]
