@@ -1,1 +1,2 @@
-ctfs/** linguist-vendored 
+ctfs/** linguist-vendored
+*.html linguist-documentation=false
