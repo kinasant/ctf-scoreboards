@@ -51,5 +51,10 @@
             <td><a href="ctfs/USC/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2543" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/QUESTCON">QUESTCON</a></td>
+            <td><a href="ctfs/QUESTCON/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2505" target="_blank">CTFtime</a></td>
+        </tr>
     </tbody>
   </table>
