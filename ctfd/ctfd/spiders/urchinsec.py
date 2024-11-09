@@ -17,7 +17,7 @@ class TeamSpider(scrapy.Spider):
 #table.xpath(td[1]//a/@href").get()
     def login(self,response):
         nonce =  response.xpath("//input[@id='nonce']/@value").get()
-        yield FormRequest.from_response(response,formdata={'name':'{REDACTED}','password':"{I_didnt_forget_the_password_this_time}",'nonce':nonce},callback=self.parse,dont_filter=True)
+        yield FormRequest.from_response(response,formdata={'name':'{REDACTED}','password':"{I_didnt_leave_the_password_here_this_time}",'nonce':nonce},callback=self.parse,dont_filter=True)
     @inline_requests
     def parse(self, response):
         #item = response.meta['item']
