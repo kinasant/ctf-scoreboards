@@ -1,2 +1,2 @@
 ctfs/** linguist-vendored
-*.html linguist-documentation=false
+*.html linguist-detectable=false
