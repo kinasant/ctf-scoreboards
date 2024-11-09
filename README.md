@@ -22,7 +22,7 @@
             <td><a href="https://ctftime.org/event/2527" target="_blank">CTFtime</a></td>
         </tr>
             <tr>
-            <td rowspan=1><a href="ctfs/AlpacaHack">AlpacaHack</a></td>
+            <td rowspan=1><a href="ctfs/Alpacahack">AlpacaHack</a></td>
             <td><a href="ctfs/Alpacahack/2024">2024</a></td>
             <td><a href="https://ctftime.org/ctf/1163" target="_blank">CTFtime</a></td>
         </tr>
