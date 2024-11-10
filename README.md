@@ -56,5 +56,15 @@
             <td><a href="ctfs/QUESTCON/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2505" target="_blank">CTFtime</a></td>
         </tr>
+            <tr>
+            <td rowspan=1><a href="ctfs/MetaRed">MetaRed</a></td>
+            <td><a href="ctfs/MetaRed/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2537" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/BlueHens">BlueHens</a></td>
+            <td><a href="ctfs/BlueHens/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2512" target="_blank">CTFtime</a></td>
+        </tr>
     </tbody>
   </table>
