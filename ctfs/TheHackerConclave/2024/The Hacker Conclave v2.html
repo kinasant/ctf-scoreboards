@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html data-bs-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ll-nam{color:#2196f3}.ll-num{color:#ec407a}.ll-str{color:#43a047}.ll-rex{color:#ef6c00}.ll-pct{color:#666}.ll-key{color:#555;font-weight:bold}.ll-com{color:#aaa;font-style:italic}</style>
+  <title>The Hacker Conclave v2</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://ctf.thehackerconclave.es/themes/core-beta/static/img/favicon.ico?d=56cc0867" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="./The Hacker Conclave v2_files/main.0c7144ba.css">
+  
+
+  
+
+  <script src="./The Hacker Conclave v2_files/color_mode_switcher.52334129.js.download"></script>
+
+  <script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "71810d9f13b057eff67871946d18f188681a91b3678b946a033a1be49fb7cd0c",
+          'userMode': "teams",
+          'userId': 0,
+          'userName': null,
+          'userEmail': null,
+          'teamId': null,
+          'teamName': null,
+          'start': null,
+          'end': null,
+          'themeSettings': null,
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+
+  
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="https://ctf.thehackerconclave.es/" class="navbar-brand">
+      
+        The Hacker Conclave v2
+      
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.thehackerconclave.es/users">
+              Users
+            </a>
+          </li>
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://ctf.thehackerconclave.es/teams">
+                Teams
+              </a>
+            </li>
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.thehackerconclave.es/scoreboard">
+              Scoreboard
+            </a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://ctf.thehackerconclave.es/challenges">
+            Challenges
+          </a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.thehackerconclave.es/login">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Login" data-bs-original-title="Login">
+                <i class="fas fa-sign-in-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-in-alt pe-1"></i>
+                Login
+              </span>
+            </a>
+          </li>
+        
+        <li class="nav-item">
+          <button class="nav-link theme-switch" type="button">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Toggle theme" data-bs-original-title="Toggle theme">
+              <i class="fas d-none d-md-inline fa-moon"></i>
+            </span>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-sun pe-1"></i>
+              Toggle theme
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Scoreboard
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+  
+    <div class="alert alert-info alert-dismissible text-center" role="alert">
+      <span>Scoreboard has been frozen</span>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  
+
+  
+</div>
+
+    <div id="score-graph" class="align-items-center d-flex" :class="{&#39;d-flex&#39;: show, &#39;d-none&#39;: !show}" x-data="ScoreboardDetail" x-ref="scoregraph" @bracket-change.window="activeBracket=$event.detail; update();" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1732527690010"><div style="position: relative; width: 1296px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1620" height="500" style="position: absolute; left: 0px; top: 0px; width: 1296px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(364px, 315px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">2024-11-23 15:30:47</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:hsl(26, 76%, 46%);"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">HCS</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">1,560</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+
+    <div id="scoreboard" class="row" x-data="ScoreboardList">
+      <template x-if="brackets.length &amp;&amp; standings.length"></template>
+
+      <div class="col-md-12" x-show="standings.length" style="">
+        <table class="table table-striped align-middle">
+          <thead>
+          <tr>
+            <th style="width: 10px">Place</th>
+            <th class="text-start ps-3">Team</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <template x-for="(standing, index) in standings.filter(i =&gt; activeBracket ? i.bracket_id==activeBracket : true)"></template><tr>
+                <th scope="row" class="text-center" x-text="index + 1">1</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/71">HCS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">2</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/7">The dangers of my heart</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">3</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/111">JPIJ</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">4</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/113">Minus Zero Knowledge</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2010</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">5</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/3">MindCrafters</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1810</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">6</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/109">0M3G4_SQU4D</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1760</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">7</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/93">Pekora Geng</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">8</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/4">Sqli Enjoyer</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1310</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">9</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/24">ASIS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">10</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/51">chp0ck3r$</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">11</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/58">CyberCh1ck</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">12</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/78">NCH</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1010</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">13</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/60">CR34T1N3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1010</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">14</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/122">zzzmilky</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1010</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">15</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/27">OP_EN</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1010</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">16</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/11">B0c4t4d3J4m0n</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">960</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">17</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/19">Sudah waktunya kami ke atas</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">760</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">18</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/23">D@rk_D3v1l</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">760</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">19</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/154">CipherHunters</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">760</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">20</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/96">Xor</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">760</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">21</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/129">ay0</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">760</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">22</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/40">Null</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">760</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">23</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/116">Pseudo Coders</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">24</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/52">movie43</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">25</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/20">CRMA Cyber Club</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">26</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/30">PotatoPower</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">27</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/74">sakana</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">28</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/61">kn1ghts</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">29</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/15">Cyber_Trace</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">30</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/68">f4n_n3r0</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">31</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/56">huli07</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">32</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/138">Only_me</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">33</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/112">BitMaster</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">34</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/49">Sea~</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">35</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/41">C1ph3r-Sh4d0w5</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">36</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/123">/etc/shadow</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">37</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/14">NotLe0n</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">38</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/153">gigi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">39</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/29">Kotzaglot</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">40</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/141">CozyBox</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">41</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/107">voker2311</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">42</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/69">ctfrrteam</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">43</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/53">Team Onigiri</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">44</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/127">RvC_34GL35</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">45</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/21">HackingNoHero</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">46</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/33">Living_Failures</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">47</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/63">GOTHAMSEC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">48</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/152">0sc4r1n</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">49</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/86">FL4M3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">50</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/43">Hanvonranxe</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">51</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/117">HenrikFrs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">52</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/22">OSAM_z3r0day</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">53</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/134">ZeroMarea</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">54</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/159">YMD</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">55</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/156">b1p0lyar0chk@</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">56</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/161">SF</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">57</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/163">kornpong_citc</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">58</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/10">ThomasgKorp</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">59</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/132">sparrow</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">60</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/13">Ich</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">61</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/151">h45h45</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">62</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/66">CyberUnit</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">63</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/75">0xn00bs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">64</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/104">s1n1$t3r</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">65</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/9">S31s@1Cyb3r</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">66</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/140">Edge Of Dimensions</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">67</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/26">J16D</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">68</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/124">Raptors</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">69</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/142">negave</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">70</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/31">cipherghost54</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">71</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/6">Last0neStanding</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">72</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/146">{dom}</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">73</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/148">techstat</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">74</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/125">CyberCellVIIT</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">75</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/143">Ch4kr4vyuh</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">76</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/118">TheGrue</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">77</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/136">mikjam</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">78</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/157">Cypher404</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">79</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/160">PRAVDA</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">80</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/103">IF-CDP</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">81</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/87">ukk1337</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">82</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/130">Forg1ven</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">83</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/171">MENGXINLIN</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">84</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/172">Dotrongtam4321@gmail.com</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">85</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thehackerconclave.es/teams/173">blupblup</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12" x-show="! standings.length" style="display: none;">
+        <h3 class="text-center text-muted">Scoreboard is empty</h3>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io/" class="text-secondary">
+      <small class="text-muted">
+        Powered by CTFd
+      </small>
+    </a>
+  </div>
+</footer>
+
+<div x-data="">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html"></div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data="">
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module" src="./The Hacker Conclave v2_files/index.2e31e3b8.js.download"></script><script type="module" src="./The Hacker Conclave v2_files/index.1cf73b05.js.download"></script><script type="module" src="./The Hacker Conclave v2_files/echarts.128204f2.js.download"></script><script type="module" src="./The Hacker Conclave v2_files/scoreboard.b1c04d97.js.download"></script>
+
+
+
+
+
+
+</body></html>

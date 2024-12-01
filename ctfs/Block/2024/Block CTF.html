@@ -1,0 +1,3401 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html data-bs-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ll-nam{color:#2196f3}.ll-num{color:#ec407a}.ll-str{color:#43a047}.ll-rex{color:#ef6c00}.ll-pct{color:#666}.ll-key{color:#555;font-weight:bold}.ll-com{color:#aaa;font-style:italic}</style>
+  <title>Block CTF</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://2024.blockctf.com/files/aa7d6d3b1d4f99fa6bf30ea79d6b2d51/62c3d1403929a07cdbb8f3adca8a048e.png" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="./Block CTF_files/main.0c7144ba.css">
+  
+
+  
+
+  <script src="./Block CTF_files/color_mode_switcher.52334129.js.download"></script>
+
+  <script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "",
+          'userMode': "teams",
+          'userId': 0,
+          'userName': null,
+          'userEmail': null,
+          'teamId': null,
+          'teamName': null,
+          'start': 1731535200,
+          'end': 1731621600,
+          'themeSettings': null,
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+
+  <style id="theme-color">
+  :root {
+    --theme-color: linear-gradient(to right,
+    #13BBAF 0%,
+    #FF4F00 33%,
+    #F8BE2C 66%,
+    #ECA3FC 100%);
+
+    --footer-color: linear-gradient(to right,
+    #D40000 0%,
+    #8400D1 33%,
+    #D73500 66%,
+    #087D76 100%);
+
+    --black: #000000;
+    --btn: linear-gradient(to bottom right, #FF4F00, #13BBAF);
+  }
+
+  @font-face {
+    font-family: 'PilatWide';
+    src: url('https://cdn.block.xyz/fonts/pilatwide/PilatWide-Bold.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PPNeueMachina';
+    src: url('https://cdn.block.xyz/fonts/ppneuemachina/PPNeueMachina-Regular.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  main { padding-top: 84px; }
+  html, body, .container { font-family: "PPNeueMachina" !important; }
+  [data-bs-theme="dark"] body, [data-bs-theme="dark"] .jumbotron { background: black !important; color: white}
+  [data-bs-theme="light"] body, [data-bs-theme="light"] .jumbotron { background: white !important; color: black}
+  .navbar { background: var(--theme-color) !important; min-height: 60px; }
+  .footer { background: --black !important; }
+
+  .navbar-nav .nav-link {
+    font-family: "PilatWide" !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    line-height: 180%;
+    font-size: 12px;
+    color: black;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  .navbar-nav .nav-item::after {
+    transition: background .2s ease-out;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 86%;
+    margin-left: -42%;
+    margin-bottom: 6px;
+    height: 1px;
+    background: black;
+    content: "";
+  }
+
+  li.nav-item { position: relative; }
+
+  li.nav-item:hover a {
+    color: white;
+  }
+  li.nav-item:hover::after { background: white !important; }
+
+  [data-bs-theme="dark"] button, [data-bs-theme="dark"] .btn, [data-bs-theme="dark"] .btn-primary { border: none !important; }
+
+  [data-bs-theme="light"] .btn, [data-bs-theme="light"] .btn-primary { border: 2px solid #0000CD !important; }
+
+  button.btn-success, button.btn-primary {
+    background: linear-gradient(to top right, #8EF3FF, #ECA3FC) !important;
+    --bs-btn-bg: linear-gradient(to bottom right, #0000CD, #730D00);
+  }
+
+  .btn, .btn-primary {
+    border-radius: 100px;
+    padding: 8px;
+    background: white;
+    color: black;
+  }
+
+  .btn:hover, .btn-primary:hover {
+    background: linear-gradient(to top right, #D40000, #0000CD) !important;
+  }
+
+  button.navbar-toggler {
+  	background: transparent !important;
+    border: 1px solid white !important;
+  }
+
+  button.btn.challenge-button {
+    background: white;
+  }
+  
+  [data-bs-theme="light"] [x-data="CaptainMenu"] i::before {
+    padding: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom right, #D40000, #0000CD);
+  }
+  
+  a { color: #0EB0D2 }
+  a:hover { color: #5AEBDC }
+
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="https://2024.blockctf.com/" class="navbar-brand">
+      
+        <img class="img-responsive ctf_logo" src="./Block CTF_files/62c3d1403929a07cdbb8f3adca8a048e.png" alt="Block CTF" height="25">
+      
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://2024.blockctf.com/users">
+              Users
+            </a>
+          </li>
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://2024.blockctf.com/teams">
+                Teams
+              </a>
+            </li>
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://2024.blockctf.com/scoreboard">
+              Scoreboard
+            </a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://2024.blockctf.com/challenges">
+            Challenges
+          </a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://2024.blockctf.com/register">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Register" data-bs-original-title="Register">
+                  <i class="fas fa-user-plus d-none d-md-inline d-lg-none"></i>
+                </span>
+                <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-user-plus pe-1"></i>
+                  Register
+                </span>
+              </a>
+            </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://2024.blockctf.com/login">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Login" data-bs-original-title="Login">
+                <i class="fas fa-sign-in-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-in-alt pe-1"></i>
+                Login
+              </span>
+            </a>
+          </li>
+        
+        <li class="nav-item">
+          <button class="nav-link theme-switch" type="button">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Toggle theme" data-bs-original-title="Toggle theme">
+              <i class="fas d-none d-md-inline fa-moon"></i>
+            </span>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-sun pe-1"></i>
+              Toggle theme
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Scoreboard
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+  
+
+  
+</div>
+
+    <div id="score-graph" class="align-items-center d-flex" :class="{&#39;d-flex&#39;: show, &#39;d-none&#39;: !show}" x-data="ScoreboardDetail" x-ref="scoregraph" @bracket-change.window="activeBracket=$event.detail; update();" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1732207010657"><div style="position: relative; width: 1296px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1620" height="500" style="position: absolute; left: 0px; top: 0px; width: 1296px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(404px, 255px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">2024-11-14 08:38:42</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:hsl(119, 84%, 59%);"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">SKSD</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">1,826</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+
+    <div id="scoreboard" class="row" x-data="ScoreboardList">
+      <template x-if="brackets.length &amp;&amp; standings.length"></template>
+
+      <div class="col-md-12" x-show="standings.length" style="">
+        <table class="table table-striped align-middle">
+          <thead>
+          <tr>
+            <th style="width: 10px">Place</th>
+            <th class="text-start ps-3">Team</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <template x-for="(standing, index) in standings.filter(i =&gt; activeBracket ? i.bracket_id==activeBracket : true)"></template><tr>
+                <th scope="row" class="text-center" x-text="index + 1">1</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/104">.;,;.</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3676</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">2</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/307">UofTCTF</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3676</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">3</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/275">SKSD</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3676</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">4</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/363">ENOFLAG</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3676</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">5</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/302">PBR | UCLA</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3276</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">6</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/99">not the real L3ak</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3276</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">7</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/100">no rev/pwn no life</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3276</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">8</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/92">valgrind</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3276</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">9</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/252">bi0s</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3126</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">10</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/48">CYberMouflons</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3026</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">11</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/237">TheCrewTable</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2876</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">12</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/250">L0stAx3s</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2501</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">13</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/84">0xE0F</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2276</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">14</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/212">SNI</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2276</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">15</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/281">Maple Bacon</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">16</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/241">BKISC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2126</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">17</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/529">The Few Chosen</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1976</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">18</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/125">WE_0WN_Y0U</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1976</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">19</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/164">SecFault</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1876</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">20</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/239">polygl0ts</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1826</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">21</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/300">La frererie</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1726</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">22</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/315">InfoSecIITR</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1676</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">23</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/337">cyber_space</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1651</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">24</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/136">WWF</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1576</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">25</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/123">MindCrafters</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1526</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">26</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/318">DSGS4T</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1476</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">27</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/312">BITSkrieg</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1476</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">28</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/367">Tower of Hanoi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1451</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">29</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/124">bluehens</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1426</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">30</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/137">The Dwellers of the Hideout</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1326</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">31</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/282">ucsd</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1251</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">32</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/411">1nf1n1ty</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">33</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/251">Phish Paprikas</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1176</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">34</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/507">0-Day Aarhus</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1076</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">35</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/482">0xfun</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1026</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">36</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/366">0M3G4_SQU4D</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1026</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">37</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/579">FlagMotori</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1026</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">38</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/228">Sagiring</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1000</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">39</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/159">ICC UH</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">951</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">40</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/198">room2042</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">925</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">41</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/327">MEOW MEOW MEOW MEOW MEOW</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">876</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">42</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/319">Moaiman</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">851</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">43</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/309">VxPx</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">851</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">44</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/345">whitebunny314</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">826</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">45</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/226">Balsn</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">801</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">46</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/382">MCS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">776</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">47</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/208">Just For The Questions</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">751</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">48</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/611">🐬</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">726</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">49</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/535">G04T3DP30PL3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">726</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">50</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/218">16j</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">700</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">51</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/236">Flaggermeister</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">676</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">52</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/188">setters</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">676</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">53</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/542">seventeen17</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">651</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">54</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/224">R321</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">651</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">55</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/388">FCCPC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">651</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">56</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/628">Cyber Salmons</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">626</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">57</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/375">Ireland Without the RE</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">576</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">58</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/539">PwnProphecys</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">576</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">59</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/330">Bit Loopy</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">576</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">60</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/516">Pwnus</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">576</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">61</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/203">0237h</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">551</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">62</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/126">ThomasG</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">551</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">63</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/87">Shell We Hack?</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">551</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">64</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/194">jackets</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">551</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">65</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/308">R4nd0m B00l5h33t5 G0</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">526</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">66</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/543">aaaa</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">526</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">67</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/69">Name</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">476</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">68</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/211">TheRoundRoads</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">476</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">69</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/235">att12ch</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">476</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">70</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/592">bunniesGang</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">476</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">71</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/311">Claquettes Chaussettes</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">451</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">72</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/370">vyra</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">426</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">73</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/387">HCS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">426</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">74</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/405">VN_MSEC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">426</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">75</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/389">Sp0tTh3Bug</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">426</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">76</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/571">Asuri</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">426</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">77</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/493">noob</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">426</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">78</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/147">NYUSEC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">426</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">79</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/283">Frou5 Li tnaguez</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">401</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">80</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/192">W1TCH3RS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">401</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">81</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/641">noreply</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">82</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/290">NefSharks</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">376</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">83</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/359">Almdudler</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">376</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">84</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/274">xryasnoy</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">376</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">85</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/553">cbhgogogo</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">376</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">86</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/213">BKDN_n3wb13</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">351</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">87</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/473">TRYHARD</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">351</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">88</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/439">robot</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">351</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">89</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/243">m1nt4l1ty</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">351</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">90</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/649">Nol3ptr</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">326</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">91</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/121">Octagram</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">301</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">92</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/79">elliptic_garden</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">301</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">93</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/138">CtrlAltMiau - Duoc UC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">301</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">94</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/106">TreasureSource</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">301</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">95</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/407">kagehutatsu</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">96</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/149">lagune</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">276</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">97</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/116">ayo</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">276</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">98</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/313">JordanSec</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">276</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">99</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/362">ftour chamali 2dh msmna khawya</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">251</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">100</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/160">Davidpb</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">251</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">101</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/306">hack_tuah</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">251</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">102</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/133">freep0nx</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">103</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/343">meow</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">104</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/452">fakeaviationist</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">105</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/73">E45TC0D3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">106</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/271">Babatschi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">107</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/458">TheForgottenBits</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">108</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/207">Bumble Enthusiast</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">109</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/242">1n47h3c45h</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">110</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/132">very_bad_at_ctfs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">111</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/643">Xxxxxx</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">112</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/134">f4n_n3r0</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">113</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/368">uhhh</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">114</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/246">ringmaster</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">115</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/392">MlemKem</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">116</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/463">xxx</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">117</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/469">test001</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">118</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/471">red full moon</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">119</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/485">Kukko ja Paalit</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">120</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/333">Kernel_Sanders</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">121</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/506">Newbies</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">122</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/244">el_btala_gaming</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">123</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/230">ISP</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">124</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/509">a</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">125</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/580">Nepaletka</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">126</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/645">sebastianpc</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">127</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/587">Puzzled</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">128</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/130">Num3R0n4u7s</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">129</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/394">seetief</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">201</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">130</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/329">kibanabs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">131</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/484">OAO</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">132</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/490">uwu</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">133</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/531">No nam</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">134</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/504">Me only</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">135</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/599">BMSTM</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">136</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/238">XORphey</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">137</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/601">DFG436y</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">138</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/447">notn</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">139</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/659">voidpunny</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">140</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/334">BrixiaSploiters</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">176</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">141</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/201">tongkhuyet</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">176</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">142</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/120">CryptoKobolds</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">176</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">143</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/515">Unc and phew</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">176</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">144</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/631">S™</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">176</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">145</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/222">TheAmazingDevil</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">151</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">146</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/442">sdawe</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">147</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/62">0xInSec</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">126</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">148</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/63">Sea~</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">149</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/354">cavih49215</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">150</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/205">us3c</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">151</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/400">PowerStrongCountry</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">152</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/90">royal recon squad</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">153</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/119">Espionage</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">154</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/477">knights</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">155</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/202">st0p_cyb3rbu11ying</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">156</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/526">BUNTIF</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">157</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/378">kangteam</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">158</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/570">sajenakmain</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">159</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/52">HackingNoHero</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">160</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/301">kensaltsolo</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">101</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">161</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/428">j</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">162</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/338">forfun</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">76</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">163</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/248">Ya_Latifa_Ti_Oskti</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">76</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">164</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/398">monkee</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">76</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">165</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/499">kek</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">76</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">166</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/86">JoJoBaOil</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">76</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">167</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/414">OENB1</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">75</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">168</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/630">bendanibabi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">75</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">169</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/268">RaBi3a</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">170</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/351">GGWPs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">171</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/430">YMD</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">172</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/440">soala gogo</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">173</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/459">ashva</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">174</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/51">无声惊雷</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">175</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/197">{dom}</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">176</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/167">H3X</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">177</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/521">0xG04</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">178</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/215">LigSugSig</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">179</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/289">Schrodinger Bears</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">180</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/263">Club Defensys</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">181</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/214">Nop</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">182</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/336">KVO</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">183</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/161">ctfrrteam</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">184</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/565">3r0th3r CC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">185</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/77">sv_enablebunnyhopping1</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">186</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/128">Gon_Tanaka</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">187</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/82">DarkPulse</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">188</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/605">MrRobot1337</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">189</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/321">ppjj</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">51</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">190</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/357">edamamens</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">191</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/624">novak</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">192</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/91">ABTI</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">193</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/320">0x4652</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">194</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/331">k023971</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">195</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/316">R4Y4N3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">196</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/348">Swasy</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">197</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/376">Chacks</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">198</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/385">pekora geng</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">199</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/395">z0udan</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">200</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/413">跟党走就队</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">201</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/153">betl0g</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">202</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/170">WeAre</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">203</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/424">sijazoo family</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">204</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/221">CyberLions</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">205</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/58">Team Bengal Tigers</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">206</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/195">Codebreakers</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">207</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/451">kerandoman</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">208</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/114">Dustflare</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">209</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/47">EasyIce</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">210</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/454">4GUn7uk</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">211</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/467">Caff3in3-DB</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">212</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/189">loooser</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">213</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/139">Cyber Janitorial Security Services</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">214</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/181">EOA !!</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">215</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/416">PzKpfw</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">216</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/519">YuriEnjoyers</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">217</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/522">an0nimities</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">218</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/528">H7Tex</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">219</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/540">X7!N3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">220</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/144">fzhshzh</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">221</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/552">ptitctf</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">222</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/557">CipherHunters</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">223</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/78">ExploitNerds</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">224</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/564">Shad0w_txt</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">225</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/569">Triada</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">226</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/431">zzzmilky</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">227</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/576">fr334aks-Mini</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">228</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/210">bigpig</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">229</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/270">RΞD 5HΞLL</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">230</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/229">StealthX</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">231</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/227">FlagF!nd3rz</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">232</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/598">ThinkSlowly</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">233</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/496">0y3n</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">234</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/572">Fir3w4ll F3ll0ws</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">235</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/462">s3cure_sh3ll</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">236</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/606">hengker gacor</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">237</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/216">CyberCh1ck</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">238</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/115">ex3x</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">239</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/562">hibwyli</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">240</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/610">Waldbaur</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">241</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/623">R4V3N</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">242</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/135">terereOverflow</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">243</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/129">.::The Factöry of Pwn::.</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">244</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/277">F4XD</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">245</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/640">Emp0wR3D</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">246</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/654">whyhacking</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">247</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/665">Bracken</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">26</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">248</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/352">beta</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">249</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/393">Nasi Lemak</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">250</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/152">youtiaos</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">251</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/492">testtest1</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">252</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/581">bonk</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">253</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/182">acdwas</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">254</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/449">kerosene</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">255</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/344">0xstatic</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">256</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/664">X@k3R_v_R3k@X</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">257</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/324">8007r007</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">258</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/288">CRUx BPHC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">259</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/328">Pr0t3ct0rs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">260</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/314">Myserk</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">261</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/98">Myc0w0rrhizal Network :3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">262</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/264">Yshtavat</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">263</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/53">Cipherghost</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">264</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/65">Spooky Catboys</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">265</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/266">fsoci4ty</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">266</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/304">julian9901</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">267</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/310">mirp30</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">268</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/341">etlb</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">269</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/317">404 Brain Not Found</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">270</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/295">misfits</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">271</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/346">Flatten</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">272</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/347">Daniel'); DROP TABLE teams; --</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">273</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/350">HaCoeur</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">274</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/297">badierouhaniphg@gmail.com</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">275</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/254">black mamba</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">276</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/355">CR-7</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">277</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/356">Team Spiryt</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">278</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/74">0xH0P3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">279</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/42">clock-glitch</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">280</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/72">Penguins</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">281</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/365">B̂</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">282</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/372">SCSU Lone Husky</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">283</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/373">Frenchie</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">284</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/88">Yousif</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">285</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/193">Pack3t P1rate$</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">286</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/75">Aizara_vistor</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">287</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/291">t1m3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">288</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/60">B4stiC1ub</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">289</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/247">junandmei</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">290</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/384">Archiv3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">291</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/386">ggwp</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">292</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/391">qweasd</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">293</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/232">Forg1ven</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">294</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/191">Charlie's Angels</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">295</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/151">J20</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">296</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/269">Ciallo</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">297</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/256">DobbySan</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">298</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/397">Hule</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">299</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/296">ib3xcyb3r</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">300</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/105">Shaqiu54</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">301</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/399">EliteCollapseZ</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">302</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/102">Team Bert</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">303</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/45">excelr8</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">304</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/67">Attack On Hash Function</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">305</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/200">Flat_Earthers</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">306</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/401">NECC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">307</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/260">CasperX</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">308</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/402">dafashi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">309</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/403">c-bass</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">310</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/404">SCTAAAAAX</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">311</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/406">fatdog</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">312</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/280">401_πRates</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">313</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/89">Digitalize</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">314</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/412">50%</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">315</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/59">bmrjrgl</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">316</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/417">从加利福尼亚肘到佛罗里达</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">317</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/171">无穷</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">318</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/285">N3w8i3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">319</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/419">louise</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">320</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/421">idk</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">321</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/165">88forU1</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">322</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/190">0x0024</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">323</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/293">lone_warrior001</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">324</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/429">[H@ck3r.dro7]</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">325</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/432">ahhorse</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">326</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/433">yangs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">327</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/435">小猫老弟</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">328</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/438">ddd</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">329</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/276">Owls</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">330</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/443">mir0soft</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">331</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/423">Teki09</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">332</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/446">Kheshig</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">333</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/233">min6</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">334</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/173">图书馆五楼风很大</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">335</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/112">H3x0r</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">336</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/455">Nightly</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">337</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/456">n00b_t34m</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">338</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/457">asdfghjk</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">339</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/80">F$0CI3TY</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">340</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/71">01</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">341</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/460">M1tM</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">342</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/464">CTF{FLAG</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">343</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/465">SecJut</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">344</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/468">pfapostol</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">345</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/470">4DR3N4L1N3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">346</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/240">The Muslim Chasers</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">347</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/475">Code Toàn Bug</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">348</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/476">skibiDiDiOS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">349</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/85">Funkiedorf</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">350</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/279">ByteBandits</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">351</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/479">99999</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">352</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/183">skill_issue</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">353</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/481">YCF</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">354</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/487">Issue_Of_Skills</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">355</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/225">CryptoCrackers</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">356</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/488">啊对对队</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">357</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/486">xzs1475712603@163.com</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">358</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/249">RRR</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">359</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/489">Sakthi CTF</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">360</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/491">ilostmybag</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">361</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/495">Calpis</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">362</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/178">The Hacktivists</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">363</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/505">Vilgax</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">364</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/186">PrivateUser</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">365</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/510">LamentXU</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">366</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/168">Hackerpatzerl</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">367</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/258">hellosociety</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">368</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/155">Blazing Fire</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">369</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/518">javascript:alert(1)</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">370</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/525">play</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">371</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/498">Teamlearn</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">372</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/483">mikoto2726</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">373</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/527">skrrt brr@ brr@</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">374</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/530">vcssi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">375</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/209">JerungRawr</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">376</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/536">malc00kies</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">377</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/537">R@3L$OROU$</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">378</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/541">Rever$eAck</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">379</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/547">T34M_V!RU$</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">380</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/548">poki</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">381</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/549">bocah ilang</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">382</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/265">brok</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">383</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/555">xls team</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">384</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/556">7632</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">385</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/554">d43m0n5</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">386</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/563">SHA-272</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">387</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/118">wang1rrr</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">388</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/568">RS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">389</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/574">piBond</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">390</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/577">Z3r0_l0g0n</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">391</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/578">z1squad</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">392</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/68">South Fayette High School</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">393</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/582">fok2005@gmail.com</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">394</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/196">Osmium</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">395</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/584">lol</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">396</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/305">Joar</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">397</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/585">EachLove3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">398</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/586">80085</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">399</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/588">cureSky</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">400</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/589">zero days to glory pass</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">401</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/590">VASebut</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">402</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/595">attt</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">403</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/596">t_h_</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">404</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/603">sigma</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">405</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/604">得闲饮茶</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">406</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/607">NEWNEW</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">407</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/612">labupump</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">408</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/609">aaabbbccc</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">409</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/618">vedant015</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">410</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/110">H4ck0pp</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">411</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/622">testingattentionplease</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">412</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/625">303</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">413</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/627">Sh4d0wL3gi0n</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">414</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/632">S3NTINELS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">415</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/636">oteeeee</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">416</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/637">Cypher.Nitro</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">417</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/639">duck</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">418</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/642">boop</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">419</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/634">one-shot</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">420</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/644">superhooman</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">421</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/122">Odin's Overwatch</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">422</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/299">soya</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">423</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/163">CyberUnit</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">424</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/648">Hacky Easter</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">425</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/650">iaccep</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">426</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/617">abc</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">427</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/651">fsoc-amyglan</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">428</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/294">1ntrud3rs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">429</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/180">East_Siders</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">430</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/657">dark_emperor</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">431</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/658">Jolta</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">432</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/660">karagi3963@cironex.com</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">433</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/661">Otaphoque</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">434</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/602">jmayliya</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">435</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/662">squishysquad</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">436</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/286">Phish Hat Hackers</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">437</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://2024.blockctf.com/teams/668">mimimimi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12" x-show="! standings.length" style="display: none;">
+        <h3 class="text-center text-muted">Scoreboard is empty</h3>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io/" class="text-secondary">
+      <small class="text-muted">
+        Powered by CTFd
+      </small>
+    </a>
+  </div>
+</footer>
+
+<div x-data="">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html"></div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data="">
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module" src="./Block CTF_files/index.2e31e3b8.js.download"></script><script type="module" src="./Block CTF_files/index.1cf73b05.js.download"></script><script type="module" src="./Block CTF_files/echarts.128204f2.js.download"></script><script type="module" src="./Block CTF_files/scoreboard.b1c04d97.js.download"></script>
+
+
+
+
+
+
+</body></html>

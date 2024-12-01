@@ -1,0 +1,456 @@
+points,name,challenge
+1519,icesfont,"[{'name': 'disconnection-revenge', 'solves': 3, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'disconnection', 'solves': 7, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Pico Note 2', 'solves': 7, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}]"
+1019,maple3142,"[{'name': 'disconnection', 'solves': 7, 'category': 'Web'}, {'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+1019,parrot409,"[{'name': 'disconnection', 'solves': 7, 'category': 'Web'}, {'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+1019,dimas,"[{'name': 'disconnection-revenge', 'solves': 3, 'category': 'Web'}, {'name': 'disconnection', 'solves': 7, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Pico Note 2', 'solves': 7, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}]"
+626,ngk,"[{'name': 'disconnection', 'solves': 7, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,icchy,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,m77,"[{'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'OpenBio 2', 'solves': 5, 'category': 'Web'}, {'name': 'AdBlog', 'solves': 6, 'category': 'Web'}, {'name': 'Neko Note', 'solves': 6, 'category': 'Web'}, {'name': 'jqi', 'solves': 8, 'category': 'Web'}, {'name': 'Warmuprofile', 'solves': 13, 'category': 'Web'}, {'name': 'OpenBio', 'solves': 13, 'category': 'Web'}, {'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'Pico Note 2', 'solves': 7, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,rsk0315,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}, {'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,cp20,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+262,frevadiscor,"[{'name': 'disconnection-revenge', 'solves': 3, 'category': 'Web'}, {'name': 'disconnection', 'solves': 7, 'category': 'Web'}, {'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,arkfan69,"[{'name': 'disconnection', 'solves': 7, 'category': 'Web'}, {'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,endy,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,chanze,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,hehe123,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+262,akiym,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,kusano,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,claustra01,"[{'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,roaris,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+262,lbao,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,zeosutt,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,decl,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,chocorusk,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,x00byte,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,viky,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,tan90909090,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,zoiltin,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,mojashi,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,bigbluewhale111,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,tunamagur0,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+262,harrison,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+262,magurofly,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+262,bliutech,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,tchen,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'Panda Memo', 'solves': 1, 'category': 'Web'}, {'name': 'Pico Note 2', 'solves': 7, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Neko Note', 'solves': 6, 'category': 'Web'}, {'name': 'OpenBio 2', 'solves': 5, 'category': 'Web'}, {'name': 'OpenBio', 'solves': 13, 'category': 'Web'}, {'name': 'jqi', 'solves': 8, 'category': 'Web'}, {'name': 'Warmuprofile', 'solves': 13, 'category': 'Web'}, {'name': 'AdBlog', 'solves': 6, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+262,mariosk,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}, {'name': 'Pico Note 2', 'solves': 7, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+262,onotch,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+146,toasterpwn,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+146,logdav,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'miniblog++', 'solves': 3, 'category': 'Web'}, {'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'ScoreShare', 'solves': 1, 'category': 'Web'}, {'name': 'jqi', 'solves': 8, 'category': 'Web'}, {'name': 'AdBlog', 'solves': 6, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+146,siunam,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+146,yura,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+146,toomer,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'jqi', 'solves': 8, 'category': 'Web'}, {'name': 'Warmuprofile', 'solves': 13, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+146,se0r12,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+146,jonathan403,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+116,hamayanhamayan,"[{'name': 'minimal-waf', 'solves': 12, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,vow,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,wanui,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+116,n0name,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+116,rjcyber,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,ppp45,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,mizore-fuyu,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,hsw109,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,m0h31h31,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,kawaken,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,yumaru,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,ikd,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}]"
+116,ymd,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,notroks,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,loid,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,zatsu,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Disco Party', 'solves': 1, 'category': 'Web'}, {'name': 'miniblog++', 'solves': 3, 'category': 'Web'}, {'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'OpenBio', 'solves': 13, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+116,jackhax,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,cl1mb3r,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+116,xoxo,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,kensyo,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,slephy,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,xrekkusu,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,chara,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,akrontab,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,biggest-tomato,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,siark,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,kaiziron,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,pfapostol,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,ibarkay,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,7h3-b3773r-g0os3,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,hiikunz,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'miniblog++', 'solves': 3, 'category': 'Web'}, {'name': 'OpenBio', 'solves': 13, 'category': 'Web'}, {'name': 'Warmuprofile', 'solves': 13, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+116,c0nde,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,snail-gt,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+116,koufu193,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+116,xrzhev,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+116,macaroon,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,xxax,[]
+0,zk47,[]
+0,lana,[]
+0,7hund3r,[]
+0,goutte,[]
+0,sig-255,[]
+0,goldleo1,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,neo01,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,d1g1t4l-f0rtr355,[]
+0,yorksyo,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,carrot303,[]
+0,konchan51,[]
+0,katchannn,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,frennn,[]
+0,bit,[]
+0,3r3m1t3,[]
+0,crazyman,[]
+0,small007,[]
+0,boris8298,[]
+0,rustyyyy,[]
+0,fs0c,[]
+0,jpegisme,[]
+0,vdat,[]
+0,rawdawg,[]
+0,literide,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,sceleri,[]
+0,sepo-np,[]
+0,mrelliot,[]
+0,kururu,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,ramblec96,[]
+0,k0w4lzk1,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,r1pp3r,[]
+0,ftc-ctf,[]
+0,0842a77fba,[]
+0,sat46,[]
+0,san,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,csiongn,[]
+0,discombombulatedeye,[]
+0,keruen,[]
+0,popipo,[]
+0,skyepodium,[]
+0,kumama-nui,[]
+0,ryomen,[]
+0,zainos,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,akiidjk,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,mrsolo404,[]
+0,lafixier,[]
+0,rolling-girl39,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,cttf,[]
+0,dgtc,[]
+0,sher6en,[]
+0,ivar,[]
+0,thedarkav3ng3r,[]
+0,a1ice,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,tr1s,[]
+0,veritas,[]
+0,leeup,[]
+0,yuu,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,hyhy,[]
+0,dracu,[]
+0,cr10,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,laika,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,szk3y,[]
+0,hiroshimataro,[]
+0,pathanaslam1280,[]
+0,ph4n10m,[]
+0,ihk-1,[]
+0,kingpig,[]
+0,longtruong07,[]
+0,4yn,[]
+0,saviur,[]
+0,pirosiki,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,totpro,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+0,usupek,[]
+0,tux,[]
+0,lexanhacker,[]
+0,abhay,[]
+0,satler,[]
+0,akr2248,[]
+0,zahidhussain1030,[]
+0,s0f,[]
+0,yanhuosanjin,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,lixbix,[]
+0,t43f0rg0ten,[]
+0,0xg0ku1,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,tsutsu,"[{'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}]"
+0,ri5e,[]
+0,hiziki,"[{'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,strongysert,[]
+0,chouxiaoya63,[]
+0,bunny,[]
+0,hucstar,[]
+0,kodai,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,jihedp,[]
+0,d23cqat01-n,[]
+0,striker07,[]
+0,antim-guna-nayak,[]
+0,pillsforskills,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,fio22,[]
+0,sashabrown,[]
+0,denverseh,[]
+0,heydc7,[]
+0,amcaqt,[]
+0,bogeyman3301,[]
+0,ants13,[]
+0,morimori,[]
+0,rebecca,[]
+0,imam,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,b3d1,[]
+0,h13u,"[{'name': 'Country DB', 'solves': 104, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,eth007,[]
+0,persiancats,[]
+0,fearnot,[]
+0,thur3ya,[]
+0,h1dden,[]
+0,bugspider,[]
+0,1e90ff,[]
+0,installman,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,sanders003,[]
+0,sasax7,[]
+0,naomi,[]
+0,th3h4ckt1v15t5,[]
+0,sneaky-potato,[]
+0,arcturus,[]
+0,jockky,[]
+0,foushgx,[]
+0,qubit,[]
+0,huli07,[]
+0,obashun22,[]
+0,whoisdan,[]
+0,3n16m40hun73r,[]
+0,sachinsingal4,[]
+0,monkee,[]
+0,lamlamhehe,[]
+0,diolla,[]
+0,takella6315,[]
+0,hossam,[]
+0,joseph,[]
+0,ramdos,[]
+0,rustybladez,[]
+0,fsociety22,[]
+0,fzhshzh,[]
+0,soyarot4159,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,zencipher,[]
+0,harith,[]
+0,r3yd4n,[]
+0,austenj,[]
+0,seocode,[]
+0,hombing,[]
+0,zvigzi,[]
+0,mutentman,[]
+0,water009,[]
+0,h1tm4n,[]
+0,wamp,[]
+0,dustflare,[]
+0,chewzhichao,[]
+0,whiteapple,[]
+0,mostafa-2003,[]
+0,ash,[]
+0,warranty-v01d,[]
+0,cqbtq,[]
+0,avk,[]
+0,saply,[]
+0,kertthewert,[]
+0,almurady,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,ddogok,[]
+0,whip09,[]
+0,vi-3,[]
+0,black-devil,[]
+0,ak5,[]
+0,kaatil,[]
+0,j0sh,[]
+0,alswn,[]
+0,slavetomints,[]
+0,qlashx,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,tr4c3,[]
+0,fatimamv,[]
+0,paola,[]
+0,torus888,[]
+0,rastthack,[]
+0,mian,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,qiio,[]
+0,p14ner,[]
+0,libero,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,pwn,[]
+0,a666666,[]
+0,isaacfletcher,[]
+0,shoaibbshaikhh,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,rs8897,[]
+0,sasori-rose,[]
+0,330169,[]
+0,homesentinel,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,zeddy,[]
+0,ax0l0tl,[]
+0,nimowen,[]
+0,r0lexx,[]
+0,hajranaeem,[]
+0,daffaea,[]
+0,ctounne,[]
+0,suhayb2030,[]
+0,tora225,[]
+0,zwique,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,cyfer,[]
+0,ziggi,[]
+0,henry,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+0,barondebajit,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,pr0xybyt3,[]
+0,shaswat,[]
+0,jaeduck,[]
+0,amchi01,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,yunolay,[]
+0,kyokito,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,j053,[]
+0,doo,[]
+0,capybara,[]
+0,singetu0096,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+0,ynatwest,[]
+0,wh1t3-soul3,[]
+0,sonia-ciklamini,[]
+0,elleuch,[]
+0,lebr0nli,[]
+0,luniao,[]
+0,ghost,[]
+0,borgeous,[]
+0,guts7sword,[]
+0,lutfiaafroze,[]
+0,pprr,[]
+0,neith,[]
+0,zivana2,"[{'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+0,lu513n,"[{'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,shinobe179,[]
+0,k1ra,[]
+0,sh3llsh0ck,[]
+0,mbukuzdulu,[]
+0,killuadev,[]
+0,the-h,[]
+0,zafiro,[]
+0,noorinsec,[]
+0,panzoe,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,aeruu,[]
+0,cho867571,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+0,100galib,[]
+0,tonyke,[]
+0,kr15n4,[]
+0,lamentxu-typhon,"[{'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'Warmuprofile', 'solves': 13, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,0m3r,[]
+0,sh1ro,[]
+0,just-here-chilling,[]
+0,315732,[]
+0,itachiuchiha,[]
+0,zzzzzzzxwb,"[{'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,chandan,[]
+0,windy-55,[]
+0,hazy0189,"[{'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,evbcffp1xb,[]
+0,sara,[]
+0,escanor,[]
+0,tipsen,[]
+0,b1nd1fftr1y,[]
+0,1chig0,[]
+0,tls-isnice,[]
+0,8ball,[]
+0,small,[]
+0,heliman,[]
+0,simoni,[]
+0,wall-gregz,[]
+0,yaaahyax,[]
+0,n0ir,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,yanoosh,[]
+0,wxx,[]
+0,tazarkour,[]
+0,biswa007,[]
+0,s4iy1n,[]
+0,drdoom-1337,[]
+0,h3k0n,[]
+0,ariabyss,[]
+0,p4yback,[]
+0,b4d33e,[]
+0,s1mple,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,0xff,[]
+0,hanvonranxe,[]
+0,febrian,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}]"
+0,kikituxx,[]
+0,darkshadowhacker,[]
+0,ptr-yudai,"[{'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,ayushch,[]
+0,satuo,[]
+0,jinu,[]
+0,zhydra7,[]
+0,siro317,"[{'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+0,zack,[]
+0,0ptimus,[]
+0,pavel,[]
+0,blackangel,[]
+0,k1td,[]
+0,doctor,[]
+0,starfall,[]
+0,mikusan,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}]"
+0,ma1f0y,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,rakibmsiddique,[]
+0,ensy,"[{'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,souleh,[]
+0,sevgillim,[]
+0,imarcex,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,denversehh,[]
+0,kingkong,[]
+0,edwowmath,[]
+0,who1sd0l,[]
+0,s-h0xi1o,[]
+0,skyzx,[]
+0,s0m3,[]
+0,kelazote,[]
+0,chamizzu,[]
+0,satoki,[]
+0,lorddracula,[]
+0,parall3l,[]
+0,charmer,[]
+0,what-is-ctf,[]
+0,ark,[]
+0,caphosra,[]
+0,hoon,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,practiceuser,[]
+0,pvtsec,[]
+0,ghassendal58,[]
+0,godmelon123,[]
+0,mim,[]
+0,mdarif,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,strawberryshiesty,[]
+0,lantern,[]
+0,lantern76,[]
+0,m1t0,[]
+0,nuts,[]
+0,eagle1,[]
+0,louise35,[]
+0,corvusddoskrom,[]
+0,mehrab,[]
+0,nrz-amir-ho3in,[]
+0,yagarashi,[]
+0,feeqree,[]
+0,nero-lol,[]
+0,seoyeong,[]
+0,sensei123,[]
+0,tatsuya-akira,[]
+0,yu212,"[{'name': 'Alpaca Poll', 'solves': 58, 'category': 'Web'}, {'name': 'Treasure Hunt', 'solves': 100, 'category': 'Web'}, {'name': 'GitFile Explorer', 'solves': 17, 'category': 'Web'}, {'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'CaaS', 'solves': 52, 'category': 'Web'}, {'name': 'Pico Note 1', 'solves': 51, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}, {'name': 'TOWFL', 'solves': 25, 'category': 'Web'}, {'name': 'Country DB', 'solves': 104, 'category': 'Web'}]"
+0,chicken0248,[]
+0,iota,[]
+0,xzhiyouu,[]
+0,1thr00n3r,[]
+0,aravind,[]
+0,cybercrow,[]
+0,shy,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,hakkaeason,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,st4rl3ss,[]
+0,dark-d3v1l,"[{'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,sho3lax0x01,[]
+0,cbrgrdnr,[]
+0,nayu,[]
+0,bael,[]
+0,monish,[]
+0,v19,[]
+0,ardhani,"[{'name': 'CakeGEAR', 'solves': 45, 'category': 'Web'}, {'name': 'Simple Login', 'solves': 256, 'category': 'Web'}]"
+0,0h-cr3p3,[]
+0,jacop0x,[]
+0,ta921,[]
+0,amgoda,[]
+0,titanhzz,[]
+0,k1zzu,[]
+0,0xmvr,[]
+0,wansyh,[]
+0,aaqibansarii,[]
+0,lonorot,[]
+0,hidehic0,[]
+0,shinobin,[]
+0,robot,[]
+0,haxor101,[]
+0,hemraj9849,[]
+0,inv1nc,[]
