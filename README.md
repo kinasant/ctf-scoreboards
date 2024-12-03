@@ -106,10 +106,16 @@
             <td><a href="ctfs/SECCON/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2478" target="_blank">CTFtime</a></td>
         </tr>
+      
               <tr>
             <td rowspan=1><a href="ctfs/TheHackerConclave">TheHackerConclave</a></td>
             <td><a href="ctfs/TheHackerConclave/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2575" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/WorldWide">WorldWide</a></td>
+            <td><a href="ctfs/WorldWide/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2572" target="_blank">CTFtime</a></td>
         </tr>
     </tbody>
   </table>
