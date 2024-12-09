@@ -116,5 +116,10 @@
             <td><a href="ctfs/WorldWide/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2572" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/LakeCTF">LakeCTF</a></td>
+            <td><a href="ctfs/LakeCTF/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2502" target="_blank">CTFtime</a></td>
+        </tr>
     </tbody>
   </table>
