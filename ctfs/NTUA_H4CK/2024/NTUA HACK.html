@@ -1,0 +1,3521 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html style="height: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>NTUA HACK</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="https://ctfnhack.ctflib.eu/files/6b76021f3f375c76aff9d6e545572407/Copy_of_Untitled_Design1.png" type="image/x-icon">
+
+	<!-- Google Font -->
+	<link rel="stylesheet" href="./NTUA HACK_files/css2">
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="./NTUA HACK_files/fontawesome-free.all.min.css">
+	<!-- overlayScrollbars -->
+	<link rel="stylesheet" href="./NTUA HACK_files/OverlayScrollbars.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="./NTUA HACK_files/adminlte.min.css">
+
+	<style type="text/css">
+		body {
+			font-family: 'Roboto Condensed', sans-serif;
+		}
+		.sidebar-mini .nav-sidebar .nav-header {
+			opacity: 1;
+			transition: opacity 0.5s;
+		}
+		.sidebar-mini.sidebar-collapse .nav-sidebar .nav-header {
+			display: block;
+			opacity: 0;
+		}
+		.sidebar-mini.sidebar-collapse .nav-sidebar:hover .nav-header {
+			opacity: 1;
+		}
+		.sidebar-mini .main-sidebar .nav-link, .sidebar-mini-md .main-sidebar .nav-link, .sidebar-mini-xs .main-sidebar .nav-link {
+			transition: unset;
+		}
+
+		/* Dark - Green */
+		/*
+		[class*=sidebar-dark-] {background-color: #191A19;}
+		.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*=navbar]) {background-color: #191A19;}
+		[class*=sidebar-dark] .brand-link {border-bottom: 1px solid #39ff14;}
+		.navbar-dark {background-color: #191A19;border-color: #39ff14;}
+
+		a {color: #41a728;}
+		a:hover {color: #338320;}
+		*/
+	</style>
+
+	
+	<style type="text/css">
+		#score-graph {height: 400px;}
+
+		.scoreboard-list .table thead tr {font-size: 0.75em;}
+		.scoreboard-list .table thead tr th {padding-top: .5rem;padding-bottom: .5rem;}
+	</style>
+
+
+	
+	</script>
+
+	<script type="text/javascript" src="./NTUA HACK_files/theme.30254fa5.js.download"></script>
+
+	<!-- Import font -->
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./NTUA HACK_files/css2(1)" rel="stylesheet">
+
+<!-- Theme Color -->
+<style>
+a {color: #2ca8ef;}
+a:hover {color: #2ca8ef;}
+.dark-mode a:not(.btn):hover {color: #2ca8ef;}
+[class*=sidebar-dark-] {background-color: #112454;}
+.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*=navbar]) {background-color: #112454;}
+.navbar-dark {background-color: #112454;}
+.dark-mode .navbar-dark {background-color: #112454;}
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {background-color: #194e82}
+.btn-info {
+    color: #fff;
+    background-color: #2ca8ef;
+    border-color: #2ca8ef;
+    box-shadow: none;
+}
+.btn-info:hover {
+    background-color: #2ca8ef;
+    border-color: #2ca8ef;
+}
+.btn-info.focus, .btn-info:focus {
+    color: #fff;
+    background-color: #2ca8ef;
+    border-color: #2ca8ef;
+    box-shadow: 0 0 0 0 rgb(75, 19, 91, 0.5);
+}
+.dark-mode .jumbotron {
+	background-color: #15181a;
+}
+</style>
+
+<!-- Glow CSS -->
+<style>
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {text-shadow: 0 0 10px #d1f4ff, 0 0 20px #d1f4ff, 0 0 30px #a3daff, 0 0 40px #a3daff, 0 0 50px #8ac8ff, 0 0 60px #8ac8ff, 0 0 70px #8ac8ff;}
+  to {text-shadow: 0 0 20px #e6f7ff, 0 0 30px #e6f7ff, 0 0 40px #b3e7ff, 0 0 50px #b3e7ff, 0 0 60px #99dfff, 0 0 70px #99dfff, 0 0 80px #99dfff;}
+}
+</style>
+
+
+<!-- Alive Footer -->
+<style>
+.rozina-footer{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: right;
+   z-index:1032;
+   margin-right: -50px;
+   margin-bottom: -10px;
+   pointer-events: none;
+}
+</style>
+
+<!-- Nav Icons -->
+<style>
+.sidebar .nav li:nth-of-type(2) .nav-icon.fas.fa-file-alt:before{content: "\f015";}
+.sidebar .nav li:nth-of-type(3) .nav-icon.fas.fa-file-alt:before{content: "\f024";}
+.sidebar .nav li:nth-of-type(4) .nav-icon.fas.fa-file-alt:before{content: "\f0e3";}
+</style>
+
+<!-- Logo Open/Close Fix -->
+<style>
+  .brand-image{opacity: 1;transition: .5s opacity;}
+  .sidebar-collapse .brand-image {opacity: 0;}
+  .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused, .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .brand-image {opacity: 1;}
+</style>
+
+<!-- Platform Theme Fixes -->
+<style>
+/* Fix tags Dark Theme */
+.tags-list .badge.badge-dark {transition: none;}
+.dark-mode .tags-list .badge.badge-dark {color: #1f2d3d;background-color: #f8f9fa;}
+/* Fix duplicate notifications */
+div.challenges-category .card-body .col-12 .alert.alert-danger.alert-dismissible,  
+div.challenges-category .card-body .col-12 .alert.alert-info.alert-dismissible {display: none;}
+/* Fix white letters on dark theme */
+.jumbotron .edit-team, .jumbotron .edit-captain, .jumbotron .invite-members, .jumbotron .disband-team {color: #15181a !important;}
+.dark-mode .jumbotron .edit-team, .dark-mode .jumbotron .edit-captain, .dark-mode .jumbotron .invite-members, .dark-mode .jumbotron .disband-team, .dark-mode .jumbotron #team-id, .dark-mode .jumbotron #team-place, .dark-mode .jumbotron #team-score, .dark-mode .jumbotron h1 {color: #ffffff !important;}
+</style>
+
+<!-- Snow -->
+<style>
+.shadow-color {
+  text-shadow: 4px 4px 8px black;
+  color: #f5f5f5;
+  font-family: "Mountains Of Christmas";
+  font-weight: 700;
+ }
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+  pointer-events: none;
+}
+.snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+</style>
+
+<!-- Home Image Change -->
+<style>
+.main-panel {
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/files/da3fd65d17b62c7f17d7ab5055b4e380/morning.png"); \
+	background-size: cover; \
+	background-repeat: no-repeat; \
+	background-position: 30% 30%; \
+}
+.dark-mode .main-panel {
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/files/e3f73a6620e24e3a0e001565e329542f/night.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 30% 30%;
+}
+</style>
+</head>
+<body class="sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed dark-mode" style="height: auto;">
+	<script type="text/javascript">CTFdPlatformTheme.init.body();</script>
+	<div class="wrapper">
+
+		<!-- Preloader -->
+		<!--<div class="preloader flex-column justify-content-center align-items-center">
+			
+				<img class="animation__wobble" src="/files/cb7a6cb446c6aa5ce4abde2aea82962c/Copy_of_Untitled_Design1.png" alt="NTUA HACK" height="60">
+			
+		</div>-->
+
+		<!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-dark">
+	<!-- Left navbar links -->
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" data-widget="pushmenu" href="https://ctfnhack.ctflib.eu/scoreboard#" role="button" data-enable-remember="true"><i class="fas fa-bars"></i></a>
+		</li>
+	</ul>
+	<!-- SEARCH FORM -->
+	<!--
+	<form class="form-inline ml-0 ml-md-3">
+		<div class="input-group input-group-sm">
+			<input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+			<div class="input-group-append">
+				<button class="btn btn-navbar" type="submit">
+					<i class="fas fa-search"></i>
+				</button>
+			</div>
+		</div>
+	</form>
+	-->
+
+	<!-- Right navbar links -->
+	<ul class="navbar-nav ml-auto">
+
+		
+			
+
+			<li class="nav-item" id="theme-mode-dark" onclick="CTFdPlatformTheme.action.toggleDarkMode();">
+				<a class="nav-link" role="button" style="display: none;">
+					<i class="far fa-moon"></i> <span class="d-none d-sm-inline">Dark Mode</span>
+				</a>
+				<a class="nav-link" role="button" style="display: block;">
+					<i class="far fa-sun"></i> <span class="d-none d-sm-inline">Light Mode</span>
+				</a>
+			</li>
+			<script type="text/javascript">CTFdPlatformTheme.action.updateDarkMode();</script>
+
+			<li class="nav-item">
+				<a class="nav-link" href="https://ctfnhack.ctflib.eu/notifications" role="button">
+					<i class="fas fa-bell"></i> <span class="d-none d-sm-inline">Notifications</span>
+				</a>
+			</li>
+
+
+			<!-- User Dropdown Menu -->
+			<li class="nav-item dropdown">
+				<a class="nav-link" data-toggle="dropdown" href="https://ctfnhack.ctflib.eu/scoreboard#">
+					<i class="fas fa-user"></i> temp
+				</a>
+				<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+					<a href="https://ctfnhack.ctflib.eu/user" class="dropdown-item">
+						<i class="fas fa-user"></i> My Profile
+					</a>
+					
+						<a href="https://ctfnhack.ctflib.eu/team" class="dropdown-item">
+							<i class="fas fa-user"></i> My Team
+						</a>
+					
+					<a href="https://ctfnhack.ctflib.eu/settings" class="dropdown-item">
+						<i class="fas fa-cog"></i> Settings
+					</a>
+					<div class="dropdown-divider"></div>
+					<a href="https://ctfnhack.ctflib.eu/logout" class="dropdown-item">
+						<i class="fas fa-sign-out-alt"></i> Logout
+					</a>
+				</div>
+			</li>
+
+		
+	</ul>
+</nav>
+<!-- /.navbar -->
+		<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+	<!-- Brand Logo -->
+	<a href="https://ctfnhack.ctflib.eu/" class="brand-link" style="text-align: center;">
+		
+			<img class="brand-image" src="./NTUA HACK_files/Copy_of_Untitled_Design1.png" alt="NTUA HACK" style="margin-left: 15px;">
+		
+	<div style="position: fixed;background: #b2121d;box-shadow: 0 0 0 999px #b2121d;clip-path: inset(0 -100%);inset: 0 auto auto 0;transform-origin: 100% 0;transform: translate(-29.3%) rotate(-45deg);color: #fff;font-size: 12px;pointer-events: none;text-shadow: 0 0 2px #000;">ONLINE</div></a>
+
+	<!-- Sidebar -->
+	<div class="sidebar" x-data="Sidebar" style="overflow-y: auto;">
+
+		<!-- Sidebar Menu -->
+		<nav class="mt-2">
+			<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+				<li class="nav-header">PAGES</li>
+				<li class="nav-item">
+					<a href="https://ctfnhack.ctflib.eu/" class="nav-link">
+						<i class="nav-icon fas fa-file-alt"></i>
+						<p>
+							Home
+						</p>
+					</a>
+				</li>
+				
+					<li class="nav-item">
+						<a href="https://ctfnhack.ctflib.eu/sponsors" class="nav-link">
+							<i class="nav-icon fas fa-file-alt"></i>
+							<p>
+								Sponsors
+							</p>
+						</a>
+					</li>
+				
+					<li class="nav-item">
+						<a href="https://ctfnhack.ctflib.eu/rules" class="nav-link">
+							<i class="nav-icon fas fa-file-alt"></i>
+							<p>
+								Rules
+							</p>
+						</a>
+					</li>
+				
+
+				
+					<li class="nav-item">
+						<a href="https://ctfnhack.ctflib.eu/users" class="nav-link">
+							<i class="nav-icon fas fa-user-friends"></i>
+							<p>
+								Users
+							</p>
+						</a>
+					</li>
+					
+						<li class="nav-item">
+							<a href="https://ctfnhack.ctflib.eu/teams" class="nav-link">
+								<i class="nav-icon fas fa-users"></i>
+								<p>
+									Teams
+								</p>
+							</a>
+						</li>
+					
+				
+				
+				
+					<li class="nav-item">
+						<a href="https://ctfnhack.ctflib.eu/user" class="nav-link">
+							<i class="nav-icon fas fa-user"></i>
+							<p>
+								My Profile
+							</p>
+						</a>
+					</li>
+					
+						<li class="nav-item">
+							<a href="https://ctfnhack.ctflib.eu/team" class="nav-link">
+								<i class="nav-icon fas fa-users"></i>
+								<p>
+									My Team
+								</p>
+							</a>
+						</li>
+					
+				
+
+				
+					<li class="nav-item">
+						<a href="https://ctfnhack.ctflib.eu/scoreboard" class="nav-link active">
+							<i class="nav-icon fas fa-chart-area"></i>
+							<p>
+								Scoreboard
+							</p>
+						</a>
+					</li>
+				
+				
+
+				
+					
+						<li class="nav-header">CHALLENGES <i class="nav-icon fas fa-circle-notch fa-spin" x-show="!loaded"></i></li>
+						<template x-for="i in ghosts"></template><li class="nav-item" x-show="!loaded" style="opacity: 0.5;">
+								<a href="https://ctfnhack.ctflib.eu/challenges" class="nav-link">
+									<i class="nav-icon fas fa-puzzle-piece"></i>
+									<p>
+										Loading ...
+									</p>
+								</a>
+							</li>
+						<template x-for="(category, idx) in getCategories()" :key="idx"></template>
+					
+				
+
+			</ul>
+		</nav>
+		<!-- /.sidebar-menu -->
+
+	</div>
+	<!-- /.sidebar -->
+</aside>
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper" style="min-height: 659.2px;">
+			
+	<div class="content-header">
+		<div class="container-fluid">
+			<div class="row mb-2">
+				<div class="col-sm-6">
+					<h1 class="m-0">Scoreboard</h1>
+				</div>
+				<div class="col-sm-6">
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item"><a href="https://ctfnhack.ctflib.eu/">Home</a></li>
+						<li class="breadcrumb-item active">Scoreboard</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="content">
+		
+		<div>
+	
+
+	
+</div>
+
+		<div id="score-graph" class="row align-items-center" x-data="ScoreboardDetail" x-ref="scoregraph" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1734414667488"><div style="position: relative; width: 1262px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1577" height="500" style="position: absolute; left: 0px; top: 0px; width: 1262px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(344px, 321px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">2024-12-15 16:23:28</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:hsl(235, 85%, 55%);"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">NtuaLipa</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">1,421</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+
+		<div class="card scoreboard-list">
+
+			<div class="card-header">
+				<h3 class="card-title">
+					<i class="fas fa-list-ol"></i>
+					Scoreboard
+				</h3>
+
+				<div class="card-tools">
+					<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+						<i class="fas fa-minus"></i>
+					</button>
+				</div>
+			</div>
+			<div class="card-body p-0">
+				
+					
+
+						<table class="table table-hover" x-data="UsersTable">
+							<thead>
+								<tr>
+									<th style="width: 70px;" class="text-right">#</th>
+									<th>Team</th>
+									<th>Score</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+									<tr>
+										<td class="text-right">
+											
+											<i class="fas fa-trophy" style="color:#ffd700;"></i>
+											
+											1
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/222">
+												TRX <small class="text-muted" x-text="getRankName(9059)"></small>
+
+												
+											</a>
+										</td>
+										<td>9059</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											<i class="fas fa-trophy" style="color:#c0c0c0;"></i>
+											
+											2
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/199">
+												sebastianpc <small class="text-muted" x-text="getRankName(7338)"></small>
+
+												
+											</a>
+										</td>
+										<td>7338</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											<i class="fas fa-trophy" style="color:#cd7f32;"></i>
+											
+											3
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/41">
+												CYberMouflons <small class="text-muted" x-text="getRankName(6124)"></small>
+
+												
+											</a>
+										</td>
+										<td>6124</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											4
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/187">
+												peepo <small class="text-muted" x-text="getRankName(4796)"></small>
+
+												
+											</a>
+										</td>
+										<td>4796</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											5
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/102">
+												NtuaLipa <small class="text-muted" x-text="getRankName(4433)"></small>
+
+												
+											</a>
+										</td>
+										<td>4433</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											6
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/107">
+												Latvia <small class="text-muted" x-text="getRankName(3037)"></small>
+
+												
+											</a>
+										</td>
+										<td>3037</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											7
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/241">
+												tchen <small class="text-muted" x-text="getRankName(2964)"></small>
+
+												
+											</a>
+										</td>
+										<td>2964</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											8
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/129">
+												0xE0F <small class="text-muted" x-text="getRankName(2900)"></small>
+
+												
+											</a>
+										</td>
+										<td>2900</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											9
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/157">
+												kal1nyxta <small class="text-muted" x-text="getRankName(2457)"></small>
+
+												
+											</a>
+										</td>
+										<td>2457</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											10
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/134">
+												Nopium <small class="text-muted" x-text="getRankName(2332)"></small>
+
+												
+											</a>
+										</td>
+										<td>2332</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											11
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/56">
+												f4n_n3r0 <small class="text-muted" x-text="getRankName(2135)"></small>
+
+												
+											</a>
+										</td>
+										<td>2135</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											12
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/179">
+												mukusuki <small class="text-muted" x-text="getRankName(1912)"></small>
+
+												
+											</a>
+										</td>
+										<td>1912</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											13
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/181">
+												CarpeDien <small class="text-muted" x-text="getRankName(1694)"></small>
+
+												
+											</a>
+										</td>
+										<td>1694</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											14
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/146">
+												ROECYB <small class="text-muted" x-text="getRankName(1576)"></small>
+
+												
+											</a>
+										</td>
+										<td>1576</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											15
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/159">
+												logdav <small class="text-muted" x-text="getRankName(1576)"></small>
+
+												
+											</a>
+										</td>
+										<td>1576</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											16
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/72">
+												afterdark <small class="text-muted" x-text="getRankName(1563)"></small>
+
+												
+											</a>
+										</td>
+										<td>1563</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											17
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/253">
+												YMD <small class="text-muted" x-text="getRankName(1511)"></small>
+
+												
+											</a>
+										</td>
+										<td>1511</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											18
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/18">
+												INSSec <small class="text-muted" x-text="getRankName(1453)"></small>
+
+												
+											</a>
+										</td>
+										<td>1453</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											19
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/133">
+												gf34gerger <small class="text-muted" x-text="getRankName(1363)"></small>
+
+												
+											</a>
+										</td>
+										<td>1363</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											20
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/200">
+												naka9 <small class="text-muted" x-text="getRankName(1361)"></small>
+
+												
+											</a>
+										</td>
+										<td>1361</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											21
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/94">
+												普查 <small class="text-muted" x-text="getRankName(1252)"></small>
+
+												
+											</a>
+										</td>
+										<td>1252</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											22
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/212">
+												ABTI <small class="text-muted" x-text="getRankName(1233)"></small>
+
+												
+											</a>
+										</td>
+										<td>1233</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											23
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/215">
+												BITSkrieg <small class="text-muted" x-text="getRankName(1193)"></small>
+
+												
+											</a>
+										</td>
+										<td>1193</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											24
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/155">
+												nahi_jam_raha_mama <small class="text-muted" x-text="getRankName(1106)"></small>
+
+												
+											</a>
+										</td>
+										<td>1106</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											25
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/263">
+												bebubu <small class="text-muted" x-text="getRankName(1054)"></small>
+
+												
+											</a>
+										</td>
+										<td>1054</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											26
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/149">
+												1c3Gh3tt0 <small class="text-muted" x-text="getRankName(1034)"></small>
+
+												
+											</a>
+										</td>
+										<td>1034</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											27
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/49">
+												Haxer maxer <small class="text-muted" x-text="getRankName(1007)"></small>
+
+												
+											</a>
+										</td>
+										<td>1007</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											28
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/201">
+												lil till real <small class="text-muted" x-text="getRankName(802)"></small>
+
+												
+											</a>
+										</td>
+										<td>802</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											29
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/139">
+												ch1lL_9uy <small class="text-muted" x-text="getRankName(755)"></small>
+
+												
+											</a>
+										</td>
+										<td>755</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											30
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/142">
+												TEAM.애니프사 <small class="text-muted" x-text="getRankName(723)"></small>
+
+												
+											</a>
+										</td>
+										<td>723</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											31
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/206">
+												Hungers <small class="text-muted" x-text="getRankName(702)"></small>
+
+												
+											</a>
+										</td>
+										<td>702</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											32
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/235">
+												dio_team <small class="text-muted" x-text="getRankName(669)"></small>
+
+												
+											</a>
+										</td>
+										<td>669</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											33
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/221">
+												funnyfoxes <small class="text-muted" x-text="getRankName(669)"></small>
+
+												
+											</a>
+										</td>
+										<td>669</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											34
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/101">
+												jitju <small class="text-muted" x-text="getRankName(659)"></small>
+
+												
+											</a>
+										</td>
+										<td>659</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											35
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/163">
+												nendo <small class="text-muted" x-text="getRankName(629)"></small>
+
+												
+											</a>
+										</td>
+										<td>629</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											36
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/160">
+												t1 <small class="text-muted" x-text="getRankName(588)"></small>
+
+												
+											</a>
+										</td>
+										<td>588</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											37
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/113">
+												Quinntec Solutions <small class="text-muted" x-text="getRankName(570)"></small>
+
+												
+											</a>
+										</td>
+										<td>570</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											38
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/89">
+												purple storm <small class="text-muted" x-text="getRankName(547)"></small>
+
+												
+											</a>
+										</td>
+										<td>547</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											39
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/162">
+												Ev1l734ch3r <small class="text-muted" x-text="getRankName(538)"></small>
+
+												
+											</a>
+										</td>
+										<td>538</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											40
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/183">
+												H@vOK <small class="text-muted" x-text="getRankName(528)"></small>
+
+												
+											</a>
+										</td>
+										<td>528</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											41
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/116">
+												DIT Security Team <small class="text-muted" x-text="getRankName(501)"></small>
+
+												
+											</a>
+										</td>
+										<td>501</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											42
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/257">
+												xyz <small class="text-muted" x-text="getRankName(490)"></small>
+
+												
+											</a>
+										</td>
+										<td>490</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											43
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/280">
+												avc <small class="text-muted" x-text="getRankName(469)"></small>
+
+												
+											</a>
+										</td>
+										<td>469</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											44
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/209">
+												BackMoon <small class="text-muted" x-text="getRankName(461)"></small>
+
+												
+											</a>
+										</td>
+										<td>461</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											45
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/59">
+												16j <small class="text-muted" x-text="getRankName(449)"></small>
+
+												
+											</a>
+										</td>
+										<td>449</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											46
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/214">
+												mrzero1 <small class="text-muted" x-text="getRankName(436)"></small>
+
+												
+											</a>
+										</td>
+										<td>436</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											47
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/103">
+												k0kos <small class="text-muted" x-text="getRankName(432)"></small>
+
+												
+											</a>
+										</td>
+										<td>432</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											48
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/97">
+												hong_abi <small class="text-muted" x-text="getRankName(432)"></small>
+
+												
+											</a>
+										</td>
+										<td>432</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											49
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/83">
+												Mediterannean College <small class="text-muted" x-text="getRankName(419)"></small>
+
+												
+											</a>
+										</td>
+										<td>419</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											50
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/186">
+												taurus <small class="text-muted" x-text="getRankName(411)"></small>
+
+												
+											</a>
+										</td>
+										<td>411</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											51
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/105">
+												Noi <small class="text-muted" x-text="getRankName(406)"></small>
+
+												
+											</a>
+										</td>
+										<td>406</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											52
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/256">
+												catocalypse <small class="text-muted" x-text="getRankName(392)"></small>
+
+												
+											</a>
+										</td>
+										<td>392</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											53
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/255">
+												EllaniosEllhn <small class="text-muted" x-text="getRankName(388)"></small>
+
+												
+											</a>
+										</td>
+										<td>388</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											54
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/227">
+												wwwwwww <small class="text-muted" x-text="getRankName(387)"></small>
+
+												
+											</a>
+										</td>
+										<td>387</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											55
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/249">
+												koma2 <small class="text-muted" x-text="getRankName(383)"></small>
+
+												
+											</a>
+										</td>
+										<td>383</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											56
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/125">
+												PracticeTeam <small class="text-muted" x-text="getRankName(369)"></small>
+
+												
+											</a>
+										</td>
+										<td>369</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											57
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/188">
+												D4ck3n <small class="text-muted" x-text="getRankName(369)"></small>
+
+												
+											</a>
+										</td>
+										<td>369</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											58
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/119">
+												CyberSchool <small class="text-muted" x-text="getRankName(360)"></small>
+
+												
+											</a>
+										</td>
+										<td>360</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											59
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/109">
+												0DayKW <small class="text-muted" x-text="getRankName(360)"></small>
+
+												
+											</a>
+										</td>
+										<td>360</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											60
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/140">
+												p0gg135 <small class="text-muted" x-text="getRankName(356)"></small>
+
+												
+											</a>
+										</td>
+										<td>356</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											61
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/176">
+												crypt0ace <small class="text-muted" x-text="getRankName(356)"></small>
+
+												
+											</a>
+										</td>
+										<td>356</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											62
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/141">
+												CyprusFTW <small class="text-muted" x-text="getRankName(356)"></small>
+
+												
+											</a>
+										</td>
+										<td>356</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											63
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/151">
+												Riki <small class="text-muted" x-text="getRankName(356)"></small>
+
+												
+											</a>
+										</td>
+										<td>356</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											64
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/55">
+												Num3R0n4u7s <small class="text-muted" x-text="getRankName(356)"></small>
+
+												
+											</a>
+										</td>
+										<td>356</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											65
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/269">
+												oghan <small class="text-muted" x-text="getRankName(356)"></small>
+
+												
+											</a>
+										</td>
+										<td>356</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											66
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/115">
+												sleek <small class="text-muted" x-text="getRankName(333)"></small>
+
+												
+											</a>
+										</td>
+										<td>333</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											67
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/254">
+												SETU - LOKI <small class="text-muted" x-text="getRankName(332)"></small>
+
+												
+											</a>
+										</td>
+										<td>332</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											68
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/26">
+												JaSooS <small class="text-muted" x-text="getRankName(329)"></small>
+
+												
+											</a>
+										</td>
+										<td>329</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											69
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/240">
+												CyberUNIT <small class="text-muted" x-text="getRankName(320)"></small>
+
+												
+											</a>
+										</td>
+										<td>320</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											70
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/132">
+												Legion Offensive Security <small class="text-muted" x-text="getRankName(310)"></small>
+
+												
+											</a>
+										</td>
+										<td>310</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											71
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/145">
+												Scr1ptKiddi3s <small class="text-muted" x-text="getRankName(310)"></small>
+
+												
+											</a>
+										</td>
+										<td>310</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											72
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/223">
+												admin <small class="text-muted" x-text="getRankName(287)"></small>
+
+												
+											</a>
+										</td>
+										<td>287</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											73
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/126">
+												ΔV <small class="text-muted" x-text="getRankName(282)"></small>
+
+												
+											</a>
+										</td>
+										<td>282</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											74
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/182">
+												M1tM <small class="text-muted" x-text="getRankName(270)"></small>
+
+												
+											</a>
+										</td>
+										<td>270</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											75
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/190">
+												beos_nub <small class="text-muted" x-text="getRankName(260)"></small>
+
+												
+											</a>
+										</td>
+										<td>260</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											76
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/67">
+												stalk <small class="text-muted" x-text="getRankName(260)"></small>
+
+												
+											</a>
+										</td>
+										<td>260</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											77
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/152">
+												UExploitNards <small class="text-muted" x-text="getRankName(260)"></small>
+
+												
+											</a>
+										</td>
+										<td>260</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											78
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/273">
+												oblivion.ai <small class="text-muted" x-text="getRankName(260)"></small>
+
+												
+											</a>
+										</td>
+										<td>260</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											79
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/261">
+												Pericles <small class="text-muted" x-text="getRankName(260)"></small>
+
+												
+											</a>
+										</td>
+										<td>260</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											80
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/189">
+												Gon_Tanaka <small class="text-muted" x-text="getRankName(260)"></small>
+
+												
+											</a>
+										</td>
+										<td>260</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											81
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/175">
+												Saudi <small class="text-muted" x-text="getRankName(250)"></small>
+
+												
+											</a>
+										</td>
+										<td>250</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											82
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/207">
+												Huntik <small class="text-muted" x-text="getRankName(242)"></small>
+
+												
+											</a>
+										</td>
+										<td>242</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											83
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/33">
+												Nun'hack <small class="text-muted" x-text="getRankName(232)"></small>
+
+												
+											</a>
+										</td>
+										<td>232</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											84
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/63">
+												Shy <small class="text-muted" x-text="getRankName(232)"></small>
+
+												
+											</a>
+										</td>
+										<td>232</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											85
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/68">
+												Mr.Crazy8 <small class="text-muted" x-text="getRankName(220)"></small>
+
+												
+											</a>
+										</td>
+										<td>220</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											86
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/20">
+												rice cooker <small class="text-muted" x-text="getRankName(220)"></small>
+
+												
+											</a>
+										</td>
+										<td>220</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											87
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/148">
+												TSAK <small class="text-muted" x-text="getRankName(219)"></small>
+
+												
+											</a>
+										</td>
+										<td>219</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											88
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/168">
+												ph4ntom <small class="text-muted" x-text="getRankName(210)"></small>
+
+												
+											</a>
+										</td>
+										<td>210</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											89
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/37">
+												xyzsec <small class="text-muted" x-text="getRankName(210)"></small>
+
+												
+											</a>
+										</td>
+										<td>210</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											90
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/124">
+												labupump <small class="text-muted" x-text="getRankName(210)"></small>
+
+												
+											</a>
+										</td>
+										<td>210</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											91
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/99">
+												ay0 <small class="text-muted" x-text="getRankName(210)"></small>
+
+												
+											</a>
+										</td>
+										<td>210</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											92
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/164">
+												Hacky Easter <small class="text-muted" x-text="getRankName(182)"></small>
+
+												
+											</a>
+										</td>
+										<td>182</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											93
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/161">
+												pero <small class="text-muted" x-text="getRankName(172)"></small>
+
+												
+											</a>
+										</td>
+										<td>172</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											94
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/64">
+												ctfrrteam <small class="text-muted" x-text="getRankName(160)"></small>
+
+												
+											</a>
+										</td>
+										<td>160</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											95
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/172">
+												ThomasGKorp <small class="text-muted" x-text="getRankName(160)"></small>
+
+												
+											</a>
+										</td>
+										<td>160</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											96
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/232">
+												rice cooker from wish <small class="text-muted" x-text="getRankName(160)"></small>
+
+												
+											</a>
+										</td>
+										<td>160</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											97
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/234">
+												得闲饮茶 <small class="text-muted" x-text="getRankName(160)"></small>
+
+												
+											</a>
+										</td>
+										<td>160</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											98
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/238">
+												Dark Elves <small class="text-muted" x-text="getRankName(160)"></small>
+
+												
+											</a>
+										</td>
+										<td>160</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											99
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/260">
+												C99 <small class="text-muted" x-text="getRankName(160)"></small>
+
+												
+											</a>
+										</td>
+										<td>160</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											100
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/251">
+												Tospik <small class="text-muted" x-text="getRankName(160)"></small>
+
+												
+											</a>
+										</td>
+										<td>160</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											101
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/127">
+												zebo404 <small class="text-muted" x-text="getRankName(160)"></small>
+
+												
+											</a>
+										</td>
+										<td>160</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											102
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/137">
+												Raptors <small class="text-muted" x-text="getRankName(150)"></small>
+
+												
+											</a>
+										</td>
+										<td>150</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											103
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/203">
+												jake <small class="text-muted" x-text="getRankName(142)"></small>
+
+												
+											</a>
+										</td>
+										<td>142</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											104
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/244">
+												check1n <small class="text-muted" x-text="getRankName(142)"></small>
+
+												
+											</a>
+										</td>
+										<td>142</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											105
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/88">
+												Null <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											106
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/136">
+												n3ve3rg0nnag1v3y0uup! <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											107
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/170">
+												#MogamiShizuka <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											108
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/177">
+												bbqs <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											109
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/178">
+												L0ck8y7e <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											110
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/180">
+												M0NST3RDECK <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											111
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/166">
+												bobi1024 <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											112
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/171">
+												SHA-272 <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											113
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/202">
+												gfhfgxhdgfdgzfdszf <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											114
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/204">
+												Just-US <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											115
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/130">
+												priv <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											116
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/218">
+												mikejam <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											117
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/228">
+												bomm <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											118
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/213">
+												kk <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											119
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/122">
+												SF_Beginners <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											120
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/230">
+												OneDay <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											121
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/23">
+												Team XO <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											122
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/276">
+												mimimimi <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											123
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/24">
+												0xNuecht <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											124
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/81">
+												G7dFlags <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											125
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/286">
+												P1R4T35 <small class="text-muted" x-text="getRankName(110)"></small>
+
+												
+											</a>
+										</td>
+										<td>110</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											126
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/274">
+												ben10 <small class="text-muted" x-text="getRankName(100)"></small>
+
+												
+											</a>
+										</td>
+										<td>100</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											127
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/92">
+												0xpiv0t3d <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											128
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/169">
+												b4d33r <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											129
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/90">
+												sleuth <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											130
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/47">
+												Z3R0_70_R4D14N7 <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											131
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/174">
+												XoX <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											132
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/184">
+												Sevgillim <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											133
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/21">
+												B44PUJ1_OV3RFL0W <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											134
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/16">
+												Cipherghost <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											135
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/196">
+												cybernix <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											136
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/210">
+												The Ambars <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											137
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/225">
+												nobody <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											138
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/117">
+												nuts <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											139
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/220">
+												hijev <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											140
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/104">
+												OneMan <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											141
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/245">
+												Mercenary <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											142
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/76">
+												KeepX <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											143
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/277">
+												haind <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											144
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/216">
+												Sw4rtz <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											145
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/60">
+												badboys <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											146
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/283">
+												Red_Raven <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											147
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/86">
+												Imp3rator <small class="text-muted" x-text="getRankName(60)"></small>
+
+												
+											</a>
+										</td>
+										<td>60</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											148
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/147">
+												TiStoKaloooooo <small class="text-muted" x-text="getRankName(50)"></small>
+
+												
+											</a>
+										</td>
+										<td>50</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											149
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/192">
+												M0||3Y#31s7 <small class="text-muted" x-text="getRankName(50)"></small>
+
+												
+											</a>
+										</td>
+										<td>50</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											150
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/233">
+												wekkend <small class="text-muted" x-text="getRankName(50)"></small>
+
+												
+											</a>
+										</td>
+										<td>50</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											151
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/262">
+												forfun <small class="text-muted" x-text="getRankName(50)"></small>
+
+												
+											</a>
+										</td>
+										<td>50</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											152
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/292">
+												Sup3r_N0va <small class="text-muted" x-text="getRankName(20)"></small>
+
+												
+											</a>
+										</td>
+										<td>20</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											153
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/290">
+												rabi_m3a_zawali <small class="text-muted" x-text="getRankName(20)"></small>
+
+												
+											</a>
+										</td>
+										<td>20</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											154
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/13">
+												S7VEN <small class="text-muted" x-text="getRankName(20)"></small>
+
+												
+											</a>
+										</td>
+										<td>20</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											155
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/95">
+												SoloWarrior <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											156
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/77">
+												Tsamp <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											157
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/153">
+												HAIDAR <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											158
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/154">
+												!en0ughp3opl3 <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											159
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/65">
+												PersianCats <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											160
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/91">
+												hazaa <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											161
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/123">
+												pwnhup <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											162
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/173">
+												123 <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											163
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/191">
+												haven <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											164
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/198">
+												Team Spiryt <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											165
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/197">
+												Zzzz <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											166
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/30">
+												newbie33 <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											167
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/10">
+												chickens <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											168
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/226">
+												billydot13 <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											169
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/205">
+												Beginner <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											170
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/82">
+												ZeroMarea <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											171
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/239">
+												VarvTeamRep <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											172
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/62">
+												jimenavillanueva <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											173
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/243">
+												abobus <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											174
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/247">
+												Bengt "Bengan" Bengtsson <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											175
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/246">
+												mak47 <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											176
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/48">
+												Asunto Interno <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											177
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/252">
+												azerty <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											178
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/38">
+												Cyb3r_Squad <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											179
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/259">
+												teeeek <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											180
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/265">
+												Wolves <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											181
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/266">
+												Marixianos <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											182
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/268">
+												marlonbrando <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											183
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/272">
+												AlbMinistrator <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											184
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/275">
+												Solo Q <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											185
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/278">
+												Pekora Geng <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											186
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/279">
+												makarov <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											187
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/281">
+												besthero3 <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											188
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/282">
+												root <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											189
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/284">
+												XXAa <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+									<tr>
+										<td class="text-right">
+											
+											190
+										</td>
+										<td>
+											<a href="https://ctfnhack.ctflib.eu/teams/291">
+												PicchiNotBright <small class="text-muted" x-text="getRankName(10)"></small>
+
+												
+											</a>
+										</td>
+										<td>10</td>
+									</tr>
+								
+							</tbody>
+						</table>
+
+					
+				
+			</div>
+
+		</div>
+	</section>
+
+		</div>
+		<!-- /.content-wrapper -->
+
+		<!-- Main Footer -->
+		<footer class="main-footer">
+			<div class="row">
+				<div class="col">
+					<small class="text-muted" title="Click to stop the animation.">ntua-hack@ctflib.eu:~$ echo T01HIFRPIFBJUkU</small>
+				</div>
+				<div class="col text-right">
+					<small class="text-muted">Organised by <a href="https://ieee.ntua.gr/">IEEE NTUA</a> | CTF platform by <a href="https://ecsc.gr/">ecsc.gr</a> &amp; <a href="https://ctflib.eu/">ctflib.eu</a></small>
+				</div>
+			</div>
+		</footer>
+
+	<div id="sidebar-overlay"></div></div>
+	<!-- ./wrapper -->
+
+	<div x-data="">
+	<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 2000; right: 0; bottom: 56px; min-width: 20%;">
+		<div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="10000">
+			<div class="toast-header">
+				<strong class="mr-auto" x-text="$store.toast.title"></strong>
+				<small>just now</small>
+				<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="toast-body" x-html="$store.toast.html"></div>
+		</div>
+	</div>
+</div>
+
+
+<div x-data="">
+	<div class="modal" x-ref="modal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" x-text="$store.modal.title"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p x-html="$store.modal.html"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Got it!</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+	
+
+	
+	<script type="module" src="./NTUA HACK_files/index.e94d2e51.js.download"></script><script type="module" src="./NTUA HACK_files/index.ff911a04.js.download"></script><script type="module" src="./NTUA HACK_files/echarts.7de7c874.js.download"></script><script type="module" src="./NTUA HACK_files/scoreboard.dc46ae2c.js.download"></script>
+
+	
+	<script type="text/javascript">
+		window.addEventListener('load', function() {
+			if (window.Alpine) Alpine.start();
+		});
+	</script>
+
+	
+
+	<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+</div>
+<div class="rozina-footer" disabled=""></div>
+
+<script>
+if (window.location.href == 'https://ctfnhack.ctflib.eu/') {
+    document.getElementsByClassName('rozina-footer')[0].innerHTML = '<section><img src="/files/b8703c35e8ddaafe601f60c94813caa0/cartoon-yeti-secret.png" style="margin-right:90%; margin-bottom:-25em;"></section><section><img src="/files/ab4dde5ef2e6ce0077dd071dc8dfe773/side-igloo-illustration-a30db4.png" style="margin: 50px -30px;"></section>'
+}
+</script>
+
+<!-- Alive Footer -->
+<script type="text/javascript">
+	(function() {
+		const entities = ['vipolus', 'mikev', 'chagi', 'souvlakia', 'babafaba'];
+		const commands = [
+			"sudo apt install %NAME%",
+			'git commit -m "%NAME% was here"',
+			"/bin/bash ./%NAME%.sh",
+			"ssh root@%NAME%.ctf",
+			'node -e "console.log(`%NAME%`)"',
+			"cat ./flag.txt",
+          	"echo T01HIFRPIFBJUkU=",
+            "nc %NAME% 1337"
+		];
+		const footer_elements = document.querySelectorAll('.main-footer .text-muted');
+		footer_elements[1].innerHTML = 'Organised by <a href="https://ieee.ntua.gr/">IEEE NTUA</a> | CTF platform by <a href="https://ecsc.gr/">ecsc.gr</a> & <a href="https://ctflib.eu/">ctflib.eu</a>';
+		let prefix = 'ntua-hack@ctflib.eu:~$ ';
+		const container = footer_elements[0];
+		container.textContent = prefix + ' ';
+      
+		let state = 'del';
+		let word = null;
+		let sleep = 0;
+		function loop() {
+			if (state == 'del') {
+				container.textContent = container.textContent.slice(0, -1);
+				if (container.textContent.length <= prefix.length) {
+					state = 'type';
+					word = getCommand();
+				}
+			}
+			else if (state == 'type') {
+				if (word.length > 0) {
+					container.textContent += word[0];
+					word = word.substr(1);
+				}
+				else {
+					state = 'sleep';
+					sleep = 50;
+				}
+			}
+			else if (state == 'sleep') {
+				sleep--;
+				if (sleep <= 0) {
+					state = 'del';
+				}
+			}
+		}
+		function getCommand() {
+			let entity = entities[Math.floor(Math.random() * entities.length)];
+			let command = commands[Math.floor(Math.random() * commands.length)];
+			return command.replace('%NAME%', entity);
+		}
+
+		let x = setInterval(() => {loop();}, 100);
+		container.addEventListener('click', () => {clearInterval(x);}, false);
+		container.setAttribute('title', 'Click to stop the animation.');
+	})();
+</script>
+
+<!--
+<script>
+  function changeBG() {
+    console.log(1);
+  if (document.querySelectorAll('.dark-mode')[0]) {
+     document.head.innerHTML = document.head.innerHTML + '<style> \
+    .main-panel { \
+  		background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/files/e3f73a6620e24e3a0e001565e329542f/night.png"); \
+  		background-size: cover; \
+  		background-repeat: no-repeat; \
+  		background-position: 30% 30%; \
+  } \
+  </style>';
+  }
+   else {
+    document.head.innerHTML = document.head.innerHTML + '<style> \
+    .main-panel { \
+  		background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("/files/da3fd65d17b62c7f17d7ab5055b4e380/morning.png"); \
+  		background-size: cover; \
+  		background-repeat: no-repeat; \
+  		background-position: 30% 30%; \
+  } \
+  </style>';
+  }
+  }
+  changeBG();
+  const button = document.getElementById('theme-mode-dark'); 
+  button.addEventListener('click', changeBG);
+</script>
+-->
+
+<!-- Local Online Ribbon -->
+<script type="text/javascript">
+	(function() {
+		let brand = document.querySelector('.main-sidebar .brand-link');
+		let brandimg = document.querySelector('.main-sidebar .brand-link .brand-image');
+		if (!brand) return;
+
+		let ribbon = document.createElement('div');
+		ribbon.setAttribute('style', 'position: fixed;background: #b2121d;box-shadow: 0 0 0 999px #b2121d;clip-path: inset(0 -100%);inset: 0 auto auto 0;transform-origin: 100% 0;transform: translate(-29.3%) rotate(-45deg);color: #fff;font-size: 12px;pointer-events: none;text-shadow: 0 0 2px #000;');
+		ribbon.textContent = 'ONLINE';
+
+		brand.appendChild(ribbon);
+		brand.style.textAlign = 'center';
+      	if (brandimg) brandimg.style.marginLeft = '15px';
+	})();
+</script>
+
+
+</body></html>
