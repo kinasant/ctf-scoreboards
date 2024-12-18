@@ -121,5 +121,20 @@
             <td><a href="ctfs/LakeCTF/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2502" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/NTUA_H4CK">NTUA_H4CK</a></td>
+            <td><a href="ctfs/NTUA_H4CK/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2571" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/TSG">TSG</a></td>
+            <td><a href="ctfs/TSG/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2424" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/niteCTF">niteCTF</a></td>
+            <td><a href="ctfs/niteCTF/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2461" target="_blank">CTFtime</a></td>
+        </tr>
     </tbody>
   </table>
