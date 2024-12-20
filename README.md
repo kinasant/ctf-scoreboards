@@ -136,5 +136,10 @@
             <td><a href="ctfs/niteCTF/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2461" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/m0leCon">m0leCon</a></td>
+            <td><a href="ctfs/m0leCon/2024">2024 Beginner</a></td>
+            <td><a href="https://ctftime.org/event/2578" target="_blank">CTFtime</a></td>
+        </tr>
     </tbody>
   </table>
