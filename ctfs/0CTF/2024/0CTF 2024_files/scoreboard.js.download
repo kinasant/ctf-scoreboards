@@ -1,0 +1,254 @@
+function escapeHTML(str) {
+    return document.createElement('span').appendChild(document.createTextNode(str)).parentNode.innerHTML;
+};
+
+function setAnimate() {
+    $('tr.team-rec').each(function (i) {
+        $(this).find("th.done").each(function (j) {
+            setTimeout("$('tr.team-rec').eq(" + i + ").find('th.done').eq(" + j + ").addClass('animated')", 6000 * i + 200 * j);
+        });
+    });
+}
+
+function removeAnimate() {
+    $('tr.team-rec').each(function () {
+        $(this).find("th.done").each(function () {
+            $(this).removeClass('animated');
+        });
+    });
+}
+
+function sortByCate(a, b) {
+    var catesort = {
+        "Pwnable": 0,
+        "Reverse": 1,
+        "Web": 2,
+        "Crypto": 3,
+        "Mobile": 4,
+        "Misc": 5,
+    };
+    return catesort[a['cate']] - catesort[b['cate']];
+}
+
+function sortById(a, b) {
+    return parseInt(a['id']) - parseInt(b['id']);
+}
+
+
+function getcate(a) {
+    return a['cate'];
+}
+
+function unique(tmp) {
+    var re = [tmp[0]];
+
+    for (var i = 1; i < tmp.length; i++) {
+        if (re.indexOf(tmp[i]) < 0) {
+            re.push(tmp[i]);
+        }
+    }
+
+    return re.sort(sortByCate);
+}
+
+var update_scoreboard = function () {
+    if (typeof scoreboard_data_uri == "undefined") {
+        scoreboard_data_uri = "./data/scoreboard.json";
+    }
+    $.ajax({
+        url: scoreboard_data_uri + "?r=" + Math.random(),
+        dataType: "json",
+        async: false,
+        success: function (data) {
+            var problems = data['problems'].sort(sortByCate);
+            var problems_position = [];
+            var teams = data['teams'];
+
+            var categories = unique(problems.map(getcate));
+
+            thead_tr_hide = '<th class="scoreboard_flag"></th>' +
+                '<th class="team_name"></th>' +
+                '<th class="total_score"></th>';
+
+            thead_tr0 = '<th class="rotated thead_tr0"><div></div></th>' +
+                '<th class="rotated thead_tr0 team_name"><div></div></th>' +
+                '<th class="rotated total_score thead_tr0"><div class="top-border left-border right-border"></div></th>';
+
+            thead_tr = '<th class="rotated"><div class="rotated-left-edge"></div></th>' +
+                '<th class="rotated team_name"><div class="rotated-left-edge"></div></th>' +
+                '<th class="rotated total_score"><div class="left-border right-border no-top-border"><span>Total Score</span></div></th>';
+
+            thead_tr_score = '';
+
+            // resort problems
+            var k = 0;
+            var tmps = [];
+            var problems_tmp = []
+            var problems_position = [];
+            for (var i = 0; i < problems.length; i++) {
+                if (problems[i]['cate'] != categories[k]) {
+                    k += 1;
+                    tmps.sort(sortById);
+                    problems_tmp = problems_tmp.concat(tmps);
+                    tmps = [];
+                }
+                tmps.push(problems[i]);
+            }
+            tmps.sort(sortById);
+            problems_tmp = problems_tmp.concat(tmps);
+
+            tmps = []
+            problems = []
+
+            problems = problems_tmp;
+
+            function sortByPos(a, b) {
+                return problems_position[parseInt(a)] - problems_position[parseInt(b)];
+            }
+
+            var k = 0;
+            var n = 0;
+            var sub_score = 0;
+            var total_score = 0;
+            for (var i = 0; i < problems.length; i++) {
+
+                n += 1;
+
+                problems_position[problems[i]['id']] = i;
+
+                if (problems[i]['cate'] != categories[k]) {
+                    thead_tr0 += '<th class="rotated thead_tr0" colspan=' + n + ' style="width: ' + (n * 40 + 15) + 'px"><div class="top-border right-border"><span>' + categories[k] + '</span></div></th>';
+
+                    thead_tr_hide += '<th class="sub_score"></th>';
+                    thead_tr += '<th class="rotated sub_score"><div class="right-border no-top-border"><span>Score</span></div></th>';
+                    thead_tr_score += '<th class="sub_score right-border top-border scoreboard_score">' + sub_score + '</th>';
+
+                    n = 1;
+                    sub_score = 0;
+                    k += 1;
+                }
+
+                total_score += parseInt(problems[i].score);
+                sub_score += parseInt(problems[i].score);
+
+                thead_tr_hide += '<th class="scoreboard_flag"></th>';
+                thead_tr += '<th class="rotated scoreboard_flag"><div><a href="./task#task-' + problems[i].id + '"><span>' + (problems[i].title) + '</span></a></div></th>';
+                thead_tr_score += '<th class="scoreboard_flag right_border top-border scoreboard_score">' + parseInt(problems[i].score) + '</th>';
+            }
+
+            n += 1;
+            thead_tr0 += '<th class="rotated thead_tr0" colspan=' + n + ' style="width: ' + (n * 40 + 15) + 'px"><div class="top-border right-border"><span>' + categories[k] + '</span></div></th>';
+            thead_tr0 += '<th class="rotated total_time thead_tr0"></th>';
+
+            thead_tr_hide += '<th class="sub_score"></th>';
+            thead_tr_hide += '<th class="total_time"></th>';
+
+            thead_tr += '<th class="rotated sub_score"><div class="right-border no-top-border"><span>Score</span></div></th>';
+            thead_tr += '<th class="rotated total_time"></th>';
+
+            thead_tr_score += '<th class="sub_score right-border top-border scoreboard_score">' + sub_score + '</th>';
+            thead_tr_score += '<th class="total_time right_boarde top-border"><div><span>Total Time</span></div></th>';
+
+            thead_tr_score = '<th class="top-border"><div class="rotated-left-edge"></div></th>' +
+                '<th class="team_name top-border"><div class="rotated-left-edge">Team</div></th>' +
+                '<th class="total_score left-border right-border top-border scoreboard_score">' + total_score + '</th>' +
+                thead_tr_score;
+
+            if (problems.length > 0) {
+                $("#scoreboard thead tr#scoreboard_header_hide").html(thead_tr_hide);
+                $("#scoreboard thead tr#scoreboard_header0").html(thead_tr0);
+                $("#scoreboard thead tr#scoreboard_header").html(thead_tr);
+                $("#scoreboard thead tr#scoreboard_header_score").html(thead_tr_score);
+            }
+
+            thead_tr_hide = ''
+            thead_tr0 = ''
+            thead_tr = ''
+            thead_tr_score = ''
+
+            var entries = '';
+
+            for (var i = 0; i < teams.length; i++) {
+
+                for (var j = 0; j < categories.length; j++) {
+                    teams[i][categories[j]] = 0;
+                }
+
+                for (var j = 0; j < teams[i]['solved'].length; j++) {
+                    var tmp;
+                    tmp = problems[problems_position[teams[i]['solved'][j]]];
+                    teams[i][tmp["cate"]] += parseInt(tmp["score"]);
+                }
+
+                entries += '<tr class="team-rec scoreboard_row">';
+                entries += '<td class="scoreboard_rank">' + teams[i]["rank"] + '</td>';
+                entries += '<td class="scoreboard_name" width="150px"><b>' + teams[i]["username"] + '</b></td>';
+                entries += '<td class="scoreboard_score right-border left-border">' + teams[i]["score"] + '</td>';
+
+                var t = 0;
+                var k = 0;
+
+                teams[i]['solved'].sort(sortByPos);
+
+                for (var j = 0; j < problems.length; j++) {
+                    var found = false;
+
+                    if (problems[j]['cate'] != categories[t]) {
+                        entries += '<td class="right-border scoreboard_score">' + teams[i][categories[t]] + '</td>';
+                        t += 1;
+                    }
+
+                    if ((k < teams[i]['solved'].length) && (problems[j]['id'] == teams[i]['solved'][k])) {
+                        if (problems[j]['fb'] == teams[i].id) {
+                            entries += '<td class="scoreboard_flag team-chall first_blood"><span class="fa fa-flag" data-toggle="tooltip" title="' + problems[j].title + '"></span></td>';
+                        } else {
+                            entries += '<td class="scoreboard_flag team-chall"><span class="fa fa-flag" data-toggle="tooltip" title="' + problems[j].title + '"></span></td>';
+                        }
+                        k += 1;
+                    } else {
+                        entries += '<td class="undone"></td>';
+                    }
+                }
+                entries += '<td class="right-border scoreboard_score">' + teams[i][categories[t]] + '</td>';
+
+                entries += '<td class="team-rec scoreboard_score total_time right_border">' + escapeHTML(teams[i]["total"]) + '</td>';
+                entries += '</tr>';
+            }
+            $("#scoreboard tbody").html(entries);
+            $("#last_update").text("Last update time: " + UTCtoDate(data['last_update']));
+
+            entries = ''
+        }
+    });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    setAnimate();
+};
+
+
+// recalculate the position of the title
+var recal_title = function () {
+    if (navigator.userAgent.indexOf('Chrome') >= 0) {
+        $(".table-header-rotated th.rotated.thead_tr0>div").css("left", "-15.5px");
+    }
+}
+
+
+// recalculate the wedth of the page
+var recalculate_width = function () {
+    var MainContentWidth = document.getElementById('main-content').clientWidth;
+    var ScoreboardWidth = document.getElementById('scoreboard').clientWidth;
+    var SidebarWidth = document.getElementById('sidebar').clientWidth;
+    if (MainContentWidth < ScoreboardWidth) {
+        $("body").width(ScoreboardWidth + SidebarWidth + 50);
+    }
+}
+
+update_scoreboard();
+recal_title();
+recalculate_width();
+
+setInterval(update_scoreboard, 30000);
+setInterval(recal_title, 30000);
+setInterval(recalculate_width, 30000);

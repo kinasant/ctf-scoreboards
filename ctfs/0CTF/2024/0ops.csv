@@ -1,0 +1,188 @@
+Position,name,points,challenge,Total Time
+1,Friendly Maltese Citizens,10221,"{'challenge_name': ['IP Management System', 'how2link', 'EzLogic', 'EzLUTs', 'EzRegs', 'P-nodes', 'kubevirt', 'CloudDrive', 'Recruitment', 'PBX', 'secureweb', 'Signin', 'ZKPQC 2', 'dbot', 'SecEnc', 'Numbers', 'Recite', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Reverse', 'Reverse', 'Reverse', 'Reverse', 'Web', 'Web', 'Web', 'Web', 'Web', 'Crypto', 'Crypto', 'Crypto', 'Misc', 'Misc', 'Misc', 'Misc'], 'challenge_points': ['407', '611', '141', '392', '687', '647', '846', '733', '523', '1000', '611', '458', '785', '550', '846', '70', '785', '129']}",753293
+2,r3kapig,8125,"{'challenge_name': ['IP Management System', 'how2link', 'EzLogic', 'EzLUTs', 'P-nodes', 'CloudDrive', 'Recruitment', 'secureweb', 'ZKPQC 1', 'Signin', 'ZKPQC 2', 'dbot', 'GasSaver', 'Numbers', 'Recite', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Reverse', 'Reverse', 'Reverse', 'Web', 'Web', 'Web', 'Crypto', 'Crypto', 'Crypto', 'Crypto', 'Misc', 'Misc', 'Misc', 'Misc'], 'challenge_points': ['407', '611', '141', '392', '647', '733', '523', '611', '550', '458', '785', '550', '733', '70', '785', '129']}",748159
+3,Never Stop Exploiting,7477,"{'challenge_name': ['IP Management System', 'how2link', 'EzLogic', 'EzLUTs', 'EzRegs', 'P-nodes', 'CloudDrive', 'Recruitment', 'secureweb', 'Signin', 'dbot', 'GasSaver', 'Numbers', 'Recite', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Reverse', 'Reverse', 'Reverse', 'Reverse', 'Web', 'Web', 'Web', 'Crypto', 'Crypto', 'Misc', 'Misc', 'Misc', 'Misc'], 'challenge_points': ['407', '611', '141', '392', '687', '647', '733', '523', '611', '458', '550', '733', '70', '785', '129']}",989828
+4,Blue Water,6490,"{'challenge_name': ['IP Management System', 'how2link', 'EzLogic', 'EzLUTs', 'EzRegs', 'P-nodes', 'kubevirt', 'Recruitment', 'Signin', 'GasSaver', 'SecEnc', 'Numbers', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Reverse', 'Reverse', 'Reverse', 'Reverse', 'Web', 'Web', 'Crypto', 'Misc', 'Misc', 'Misc', 'Misc'], 'challenge_points': ['407', '611', '141', '392', '687', '647', '846', '523', '458', '733', '846', '70', '129']}",722360
+5,Gimel,3524,"{'challenge_name': ['EzLogic', 'EzLUTs', 'CloudDrive', 'secureweb', 'GasSaver', 'Recite', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Web', 'Web', 'Misc', 'Misc', 'Misc'], 'challenge_points': ['141', '392', '733', '611', '733', '785', '129']}",554221
+6,Kalmarunionen,3287,"{'challenge_name': ['EzLogic', 'CloudDrive', 'ZKPQC 1', 'Signin', 'ZKPQC 2', 'dbot', 'Numbers'], 'challenge_category': ['Reverse', 'Web', 'Crypto', 'Crypto', 'Crypto', 'Crypto', 'Misc'], 'challenge_points': ['141', '733', '550', '458', '785', '550', '70']}",614421
+7,Nu1L,3023,"{'challenge_name': ['EzLogic', 'EzLUTs', 'ZKPQC 1', 'Signin', 'dbot', 'GasSaver', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Crypto', 'Crypto', 'Crypto', 'Misc', 'Misc', 'Misc'], 'challenge_points': ['141', '392', '550', '458', '550', '733', '70', '129']}",460796
+8,Maple Bacon,2732,"{'challenge_name': ['how2link', 'EzLogic', 'P-nodes', 'Recruitment', 'secureweb', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Reverse', 'Web', 'Web', 'Misc', 'Misc'], 'challenge_points': ['611', '141', '647', '523', '611', '70', '129']}",378841
+9,FluxFingers,2712,"{'challenge_name': ['EzLogic', 'EzLUTs', 'kubevirt', 'Recruitment', 'secureweb', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Web', 'Web', 'Web', 'Misc', 'Misc'], 'challenge_points': ['141', '392', '846', '523', '611', '70', '129']}",277495
+10,SPRUSH,2473,"{'challenge_name': ['IP Management System', 'EzLogic', 'EzLUTs', 'EzRegs', 'P-nodes', 'Numbers', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Reverse', 'Reverse', 'Reverse', 'Misc', 'Misc'], 'challenge_points': ['407', '141', '392', '687', '647', '70', '129']}",352127
+11,Thehackerscrew,2305,"{'challenge_name': ['IP Management System', 'EzLogic', 'ZKPQC 1', 'Signin', 'dbot', 'Numbers', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Crypto', 'Crypto', 'Crypto', 'Misc', 'Misc'], 'challenge_points': ['407', '141', '550', '458', '550', '70', '129']}",426562
+12,organizers,2128,"{'challenge_name': ['EzLogic', 'EzLUTs', 'ZKPQC 1', 'SecEnc', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Crypto', 'Misc', 'Misc', 'Misc'], 'challenge_points': ['141', '392', '550', '846', '70', '129']}",510628
+13,srdnlen,2063,"{'challenge_name': ['EzLogic', 'Signin', 'ZKPQC 2', 'dbot', 'Survey'], 'challenge_category': ['Reverse', 'Crypto', 'Crypto', 'Crypto', 'Misc'], 'challenge_points': ['141', '458', '785', '550', '129']}",190577
+14,Aqua Cat,1832,"{'challenge_name': ['EzLogic', 'EzLUTs', 'ZKPQC 1', 'dbot', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Crypto', 'Crypto', 'Misc', 'Misc'], 'challenge_points': ['141', '392', '550', '550', '70', '129']}",341897
+15,More Smoked Leet Chicken,1830,"{'challenge_name': ['EzLogic', 'secureweb', 'ZKPQC 1', 'Signin', 'Numbers'], 'challenge_category': ['Reverse', 'Web', 'Crypto', 'Crypto', 'Misc'], 'challenge_points': ['141', '611', '550', '458', '70']}",322875
+16,about:blankets,1689,"{'challenge_name': ['IP Management System', 'EzLogic', 'EzLUTs', 'ZKPQC 1', 'Numbers', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Reverse', 'Crypto', 'Misc', 'Misc'], 'challenge_points': ['407', '141', '392', '550', '70', '129']}",420264
+17,ASIS,1419,"{'challenge_name': ['EzLogic', 'EzLUTs', 'EzRegs', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '392', '687', '70', '129']}",300391
+18,NotATeam,1419,"{'challenge_name': ['EzLogic', 'EzLUTs', 'EzRegs', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '392', '687', '70', '129']}",259438
+19,mode13h,1379,"{'challenge_name': ['EzLogic', 'EzLUTs', 'P-nodes', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '392', '647', '70', '129']}",300184
+20,Wanna.W1n,1297,"{'challenge_name': ['IP Management System', 'EzLogic', 'dbot', 'Numbers', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Crypto', 'Misc', 'Misc'], 'challenge_points': ['407', '141', '550', '70', '129']}",210966
+21,xlr8or,1273,"{'challenge_name': ['how2link', 'EzLogic', 'EzLUTs', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Reverse', 'Misc'], 'challenge_points': ['611', '141', '392', '129']}",255161
+22,jinmo123,1222,"{'challenge_name': ['how2link', 'secureweb'], 'challenge_category': ['Reverse', 'Web'], 'challenge_points': ['611', '611']}",196754
+23,TokyoWesterns,1219,"{'challenge_name': ['EzLogic', 'ZKPQC 1', 'Signin', 'Numbers'], 'challenge_category': ['Reverse', 'Crypto', 'Crypto', 'Misc'], 'challenge_points': ['141', '550', '458', '70']}",204081
+24,our team name was stolen,1126,"{'challenge_name': ['EzLogic', 'EzLUTs', 'Recruitment', 'Numbers'], 'challenge_category': ['Reverse', 'Reverse', 'Web', 'Misc'], 'challenge_points': ['141', '392', '523', '70']}",252187
+25,WE_0WN_Y0U,940,"{'challenge_name': ['IP Management System', 'EzLogic', 'EzLUTs'], 'challenge_category': ['Pwnable', 'Reverse', 'Reverse'], 'challenge_points': ['407', '141', '392']}",344560
+26,Hack@Sec,749,"{'challenge_name': ['ZKPQC 1', 'Numbers', 'Survey'], 'challenge_category': ['Crypto', 'Misc', 'Misc'], 'challenge_points': ['550', '70', '129']}",183368
+27,Syclover,747,"{'challenge_name': ['IP Management System', 'EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Misc', 'Misc'], 'challenge_points': ['407', '141', '70', '129']}",218629
+28,78,747,"{'challenge_name': ['IP Management System', 'EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Misc', 'Misc'], 'challenge_points': ['407', '141', '70', '129']}",281568
+29,valgrind,747,"{'challenge_name': ['IP Management System', 'EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Misc', 'Misc'], 'challenge_points': ['407', '141', '70', '129']}",321581
+30,S1uM4i,732,"{'challenge_name': ['EzLogic', 'EzLUTs', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '392', '70', '129']}",258278
+31,MilanFensi,722,"{'challenge_name': ['Recruitment', 'Numbers', 'Survey'], 'challenge_category': ['Web', 'Misc', 'Misc'], 'challenge_points': ['523', '70', '129']}",118893
+32,(l00p3r1n0;cat) > fs0c13ty,722,"{'challenge_name': ['Recruitment', 'Numbers', 'Survey'], 'challenge_category': ['Web', 'Misc', 'Misc'], 'challenge_points': ['523', '70', '129']}",231240
+33,0psu3,677,"{'challenge_name': ['IP Management System', 'EzLogic', 'Survey'], 'challenge_category': ['Pwnable', 'Reverse', 'Misc'], 'challenge_points': ['407', '141', '129']}",100537
+34,AAA,669,"{'challenge_name': ['EzLogic', 'Signin', 'Numbers'], 'challenge_category': ['Reverse', 'Crypto', 'Misc'], 'challenge_points': ['141', '458', '70']}",89716
+35,ctf_b33r_ctf,664,"{'challenge_name': ['EzLogic', 'Recruitment'], 'challenge_category': ['Reverse', 'Web'], 'challenge_points': ['141', '523']}",293841
+36,noteam,611,"{'challenge_name': ['how2link'], 'challenge_category': ['Reverse'], 'challenge_points': ['611']}",108913
+37,emmmmmm2024,606,"{'challenge_name': ['IP Management System', 'Numbers', 'Survey'], 'challenge_category': ['Pwnable', 'Misc', 'Misc'], 'challenge_points': ['407', '70', '129']}",53462
+38,The Flat Network Society,599,"{'challenge_name': ['EzLogic', 'Signin'], 'challenge_category': ['Reverse', 'Crypto'], 'challenge_points': ['141', '458']}",68697
+39,Infobahn,593,"{'challenge_name': ['Recruitment', 'Numbers'], 'challenge_category': ['Web', 'Misc'], 'challenge_points': ['523', '70']}",181794
+40,CoSGang,550,"{'challenge_name': ['dbot'], 'challenge_category': ['Crypto'], 'challenge_points': ['550']}",68332
+41,SleepyHollow,548,"{'challenge_name': ['IP Management System', 'EzLogic'], 'challenge_category': ['Pwnable', 'Reverse'], 'challenge_points': ['407', '141']}",169078
+42,M53,528,"{'challenge_name': ['Signin', 'Numbers'], 'challenge_category': ['Crypto', 'Misc'], 'challenge_points': ['458', '70']}",78068
+43,PPP,477,"{'challenge_name': ['IP Management System', 'Numbers'], 'challenge_category': ['Pwnable', 'Misc'], 'challenge_points': ['407', '70']}",58363
+44,Crystals,458,"{'challenge_name': ['Signin'], 'challenge_category': ['Crypto'], 'challenge_points': ['458']}",18694
+45,cielo,407,"{'challenge_name': ['IP Management System'], 'challenge_category': ['Pwnable'], 'challenge_points': ['407']}",59756
+46,bup11f,340,"{'challenge_name': ['EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '70', '129']}",82309
+47,The Few Chosen,340,"{'challenge_name': ['EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '70', '129']}",260087
+48,bl4ck0u7,340,"{'challenge_name': ['EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '70', '129']}",43167
+49,pwnagaukar,340,"{'challenge_name': ['EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '70', '129']}",145837
+50,Imagine Losing :(,340,"{'challenge_name': ['EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '70', '129']}",38736
+51,Zurna,340,"{'challenge_name': ['EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '70', '129']}",189439
+52,siginthq,340,"{'challenge_name': ['EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '70', '129']}",123763
+53,newline,340,"{'challenge_name': ['EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '70', '129']}",58075
+54,Phish Paprikaš,340,"{'challenge_name': ['EzLogic', 'Numbers', 'Survey'], 'challenge_category': ['Reverse', 'Misc', 'Misc'], 'challenge_points': ['141', '70', '129']}",91889
+55,xSTF,270,"{'challenge_name': ['EzLogic', 'Survey'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '129']}",63800
+56,Team ATTckers,270,"{'challenge_name': ['EzLogic', 'Survey'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '129']}",63398
+57,BKISC,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",6979
+58,Honey_badger,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",23515
+59,L-team,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",46250
+60,BITSkrieg,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",41703
+61,h3ckm3ck,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",37606
+62,noreply,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",51946
+63,bi0s,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",66605
+64,Ganesh,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",59067
+65,CyKor,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",101590
+66,TRX,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",107706
+67,Phreaks 2600,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",118617
+68,Ph4nt0m Tr0up3,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",126062
+69,World Wide Flags,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",121742
+70,Team Enu,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",126830
+71,Nepnep,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",183752
+72,bearmoon,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",114983
+73,MeowWare,211,"{'challenge_name': ['EzLogic', 'Numbers'], 'challenge_category': ['Reverse', 'Misc'], 'challenge_points': ['141', '70']}",225229
+74,commander,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",18714
+75,CyberCh1ck,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",140910
+76,CP_Z3R0,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",68436
+77,QwerQ,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",138639
+78,JKKNIU Team Alpha,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",53207
+79,SSM,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",12689
+80,NextRoot,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",54496
+81,hack_tuah,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",56355
+82,Calcu404matics,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",22250
+83,CyberDefenders,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",31455
+84,1ntrud3rs,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",102954
+85,D'SCRINTER,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",57282
+86,Z0D1AC,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",29136
+87,A_I_,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",187860
+88,Squid Proxy Lovers,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",70037
+89,Black Bauhinia,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",51034
+90,P2P Academy,199,"{'challenge_name': ['Numbers', 'Survey'], 'challenge_category': ['Misc', 'Misc'], 'challenge_points': ['70', '129']}",115171
+91,test123456,141,"{'challenge_name': ['EzLogic'], 'challenge_category': ['Reverse'], 'challenge_points': ['141']}",6414
+92,R1s,141,"{'challenge_name': ['EzLogic'], 'challenge_category': ['Reverse'], 'challenge_points': ['141']}",32698
+93,MK37,141,"{'challenge_name': ['EzLogic'], 'challenge_category': ['Reverse'], 'challenge_points': ['141']}",38889
+94,Z3R0_70_R4D14N7,141,"{'challenge_name': ['EzLogic'], 'challenge_category': ['Reverse'], 'challenge_points': ['141']}",42144
+95,Explo1t,141,"{'challenge_name': ['EzLogic'], 'challenge_category': ['Reverse'], 'challenge_points': ['141']}",45696
+96,ELT,141,"{'challenge_name': ['EzLogic'], 'challenge_category': ['Reverse'], 'challenge_points': ['141']}",61394
+97,Wade,141,"{'challenge_name': ['EzLogic'], 'challenge_category': ['Reverse'], 'challenge_points': ['141']}",86778
+98,Les touristes,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",380
+99,ABC,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",613
+100,ctfrrteam,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",4440
+101,Gon_Tanaka,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",4566
+102,pcman,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",5231
+103,skulobasket,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",6829
+104,pwnlentoni,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",11987
+105,Pixel perfect,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",13576
+106,Saaams,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",13837
+107,Chocolitos del Tiempo,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",14277
+108,BIT,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",17656
+109,TC0q,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",21662
+110,H⌀meLe$$,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",23038
+111,Spoof _Troop,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",33385
+112,0ops{F1ag_1s_H3re},129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",33759
+113,LoveFromMimic,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",38425
+114,Coney Island Arcade,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",39593
+115,QU5PTUFMWQ==,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",39880
+116,xryasnoy,129,"{'challenge_name': ['Survey'], 'challenge_category': ['Misc'], 'challenge_points': ['129']}",43101
+117,No module name,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",3516
+118,Espionage,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",4581
+119,0xfun,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",5142
+120,b01lers,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",7503
+121,r00t,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",8238
+122,HyperSpectrum,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",9015
+123,C4AliceMyth,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",9262
+124,0x8pwn,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",9278
+125,cck,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",10127
+126,potarai,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",10716
+127,4NI_Pr0fil3,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",10728
+128,Scr1w,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",14206
+129,Just For The Questions,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",14372
+130,nickbourbaki,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",15828
+131,xxxx,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",16421
+132,rice cooker,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",17651
+133,skibiDiDiOS,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",18208
+134,stalk,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",18244
+135,Ripe Rice,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",20095
+136,Bushwhackers,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",20575
+137,SiBears,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",21590
+138,Pwnus,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",24989
+139,TaipanByte,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",25095
+140,MOMHACKERS,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",25097
+141,Dominus,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",25204
+142,Caliphal Hounds,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",30786
+143,M1tM,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",33102
+144,PwnSEc,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",33529
+145,NYUSEC,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",34418
+146,f4n_n3r0,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",36114
+147,Lullaby,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",36427
+148,ROIS,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",37007
+149,Y@o,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",37272
+150,Kuastro,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",37283
+151,正规子群,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",37576
+152,YR,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",42446
+153,1753c,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",44659
+154,Bit Busters,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",45063
+155,hihi,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",45476
+156,wgpsec,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",45790
+157,0093,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",47182
+158,CrémeTartinéFabuleuse,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",47215
+159,Ch4kr4vyuh,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",47418
+160,CYBERSQD,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",49092
+161,patch_N0tes,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",50126
+162,ATS,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",50167
+163,0xdeada1u5,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",51851
+164,CyberZone,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",52987
+165,N0_SIGNAL,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",54443
+166,EvilBunnyWrote,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",54935
+167,C1ph3rb0t,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",55855
+168,bury_at_p1c0ctf,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",58074
+169,Kava Bar Strobe Party,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",58090
+170,ethan.benyayer@ecole2600.com,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",63587
+171,MaguenCTF,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",63897
+172,r4c00ns,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",64303
+173,Zero Day Warriors,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",67595
+174,p0pk1,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",70512
+175,H4xor_Hunters,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",75234
+176,m1nt4l1ty,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",76723
+177,sayonara,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",87640
+178,Ya3tik Essa7a,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",87772
+179,Phr34k$,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",88462
+180,bobi,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",89108
+181,IceCliffs,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",91338
+182,Oc,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",110005
+183,Rethyme,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",116977
+184,h0n3y_b4gg3r5,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",120906
+185,THUcool4u,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",125919
+186,HWALBIN,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",137589
+187,侍,70,"{'challenge_name': ['Numbers'], 'challenge_category': ['Misc'], 'challenge_points': ['70']}",149870
