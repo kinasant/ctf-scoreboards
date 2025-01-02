@@ -1,0 +1,273 @@
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min
+}
+
+function formatDate(d, withTZ=true){
+    var pad = function(n){
+        return  n >= 10 ? n : '0' + n
+    }
+    var ts = function(d){
+        var h = Math.floor(Math.abs(d.getTimezoneOffset())/60)
+
+        return pad(h) + ':' + pad(Math.abs(d.getTimezoneOffset()) - h * 60)
+    }
+
+    var s = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +  ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes())
+
+    if (withTZ){
+        s += ' UTC' + (d.getTimezoneOffset() <= 0 ? '+' : '-') + ts(d)
+    }
+    return s
+}
+
+function confirmExit() {
+    return "Flag submission in progress. Are you sure, you want to close?";
+}
+
+function pow(form){
+    $('#progress-container').show()
+    $('#flag-submit-form').hide()
+    var flag = document.getElementById('inputFlag').value.trim();
+    var salt = document.getElementById('salt').value;
+    var myWorker = new Worker('/assets/js/worker.js?8');
+
+    myWorker.onmessage = function(e) {
+        if(e.data.type == 'progress'){
+            $('#progress-bar').css('width', e.data.data + '%');
+        } else if(e.data.type == 'done') {
+            document.getElementById('inputFlag').value = e.data.data;
+            window.onbeforeunload = null;
+            form.submit();
+            myWorker.terminate();
+        }
+    }
+
+    window.onbeforeunload = confirmExit;
+    myWorker.postMessage({flag: flag, salt: salt});
+    return false;
+}
+
+$(function() {
+    $('#zero-day-policy').on('click', function(){
+        alert('Be aware that any exploits you send to our network should be considered burned. If you think you may have used an unintended vulnerability, please let us know, and we will attempt to coordinate disclosure with you. However, either way, we reserve the right to report any critical bugs in third-party software that we become aware of. Please keep this in mind when conversing with our servers.');
+        return false;
+    });
+
+    $('#dragon-sector-mode').on('click', function(){
+        let found = false;
+        $('.team-table').find('tr').each(function(i, e) {
+            if(! found && e.innerHTML.includes('>Dragon Sector</a>')){
+                $('.team-table').css('transform', 'rotate(180deg) scaleX(-1)');
+                found = true;
+                return;
+            }
+            if(found) {
+                e.remove();
+            }
+        });
+        return false;
+    });
+    if(new Date('2024-12-27T23:59:51.337+01:00') < Date.now()){
+        $('#dragon-sector-mode').removeClass('hidden');
+    }
+
+
+    $('.timestamp').each(function(i, e){
+        e.title = e.innerText
+        e.innerText = formatDate(new Date(e.attributes['data-time'].value), false)
+    })
+
+    $('#flag-submit-form').on('submit', function(){
+        return pow(this);
+    });
+
+    if($("#category_chart").length > 0) {
+        var ctx = document.getElementById("category_chart");
+
+        var ccLabels = $("#category_chart").attr("data-ccLabels").split(",").filter(function(n){ return n != "" });
+        var ccData1 = $("#category_chart").attr("data-ccData1").split(",").filter(function(n){ return n != "" });
+        var ccData2 = $("#category_chart").attr("data-ccData2").split(",").filter(function(n){ return n != "" });
+
+
+        new Chartist.Bar('#category_chart', {
+          labels: ccLabels,
+          series: [
+            ccData1,
+            ccData2
+          ]
+        }, {
+          stackBars: true
+        }).on('draw', function(data) {
+          if(data.type === 'bar') {
+            data.element.attr({
+              style: 'stroke-width: 30px'
+            });
+          }
+        });
+    }
+
+    function updateNewsTimes(){
+        var newsItems = document.querySelectorAll('.news-time');
+        newsItems.forEach(function(n){
+            var ts = countdown(new Date(n.dataset.time), undefined, countdown.HOURS | countdown.MINUTES);
+            if (ts.hours > 0){
+                n.innerText = ts.hours + 'h' + (ts.minutes < 10 ? ('0'+ ts.minutes) : ts.minutes ) + 'm ago';
+            }
+            else {
+                n.innerText = ts.minutes + 'm ago';
+            }
+        })
+    }
+    setInterval(function(){
+        updateNewsTimes()
+    }, 1000);
+
+    if($("#timer").length) {
+        var timer = document.getElementById('timer');
+        var startTime = new Date(timer.dataset.startTime);
+        var endTime = new Date(timer.dataset.endTime);
+        var duration = countdown(startTime, endTime, undefined, 2);
+
+        var endTimerId = null;
+
+        var startLink = '<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=' + encodeURI('Start of the ' + timer.dataset.title) + '&iso=' + timer.dataset.startTime + '">' + formatDate(startTime)  + '</a>'
+        var endLink = '<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=' + encodeURI('End of the ' + timer.dataset.title) + '&iso=' + timer.dataset.endTime + '">' + formatDate(endTime) + '</a>'
+
+        var startTimerId = countdown(startTime, function (ts) {
+            if (ts.value < 0) { // ctf hasn't started
+                timer.innerHTML = 'The CTF will start at <b>' + startLink + '</b> (<b>in ' + ts.toHTML() + '</b>)<br>and will last for <b>' + duration + '</b> (so it will end <b>' + endLink + '</b>)';
+            }
+            else { // ctf has started
+                window.clearInterval(startTimerId);
+                if (endTimerId === null) {
+                    endTimerId = countdown(new Date(timer.dataset.endTime), function (ts) {
+                        if (ts.value < 0) { // ctf is running
+                            timer.innerHTML = 'The CTF is <b>running</b> till <b>' + endLink + '</b> (for <b>' + ts.toString() + '</b>)';
+                        }
+                        else { // ctf is over
+                            window.clearInterval(endTimerId);
+                            timer.innerHTML = 'The CTF is over, thanks for playing! hxp <3 you! 😊';
+                        }
+                    }, undefined, 2);
+                }
+            }
+        }, undefined, 2);
+    }
+
+    if(document.querySelector('#connection_mirrors')) {
+        var ul = document.querySelector('#connection_mirrors');
+        for (var i = ul.children.length; i >= 0; i--) {
+            ul.appendChild(ul.children[Math.random() * i | 0]);
+        }
+    }
+
+    const MIN_UPDATE_DURATION = 6*60*1000
+    const MAX_UPDATE_DURATION = 10*60*1000
+    const COOKIE_READNEWS = 'r'
+    var newsHTMLBackup = $('#newsbox').html() //keep IRC header
+    var titleBackup = document.title
+    var currentNews = null //currently modal news!
+    var bc = null
+    var bcClose = null
+    var allNews= null // last response from the server
+
+    // I use cookies instead of LocalStorage, because of bugs in Firefox - https://bugzilla.mozilla.org/show_bug.cgi?format=default&id=1453699
+    // The cookie contains read news ids : [1, 2, 3]
+    if(!docCookies.hasItem(COOKIE_READNEWS)) {
+        docCookies.setItem(COOKIE_READNEWS, "[]", Infinity, "/")
+    }
+
+    var updateNewsModal = function(readNews){
+        var current = allNews.filter(function(e){
+            return $.inArray(e.Id, readNews) === -1
+        })
+        currentNews = current.map(function(e){
+            return e.Id
+        })
+        var s = current.map(function(e){
+            return e.Text
+        }).join('<br>')
+
+
+        $('#newNewsBody').html(s)
+        updateNewsTimes()
+
+        if(s.length > 0){
+            $('#exampleModalCenter').modal('show')
+            document.title = "⚠️ New News ⚠️"
+        }
+        else {
+            $('#exampleModalCenter').modal('hide')
+            document.title = titleBackup
+        }
+    }
+
+    if ('BroadcastChannel' in self) {
+        bcClose = new BroadcastChannel('close')
+        bcClose.onmessage = function (e) {
+            console.log('Other tab marked news as read')
+            updateNewsModal(e.data)
+        }
+    } else {
+        setInterval(function(){ // Cookies have no event api, so we poll
+            updateNewsModal(JSON.parse(docCookies.getItem(COOKIE_READNEWS)))
+        }, 1000)
+    }
+
+    $('.modal-close').on('click', function (e) {
+        var readNews = JSON.parse(docCookies.getItem(COOKIE_READNEWS)).concat(currentNews)
+        docCookies.setItem(COOKIE_READNEWS, JSON.stringify(readNews), Infinity, "/")
+
+        updateNewsModal(readNews)
+
+        if(bcClose != null){
+            bcClose.postMessage(readNews)
+        }
+    })
+
+    // handles array of news both from Ajax and BroadcastChannel
+    var handleData = function(data){
+        allNews = data
+        var s = data.map(function(n){
+            return n.Text
+        }).join('<br>')
+
+        $('#newsbox').html(newsHTMLBackup + s)
+
+        updateNewsModal(JSON.parse(docCookies.getItem(COOKIE_READNEWS)))
+    }
+
+    var updateTimeout = null
+    var update = function(){
+        console.log('Fetching news')
+        var request = new XMLHttpRequest()
+        request.open('GET', '/public/news', true)
+
+        request.onload = function() {
+          if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText)
+            handleData(data)
+
+            if(bc != null){
+                bc.postMessage(data)
+            }
+          }
+        }
+        request.send();
+
+        updateTimeout = setTimeout(update, getRandomArbitrary(MIN_UPDATE_DURATION, MAX_UPDATE_DURATION))
+    }
+
+    if ('BroadcastChannel' in self) { // BroadCastChannel is supported so we share AJAX results with other tabs
+        bc = new BroadcastChannel('news');
+        bc.onmessage = function (e) {
+            console.log('Got data from another tab')
+            handleData(e.data)
+
+            clearTimeout(updateTimeout) // Reschedule pending update
+            updateTimeout = setTimeout(update, getRandomArbitrary(MIN_UPDATE_DURATION, MAX_UPDATE_DURATION))
+        }
+    }
+
+    update()
+})
