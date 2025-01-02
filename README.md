@@ -151,5 +151,26 @@
             <td><a href="ctfs/0CTF/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2448" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/Wargames.MY">Wargames.MY</a></td>
+            <td><a href="ctfs/Wargames.MY/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2597" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/hxp">hxp</a></td>
+            <td><a href="ctfs/hxp/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2437" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/ASIS">ASIS</a></td>
+            <td><a href="ctfs/ASIS/2024">2024 Finals</a></td>
+            <td><a href="https://ctftime.org/event/2403" target="_blank">CTFtime</a></td>
+        </tr>
+                        <tr>
+            <td rowspan=1><a href="ctfs/0xL4ugh">0xL4ugh</a></td>
+            <td><a href="ctfs/0xL4ugh/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2587" target="_blank">CTFtime</a></td>
+        </tr>
+
     </tbody>
   </table>
