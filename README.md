@@ -172,5 +172,5 @@
             <td><a href="https://ctftime.org/event/2587" target="_blank">CTFtime</a></td>
         </tr>
 
-    </tbody>
+  </tbody>
   </table>
