@@ -171,6 +171,11 @@
             <td><a href="ctfs/0xL4ugh/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2587" target="_blank">CTFtime</a></td>
         </tr>
+        <tr>
+            <td rowspan=1><a href="ctfs/IrisCTF">IrisCTF</a></td>
+            <td><a href="ctfs/IrisCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2503/" target="_blank">CTFtime</a></td>
+        </tr>
 
   </tbody>
   </table>
