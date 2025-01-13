@@ -171,6 +171,15 @@
             <td><a href="ctfs/IrisCTF/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2503/" target="_blank">CTFtime</a></td>
         </tr>
-
+              <tr>
+            <td rowspan=1><a href="ctfs/UofTCTF">UofTCTF</a></td>
+            <td><a href="ctfs/UofTCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2570/" target="_blank">CTFtime</a></td>
+        </tr>
+                    <tr>
+            <td rowspan=1><a href="ctfs/Cyberleague">Cyberleague</a></td>
+            <td><a href="ctfs/Cyberleague/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2530/" target="_blank">CTFtime</a></td>
+        </tr>
   </tbody>
   </table>
