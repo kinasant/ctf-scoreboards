@@ -186,5 +186,10 @@
             <td><a href="ctfs/NewYearCTF/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2582/" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/TSCCTF">TSCCTF</a></td>
+            <td><a href="ctfs/TSCCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2598" target="_blank">CTFtime</a></td>
+        </tr>
   </tbody>
   </table>
