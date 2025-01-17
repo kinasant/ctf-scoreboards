@@ -1,0 +1,1 @@
+import{m as t,C as a}from"./index-s9zJgT4T.js";import{g as e,e as i}from"./index-CQcvpVX8.js";import"./echarts-BbVjyU77.js";window.Alpine=t;window.CTFd=a;t.data("ScoreboardDetail",()=>({data:null,async init(){this.data=await a.pages.scoreboard.getScoreboardDetail(10);let o=e(a.config.userMode,this.data);i(this.$refs.scoregraph,o)}}));t.start();
