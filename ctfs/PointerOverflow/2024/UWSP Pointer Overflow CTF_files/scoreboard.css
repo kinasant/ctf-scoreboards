@@ -1,0 +1,429 @@
+html {
+  overflow-y: scroll; }
+  html, html body {
+    height: 100%; 
+	width: 100%;
+}
+    html .full-height {
+      height: 100%;
+      font-size: 12pt; }
+
+.container.full-height {
+  margin-top: -56px;
+  height: 100vh; 
+	width: 100%;
+}
+
+  .row.full-height {
+    padding-top: 56px; }
+    .row.full-height .body-col {
+      padding-top: 1rem; }
+
+body {
+  font-weight: 400; }
+
+  table, .table {
+    font-size: 12pt; }
+
+    .left-sidebar {
+      position: relative;
+      display: flex;
+      flex-direction: column; }
+      .left-sidebar .left-sidebar-background {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        margin-left: -15px;
+        overflow: hidden;
+        top: 0;
+        bottom: 0; }
+
+.btn-delete {
+  display: inline;
+  float: right;
+  margin-top: -39px; }
+
+  .list-group {
+    margin-top: 20px; }
+
+    .right {
+      float: right; }
+
+      .panel-heading .right {
+        margin-top: -2em; }
+        .panel-heading .btn {
+          font-size: 150%; }
+
+.challenge .solved {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  display: inline-block; }
+
+  .challenge-table {
+    font-size: 16px; }
+    .challenge-table .btn {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-right: 10px; }
+      .challenge-table .btn.btn-xs {
+        margin-right: 0px; }
+
+#scoreboard {
+  font-size: 16px; }
+
+  a.btn {
+    text-decoration: none; }
+
+    .lockbtn {
+      width: 95px; }
+
+      .center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto; }
+
+        .btn-sm {
+          margin: auto;
+          width: 40px;
+          height: 40px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; }
+          .btn-sm .btn-inner {
+            font-size: 16px; }
+
+.well h4 {
+  margin-top: 0; }
+  .well .no-decoration {
+    font-size: 24px;
+    text-decoration: none; }
+    .well .no-decoration:hover {
+      text-decoration: underline; }
+.well .hash-link {
+  text-align: center;
+  margin-bottom: 16px; }
+
+#news-box {
+  min-height: 150px;
+  overflow: auto;
+  bottom: 0;
+  top: 0;
+  flex-grow: 1; }
+  #news-box ul {
+    list-style-type: none;
+    padding: 10px 16px; }
+    #news-box .news-item {
+      padding-bottom: 16px; }
+      #news-box .news-item p {
+        margin: 0; }
+        #news-box .news-item .byline {
+          font-size: 80%; }
+
+#countdown {
+  float: right;
+  line-height: 21px;
+  padding-top: 9.5px; }
+
+  #loading-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.4;
+    z-index: 2000;
+    display: none; }
+
+    .sbchart {
+      width: 100%;
+      height: 300px; }
+
+      .sbchart-legend {
+        overflow: visible;
+        position: absolute;
+        right: 0;
+        max-width: 180px; }
+
+        ul.step-legend {
+          list-style-type: none; }
+          ul.step-legend li {
+            white-space: nowrap; }
+
+.step-legend-marker {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  margin-right: 3px; }
+
+  .team-solved {
+    margin-top: 20px; }
+
+    table.team-challenges, table.team-players, table.team-challenges-unsolved {
+      font-size: 100%; }
+
+      .tag-chart {
+        height: 250px; }
+
+        .team-score-chart {
+          height: 250px; }
+
+          .oneline {
+            white-space: nowrap; }
+
+            .jeopardy-container {
+              display: flex;
+              width: 100%; }
+              .jeopardy-container.jeopardy-tags-container {
+                flex-wrap: wrap;
+                justify-content: center; }
+                .jeopardy-container.row {
+                  margin: 0; }
+                  .jeopardy-container.row .jeopardy-col {
+                    flex-grow: 1; }
+                    .jeopardy-container.row .jeopardy-box {
+                      height: 188px;
+                      text-align: center;
+                      margin: 10px 5px;
+                      position: relative;
+                      display: inline-block;
+                      min-width: 188px;
+                      text-size: 16pt; }
+                      .jeopardy-container.row .jeopardy-box p {
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        position: absolute; }
+                  .jeopardy-container.row .jeopardy-cat {
+                    font-weight: bolder;
+                    font-size: 1.3em;
+                    border-radius: 6px;
+                    margin-bottom: 0px; }
+                    .jeopardy-container.row .jeopardy-chall {
+                      perspective: 1000px;
+                      overflow: hidden;
+                      border-radius: 6px; }
+                      .jeopardy-container.row .jeopardy-chall .flipper {
+                        transition: 0.8s;
+                        transform-style: preserve-3d;
+                        position: relative;
+                        height: 100%;
+                        width: 100%; }
+                        .jeopardy-container.row .jeopardy-chall:hover .flipper,
+                        .jeopardy-container.row .jeopardy-chall.hover .flipper {
+                          transform: rotateY(180deg); }
+                          .jeopardy-container.row .jeopardy-chall .front,
+                          .jeopardy-container.row .jeopardy-chall .back {
+                            position: absolute;
+                            backface-visibility: hidden;
+                            height: 100%;
+                            width: 100%;
+                            border-radius: 6px; }
+                            .jeopardy-container.row .jeopardy-chall .front {
+                              z-index: 2;
+                              transform: rotateY(0deg);
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: space-between; }
+                              .jeopardy-container.row .jeopardy-chall .front .chall-tags {
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: flex-end;
+                                width: 100%;
+                                height: 30px; }
+                                .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-tag,
+                                .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-dummy:first-child:last-child {
+                                  flex-grow: 1;
+                                  font-size: 16px;
+                                  height: 24px; }
+                                  .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-tag:nth-child(2),
+                                  .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-tag .chall-dummy:first-child:last-child,
+                                  .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-dummy:first-child:last-child:nth-child(2),
+                                  .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-dummy:first-child:last-child .chall-dummy:first-child:last-child {
+                                    border-bottom-left-radius: 6px; }
+                                    .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-tag:last-child,
+                                    .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-tag .chall-dummy:first-child:last-child,
+                                    .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-dummy:first-child:last-child:last-child,
+                                    .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-dummy:first-child:last-child .chall-dummy:first-child:last-child {
+                                      border-bottom-right-radius: 6px; }
+                                      .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-tag:not(:last-child),
+                                      .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-dummy:first-child:last-child:not(:last-child) {
+                                        border-right: 2px solid #42A5F5; }
+                                .jeopardy-container.row .jeopardy-chall .front .chall-tags .chall-dummy:first-child:last-child {
+                                  width: 100%; }
+                              .jeopardy-container.row .jeopardy-chall .front .chall-num {
+                                display: flex; }
+                                .jeopardy-container.row .jeopardy-chall .front .chall-num .chall-num-val {
+                                  font-size: 16px;
+                                  padding-left: 10px;
+                                  padding-top: 4px; }
+                              .jeopardy-container.row .jeopardy-chall .front .chall-name {
+                                padding-left: 10px;
+                                padding-right: 10px; }
+                                .jeopardy-container.row .jeopardy-chall .front .solved-banner {
+                                  transform: rotate(-45deg);
+                                  background-color: #ff0000;
+                                  position: absolute;
+                                  top: 40%;
+                                  bottom: 40%;
+                                  left: -100%;
+                                  right: -100%; }
+                      .jeopardy-container.row .jeopardy-chall .back {
+                        transform: rotateY(180deg); }
+
+@keyframes oscillate {
+  from {
+    left: -33px;   }
+    to {
+      left: -38px;   }
+}
+
+.tag-selector {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  font-size: 20px; }
+  .tag-selector .tag-align {
+    display: flex;
+    flex-wrap: wrap; }
+    .tag-selector .tag-align .tag-filter {
+      flex-grow: 1;
+      height: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      cursor: pointer;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 5px;
+      min-width: 15%;
+      border-radius: 6px; }
+      .tag-selector .tag-align .tag-filter .tag-item {
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 100%;
+        display: inline-block;
+        text-align: center; }
+        .tag-selector .tag-align .tag-filter .tag-item i {
+          vertical-align: sub; }
+    .tag-selector .tag-align .tag-either {
+      background-color: #757575; }
+      .tag-selector .tag-align .tag-inc {
+        background-color: #2E7D32; }
+        .tag-selector .tag-align .tag-exc {
+          background-color: #c62828; }
+  .tag-selector .info-box {
+    position: absolute;
+    right: 0px;
+    width: 10px; }
+    .tag-selector .info-box .info-text {
+      position: relative;
+      width: 150px;
+      display: inline-block;
+      height: 56px;
+      top: -10px;
+      right: -20px;
+      transition-duration: 0.8s;
+      opacity: 0;
+      top: -10px; }
+      .tag-selector .info-box .info-text::before {
+        position: absolute;
+        content: "keyboard_arrow_left";
+        font-family: 'Material Icons';
+        left: -35px;
+        top: -2px;
+        font-size: 46px; }
+  .tag-selector:hover .info-text {
+    right: 0px;
+    opacity: 1; }
+
+.solvers {
+  max-width: 400px;
+  margin: auto; }
+  .solvers .solve-head {
+    text-align: center;
+    padding-bottom: 4px;
+    border-bottom: 1px solid; }
+    .solvers .solver-container {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 6px; }
+      .solvers .team-link {
+        color: inherit;
+        cursor: pointer; }
+        .solvers .show-container {
+          display: flex;
+          justify-content: space-around; }
+          .solvers .show-container .show-more {
+            text-align: center; }
+
+.modal {
+  overflow-y: auto; }
+
+  #attachment-table .label-sized {
+    height: 17px; }
+    #attachment-table .button-top {
+      padding-top: 28px; }
+
+.challenge-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px; }
+  .challenge-list .challenge-item {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 10px; }
+
+.user-field .multiple {
+  display: flex; }
+
+.list-item {
+  display: flex;
+  cursor: pointer; }
+  .list-item .form-control {
+    height: 40px; }
+
+.navbar {
+  font-size: 12pt; 
+	width: 100%;
+}
+
+  .mobile {
+    display: none; }
+
+    #tag-table tbody tr:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.25); }
+      #tag-table tbody tr td {
+        vertical-align: middle; }
+        #tag-table tbody tr .btn span {
+          font-size: 1.5em;
+          vertical-align: middle; }
+
+.fileupload {
+  height: 0;
+  display: none; }
+
+  @media screen and (max-width: 767px) {
+    .mobile {
+      display: initial;   }
+      #news-box {
+        display: none;   }
+        body {
+          padding-top: 20px;   }
+          header {
+            width: 100vw;   }
+            .menu-btn {
+              width: auto;   }
+              .menu-btn i {
+                font-size: 2.5em;   }
+    .left-sidebar {
+      display: none;   }
+}

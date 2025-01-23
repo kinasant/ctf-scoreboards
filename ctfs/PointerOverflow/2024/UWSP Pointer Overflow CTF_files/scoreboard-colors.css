@@ -1,0 +1,59 @@
+body {
+  background-color: #210032;
+  color: #ffffff; }
+
+  .navbar-default {
+    background-color: #512698; }
+
+    .left-sidebar-background {
+      background-color: #ffc82e; }
+
+      a.list-group-item {
+        background-color: #512698;
+        color: #ffffff; }
+        a.list-group-item.active, a.list-group-item.active:hover,
+        a.list-group-item.active:focus {
+          background-color: #401587;
+          border-color: #512698;
+          color: #ffffff; }
+
+#news-box {
+  background-color: #401587; }
+
+  input.form-control[readonly] {
+    background-color: #fff; }
+
+    #loading-overlay {
+      background-color: #000; }
+
+      #scoreboard > tbody > tr:nth-child(odd) > td {
+        background-color: #4e5d6c; }
+
+        .panel-primary > .panel-heading {
+          background-color: #27326d; }
+
+          .chall-submit[disabled], .chall-submit {
+            background-color: #210032; }
+
+            .chall-well, .chall-panel, .chall-panel-body {
+              background-color: #512698; }
+
+              .chall-panel-body a {
+                color: #ffc82e; }
+                .chall-panel-body a:hover, .chall-panel-body a:focus, .chall-panel-body a:active {
+                  color: #ffc82e; }
+
+.jeopardy-cat {
+  background: #512698; }
+
+  .jeopardy-chall .front, .jeopardy-chall .back {
+    background: #512698;
+    color: #ffffff; }
+    .jeopardy-chall .front .chall-tag,
+    .jeopardy-chall .front .chall-dummy:first-child:last-child {
+      border: 1px solid #512698;
+      background-color: #ffc82e;
+	color: #210032;
+ }
+  .jeopardy-chall.solved .card {
+    background: #401587; }
