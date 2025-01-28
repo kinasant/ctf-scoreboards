@@ -21,9 +21,13 @@
             <td><a href="ctfs/UrchinSecAware/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2527" target="_blank">CTFtime</a></td>
         </tr>
-            <tr>
-            <td rowspan=1><a href="ctfs/Alpacahack">AlpacaHack</a></td>
-            <td><a href="ctfs/Alpacahack/2024">2024</a></td>
+        <tr>
+            <td rowspan=2><a href="ctfs/AlpacaHack">AlpacaHack</a></td>
+            <td><a href="ctfs/AlpacaHack/2025">2025</a></td>
+            <td><a href="https://ctftime.org/ctf/2633" target="_blank">CTFtime</a></td>
+        </tr>
+        <tr>
+            <td><a href="ctfs/AlpacaHack/2024">2024</a></td>
             <td><a href="https://ctftime.org/ctf/1163" target="_blank">CTFtime</a></td>
         </tr>
       <tr>
@@ -196,5 +200,21 @@
             <td><a href="ctfs/PointerOverflow/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2121" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/Remedy">Remedy</a></td>
+            <td><a href="ctfs/Remedy/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2618" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/x3ctf">x3ctf</a></td>
+            <td><a href="ctfs/x3ctf/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2467" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/KnightCTF">KnightCTF</a></td>
+            <td><a href="ctfs/KnightCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2610" target="_blank">CTFtime</a></td>
+        </tr>
+      
   </tbody>
   </table>
