@@ -1,19 +1,314 @@
 points,name,challenge
-897,!,"[{'name': 'subway', 'solves': 8, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 74, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}]"
-897,blin00,"[{'name': 'subway', 'solves': 8, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}, {'name': 'I2C Device', 'solves': 4, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 74, 'category': 'Rev'}]"
-897,eba13005b88dce03165e,"[{'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'subway', 'solves': 8, 'category': 'Rev'}]"
-897,wane,"[{'name': 'subway', 'solves': 8, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 74, 'category': 'Rev'}]"
-897,yu212,"[{'name': 'subway', 'solves': 8, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 74, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'Cake Puzzle', 'solves': 15, 'category': 'Rev'}, {'name': 'mimikyu', 'solves': 8, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 25, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 38, 'category': 'Rev'}]"
-897,akiym,"[{'name': 'subway', 'solves': 8, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}]"
-620,ptr-yudai,"[{'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'subway', 'solves': 8, 'category': 'Rev'}]"
-620,tan90909090,"[{'name': 'subway', 'solves': 8, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'service', 'solves': 1, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 74, 'category': 'Rev'}, {'name': 'fvm', 'solves': 4, 'category': 'Rev'}, {'name': 'mimikyu', 'solves': 8, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 25, 'category': 'Rev'}, {'name': 'kiwi', 'solves': 6, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 38, 'category': 'Rev'}]"
-593,flocto,"[{'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}]"
-593,clowncs,"[{'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'Gaming VM', 'solves': 3, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 38, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 25, 'category': 'Rev'}]"
-593,lunashci,"[{'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}]"
-593,rsk0315,"[{'name': 'vcipher', 'solves': 10, 'category': 'Rev'}, {'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 74, 'category': 'Rev'}]"
-316,elvis,"[{'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'Gaming VM', 'solves': 3, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 74, 'category': 'Rev'}]"
-316,ske,"[{'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}]"
-316,tchen,"[{'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 74, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}]"
-316,zatsu,"[{'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 38, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 74, 'category': 'Rev'}, {'name': 'imgchk', 'solves': 5, 'category': 'Rev'}, {'name': 'Cake Puzzle', 'solves': 15, 'category': 'Rev'}, {'name': 'nande', 'solves': 11, 'category': 'Rev'}]"
-316,jaslayer,"[{'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}]"
-316,komugi,"[{'name': 'hidden', 'solves': 29, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 64, 'category': 'Rev'}]"
+897,5unkn0wn,"[{'name': 'subway', 'solves': 11, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}]"
+897,blin00,"[{'name': 'subway', 'solves': 11, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}, {'name': 'I2C Device', 'solves': 4, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+897,eba13005b88dce03165e,"[{'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'subway', 'solves': 11, 'category': 'Rev'}]"
+897,wane,"[{'name': 'subway', 'solves': 11, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+897,yu212,"[{'name': 'subway', 'solves': 11, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'Cake Puzzle', 'solves': 15, 'category': 'Rev'}, {'name': 'mimikyu', 'solves': 9, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 26, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}]"
+897,akiym,"[{'name': 'subway', 'solves': 11, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+620,ptr-yudai,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'subway', 'solves': 11, 'category': 'Rev'}]"
+620,tan90909090,"[{'name': 'subway', 'solves': 11, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'service', 'solves': 1, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'fvm', 'solves': 4, 'category': 'Rev'}, {'name': 'mimikyu', 'solves': 9, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 26, 'category': 'Rev'}, {'name': 'kiwi', 'solves': 6, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}]"
+593,flocto,"[{'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+593,clowncs,"[{'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Gaming VM', 'solves': 3, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 26, 'category': 'Rev'}]"
+593,lunashci,"[{'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+593,rsk0315,"[{'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+316,elvis,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Gaming VM', 'solves': 3, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+316,ske,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+316,tchen,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}]"
+316,zatsu,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}, {'name': 'pytecode', 'solves': 16, 'category': 'Rev'}, {'name': 'Everything Silver', 'solves': 13, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'imgchk', 'solves': 5, 'category': 'Rev'}, {'name': 'Cake Puzzle', 'solves': 15, 'category': 'Rev'}, {'name': 'nande', 'solves': 11, 'category': 'Rev'}]"
+316,jaslayer,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+316,komugi,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+316,roaris,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'nande', 'solves': 11, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'Cake Puzzle', 'solves': 15, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 26, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}]"
+316,mojashi,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+316,k0080,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 26, 'category': 'Rev'}, {'name': 'nande', 'solves': 11, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}]"
+316,szk3y,"[{'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+192,luma,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}]"
+124,edwowmath,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+124,themythologist,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,discombombulatedeye,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,equinoxa,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,selph,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,40414,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,tcfsh69,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,lmog,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,hasuneko,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'luau', 'solves': 21, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 26, 'category': 'Rev'}, {'name': 'Cake Puzzle', 'solves': 15, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}]"
+124,shark,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,kalakala,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,3r3n,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,shunt,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,pks0x00,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,mikan,"[{'name': 'subway', 'solves': 11, 'category': 'Rev'}, {'name': 'vcipher', 'solves': 15, 'category': 'Rev'}, {'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+124,st21r,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,akimon658,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,hazy0189,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,crazyman,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,ri5e,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,ynatwest,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,1thr00n3r,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,riantkb,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,m3t30r,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,zack08110,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,ptagon,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,macaroon,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,t0msec,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,soramea,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,n0name,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}]"
+124,jackhax,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,trimscash,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+124,kensyo,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,wixter-07,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,askyp,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,iwashiira,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}]"
+124,mountainrose,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+124,koufu193,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 26, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+124,david399,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,kenki,"[{'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+0,whalefall,[]
+0,lexanhacker,[]
+0,hanvonranxe,[]
+0,san,[]
+0,itachiuchiha,[]
+0,cyberjuss,[]
+0,zious,[]
+0,0777,[]
+0,tonyke,[]
+0,satoki,"[{'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+0,haidao,[]
+0,zencipher,[]
+0,xs-vulnerability,[]
+0,cookie,[]
+0,alimohd9166,[]
+0,y4su,[]
+0,satler,[]
+0,arocodem,[]
+0,annewithoutani,[]
+0,dwcapybara,[]
+0,rk01m,"[{'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+0,kizuna365,[]
+0,bogan1011,[]
+0,ibrahim,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,dereinnnnnn,[]
+0,june,[]
+0,theflash2k,[]
+0,rajora-aenosh,[]
+0,unkn0wn5urf,[]
+0,sleuth123,[]
+0,bomin,[]
+0,b1nd1fftr1y,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,chameleon567,[]
+0,tyako,[]
+0,shanxm,[]
+0,fzhshzh,[]
+0,fallen,[]
+0,robertowen,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}, {'name': 'decompile me', 'solves': 26, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+0,mikejam,[]
+0,raxh,[]
+0,febrian,[]
+0,darkshadowhacker,[]
+0,yorksyo,[]
+0,aogami,[]
+0,akr1033,[]
+0,sawyer,[]
+0,mol-cyber,[]
+0,bl4ckhun73r,[]
+0,ariefhameed,[]
+0,all,[]
+0,lntm2006,[]
+0,spicypanner,[]
+0,darkvoice,[]
+0,codelab,[]
+0,hsw109,[]
+0,ch1ll,[]
+0,sim1222,[]
+0,sara,[]
+0,sleepyqi,[]
+0,nataliadias,[]
+0,kx-01,[]
+0,abkr020,[]
+0,tsof,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,ritam26,[]
+0,noss,[]
+0,rikis,[]
+0,m4rk,[]
+0,vergil,[]
+0,takotako,[]
+0,dtalever,[]
+0,bell77m,[]
+0,wincr4ck,[]
+0,ainkun,[]
+0,flipper,[]
+0,ak5,[]
+0,kindun,[]
+0,olo-rotalo,[]
+0,t1-abu,[]
+0,mahi-german,[]
+0,bhargav11,[]
+0,clesturfurence,[]
+0,oliveramarilyn,[]
+0,reverse,[]
+0,professor,[]
+0,d7a,[]
+0,dev-null,[]
+0,gyro,[]
+0,zap1555,[]
+0,tenma,[]
+0,n0ri,[]
+0,adrian-06,[]
+0,s31zur3,[]
+0,0xnarwhal,[]
+0,relster,[]
+0,xpheli-chan,[]
+0,koalacl0f,[]
+0,metaroid-alpha-1309,[]
+0,akrugru,[]
+0,elw001,[]
+0,tareqkh,[]
+0,hackthastic07,[]
+0,switchrex,[]
+0,pinkbanshi,[]
+0,mshrinath,[]
+0,moi,[]
+0,seven,[]
+0,destis-andromeda,[]
+0,sojaku,[]
+0,blueeye,[]
+0,xbl1p,[]
+0,laibaf,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,swollows,[]
+0,devhacker,[]
+0,charmer,[]
+0,nullpointersf,[]
+0,4shur4,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'nimrev', 'solves': 39, 'category': 'Rev'}, {'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+0,fuyosuru,[]
+0,firesecurity,[]
+0,xnonex,[]
+0,venukamatchi,[]
+0,th3lilj4nn47,[]
+0,carry-ua,[]
+0,tomsabu,[]
+0,s4mgoh,[]
+0,d1v-k,[]
+0,mews,[]
+0,k-d-iz,[]
+0,neeraj,[]
+0,zorro,[]
+0,skyeker,[]
+0,m1nhd4cc,[]
+0,phoen1xxx,[]
+0,hungry-bogart,[]
+0,saakama824,[]
+0,sevineven,[]
+0,zytbxl,"[{'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,wxx,[]
+0,torontokyo,[]
+0,rastthack,[]
+0,bug2531,[]
+0,sahi,[]
+0,cankayadev,[]
+0,sai,[]
+0,mrelliot,[]
+0,ex3x,[]
+0,isl4r,[]
+0,dolearnctf,[]
+0,neo01x,[]
+0,botshhh,[]
+0,mbukuzdulu,[]
+0,trmn,[]
+0,f-rusher,[]
+0,d1g1talg0d,[]
+0,roq-aia2,[]
+0,sevgillim,[]
+0,v1d,[]
+0,mississummer,[]
+0,perdianaka,[]
+0,persiancats,[]
+0,clkg,[]
+0,mr-disco,[]
+0,toastedscorpion,[]
+0,zeus,[]
+0,imadxt,[]
+0,iamadityasharma,[]
+0,continental,[]
+0,mkctf04,[]
+0,ch1llc0d3,[]
+0,oxnouf,[]
+0,anka4z,[]
+0,danissimurr,[]
+0,x03e,[]
+0,eeswepe,[]
+0,amine,[]
+0,zawarudo,[]
+0,krupalsai,[]
+0,sepiol79,[]
+0,hunt3rx-30,[]
+0,spyied,[]
+0,xmmmmmm,[]
+0,m4z3n,[]
+0,harukiii1,[]
+0,karlos,[]
+0,zero1612,[]
+0,kopy,[]
+0,shimon,[]
+0,mczdj,[]
+0,alpacactfer,[]
+0,zeroc,[]
+0,noli,[]
+0,pewpewpew,[]
+0,redrococo-z3r0,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,crack-me-pls,[]
+0,h3k0n,[]
+0,hazaa,[]
+0,fakebutterzx,[]
+0,moshi,[]
+0,pyfffe,[]
+0,pa0x73cal,[]
+0,huzaifamalik,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,sonder-1,[]
+0,hexgh0st,[]
+0,imnoob,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,zacht9,[]
+0,doraemon,[]
+0,awdyane,"[{'name': 'hidden', 'solves': 39, 'category': 'Rev'}, {'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
+0,le0s1mba,[]
+0,mobyduck,[]
+0,rninverse,[]
+0,nahaap,[]
+0,raad-alzyoud,[]
+0,sayed-ahmed,[]
+0,dipendrabk,[]
+0,keymoon,[]
+0,salazar,[]
+0,ljnljn,[]
+0,finder,"[{'name': 'Simple Flag Checker', 'solves': 78, 'category': 'Rev'}]"
+0,sh3p3rd,[]
+0,saruul,[]
+0,fazect,[]
+0,tkss,[]
+0,shemkumar,[]
+0,c3lc0md1g1super,[]
+0,evbcffp1xb,[]
+0,blazzzhenny,[]
+0,bea,[]
+0,hakkaeason,[]
+0,wanui,[]
+0,blackpeach,[]
+0,crownprince,[]
+0,mulattohat,[]
+0,ham4,[]
+0,shellovx,[]
+0,happytiger,[]
+0,hiroki1111,[]
+0,quantum,[]
+0,for-rest,[]
+0,sapphire15,"[{'name': 'nimrev', 'solves': 39, 'category': 'Rev'}]"
+0,kentaro1043,[]
+0,joseph,[]
+0,hifs,[]
+0,0xgsmonkey,[]
+0,adrjo,[]
+0,aviral,[]
+0,ragrocks,[]
+0,yanooshyanoosh,[]
+0,omega,[]
+0,sh0wm1,[]
+0,kaigyo,[]
+0,tes,"[{'name': 'masking tape', 'solves': 88, 'category': 'Rev'}]"
