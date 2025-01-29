@@ -215,6 +215,10 @@
             <td><a href="ctfs/KnightCTF/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2610" target="_blank">CTFtime</a></td>
         </tr>
-      
+        <tr>
+            <td rowspan=1><a href="ctfs/TU">TU</a></td>
+            <td><a href="ctfs/TU/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2584" target="_blank">CTFtime</a></td>
+        </tr>
   </tbody>
   </table>
