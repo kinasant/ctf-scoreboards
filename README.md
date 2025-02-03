@@ -228,7 +228,7 @@
               <tr>
             <td rowspan=1><a href="ctfs/nullconHackIM">nullconHackIM</a></td>
             <td><a href="ctfs/nullconHackIM/2025">2025</a></td>
-            <td><a href="https://ctftime.org/event/2065" target="_blank">CTFtime</a></td>
+            <td><a href="https://ctftime.org/event/2642" target="_blank">CTFtime</a></td>
         </tr>
   </tbody>
   </table>
