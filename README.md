@@ -220,5 +220,15 @@
             <td><a href="ctfs/TU/2024">2024</a></td>
             <td><a href="https://ctftime.org/event/2584" target="_blank">CTFtime</a></td>
         </tr>
+          <tr>
+            <td rowspan=1><a href="ctfs/Bearcat">Bearcat</a></td>
+            <td><a href="ctfs/Bearcat/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2596" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/nullconHackIM">nullconHackIM</a></td>
+            <td><a href="ctfs/nullconHackIM/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2065" target="_blank">CTFtime</a></td>
+        </tr>
   </tbody>
   </table>
