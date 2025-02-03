@@ -7,7 +7,7 @@ class TeamSpider(scrapy.Spider):
     name = "nullcon"
     def start_requests(self):
         urls = [
-            "file:///D:/ctf/stat/ctfd/ctfd/spiders/Nullcon%20HackIM%20CTF%20Goa%202025.html",
+            "file://Nullcon%20HackIM%20CTF%20Goa%202025.html",
             ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)

@@ -20,7 +20,7 @@ class TeamSpider(scrapy.Spider):
         yield FormRequest.from_response(response,formdata={'name':'{REDACTED}','password':"{I_didnt_leave_the_password_here_this_time}",'nonce':nonce},callback=self.parse,dont_filter=True)
     @inline_requests
     def parse(self, response):
-        response = yield scrapy.Request(url = "file:///D:/ctf/stat/ctfd/ctfd/spiders/BearcatCTF%202025_%20World%20Tour.html")
+        response = yield scrapy.Request(url = "file://BearcatCTF%202025_%20World%20Tour.html")
         #item = response.meta['item']
         df = pd.DataFrame()
         points = []
