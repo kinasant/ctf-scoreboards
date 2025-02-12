@@ -230,5 +230,15 @@
             <td><a href="ctfs/nullconHackIM/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2642" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/BITSCTF">BITSCTF</a></td>
+            <td><a href="ctfs/BITSCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2607" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/LA">LA</a></td>
+            <td><a href="ctfs/LA/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2592" target="_blank">CTFtime</a></td>
+        </tr>
   </tbody>
   </table>
