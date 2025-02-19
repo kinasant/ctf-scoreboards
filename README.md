@@ -240,5 +240,16 @@
             <td><a href="ctfs/LA/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2592" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/EHAX">EHAX</a></td>
+            <td><a href="ctfs/EHAX/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2677" target="_blank">CTFtime</a></td>
+        </tr>
+          <tr>
+            <td rowspan=1><a href="ctfs/BroncoCTF">BroncoCTF</a></td>
+            <td><a href="ctfs/BroncoCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2261" target="_blank">CTFtime</a></td>
+        </tr>
+      
   </tbody>
   </table>
