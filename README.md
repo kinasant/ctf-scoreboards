@@ -250,6 +250,15 @@
             <td><a href="ctfs/BroncoCTF/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2261" target="_blank">CTFtime</a></td>
         </tr>
-      
+              <tr>
+            <td rowspan=1><a href="ctfs/Kashi">Kashi</a></td>
+            <td><a href="ctfs/Kashi/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2668" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/TRX">TRX</a></td>
+            <td><a href="ctfs/TRX/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2654" target="_blank">CTFtime</a></td>
+        </tr>
   </tbody>
   </table>
