@@ -260,5 +260,30 @@
             <td><a href="ctfs/TRX/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2654" target="_blank">CTFtime</a></td>
         </tr>
+          <tr>
+            <td rowspan=1><a href="ctfs/Ugra">Ugra</a></td>
+            <td><a href="ctfs/Ugra/2025/Quals">2025 Quals</a></td>
+            <td><a href="https://ctftime.org/event/2693" target="_blank">CTFtime</a></td>
+        </tr>
+          <tr>
+            <td rowspan=1><a href="ctfs/UTCTF">UTCTF</a></td>
+            <td><a href="ctfs/UTCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2641" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/Kind4SUS">Kind4SUS</a></td>
+            <td><a href="ctfs/Kind4SUS/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2703" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/Nowruz">Nowruz</a></td>
+            <td><a href="ctfs/Nowruz/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2601" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/WATCTF">WATCTF</a></td>
+            <td><a href="ctfs/WATCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2727" target="_blank">CTFtime</a></td>
+        </tr>
   </tbody>
   </table>
