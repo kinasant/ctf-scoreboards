@@ -261,7 +261,7 @@
             <td><a href="https://ctftime.org/event/2654" target="_blank">CTFtime</a></td>
         </tr>
           <tr>
-            <td rowspan=2><a href="ctfs/TPCTF">TPCTF</a></td>
+            <td rowspan=1><a href="ctfs/TPCTF">TPCTF</a></td>
             <td><a href="ctfs/TPCTF/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2645" target="_blank">CTFtime</a></td>
         </tr>
