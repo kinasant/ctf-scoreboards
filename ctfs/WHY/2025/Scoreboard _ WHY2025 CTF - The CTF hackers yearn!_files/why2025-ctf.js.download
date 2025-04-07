@@ -1,0 +1,409 @@
+var amountPlanets = 42;
+var cats = {
+    "bin": "Binary",
+    "cry": "Crypto",
+    "for": "Forensics",
+    "misc": "Misc",
+    "net": "Network",
+    "onsite": "Onsite",
+    "pwn": "Pwnable",
+    "web": "Web",
+}
+
+var planetSizes = {
+    50: 52,
+    100: 64,
+    200: 76,
+    300: 88,
+    400: 100
+}
+
+// Nebula/Starfield based on: https://codepen.io/beejaymorgan/pen/rjPwmL
+function drawNebula(){
+    const nebC1 = 'rgba(176,59,191,0.3)'; // Violet
+    const nebC2 = 'rgba(82,52,191,0.3)';  // Deep Purple
+
+    const nebBlobs = 100;
+
+    let neb = document.getElementsByClassName('nebula')[0];
+
+    // Build some gas clouds
+    let n=0;
+    let gradientString = '';
+    for(n;n<nebBlobs;n++){
+        let c = {};
+        let type = Math.ceil(Math.random() * 2);
+        c.x = Math.round(Math.random() * 100);
+        c.y = Math.round(Math.random() * 100);
+        c.l = Math.round(Math.random() * 30);
+        let s = `radial-gradient(circle at ${c.x}% ${c.y}%, ${type<2?nebC1:nebC2} 0%, transparent ${c.l}%)`;
+        gradientString += s;
+        if(n < (nebBlobs - 1)){gradientString += ',';}
+    }
+    neb.style.background = gradientString;
+}
+
+function drawStarfield(){
+    const numStars = 200;
+
+    let sf = document.getElementsByClassName('starfield')[0];
+
+    for(var st=0; st<numStars; st++){
+        let sx = Math.round(Math.random() * 100);
+        let sy = Math.round(Math.random() * 100);
+        let size = Math.round(Math.random() * 10);
+        let fade = Math.random();
+        let star = document.createElement('div');
+        star.classList.add('star');
+        if(fade > 0.95 && size > 2){
+	    star.classList.add('twinkle');
+            star.classList.add('lens-flare');
+        }
+        star.style.left = `${sx}%`;
+        star.style.top = `${sy}%`;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.opacity = `${fade}`;
+        sf.appendChild(star);
+    }
+}
+
+
+function createPlanet(grow, x, y, id, cat, points, title, complete=false){
+    var planet = document.createElement("div");
+    planet.id = "chal-" + id;
+    if (complete){
+        planet.classList = "planet " + cat + " complete";
+    } else {
+        planet.classList = "planet " + cat;
+    }
+    var size = planetSizes[points] * grow;
+    planet.style = "--size: " + size + "px;--x: " + x + "px;--y: " + y + "px;";
+
+    if (cat == "pwn" || cat == "web"){
+        var ring = document.createElement("ring");
+        if (cat == "pwn") { 
+            ring.classList = "ring ring-color-1";
+        } else {
+            ring.classList = "ring ring-color-2";
+        }
+        planet.appendChild(ring);
+    }
+
+    var span = document.createElement("span");
+    span.textContent = cat + " " + points;
+    planet.appendChild(span);
+
+    var chal_info = document.createElement("div");
+    chal_info.classList = "chal-info";
+    chal_info.textContent = cats[cat] + " (" + points + "): " + title;
+    planet.appendChild(chal_info);
+
+    planet.addEventListener("click", () => {
+        showChallenge(id);
+    });
+    return planet;
+}
+
+function createPlanets(){
+    if (typeof challenges === 'undefined'){
+        return;
+    }
+    var amount = challenges.length;
+    document.getElementById("planets").innerHTML = "";
+    var width = 1200;
+    var height = 600;
+    var centerX = window.innerWidth / 2;
+    var centerY = 160 + height / 2;
+    var r = (height + width) / 2;
+
+    var dis = 0.2;
+    var disStep = 0.16;
+    var i = 0;
+    var circleSizes = [ 7, 10, 16, 23, 30 ];
+    var planet;
+    var planets = [];
+    var growPlanet = 1;
+
+    if (amount > 17){
+        createSun(200, centerX, centerY);
+    } else {
+        createSun(400, centerX, centerY);
+        dis = 0.4;
+        disStep = 0.3;
+        growPlanet = 2;
+    }
+
+    while (i < amount){
+        var step = 2 * Math.PI / Math.min(circleSizes.shift(), amount- i);
+        for(var theta=0;  theta < 2*Math.PI;  theta+=step) {
+            var x =  centerX + r*Math.cos(theta)*dis;
+            var y = centerY - 0.6 *  r*Math.sin(theta)*dis;
+            var cat = getKeyByValue(cats, challenges[i]["category"]);
+            planets.push( { "x": x, "y": y, "planet": createPlanet(growPlanet, x, y, challenges[i]["id"], cat, challenges[i]["points"], challenges[i]["title"], challenges[i]["solved"]) } );
+            i = i + 1;
+            if(i == amount){
+                break;
+            }
+        }
+        dis = dis + disStep;
+    }
+    // Reorder elements, so they are placed from bottom to top to DOM, 
+    // this so that the hover of the challenge info will be displayed on top of the underneath planet
+    planets.sort(function(a,b) {
+        return b.y - a.y;
+    });
+    for(var i=0;i<planets.length;i++){
+        document.getElementById("planets").appendChild(planets[i].planet);
+    }
+}
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key].toLowerCase() === value);
+}
+
+function createSun(size, x, y){
+    var sun = document.getElementById("sun");
+    sun.style = "--size: " + size + "px;--x: " + x + "px;--y: " + y + "px;";
+}
+
+window.addEventListener("resize", () => {
+    if(window.innerWidth<600){
+        simpleDesign();
+    }
+});
+
+function simpleDesign(){
+    document.getElementById("planets").classList.add("nono-nononono-nononono-nono-theres-no-planet");
+    document.getElementById("sun").classList.add("no-sun");
+    document.getElementById("starfield").classList.add("no-animation");
+
+    var tt = document.getElementById("theme-toggle");
+    if (tt != null){
+        document.getElementById("toggle-theme-label").textContent = "Theme: Simple";
+        document.getElementById("theme-toggle").checked = false;
+    }
+    localStorage.setItem("theme", "simple");
+}
+
+function fancyDesign(){
+    document.getElementById("planets").classList.remove("nono-nononono-nononono-nono-theres-no-planet");
+    document.getElementById("sun").classList.remove("no-sun");
+    document.getElementById("starfield").classList.remove("no-animation");
+
+    var tt = document.getElementById("theme-toggle");
+    if (tt != null){
+        document.getElementById("toggle-theme-label").textContent = "Theme: Fancy";
+        document.getElementById("theme-toggle").checked = true;
+    }
+    localStorage.setItem("theme", "fancy");
+}
+
+function showChallenge(id){
+    var chal = "";
+    for (var i=0;i<challenges.length;i++){
+        if (challenges[i]["id"] == id){
+            chal = challenges[i];
+            break;
+        }
+    }
+
+    var modal = document.getElementById("challenge-modal");
+    var content = document.getElementById("challenge-content");
+    content.innerHTML = "";
+
+    var challenge = document.createElement("div");
+    var cat = getKeyByValue(cats, chal["category"]);
+
+    var closeButton = document.createElement("span");
+    closeButton.classList.add("close");
+    closeButton.textContent = "X";
+    closeButton.addEventListener("click", () => {
+        closeChallengeModal();
+    });
+    challenge.appendChild(closeButton);
+
+    var img = document.createElement("img");
+    img.src = "img/" + cat + chal["points"]  + "_small.png";
+    img.alt = "An image showing the WHY2025 logo with the category, which is " + chal["category"] + " and points, which is " + chal["points"] + ".";
+    challenge.appendChild(img);
+
+    var h3 = document.createElement("h3");
+    h3.textContent = chal["title"];
+    challenge.appendChild(h3);
+
+    if (chal["hints"] != ""){
+        var h = document.createElement("div");
+        h.classList.add("challenge-hint");
+        h.innerHTML = chal["hints"];
+        challenge.appendChild(h);
+    }
+
+    var p = document.createElement("p");
+    p.innerHTML = chal["description"];
+    challenge.appendChild(p);
+
+    if (!chal["solved"]){
+        if (chal["attachment"] != ""){
+            var d = document.createElement("div");
+            d.id = "attachment";
+            d.classList.add("attachment");
+    
+            d.innerHTML = chal["attachment"];
+    
+            challenge.appendChild(d);
+        }
+
+        var input = document.createElement("input");
+        input.id = "flag";
+        input.type = "text";
+        input.name = "flag";
+        input.classList.add("input-flag");
+        input.placeholder = "flag{...}";
+        challenge.appendChild(input);
+
+        var button = document.createElement("button");
+        button.textContent = "Submit Flag";
+        button.addEventListener("click", () => {
+            var flag = document.getElementById("flag").value;
+            submitFlag(chal["id"], flag);
+            modal.style.display="none";
+        });
+        challenge.appendChild(button);
+    } else {
+        var solved_div = document.createElement("div");
+        solved_div.classList.add("solved");
+
+        var solved_h4 = document.createElement("h4");
+        solved_h4.textContent  ="You already solved this challenge!";
+        solved_div.append(solved_h4);
+
+        challenge.appendChild(solved_div);
+    }
+
+    content.appendChild(challenge);
+
+    modal.style.display="block";
+}
+
+function submitFlag(id, flag){
+    try {
+        fetch("/actions/challenges.php", {
+            method: "POST",
+            body: "action=submit_flag&challenge=" + id + "&flag=" + flag + "&xsrf_token=" + encodeURIComponent(XSRF_TOKEN),
+            headers: {"Content-type": "application/x-www-form-urlencoded; charset=UTF-8"},
+        })   
+        .then(response => response.json())
+        .then(response => handleFlagSubmit(id, response))
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+function handleFlagSubmit(id,resp){
+    if (resp["solved"]){
+        // Update planet to solved
+        document.getElementById("chal-" + id).classList.add("complete");
+
+        // Update challenges array
+        for(var i=0;i<challenges.length;i++){
+            if(challenges[i]["id"] == id){
+                challenges[i]["solved"] = true;
+            }
+        }
+
+        showFlagSubmitMessage(false);
+    } else {
+        showFlagSubmitMessage(true);
+    }
+}
+
+function closeChallengeModal(){
+    var modal = document.getElementById("challenge-modal");
+    modal.style.display="none";
+}
+
+function showFlagSubmitMessage(fail){
+    var modal = document.getElementById("challenge-modal");
+    var content = document.getElementById("challenge-content");
+    content.innerHTML = "";
+
+    var message = document.createElement("div");
+
+    var closeButton = document.createElement("span");
+    closeButton.classList.add("close");
+    closeButton.textContent = "X";
+    closeButton.addEventListener("click", () => {
+        closeChallengeModal();
+    });
+    message.appendChild(closeButton);
+
+    var smiley = document.createElement("div");
+    smiley.classList.add("smiley");
+
+    var smile = document.createElement("div");
+    var msg = document.createElement("div");
+
+    if (fail == true){
+        smile.classList.add("sad");
+        msg.classList.add("wrong-flag");
+        msg.textContent = "Wrong Flag!";
+    } else {
+        smile.classList.add("smile");
+        msg.classList.add("correct-flag");
+        msg.textContent = "Challenge Solved!";
+    }
+
+    smiley.appendChild(smile);
+    smiley.appendChild(msg);
+    message.appendChild(smiley);
+
+    content.appendChild(message);
+
+    modal.style.display="block";
+}
+
+
+drawNebula();
+drawStarfield();
+createPlanets();
+
+// Show normal grid when reduced motion
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (mediaQuery.matches){
+    simpleDesign();
+}
+
+mediaQuery.addEventListener('change', () => {
+    if (mediaQuery.matches){
+        simpleDesign();
+    } 
+});
+
+// Show normal grid on mobile screens
+if(window.screen.width<600){
+    simpleDesign();
+}
+
+// Check Local Storage for theme settings
+const theme = localStorage.getItem("theme");
+if (theme != null) {
+    if (theme == "simple"){
+        simpleDesign();
+    }
+    if (theme == "fancy"){
+        fancyDesign();
+    }
+}
+
+// Add listener for theme toggle
+var tt = document.getElementById("theme-toggle");
+if (tt != null){
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.getElementById("theme-toggle").checked){
+            fancyDesign();
+        } else {
+            simpleDesign();
+        }
+    });
+}

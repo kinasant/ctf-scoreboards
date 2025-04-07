@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Beon';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Beon'), url('https://fonts.cdnfonts.com/s/14756/beon-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'Beon';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Beon'), url('https://fonts.cdnfonts.com/s/14756/Beon.woff') format('woff');
+}
+
+

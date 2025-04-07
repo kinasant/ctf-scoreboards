@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://sillyctf.psuccso.org/scoreboard -->
+<html data-bs-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ll-nam{color:#2196f3}.ll-num{color:#ec407a}.ll-str{color:#43a047}.ll-rex{color:#ef6c00}.ll-pct{color:#666}.ll-key{color:#555;font-weight:bold}.ll-com{color:#aaa;font-style:italic}</style>
+  <title>SillyCTF</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://sillyctf.psuccso.org/themes/core-beta/static/img/favicon.ico?d=babf08b2" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="./SillyCTF_files/main.e9ec7884.css">
+  
+
+  
+
+  <script src="./SillyCTF_files/color_mode_switcher.52334129.js.download"></script>
+
+
+
+  <style id="theme-color">
+:root {--headings-color: #ec7ec4;}
+:root {--theme-color: #ec7ec4;}
+:root {--theme-color-light: #F09AD1;}
+:root{--theme-color-dark: #E448AA;}
+.navbar{background-color: var(--theme-color) !important;}
+.jumbotron{background-color: var(--theme-color) !important;}
+
+  a {
+  	color: var(--theme-color);
+  }
+  a:hover {
+  	color: var(--theme-color-dark);
+  }
+  
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--theme-color);
+    --bs-btn-border-color: var(--theme-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #E448AA;
+    --bs-btn-hover-border-color: #E448AA;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+  
+.btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--theme-color);
+    --bs-btn-border-color: var(--theme-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--theme-color-dark);
+    --bs-btn-hover-border-color: var(--theme-color-dark);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+  
+.btn-block {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--theme-color);
+    --bs-btn-border-color: var(--theme-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--theme-color-dark);
+    --bs-btn-hover-border-color: var(--theme-color-dark);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+  
+.jumbotron h1 {
+  color: #212529;
+}
+
+.navbar .nav-link {
+  color: #212529
+}
+
+.navbar .nav-link:hover {
+  color: #fff
+}
+  
+.navbar.navbar-dark.bg-dark {
+    background-color: var(--theme-color) !important;
+}
+
+.nav-tabs .nav-link {
+  color: var(--theme-color-dark);
+}
+
+.form-control:focus {
+ 	border-color: var(--theme-color-light);
+ 	box-shadow: 0 0 0 .1rem var(--theme-color-light);
+}
+  
+.challenge-solved {
+    background-color: var(--theme-color);
+}
+  
+  
+ .tag-Easy, .tag-Medium, .tag-Hard, .tag-Insane {
+  border: var(--theme-color) solid 2px !important;
+ }
+.tag-Easy {
+  border-color: green!important;
+ }
+  .tag-Medium {
+   border-color: yellow!important;
+  }
+  .tag-Hard {
+  	 border-color: red!important;
+  }
+  .tag-Hard {
+  	 border-color: red!important;
+  }
+.tag-Insane {
+ border-color: purple!important;
+}
+</style>
+
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+<body class="vsc-initialized">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="https://sillyctf.psuccso.org/" class="navbar-brand">
+      
+        <img class="img-responsive ctf_logo" src="./SillyCTF_files/SillyCTF.png" alt="SillyCTF" height="25">
+      
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://sillyctf.psuccso.org/rules">
+              Rules
+            </a>
+          </li>
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://sillyctf.psuccso.org/users">
+              Users
+            </a>
+          </li>
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://sillyctf.psuccso.org/teams">
+                Teams
+              </a>
+            </li>
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://sillyctf.psuccso.org/scoreboard">
+              Scoreboard
+            </a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://sillyctf.psuccso.org/challenges">
+            Challenges
+          </a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://sillyctf.psuccso.org/notifications">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Notifications" data-bs-original-title="Notifications">
+                <i class="fas fa-bell d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-bell pe-1"></i>
+                  <span x-data="" x-show="$store.unread_count &gt; 0" x-text="$store.unread_count" class="badge rounded-pill bg-danger badge-notification" style="display: none;">0</span>
+                  Notifications
+              </span>
+            </a>
+          </li>
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://sillyctf.psuccso.org/team">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Team" data-bs-original-title="Team">
+                  <i class="fas fa-users d-none d-md-inline d-lg-none"></i>
+                </span>
+                <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-users pe-1"></i>
+                  Team
+                </span>
+              </a>
+            </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://sillyctf.psuccso.org/user">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Profile" data-bs-original-title="Profile">
+                <i class="fas fa-user-circle d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-user-circle pe-1"></i>
+                Profile
+              </span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://sillyctf.psuccso.org/settings">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Settings" data-bs-original-title="Settings">
+                <i class="fas fa-cogs d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-cogs pe-1"></i>
+                Settings
+              </span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://sillyctf.psuccso.org/logout">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Logout" data-bs-original-title="Logout">
+                <i class="fas fa-sign-out-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-out-alt pe-1"></i><span class="d-lg-none">
+                  Logout
+                </span>
+              </span>
+            </a>
+          </li>
+        
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-language d-none d-md-inline"></i>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-language pe-1"></i>
+              Change language
+            </span>
+          </button>
+          <form x-data="LanguageForm">
+            <ul class="dropdown-menu dropdown-menu-end">
+              
+              <li>
+                  <span class="dropdown-item bg-primary text-white" @click="set" value="en">
+                    English
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="de">
+                    Deutsch
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pl">
+                    Polski
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="es">
+                    Español
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ar">
+                    اَلْعَرَبِيَّةُ
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_CN">
+                    简体中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_TW">
+                    繁體中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fr">
+                    Français
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ko">
+                    한국어
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ru">
+                    русский язык
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pt_BR">
+                    Português do Brasil
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sk">
+                    Slovenský jazyk
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ja">
+                    日本語
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="it">
+                    Italiano
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="vi">
+                    tiếng Việt
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ca">
+                    Català
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="el">
+                    Ελληνικά
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fi">
+                    Suomi
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ro">
+                    Română
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sl">
+                    Slovenščina
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sv">
+                    Svenska
+                  </span>
+              </li>
+            </ul>
+          </form>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-link theme-switch" type="button">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Toggle theme" data-bs-original-title="Toggle theme">
+              <i class="fas d-none d-md-inline fa-moon"></i>
+            </span>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-sun pe-1"></i>
+              Toggle theme
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Scoreboard
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+  
+
+  
+</div>
+
+    <div id="score-graph" class="align-items-center d-flex" :class="{&#39;d-flex&#39;: show, &#39;d-none&#39;: !show}" x-data="ScoreboardDetail" x-ref="scoregraph" @bracket-change.window="activeBracket=$event.detail; update();" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1743488149157"><div style="position: relative; width: 1296px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1620" height="500" style="position: absolute; left: 0px; top: 0px; width: 1296px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+
+    <div id="scoreboard" class="row" x-data="ScoreboardList">
+      <template x-if="brackets.length &amp;&amp; standings.length"></template><div class="col-md-12 py-3">
+          <nav class="nav nav-pills nav-fill">
+            <button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: !activeBracket}" @click="activeBracket=null" class="nav-link active">All</button>
+            <template x-for="bracket in brackets"></template><button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: activeBracket == bracket.id}" x-text="bracket.name" @click="activeBracket=bracket.id" class="nav-link">Academic</button><button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: activeBracket == bracket.id}" x-text="bracket.name" @click="activeBracket=bracket.id" class="nav-link">Open</button>
+          </nav>
+        </div>
+
+      <div class="col-md-12" x-show="standings.length">
+        <table class="table table-striped align-middle">
+          <thead>
+          <tr>
+            <th style="width: 10px">Place</th>
+            <th class="text-start ps-3">Team</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <template x-for="(standing, index) in standings.filter(i =&gt; activeBracket ? i.bracket_id==activeBracket : true)"></template><tr>
+                <th scope="row" class="text-center" x-text="index + 1">1</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/22">1c3Gh3tt0</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">6421</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">2</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/33">ex futuro</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">5149</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">3</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/182">piestexy</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">5135</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">4</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/175">SquidProxyLovers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">4859</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">5</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/27">twosheep</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">4836</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">6</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/24">GG Bonds</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">4574</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">7</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/4">first</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">4401</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">8</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/59">Schrodinger Bears</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">4281</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">9</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/5">Awesome Team Name</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">4253</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">10</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/193">V1t</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">3959</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">11</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/120">0xFAILURES</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">3881</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">12</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/23">amogOS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">3777</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">13</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/17">Co1</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">3496</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">14</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/194">Davidpb</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">3299</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">15</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/160">jasprit bumrah</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">3230</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">16</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/64">Cipher5layers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">2712</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">17</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/70">Fish𓆟𓆟𓆟𓆟Fish𓆟𓆟Fish</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">2705</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">18</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/8">PowerRangers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">2657</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">19</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/67">newbies</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">2636</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">20</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/123">manusia</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">2307</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">21</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/108">MelR00t</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">2137</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">22</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/139">bread gone solo dolo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">2120</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">23</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/210">Krissy's Cool Team for Attractive People</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">1951</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">24</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/48">0x01_if_by_LAN</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">1886</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">25</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/15">hashcats</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">1735</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">26</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/100">CyberLegion</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">1620</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">27</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/144">Magul</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">1440</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">28</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/58">k3ycr4ck</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">1436</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">29</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/57">Sunshine_Agent</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">1372</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">30</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/69">bdhxgrp</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">1327</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">31</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/91">WSBTbyBDdXJpb3Vz</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">1287</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">32</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/66">#MogamiShizuka</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">1225</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">33</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/206">PixelPioneers25</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">1225</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">34</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/185">H4ck3r T34m</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">1127</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">35</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/181">0ski</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">1023</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">36</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/52">mmu_my</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">1000</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">37</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/138">Thr4t Hunt1n9</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">987</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">38</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/83">Cr4ckH0st</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">972</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">39</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/118">nope</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">937</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">40</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/106">RouterOnAStick</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">921</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">41</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/105">Unleashed Souls</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">913</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">42</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/192">Kasper and friends</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">887</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">43</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/191">&amp;&amp; ls</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">884</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">44</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/56">LeetSh4d0ws</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">825</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">45</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/81">SillyMasters3</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">740</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">46</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/79">bebekZz</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">723</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">47</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/164">Slug Club</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">723</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">48</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/87">57r1f3</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">700</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">49</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/51">ICT</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">700</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">50</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/63">Wahoo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">700</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">51</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/28">Anime</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">637</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">52</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/176">p1nk</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">627</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">53</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/162">anucow</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">619</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">54</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/44">ctfrrteam</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">600</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">55</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/151">!!__script_kiddies__!!</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">600</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">56</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/97">BinarySpartans</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">598</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">57</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/179">HackStorm</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">527</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">58</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/13">xusheng</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">59</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/158">Table2</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">60</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/62">Crossing Field</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">61</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/195">ph1nx</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">427</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">62</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/153">SoloBox</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">425</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">63</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/150">ds4x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">423</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">64</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/96">JumpingCats4000</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">65</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/55">SyntaxError</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">66</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/131">Cryptis25</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">67</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/201">Atomic_Pwnz</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">68</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/19">RRU_1</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">69</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/212">sigmasigmaboi</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">397</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">70</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/199">Noob Team</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">372</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">71</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/217">billie</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">372</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">72</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/190">DaVinciCode</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">350</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">73</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/114">Testing</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">323</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">74</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/75">devfault</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">75</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/186">JeffSchulman</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">76</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/115">The ThunderBolts</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">77</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/155">gard</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">78</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/40">CyberUnicorn</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">79</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/200">iamsad</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">80</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/93">CTF A Month Until We Get A Job</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">81</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/107">kgrzk2025</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">82</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/209">lychiseed</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">83</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/25">fzhshzh</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">84</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/18">Cheese and Beans</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">125</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">85</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/219">cph04544</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">125</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">86</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/112">&lt;&lt;&lt;----&gt;&gt;&gt;</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">122</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">87</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/86">sudoninja</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">88</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/16">Orthos</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">89</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/141">f4n_n3r0</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">90</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/163">Maates</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">91</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/172">The Hacktivists</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">92</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/84">Cyber_Vanguard</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">93</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/156">Hakierspejs</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">94</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/31">Wired Ghost</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">95</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/143">fiddlingaround</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">98</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">96</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/82">Peachy</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">98</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">97</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/197">Unidentified Members</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Academic</span>
+                </td>
+                <td x-text="standing.score">98</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">98</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/215">sigaboisigaboi</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">99</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://sillyctf.psuccso.org/teams/152">Understandable</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open</span>
+                </td>
+                <td x-text="standing.score">38</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12" x-show="! standings.length" style="display: none;">
+        <h3 class="text-center text-muted">Scoreboard is empty</h3>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io/" class="text-secondary">
+      <small class="text-muted">
+        Powered by CTFd
+      </small>
+    </a>
+  </div>
+</footer>
+
+<div x-data="">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html"></div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data="">
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module" src="./SillyCTF_files/index.8a9f494f.js.download"></script><script type="module" src="./SillyCTF_files/index.1cf73b05.js.download"></script><script type="module" src="./SillyCTF_files/echarts.128204f2.js.download"></script><script type="module" src="./SillyCTF_files/scoreboard.899daf28.js.download"></script>
+
+
+
+
+
+
+</body></html>

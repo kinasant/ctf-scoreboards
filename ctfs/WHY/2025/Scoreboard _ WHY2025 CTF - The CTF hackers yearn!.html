@@ -1,0 +1,4307 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://ctf.why2025.org/scores -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Scoreboard : WHY2025 CTF - The CTF hackers yearn!</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://ctf.why2025.org/img/why2025_ctf_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/css2" rel="stylesheet">
+    <link href="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/beon" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/mellivora.css" rel="stylesheet">
+    <link href="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/why2025-ctf.css" rel="stylesheet"><script type="text/javascript">
+        var global_dict = {};
+        
+    </script>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+
+<body>
+    <div class="modal fade" id="login-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="login-dialog-form" method="post" class="form-signin" action="https://ctf.why2025.org/actions/login">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Log in</h4>
+                    </div>
+		    <div class="modal-body">
+                            <input name="49491c99ffef6e524c721607d3511834" type="text" class="form-control" placeholder="Username" id="login-email-input" required="" autofocus=""><input name="0b0e3420f69c10b31f0b8671437d44e4" type="password" class="form-control" placeholder="Password" id="login-password-input" required="">
+                            <input type="hidden" name="action" value="login">
+                            <input type="hidden" name="redirect" value="/scores">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember_me" value="1" checked=""> Remember me
+                                </label>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="login-button">Log in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<div class="page">
+    <nav class="header" id="header">
+        <div id="header-inner">
+            <div id="header-logo">
+                <a href="https://ctf.why2025.org/">
+                    <h3 id="site-logo-text">WHY2025 CTF</h3>
+                </a>
+            </div>
+            <div id="header-menu">
+                <ul class="nav nav-pills pull-right" id="menu-main">
+                            <li><a href="https://ctf.why2025.org/home">Home</a></li>
+                            
+                            <li class="active"><a href="https://ctf.why2025.org/scores">Scoreboard</a></li>
+                            
+                            
+                            <li><a href="https://ctf.why2025.org/register">Register</a></li>
+                            <li><a href="https://ctf.why2025.org/scores" data-toggle="modal" data-target="#login-dialog">Log in</a></li>
+                        
+                </ul>
+            </div>
+        </div>
+    </nav><!-- navbar -->
+    <div class="nebula" style="background: radial-gradient(circle at 63% 50%, rgba(176, 59, 191, 0.3) 0%, transparent 19%), radial-gradient(circle at 91% 21%, rgba(176, 59, 191, 0.3) 0%, transparent 23%), radial-gradient(circle at 86% 40%, rgba(176, 59, 191, 0.3) 0%, transparent 13%), radial-gradient(circle at 76% 64%, rgba(82, 52, 191, 0.3) 0%, transparent 1%), radial-gradient(circle at 67% 86%, rgba(82, 52, 191, 0.3) 0%, transparent 13%), radial-gradient(circle at 60% 56%, rgba(82, 52, 191, 0.3) 0%, transparent 30%), radial-gradient(circle at 4% 11%, rgba(82, 52, 191, 0.3) 0%, transparent 5%), radial-gradient(circle at 22% 34%, rgba(82, 52, 191, 0.3) 0%, transparent 11%), radial-gradient(circle at 31% 71%, rgba(176, 59, 191, 0.3) 0%, transparent 28%), radial-gradient(circle at 21% 11%, rgba(82, 52, 191, 0.3) 0%, transparent 10%), radial-gradient(circle at 19% 42%, rgba(176, 59, 191, 0.3) 0%, transparent 28%), radial-gradient(circle at 36% 64%, rgba(82, 52, 191, 0.3) 0%, transparent 27%), radial-gradient(circle at 28% 16%, rgba(82, 52, 191, 0.3) 0%, transparent 30%), radial-gradient(circle at 28% 73%, rgba(82, 52, 191, 0.3) 0%, transparent 29%), radial-gradient(circle at 7% 37%, rgba(176, 59, 191, 0.3) 0%, transparent 7%), radial-gradient(circle at 24% 40%, rgba(176, 59, 191, 0.3) 0%, transparent 22%), radial-gradient(circle at 93% 43%, rgba(176, 59, 191, 0.3) 0%, transparent 8%), radial-gradient(circle at 61% 96%, rgba(176, 59, 191, 0.3) 0%, transparent 5%), radial-gradient(circle at 9% 30%, rgba(176, 59, 191, 0.3) 0%, transparent 26%), radial-gradient(circle at 27% 57%, rgba(82, 52, 191, 0.3) 0%, transparent 18%), radial-gradient(circle at 15% 18%, rgba(176, 59, 191, 0.3) 0%, transparent 3%), radial-gradient(circle at 99% 62%, rgba(176, 59, 191, 0.3) 0%, transparent 11%), radial-gradient(circle at 62% 40%, rgba(176, 59, 191, 0.3) 0%, transparent 27%), radial-gradient(circle at 33% 2%, rgba(82, 52, 191, 0.3) 0%, transparent 4%), radial-gradient(circle at 58% 83%, rgba(82, 52, 191, 0.3) 0%, transparent 6%), radial-gradient(circle at 99% 66%, rgba(176, 59, 191, 0.3) 0%, transparent 26%), radial-gradient(circle at 11% 91%, rgba(82, 52, 191, 0.3) 0%, transparent 20%), radial-gradient(circle at 40% 7%, rgba(82, 52, 191, 0.3) 0%, transparent 24%), radial-gradient(circle at 77% 24%, rgba(82, 52, 191, 0.3) 0%, transparent 7%), radial-gradient(circle at 60% 97%, rgba(176, 59, 191, 0.3) 0%, transparent 9%), radial-gradient(circle at 53% 73%, rgba(176, 59, 191, 0.3) 0%, transparent 14%), radial-gradient(circle at 97% 99%, rgba(176, 59, 191, 0.3) 0%, transparent 21%), radial-gradient(circle at 39% 92%, rgba(82, 52, 191, 0.3) 0%, transparent 12%), radial-gradient(circle at 42% 76%, rgba(176, 59, 191, 0.3) 0%, transparent 24%), radial-gradient(circle at 65% 52%, rgba(176, 59, 191, 0.3) 0%, transparent 16%), radial-gradient(circle at 16% 7%, rgba(82, 52, 191, 0.3) 0%, transparent 21%), radial-gradient(circle at 3% 7%, rgba(82, 52, 191, 0.3) 0%, transparent 30%), radial-gradient(circle at 44% 93%, rgba(82, 52, 191, 0.3) 0%, transparent 28%), radial-gradient(circle at 100% 94%, rgba(176, 59, 191, 0.3) 0%, transparent 14%), radial-gradient(circle at 65% 62%, rgba(82, 52, 191, 0.3) 0%, transparent 20%), radial-gradient(circle at 28% 12%, rgba(82, 52, 191, 0.3) 0%, transparent 23%), radial-gradient(circle at 95% 59%, rgba(82, 52, 191, 0.3) 0%, transparent 13%), radial-gradient(circle at 89% 32%, rgba(176, 59, 191, 0.3) 0%, transparent 25%), radial-gradient(circle at 47% 15%, rgba(176, 59, 191, 0.3) 0%, transparent 10%), radial-gradient(circle at 52% 66%, rgba(176, 59, 191, 0.3) 0%, transparent 14%), radial-gradient(circle at 97% 22%, rgba(82, 52, 191, 0.3) 0%, transparent 16%), radial-gradient(circle at 63% 16%, rgba(82, 52, 191, 0.3) 0%, transparent 6%), radial-gradient(circle at 36% 28%, rgba(176, 59, 191, 0.3) 0%, transparent 11%), radial-gradient(circle at 15% 21%, rgba(82, 52, 191, 0.3) 0%, transparent 1%), radial-gradient(circle at 42% 18%, rgba(176, 59, 191, 0.3) 0%, transparent 27%), radial-gradient(circle at 53% 26%, rgba(176, 59, 191, 0.3) 0%, transparent 11%), radial-gradient(circle at 66% 94%, rgba(176, 59, 191, 0.3) 0%, transparent 25%), radial-gradient(circle at 69% 40%, rgba(82, 52, 191, 0.3) 0%, transparent 5%), radial-gradient(circle at 67% 79%, rgba(176, 59, 191, 0.3) 0%, transparent 25%), radial-gradient(circle at 93% 58%, rgba(176, 59, 191, 0.3) 0%, transparent 24%), radial-gradient(circle at 45% 5%, rgba(82, 52, 191, 0.3) 0%, transparent 14%), radial-gradient(circle at 42% 86%, rgba(176, 59, 191, 0.3) 0%, transparent 3%), radial-gradient(circle at 83% 24%, rgba(82, 52, 191, 0.3) 0%, transparent 18%), radial-gradient(circle at 51% 94%, rgba(82, 52, 191, 0.3) 0%, transparent 10%), radial-gradient(circle at 90% 15%, rgba(176, 59, 191, 0.3) 0%, transparent 5%), radial-gradient(circle at 19% 53%, rgba(82, 52, 191, 0.3) 0%, transparent 17%), radial-gradient(circle at 92% 67%, rgba(176, 59, 191, 0.3) 0%, transparent 3%), radial-gradient(circle at 36% 28%, rgba(176, 59, 191, 0.3) 0%, transparent 19%), radial-gradient(circle at 17% 33%, rgba(176, 59, 191, 0.3) 0%, transparent 8%), radial-gradient(circle at 87% 81%, rgba(176, 59, 191, 0.3) 0%, transparent 16%), radial-gradient(circle at 90% 62%, rgba(82, 52, 191, 0.3) 0%, transparent 11%), radial-gradient(circle at 63% 13%, rgba(176, 59, 191, 0.3) 0%, transparent 3%), radial-gradient(circle at 15% 47%, rgba(176, 59, 191, 0.3) 0%, transparent 2%), radial-gradient(circle at 77% 3%, rgba(176, 59, 191, 0.3) 0%, transparent 25%), radial-gradient(circle at 67% 14%, rgba(176, 59, 191, 0.3) 0%, transparent 12%), radial-gradient(circle at 87% 44%, rgba(82, 52, 191, 0.3) 0%, transparent 20%), radial-gradient(circle at 79% 32%, rgba(176, 59, 191, 0.3) 0%, transparent 4%), radial-gradient(circle at 96% 92%, rgba(82, 52, 191, 0.3) 0%, transparent 28%), radial-gradient(circle at 36% 55%, rgba(82, 52, 191, 0.3) 0%, transparent 18%), radial-gradient(circle at 29% 80%, rgba(176, 59, 191, 0.3) 0%, transparent 24%), radial-gradient(circle at 63% 16%, rgba(176, 59, 191, 0.3) 0%, transparent 16%), radial-gradient(circle at 99% 39%, rgba(176, 59, 191, 0.3) 0%, transparent 17%), radial-gradient(circle at 78% 59%, rgba(176, 59, 191, 0.3) 0%, transparent 26%), radial-gradient(circle at 43% 98%, rgba(176, 59, 191, 0.3) 0%, transparent 2%), radial-gradient(circle at 7% 17%, rgba(176, 59, 191, 0.3) 0%, transparent 3%), radial-gradient(circle at 94% 46%, rgba(176, 59, 191, 0.3) 0%, transparent 21%), radial-gradient(circle at 74% 80%, rgba(176, 59, 191, 0.3) 0%, transparent 28%), radial-gradient(circle at 47% 19%, rgba(176, 59, 191, 0.3) 0%, transparent 0%), radial-gradient(circle at 60% 33%, rgba(82, 52, 191, 0.3) 0%, transparent 15%), radial-gradient(circle at 93% 6%, rgba(82, 52, 191, 0.3) 0%, transparent 25%), radial-gradient(circle at 0% 75%, rgba(82, 52, 191, 0.3) 0%, transparent 24%), radial-gradient(circle at 79% 6%, rgba(82, 52, 191, 0.3) 0%, transparent 23%), radial-gradient(circle at 15% 99%, rgba(82, 52, 191, 0.3) 0%, transparent 10%), radial-gradient(circle at 73% 63%, rgba(82, 52, 191, 0.3) 0%, transparent 4%), radial-gradient(circle at 8% 77%, rgba(82, 52, 191, 0.3) 0%, transparent 2%), radial-gradient(circle at 8% 60%, rgba(176, 59, 191, 0.3) 0%, transparent 5%), radial-gradient(circle at 87% 65%, rgba(176, 59, 191, 0.3) 0%, transparent 30%), radial-gradient(circle at 79% 39%, rgba(82, 52, 191, 0.3) 0%, transparent 1%), radial-gradient(circle at 78% 83%, rgba(82, 52, 191, 0.3) 0%, transparent 10%), radial-gradient(circle at 51% 36%, rgba(82, 52, 191, 0.3) 0%, transparent 24%), radial-gradient(circle at 47% 51%, rgba(82, 52, 191, 0.3) 0%, transparent 27%), radial-gradient(circle at 8% 30%, rgba(176, 59, 191, 0.3) 0%, transparent 20%), radial-gradient(circle at 87% 39%, rgba(82, 52, 191, 0.3) 0%, transparent 3%), radial-gradient(circle at 59% 47%, rgba(176, 59, 191, 0.3) 0%, transparent 5%), radial-gradient(circle at 51% 40%, rgba(176, 59, 191, 0.3) 0%, transparent 13%);"></div>
+    <div id="starfield" class="starfield"><div class="star" style="left: 48%; top: 59%; width: 1px; height: 1px; opacity: 0.586816;"></div><div class="star" style="left: 6%; top: 14%; width: 8px; height: 8px; opacity: 0.592953;"></div><div class="star" style="left: 15%; top: 13%; width: 3px; height: 3px; opacity: 0.728719;"></div><div class="star" style="left: 66%; top: 19%; width: 1px; height: 1px; opacity: 0.838799;"></div><div class="star" style="left: 3%; top: 78%; width: 2px; height: 2px; opacity: 0.378363;"></div><div class="star" style="left: 10%; top: 81%; width: 5px; height: 5px; opacity: 0.268177;"></div><div class="star" style="left: 66%; top: 92%; width: 0px; height: 0px; opacity: 0.0184467;"></div><div class="star" style="left: 6%; top: 81%; width: 2px; height: 2px; opacity: 0.393961;"></div><div class="star" style="left: 22%; top: 55%; width: 1px; height: 1px; opacity: 0.288338;"></div><div class="star" style="left: 50%; top: 46%; width: 2px; height: 2px; opacity: 0.557831;"></div><div class="star" style="left: 58%; top: 4%; width: 7px; height: 7px; opacity: 0.920495;"></div><div class="star" style="left: 18%; top: 64%; width: 9px; height: 9px; opacity: 0.884715;"></div><div class="star twinkle lens-flare" style="left: 86%; top: 50%; width: 7px; height: 7px; opacity: 0.967723;"></div><div class="star" style="left: 64%; top: 44%; width: 8px; height: 8px; opacity: 0.730243;"></div><div class="star" style="left: 22%; top: 19%; width: 3px; height: 3px; opacity: 0.3135;"></div><div class="star" style="left: 38%; top: 94%; width: 6px; height: 6px; opacity: 0.148424;"></div><div class="star" style="left: 82%; top: 24%; width: 6px; height: 6px; opacity: 0.865598;"></div><div class="star" style="left: 0%; top: 98%; width: 7px; height: 7px; opacity: 0.454399;"></div><div class="star" style="left: 17%; top: 87%; width: 7px; height: 7px; opacity: 0.811589;"></div><div class="star" style="left: 66%; top: 76%; width: 0px; height: 0px; opacity: 0.732853;"></div><div class="star" style="left: 42%; top: 92%; width: 5px; height: 5px; opacity: 0.559258;"></div><div class="star" style="left: 84%; top: 47%; width: 6px; height: 6px; opacity: 0.0370153;"></div><div class="star" style="left: 100%; top: 18%; width: 4px; height: 4px; opacity: 0.176899;"></div><div class="star" style="left: 82%; top: 50%; width: 2px; height: 2px; opacity: 0.625144;"></div><div class="star" style="left: 19%; top: 1%; width: 5px; height: 5px; opacity: 0.439755;"></div><div class="star" style="left: 98%; top: 23%; width: 2px; height: 2px; opacity: 0.424448;"></div><div class="star" style="left: 63%; top: 41%; width: 3px; height: 3px; opacity: 0.860025;"></div><div class="star" style="left: 30%; top: 44%; width: 8px; height: 8px; opacity: 0.225108;"></div><div class="star" style="left: 35%; top: 90%; width: 5px; height: 5px; opacity: 0.0246242;"></div><div class="star" style="left: 58%; top: 42%; width: 5px; height: 5px; opacity: 0.267388;"></div><div class="star twinkle lens-flare" style="left: 11%; top: 25%; width: 4px; height: 4px; opacity: 0.991299;"></div><div class="star" style="left: 24%; top: 49%; width: 8px; height: 8px; opacity: 0.433317;"></div><div class="star twinkle lens-flare" style="left: 25%; top: 13%; width: 3px; height: 3px; opacity: 0.991526;"></div><div class="star" style="left: 74%; top: 70%; width: 8px; height: 8px; opacity: 0.404346;"></div><div class="star" style="left: 54%; top: 87%; width: 8px; height: 8px; opacity: 0.149189;"></div><div class="star" style="left: 34%; top: 24%; width: 10px; height: 10px; opacity: 0.44444;"></div><div class="star" style="left: 44%; top: 71%; width: 10px; height: 10px; opacity: 0.168234;"></div><div class="star" style="left: 33%; top: 88%; width: 4px; height: 4px; opacity: 0.855869;"></div><div class="star" style="left: 50%; top: 82%; width: 8px; height: 8px; opacity: 0.948983;"></div><div class="star" style="left: 26%; top: 86%; width: 4px; height: 4px; opacity: 0.0947808;"></div><div class="star" style="left: 80%; top: 41%; width: 9px; height: 9px; opacity: 0.587761;"></div><div class="star" style="left: 63%; top: 74%; width: 9px; height: 9px; opacity: 0.237541;"></div><div class="star twinkle lens-flare" style="left: 51%; top: 61%; width: 5px; height: 5px; opacity: 0.952;"></div><div class="star" style="left: 21%; top: 59%; width: 2px; height: 2px; opacity: 0.959206;"></div><div class="star" style="left: 93%; top: 87%; width: 2px; height: 2px; opacity: 0.0157661;"></div><div class="star" style="left: 75%; top: 35%; width: 8px; height: 8px; opacity: 0.868021;"></div><div class="star" style="left: 9%; top: 7%; width: 8px; height: 8px; opacity: 0.0015267;"></div><div class="star" style="left: 36%; top: 27%; width: 5px; height: 5px; opacity: 0.469738;"></div><div class="star" style="left: 58%; top: 17%; width: 1px; height: 1px; opacity: 0.681566;"></div><div class="star" style="left: 95%; top: 39%; width: 2px; height: 2px; opacity: 0.324784;"></div><div class="star" style="left: 62%; top: 40%; width: 5px; height: 5px; opacity: 0.152839;"></div><div class="star" style="left: 80%; top: 42%; width: 4px; height: 4px; opacity: 0.170091;"></div><div class="star" style="left: 81%; top: 43%; width: 8px; height: 8px; opacity: 0.749825;"></div><div class="star" style="left: 57%; top: 49%; width: 9px; height: 9px; opacity: 0.319649;"></div><div class="star" style="left: 95%; top: 40%; width: 4px; height: 4px; opacity: 0.127585;"></div><div class="star" style="left: 41%; top: 54%; width: 3px; height: 3px; opacity: 0.844647;"></div><div class="star" style="left: 93%; top: 50%; width: 4px; height: 4px; opacity: 0.849639;"></div><div class="star" style="left: 36%; top: 36%; width: 6px; height: 6px; opacity: 0.611288;"></div><div class="star" style="left: 35%; top: 2%; width: 8px; height: 8px; opacity: 0.0724982;"></div><div class="star" style="left: 92%; top: 25%; width: 1px; height: 1px; opacity: 0.682126;"></div><div class="star" style="left: 89%; top: 77%; width: 8px; height: 8px; opacity: 0.370472;"></div><div class="star" style="left: 8%; top: 80%; width: 1px; height: 1px; opacity: 0.722639;"></div><div class="star" style="left: 62%; top: 65%; width: 8px; height: 8px; opacity: 0.173552;"></div><div class="star" style="left: 88%; top: 6%; width: 4px; height: 4px; opacity: 0.81107;"></div><div class="star" style="left: 84%; top: 69%; width: 3px; height: 3px; opacity: 0.784038;"></div><div class="star" style="left: 84%; top: 57%; width: 6px; height: 6px; opacity: 0.134583;"></div><div class="star" style="left: 29%; top: 87%; width: 4px; height: 4px; opacity: 0.387238;"></div><div class="star" style="left: 96%; top: 31%; width: 8px; height: 8px; opacity: 0.311047;"></div><div class="star" style="left: 62%; top: 81%; width: 7px; height: 7px; opacity: 0.629638;"></div><div class="star" style="left: 49%; top: 94%; width: 6px; height: 6px; opacity: 0.382711;"></div><div class="star" style="left: 78%; top: 12%; width: 8px; height: 8px; opacity: 0.916286;"></div><div class="star" style="left: 95%; top: 94%; width: 2px; height: 2px; opacity: 0.749018;"></div><div class="star" style="left: 31%; top: 56%; width: 3px; height: 3px; opacity: 0.283576;"></div><div class="star" style="left: 82%; top: 47%; width: 8px; height: 8px; opacity: 0.839363;"></div><div class="star" style="left: 9%; top: 44%; width: 9px; height: 9px; opacity: 0.345929;"></div><div class="star" style="left: 75%; top: 60%; width: 9px; height: 9px; opacity: 0.570552;"></div><div class="star" style="left: 11%; top: 52%; width: 7px; height: 7px; opacity: 0.38287;"></div><div class="star" style="left: 20%; top: 57%; width: 4px; height: 4px; opacity: 0.864429;"></div><div class="star" style="left: 77%; top: 41%; width: 5px; height: 5px; opacity: 0.29278;"></div><div class="star" style="left: 51%; top: 33%; width: 4px; height: 4px; opacity: 0.323433;"></div><div class="star" style="left: 78%; top: 22%; width: 8px; height: 8px; opacity: 0.1986;"></div><div class="star" style="left: 6%; top: 98%; width: 6px; height: 6px; opacity: 0.31418;"></div><div class="star" style="left: 46%; top: 60%; width: 3px; height: 3px; opacity: 0.433517;"></div><div class="star" style="left: 45%; top: 0%; width: 8px; height: 8px; opacity: 0.350997;"></div><div class="star" style="left: 79%; top: 93%; width: 6px; height: 6px; opacity: 0.123933;"></div><div class="star" style="left: 80%; top: 88%; width: 7px; height: 7px; opacity: 0.67513;"></div><div class="star" style="left: 17%; top: 8%; width: 3px; height: 3px; opacity: 0.47793;"></div><div class="star" style="left: 34%; top: 39%; width: 10px; height: 10px; opacity: 0.487069;"></div><div class="star" style="left: 53%; top: 99%; width: 2px; height: 2px; opacity: 0.783483;"></div><div class="star" style="left: 69%; top: 36%; width: 3px; height: 3px; opacity: 0.601445;"></div><div class="star" style="left: 37%; top: 80%; width: 8px; height: 8px; opacity: 0.8601;"></div><div class="star" style="left: 21%; top: 100%; width: 3px; height: 3px; opacity: 0.586265;"></div><div class="star" style="left: 39%; top: 74%; width: 1px; height: 1px; opacity: 0.316529;"></div><div class="star" style="left: 36%; top: 72%; width: 1px; height: 1px; opacity: 0.994555;"></div><div class="star" style="left: 84%; top: 76%; width: 6px; height: 6px; opacity: 0.207433;"></div><div class="star" style="left: 92%; top: 9%; width: 4px; height: 4px; opacity: 0.138869;"></div><div class="star" style="left: 2%; top: 36%; width: 5px; height: 5px; opacity: 0.135307;"></div><div class="star" style="left: 92%; top: 63%; width: 4px; height: 4px; opacity: 0.486967;"></div><div class="star" style="left: 33%; top: 90%; width: 2px; height: 2px; opacity: 0.433011;"></div><div class="star" style="left: 76%; top: 100%; width: 4px; height: 4px; opacity: 0.171459;"></div><div class="star" style="left: 54%; top: 15%; width: 8px; height: 8px; opacity: 0.407045;"></div><div class="star" style="left: 23%; top: 99%; width: 2px; height: 2px; opacity: 0.325671;"></div><div class="star" style="left: 37%; top: 48%; width: 0px; height: 0px; opacity: 0.0848694;"></div><div class="star" style="left: 9%; top: 84%; width: 2px; height: 2px; opacity: 0.177236;"></div><div class="star" style="left: 32%; top: 90%; width: 9px; height: 9px; opacity: 0.888943;"></div><div class="star" style="left: 30%; top: 63%; width: 5px; height: 5px; opacity: 0.072754;"></div><div class="star" style="left: 47%; top: 45%; width: 5px; height: 5px; opacity: 0.101103;"></div><div class="star" style="left: 53%; top: 15%; width: 7px; height: 7px; opacity: 0.444418;"></div><div class="star" style="left: 97%; top: 55%; width: 9px; height: 9px; opacity: 0.0111984;"></div><div class="star" style="left: 12%; top: 37%; width: 3px; height: 3px; opacity: 0.64185;"></div><div class="star" style="left: 57%; top: 68%; width: 6px; height: 6px; opacity: 0.62796;"></div><div class="star" style="left: 94%; top: 41%; width: 3px; height: 3px; opacity: 0.66779;"></div><div class="star" style="left: 41%; top: 82%; width: 2px; height: 2px; opacity: 0.117273;"></div><div class="star" style="left: 99%; top: 72%; width: 4px; height: 4px; opacity: 0.0241338;"></div><div class="star" style="left: 96%; top: 71%; width: 3px; height: 3px; opacity: 0.421283;"></div><div class="star" style="left: 53%; top: 52%; width: 5px; height: 5px; opacity: 0.114005;"></div><div class="star" style="left: 49%; top: 96%; width: 1px; height: 1px; opacity: 0.836557;"></div><div class="star" style="left: 29%; top: 99%; width: 7px; height: 7px; opacity: 0.508977;"></div><div class="star" style="left: 75%; top: 30%; width: 4px; height: 4px; opacity: 0.484917;"></div><div class="star" style="left: 33%; top: 70%; width: 2px; height: 2px; opacity: 0.941671;"></div><div class="star" style="left: 59%; top: 77%; width: 2px; height: 2px; opacity: 0.890577;"></div><div class="star" style="left: 89%; top: 27%; width: 2px; height: 2px; opacity: 0.483205;"></div><div class="star" style="left: 57%; top: 84%; width: 4px; height: 4px; opacity: 0.789146;"></div><div class="star" style="left: 65%; top: 25%; width: 3px; height: 3px; opacity: 0.584051;"></div><div class="star" style="left: 83%; top: 88%; width: 7px; height: 7px; opacity: 0.429098;"></div><div class="star" style="left: 44%; top: 0%; width: 9px; height: 9px; opacity: 0.399886;"></div><div class="star" style="left: 93%; top: 88%; width: 6px; height: 6px; opacity: 0.219693;"></div><div class="star" style="left: 83%; top: 92%; width: 2px; height: 2px; opacity: 0.686594;"></div><div class="star" style="left: 62%; top: 64%; width: 2px; height: 2px; opacity: 0.0194532;"></div><div class="star" style="left: 38%; top: 25%; width: 9px; height: 9px; opacity: 0.292019;"></div><div class="star" style="left: 81%; top: 66%; width: 2px; height: 2px; opacity: 0.113973;"></div><div class="star" style="left: 30%; top: 0%; width: 10px; height: 10px; opacity: 0.613381;"></div><div class="star" style="left: 69%; top: 7%; width: 7px; height: 7px; opacity: 0.123267;"></div><div class="star" style="left: 41%; top: 63%; width: 1px; height: 1px; opacity: 0.932695;"></div><div class="star" style="left: 3%; top: 98%; width: 1px; height: 1px; opacity: 0.894187;"></div><div class="star" style="left: 18%; top: 7%; width: 4px; height: 4px; opacity: 0.826996;"></div><div class="star" style="left: 61%; top: 44%; width: 6px; height: 6px; opacity: 0.365813;"></div><div class="star" style="left: 70%; top: 38%; width: 1px; height: 1px; opacity: 0.780745;"></div><div class="star" style="left: 89%; top: 38%; width: 0px; height: 0px; opacity: 0.767098;"></div><div class="star" style="left: 37%; top: 85%; width: 2px; height: 2px; opacity: 0.470162;"></div><div class="star" style="left: 92%; top: 68%; width: 10px; height: 10px; opacity: 0.0682236;"></div><div class="star" style="left: 32%; top: 48%; width: 2px; height: 2px; opacity: 0.670357;"></div><div class="star" style="left: 78%; top: 17%; width: 1px; height: 1px; opacity: 0.523187;"></div><div class="star" style="left: 6%; top: 73%; width: 1px; height: 1px; opacity: 0.892624;"></div><div class="star" style="left: 94%; top: 82%; width: 8px; height: 8px; opacity: 0.828962;"></div><div class="star" style="left: 56%; top: 51%; width: 2px; height: 2px; opacity: 0.464827;"></div><div class="star" style="left: 59%; top: 79%; width: 0px; height: 0px; opacity: 0.779592;"></div><div class="star" style="left: 82%; top: 11%; width: 1px; height: 1px; opacity: 0.436449;"></div><div class="star" style="left: 59%; top: 39%; width: 9px; height: 9px; opacity: 0.666202;"></div><div class="star" style="left: 11%; top: 87%; width: 4px; height: 4px; opacity: 0.518453;"></div><div class="star" style="left: 28%; top: 18%; width: 9px; height: 9px; opacity: 0.874236;"></div><div class="star" style="left: 72%; top: 86%; width: 9px; height: 9px; opacity: 0.501225;"></div><div class="star" style="left: 86%; top: 76%; width: 5px; height: 5px; opacity: 0.629629;"></div><div class="star" style="left: 84%; top: 2%; width: 6px; height: 6px; opacity: 0.826458;"></div><div class="star" style="left: 16%; top: 44%; width: 5px; height: 5px; opacity: 0.729197;"></div><div class="star" style="left: 45%; top: 89%; width: 7px; height: 7px; opacity: 0.256018;"></div><div class="star" style="left: 75%; top: 62%; width: 1px; height: 1px; opacity: 0.558156;"></div><div class="star" style="left: 2%; top: 13%; width: 8px; height: 8px; opacity: 0.0891284;"></div><div class="star" style="left: 72%; top: 48%; width: 8px; height: 8px; opacity: 0.08128;"></div><div class="star" style="left: 46%; top: 89%; width: 0px; height: 0px; opacity: 0.0634757;"></div><div class="star" style="left: 71%; top: 99%; width: 5px; height: 5px; opacity: 0.0879038;"></div><div class="star" style="left: 21%; top: 95%; width: 3px; height: 3px; opacity: 0.645587;"></div><div class="star" style="left: 27%; top: 77%; width: 5px; height: 5px; opacity: 0.270769;"></div><div class="star" style="left: 90%; top: 83%; width: 5px; height: 5px; opacity: 0.0483543;"></div><div class="star" style="left: 37%; top: 66%; width: 5px; height: 5px; opacity: 0.580926;"></div><div class="star" style="left: 32%; top: 51%; width: 9px; height: 9px; opacity: 0.75859;"></div><div class="star" style="left: 33%; top: 3%; width: 4px; height: 4px; opacity: 0.243694;"></div><div class="star" style="left: 62%; top: 54%; width: 1px; height: 1px; opacity: 0.821863;"></div><div class="star" style="left: 52%; top: 84%; width: 4px; height: 4px; opacity: 0.76644;"></div><div class="star" style="left: 44%; top: 18%; width: 0px; height: 0px; opacity: 0.3787;"></div><div class="star" style="left: 99%; top: 83%; width: 5px; height: 5px; opacity: 0.172686;"></div><div class="star" style="left: 49%; top: 82%; width: 2px; height: 2px; opacity: 0.538643;"></div><div class="star" style="left: 99%; top: 89%; width: 4px; height: 4px; opacity: 0.446135;"></div><div class="star" style="left: 91%; top: 22%; width: 4px; height: 4px; opacity: 0.310501;"></div><div class="star" style="left: 88%; top: 83%; width: 4px; height: 4px; opacity: 0.201634;"></div><div class="star" style="left: 25%; top: 48%; width: 0px; height: 0px; opacity: 0.762632;"></div><div class="star" style="left: 53%; top: 34%; width: 7px; height: 7px; opacity: 0.755767;"></div><div class="star" style="left: 93%; top: 40%; width: 6px; height: 6px; opacity: 0.0443622;"></div><div class="star" style="left: 66%; top: 95%; width: 3px; height: 3px; opacity: 0.185087;"></div><div class="star" style="left: 29%; top: 97%; width: 0px; height: 0px; opacity: 0.603785;"></div><div class="star" style="left: 41%; top: 89%; width: 3px; height: 3px; opacity: 0.241838;"></div><div class="star" style="left: 41%; top: 72%; width: 1px; height: 1px; opacity: 0.692709;"></div><div class="star twinkle lens-flare" style="left: 93%; top: 96%; width: 3px; height: 3px; opacity: 0.953365;"></div><div class="star twinkle lens-flare" style="left: 95%; top: 72%; width: 9px; height: 9px; opacity: 0.974111;"></div><div class="star" style="left: 88%; top: 48%; width: 4px; height: 4px; opacity: 0.421851;"></div><div class="star" style="left: 4%; top: 61%; width: 4px; height: 4px; opacity: 0.533899;"></div><div class="star" style="left: 20%; top: 53%; width: 10px; height: 10px; opacity: 0.581113;"></div><div class="star" style="left: 84%; top: 18%; width: 7px; height: 7px; opacity: 0.437669;"></div><div class="star" style="left: 57%; top: 11%; width: 0px; height: 0px; opacity: 0.669394;"></div><div class="star twinkle lens-flare" style="left: 16%; top: 86%; width: 8px; height: 8px; opacity: 0.950384;"></div><div class="star" style="left: 89%; top: 87%; width: 7px; height: 7px; opacity: 0.397483;"></div><div class="star" style="left: 74%; top: 49%; width: 9px; height: 9px; opacity: 0.684862;"></div><div class="star" style="left: 26%; top: 53%; width: 7px; height: 7px; opacity: 0.389394;"></div><div class="star" style="left: 34%; top: 70%; width: 6px; height: 6px; opacity: 0.202688;"></div><div class="star" style="left: 20%; top: 26%; width: 2px; height: 2px; opacity: 0.0373129;"></div><div class="star" style="left: 89%; top: 13%; width: 2px; height: 2px; opacity: 0.763463;"></div><div class="star" style="left: 65%; top: 59%; width: 6px; height: 6px; opacity: 0.336069;"></div><div class="star" style="left: 38%; top: 44%; width: 5px; height: 5px; opacity: 0.268886;"></div><div class="star" style="left: 57%; top: 53%; width: 1px; height: 1px; opacity: 0.357406;"></div><div class="star" style="left: 12%; top: 80%; width: 9px; height: 9px; opacity: 0.925931;"></div></div>
+    <div id="sun" class="sun"></div>
+    <div id="planets" class="planets"></div>
+
+    <div class="container" id="body-container">
+
+        <div id="content-container">
+        
+    <div class="row">
+        <div class="col-lg-6">
+    <div class="row">
+        <div class="col-lg-12">
+          <h2 class="page-header">Scoreboard <small><a href="https://ctf.why2025.org/json?view=scoreboard">
+                <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/json.png" title="View json" alt="json" class="discreet-inline small-icon">
+            </a></small></h2>
+        </div>
+    </div>
+    
+    <table class="team-table table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Team</th>
+          <th class="text-center">Country</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+     
+        <tr>
+          <td>1</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=13">
+              <span class="team_13">
+                GOBBLES
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>700</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=84">
+              <span class="team_84">
+                Morbion
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>700</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=19">
+              <span class="team_19">
+                bah
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=gb">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/gb.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="gb" title="" data-original-title="United Kingdom">
+    </a>
+          </td>
+          <td>700</td>
+        </tr>
+        
+        <tr>
+          <td>4</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=121">
+              <span class="team_121">
+                Dutch Picknick
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>700</td>
+        </tr>
+        
+        <tr>
+          <td>5</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=20">
+              <span class="team_20">
+                5p4c3b4llz
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=be">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/be.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="be" title="" data-original-title="Belgium">
+    </a>
+          </td>
+          <td>700</td>
+        </tr>
+        
+        <tr>
+          <td>6</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=77">
+              <span class="team_77">
+                ctdo
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>500</td>
+        </tr>
+        
+        <tr>
+          <td>7</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=23">
+              <span class="team_23">
+                "&gt;&lt;plaintext&gt;
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>500</td>
+        </tr>
+        
+        <tr>
+          <td>8</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=219">
+              <span class="team_219">
+                Peetz0r
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>500</td>
+        </tr>
+        
+        <tr>
+          <td>9</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=34">
+              <span class="team_34">
+                team_kek
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>300</td>
+        </tr>
+        
+        <tr>
+          <td>10</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=18">
+              <span class="team_18">
+                backspace
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>300</td>
+        </tr>
+        
+        <tr>
+          <td>11</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=116">
+              <span class="team_116">
+                PinkFluffyUnicorn
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=dk">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/dk.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="dk" title="" data-original-title="Denmark">
+    </a>
+          </td>
+          <td>300</td>
+        </tr>
+        
+        <tr>
+          <td>12</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=27">
+              <span class="team_27">
+                133713pwnies
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>300</td>
+        </tr>
+        
+        <tr>
+          <td>13</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=187">
+              <span class="team_187">
+                Slipstream
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=gb">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/gb.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="gb" title="" data-original-title="United Kingdom">
+    </a>
+          </td>
+          <td>300</td>
+        </tr>
+        
+        <tr>
+          <td>14</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=206">
+              <span class="team_206">
+                [object Object]
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>300</td>
+        </tr>
+        
+        <tr>
+          <td>15</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=142">
+              <span class="team_142">
+                Notmyproblem
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ai">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ai.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ai" title="" data-original-title="Anguilla">
+    </a>
+          </td>
+          <td>250</td>
+        </tr>
+        
+        <tr>
+          <td>16</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=14">
+              <span class="team_14">
+                Sorry
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ru">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ru.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ru" title="" data-original-title="Russian Federation">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>17</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=24">
+              <span class="team_24">
+                Team_fu11_of_3diots
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=bd">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/bd.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="bd" title="" data-original-title="Bangladesh">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>18</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=16">
+              <span class="team_16">
+                WHYcast
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>19</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=36">
+              <span class="team_36">
+                TheMediocres
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>20</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=48">
+              <span class="team_48">
+                RaBi3a
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ma">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ma.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ma" title="" data-original-title="Morocco">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>21</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=42">
+              <span class="team_42">
+                Haakjes
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>22</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=54">
+              <span class="team_54">
+                46 52
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=it">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/it.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="it" title="" data-original-title="Italy">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>23</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=44">
+              <span class="team_44">
+                qwerty
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ua">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ua.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ua" title="" data-original-title="Ukraine">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>24</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=60">
+              <span class="team_60">
+                MelR00t
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nz">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nz.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nz" title="" data-original-title="New Zealand">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>25</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=53">
+              <span class="team_53">
+                0ffs3tt3rs
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>26</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=72">
+              <span class="team_72">
+                VSL
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>27</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=73">
+              <span class="team_73">
+                onemanband
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>28</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=83">
+              <span class="team_83">
+                s3quenc3
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ua">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ua.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ua" title="" data-original-title="Ukraine">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>29</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=88">
+              <span class="team_88">
+                Pitok5
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=it">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/it.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="it" title="" data-original-title="Italy">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>30</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=25">
+              <span class="team_25">
+                FPV
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ua">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ua.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ua" title="" data-original-title="Ukraine">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>31</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=115">
+              <span class="team_115">
+                CCLEMON
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>32</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=119">
+              <span class="team_119">
+                CodeCrashers
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=pk">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/pk.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="pk" title="" data-original-title="Pakistan">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>33</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=87">
+              <span class="team_87">
+                KB4B3T
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=tn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/tn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="tn" title="" data-original-title="Tunisia">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>34</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=136">
+              <span class="team_136">
+                รђ๏ﻮﻮ๏Շђ
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=es">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/es.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="es" title="" data-original-title="Spain">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>35</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=32">
+              <span class="team_32">
+                pegasus
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>36</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=52">
+              <span class="team_52">
+                onemanshow
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>37</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=98">
+              <span class="team_98">
+                magul
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=kr">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/kr.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="kr" title="" data-original-title="Korea, Republic of">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>38</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=160">
+              <span class="team_160">
+                gigawalt
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>39</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=169">
+              <span class="team_169">
+                fox-kids
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>40</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=172">
+              <span class="team_172">
+                f4n_n3r0
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>41</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=178">
+              <span class="team_178">
+                Detvedjegikke
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=dk">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/dk.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="dk" title="" data-original-title="Denmark">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>42</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=185">
+              <span class="team_185">
+                Gaffa
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>43</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=159">
+              <span class="team_159">
+                LetsSee
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ar">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ar.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ar" title="" data-original-title="Argentina">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>44</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=201">
+              <span class="team_201">
+                holyhexor
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=id">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/id.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="id" title="" data-original-title="Indonesia">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>45</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=59">
+              <span class="team_59">
+                SYNN3R
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>46</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=221">
+              <span class="team_221">
+                neymar
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=br">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/br.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="br" title="" data-original-title="Brazil">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>47</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=67">
+              <span class="team_67">
+                n00bsport
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>48</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=220">
+              <span class="team_220">
+                SYN-bit
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>49</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=167">
+              <span class="team_167">
+                RedRocket
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>50</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=210">
+              <span class="team_210">
+                Z3r0_l0g0n
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>51</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=234">
+              <span class="team_234">
+                Monsters
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>100</td>
+        </tr>
+        
+        <tr>
+          <td>52</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=26">
+              <span class="team_26">
+                SCo
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>53</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=35">
+              <span class="team_35">
+                m4ng0
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>54</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=39">
+              <span class="team_39">
+                DrBlue
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>55</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=43">
+              <span class="team_43">
+                guvnor
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>56</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=30">
+              <span class="team_30">
+                Fractal Mindshift
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>57</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=45">
+              <span class="team_45">
+                YMD
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=hk">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/hk.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="hk" title="" data-original-title="Hong Kong">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>58</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=51">
+              <span class="team_51">
+                0xKn!ght
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=eg">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/eg.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="eg" title="" data-original-title="Egypt">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>59</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=57">
+              <span class="team_57">
+                annen1923
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=au">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/au.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="au" title="" data-original-title="Australia">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>60</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=65">
+              <span class="team_65">
+                AAAA
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ai">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ai.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ai" title="" data-original-title="Anguilla">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>61</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=64">
+              <span class="team_64">
+                0xAmgoda
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=eg">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/eg.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="eg" title="" data-original-title="Egypt">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>62</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=71">
+              <span class="team_71">
+                **********
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>63</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=58">
+              <span class="team_58">
+                one-shot
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=sa">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/sa.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="sa" title="" data-original-title="Saudi Arabia">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>64</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=85">
+              <span class="team_85">
+                chenyn
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>65</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=111">
+              <span class="team_111">
+                PracticeTeam
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=sg">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/sg.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="sg" title="" data-original-title="Singapore">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>66</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=123">
+              <span class="team_123">
+                H4ckan3derl1
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=it">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/it.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="it" title="" data-original-title="Italy">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>67</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=129">
+              <span class="team_129">
+                Edu
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>68</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=138">
+              <span class="team_138">
+                R1yhtp
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>69</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=118">
+              <span class="team_118">
+                BREACHFORUMS
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=hk">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/hk.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="hk" title="" data-original-title="Hong Kong">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>70</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=163">
+              <span class="team_163">
+                team
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>71</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=165">
+              <span class="team_165">
+                zenCipher
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=id">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/id.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="id" title="" data-original-title="Indonesia">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>72</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=182">
+              <span class="team_182">
+                ancd
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>73</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=31">
+              <span class="team_31">
+                ctfrrteam
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=pl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/pl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="pl" title="" data-original-title="Poland">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>74</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=144">
+              <span class="team_144">
+                hermits
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=af">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/af.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="af" title="" data-original-title="Afghanistan">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>75</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=192">
+              <span class="team_192">
+                lifeless
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=eg">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/eg.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="eg" title="" data-original-title="Egypt">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>76</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=202">
+              <span class="team_202">
+                cqql
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=pl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/pl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="pl" title="" data-original-title="Poland">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>77</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=207">
+              <span class="team_207">
+                NaN
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>78</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=225">
+              <span class="team_225">
+                Apes Stronk Together
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=id">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/id.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="id" title="" data-original-title="Indonesia">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>79</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=76">
+              <span class="team_76">
+                The_Otters
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>80</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=232">
+              <span class="team_232">
+                H4CK_077
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>81</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=80">
+              <span class="team_80">
+                typischbeer
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>50</td>
+        </tr>
+        
+        <tr>
+          <td>82</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=15">
+              <span class="team_15">
+                csiml
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ar">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ar.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ar" title="" data-original-title="Argentina">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>83</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=17">
+              <span class="team_17">
+                IUE-badge
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>84</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=21">
+              <span class="team_21">
+                alone
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=tn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/tn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="tn" title="" data-original-title="Tunisia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>85</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=22">
+              <span class="team_22">
+                M3owSec
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ru">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ru.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ru" title="" data-original-title="Russian Federation">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>86</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=28">
+              <span class="team_28">
+                Chaospottheads
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>87</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=29">
+              <span class="team_29">
+                boeken
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>88</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=33">
+              <span class="team_33">
+                mamahakumauyoonseo
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=id">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/id.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="id" title="" data-original-title="Indonesia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>89</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=37">
+              <span class="team_37">
+                peter
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=tz">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/tz.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="tz" title="" data-original-title="Tanzania, United Republic of">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>90</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=38">
+              <span class="team_38">
+                NAANNA
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ma">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ma.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ma" title="" data-original-title="Morocco">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>91</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=40">
+              <span class="team_40">
+                hep
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=af">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/af.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="af" title="" data-original-title="Afghanistan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>92</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=41">
+              <span class="team_41">
+                0x23
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=bd">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/bd.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="bd" title="" data-original-title="Bangladesh">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>93</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=46">
+              <span class="team_46">
+                hanemile
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>94</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=47">
+              <span class="team_47">
+                blepblep
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>95</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=49">
+              <span class="team_49">
+                Pimps
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>96</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=50">
+              <span class="team_50">
+                bdhxgrp
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=bd">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/bd.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="bd" title="" data-original-title="Bangladesh">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>97</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=55">
+              <span class="team_55">
+                Librarians
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>98</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=56">
+              <span class="team_56">
+                asdasdas
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=au">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/au.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="au" title="" data-original-title="Australia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>99</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=61">
+              <span class="team_61">
+                monquess
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ua">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ua.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ua" title="" data-original-title="Ukraine">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>100</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=62">
+              <span class="team_62">
+                Lost Minds
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=iq">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/iq.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="iq" title="" data-original-title="Iraq">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>101</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=63">
+              <span class="team_63">
+                s4cript
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=sa">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/sa.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="sa" title="" data-original-title="Saudi Arabia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>102</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=66">
+              <span class="team_66">
+                finehuzz
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=my">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/my.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="my" title="" data-original-title="Malaysia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>103</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=68">
+              <span class="team_68">
+                B44D TR1P
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ma">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ma.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ma" title="" data-original-title="Morocco">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>104</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=69">
+              <span class="team_69">
+                H4ck3r T34m
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=es">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/es.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="es" title="" data-original-title="Spain">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>105</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=70">
+              <span class="team_70">
+                Hackafon
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=rs">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/rs.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="rs" title="" data-original-title="Serbia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>106</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=74">
+              <span class="team_74">
+                pietje
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>107</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=75">
+              <span class="team_75">
+                0_Clicks
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=tn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/tn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="tn" title="" data-original-title="Tunisia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>108</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=78">
+              <span class="team_78">
+                CRUSADERS
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>109</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=79">
+              <span class="team_79">
+                plaintext
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>110</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=81">
+              <span class="team_81">
+                LOL
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=us">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/us.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="us" title="" data-original-title="United States">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>111</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=82">
+              <span class="team_82">
+                0xcyb3rtron
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=eg">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/eg.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="eg" title="" data-original-title="Egypt">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>112</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=86">
+              <span class="team_86">
+                105
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=dz">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/dz.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="dz" title="" data-original-title="Algeria">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>113</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=89">
+              <span class="team_89">
+                fzhshzh
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=al">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/al.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="al" title="" data-original-title="Albania">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>114</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=90">
+              <span class="team_90">
+                tensor
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=be">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/be.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="be" title="" data-original-title="Belgium">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>115</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=91">
+              <span class="team_91">
+                0mr_hz
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=dz">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/dz.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="dz" title="" data-original-title="Algeria">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>116</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=92">
+              <span class="team_92">
+                advaddaaav
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=aq">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/aq.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="aq" title="" data-original-title="Antarctica">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>117</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=93">
+              <span class="team_93">
+                ri5e
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=am">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/am.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="am" title="" data-original-title="Armenia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>118</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=94">
+              <span class="team_94">
+                ex3x
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ar">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ar.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ar" title="" data-original-title="Argentina">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>119</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=95">
+              <span class="team_95">
+                leilow
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>120</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=96">
+              <span class="team_96">
+                devfault
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=us">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/us.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="us" title="" data-original-title="United States">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>121</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=97">
+              <span class="team_97">
+                gulag
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=id">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/id.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="id" title="" data-original-title="Indonesia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>122</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=99">
+              <span class="team_99">
+                y1ng
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>123</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=100">
+              <span class="team_100">
+                NS_
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>124</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=101">
+              <span class="team_101">
+                Integrated Hawkers
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=bd">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/bd.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="bd" title="" data-original-title="Bangladesh">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>125</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=102">
+              <span class="team_102">
+                Bits &amp; Pieces
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>126</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=103">
+              <span class="team_103">
+                PersianCats
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=us">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/us.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="us" title="" data-original-title="United States">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>127</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=104">
+              <span class="team_104">
+                j3bou9
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=tn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/tn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="tn" title="" data-original-title="Tunisia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>128</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=105">
+              <span class="team_105">
+                Bits_Finder
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>129</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=106">
+              <span class="team_106">
+                TCTN
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>130</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=107">
+              <span class="team_107">
+                TheForgottenBits
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>131</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=108">
+              <span class="team_108">
+                cyberk0tik
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ru">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ru.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ru" title="" data-original-title="Russian Federation">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>132</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=109">
+              <span class="team_109">
+                jsoa
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>133</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=110">
+              <span class="team_110">
+                baige
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>134</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=112">
+              <span class="team_112">
+                hamayanhamayan
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jp">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jp.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jp" title="" data-original-title="Japan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>135</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=113">
+              <span class="team_113">
+                GanSw
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>136</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=114">
+              <span class="team_114">
+                amyglan
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>137</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=117">
+              <span class="team_117">
+                Imbludabebiebabeba
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>138</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=120">
+              <span class="team_120">
+                Tech Tribe
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=np">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/np.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="np" title="" data-original-title="Nepal">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>139</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=122">
+              <span class="team_122">
+                JacketPotatoes
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=gb">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/gb.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="gb" title="" data-original-title="United Kingdom">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>140</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=124">
+              <span class="team_124">
+                Alexius
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=tz">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/tz.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="tz" title="" data-original-title="Tanzania, United Republic of">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>141</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=125">
+              <span class="team_125">
+                kidpwn007
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=au">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/au.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="au" title="" data-original-title="Australia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>142</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=126">
+              <span class="team_126">
+                L.O.T.U.S
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>143</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=127">
+              <span class="team_127">
+                mikejam
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>144</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=128">
+              <span class="team_128">
+                pizazz
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=sg">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/sg.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="sg" title="" data-original-title="Singapore">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>145</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=130">
+              <span class="team_130">
+                Ourbest
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>146</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=131">
+              <span class="team_131">
+                The-Hexorcists
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=pk">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/pk.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="pk" title="" data-original-title="Pakistan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>147</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=132">
+              <span class="team_132">
+                team3425324543
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=it">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/it.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="it" title="" data-original-title="Italy">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>148</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=133">
+              <span class="team_133">
+                tbsm4l
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>149</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=134">
+              <span class="team_134">
+                zysgmzb
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>150</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=135">
+              <span class="team_135">
+                Saen0zu
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=kr">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/kr.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="kr" title="" data-original-title="Korea, Republic of">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>151</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=137">
+              <span class="team_137">
+                ASpyRing
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>152</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=139">
+              <span class="team_139">
+                Fun:)
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jp">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jp.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jp" title="" data-original-title="Japan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>153</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=140">
+              <span class="team_140">
+                fennecksky
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=fr">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/fr.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="fr" title="" data-original-title="France">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>154</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=141">
+              <span class="team_141">
+                PEBKAC
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>155</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=143">
+              <span class="team_143">
+                huble
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>156</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=145">
+              <span class="team_145">
+                taurus
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jp">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jp.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jp" title="" data-original-title="Japan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>157</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=146">
+              <span class="team_146">
+                cyb3rq
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=my">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/my.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="my" title="" data-original-title="Malaysia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>158</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=147">
+              <span class="team_147">
+                The Glitch Mob
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=bd">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/bd.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="bd" title="" data-original-title="Bangladesh">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>159</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=148">
+              <span class="team_148">
+                solo
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=sa">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/sa.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="sa" title="" data-original-title="Saudi Arabia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>160</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=149">
+              <span class="team_149">
+                5unkn0wn
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=kr">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/kr.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="kr" title="" data-original-title="Korea, Republic of">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>161</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=150">
+              <span class="team_150">
+                tes
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=aq">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/aq.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="aq" title="" data-original-title="Antarctica">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>162</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=151">
+              <span class="team_151">
+                PixelPioneers25
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=tn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/tn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="tn" title="" data-original-title="Tunisia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>163</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=152">
+              <span class="team_152">
+                天亮一起追太阳
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>164</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=153">
+              <span class="team_153">
+                Network Ninjas
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>165</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=154">
+              <span class="team_154">
+                The Nepali Guy
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=np">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/np.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="np" title="" data-original-title="Nepal">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>166</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=155">
+              <span class="team_155">
+                tim
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>167</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=156">
+              <span class="team_156">
+                CTL
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>168</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=157">
+              <span class="team_157">
+                嗨嗨嗨
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>169</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=158">
+              <span class="team_158">
+                :xD
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ng">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ng.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ng" title="" data-original-title="Nigeria">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>170</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=161">
+              <span class="team_161">
+                The Hacktivists
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>171</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=162">
+              <span class="team_162">
+                WInCx
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>172</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=164">
+              <span class="team_164">
+                Re-Dem-pt-ion
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>173</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=166">
+              <span class="team_166">
+                CyberUNIT
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jo">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jo.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jo" title="" data-original-title="Jordan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>174</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=168">
+              <span class="team_168">
+                blarfengarrrrrrrr
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=af">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/af.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="af" title="" data-original-title="Afghanistan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>175</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=170">
+              <span class="team_170">
+                moichip
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=sg">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/sg.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="sg" title="" data-original-title="Singapore">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>176</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=171">
+              <span class="team_171">
+                mcusecurity
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=es">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/es.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="es" title="" data-original-title="Spain">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>177</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=173">
+              <span class="team_173">
+                Mists
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jo">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jo.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jo" title="" data-original-title="Jordan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>178</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=174">
+              <span class="team_174">
+                GGWPs
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=bd">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/bd.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="bd" title="" data-original-title="Bangladesh">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>179</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=175">
+              <span class="team_175">
+                swisscheese
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ch">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ch.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ch" title="" data-original-title="Switzerland">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>180</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=176">
+              <span class="team_176">
+                ZeroMarea
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jp">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jp.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jp" title="" data-original-title="Japan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>181</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=177">
+              <span class="team_177">
+                Hubbabubba
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=de">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/de.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="de" title="" data-original-title="Germany">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>182</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=179">
+              <span class="team_179">
+                Bagman
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=us">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/us.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="us" title="" data-original-title="United States">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>183</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=180">
+              <span class="team_180">
+                mrwalker511
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=us">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/us.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="us" title="" data-original-title="United States">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>184</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=181">
+              <span class="team_181">
+                liqueur
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=au">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/au.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="au" title="" data-original-title="Australia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>185</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=183">
+              <span class="team_183">
+                DinosaurDeathCertificate
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=fi">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/fi.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="fi" title="" data-original-title="Finland">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>186</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=184">
+              <span class="team_184">
+                Aberdeen
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=gb">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/gb.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="gb" title="" data-original-title="United Kingdom">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>187</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=186">
+              <span class="team_186">
+                BirBond
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>188</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=188">
+              <span class="team_188">
+                hehe
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=tn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/tn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="tn" title="" data-original-title="Tunisia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>189</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=189">
+              <span class="team_189">
+                jjj
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=tn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/tn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="tn" title="" data-original-title="Tunisia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>190</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=190">
+              <span class="team_190">
+                RulerOfHell
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=bd">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/bd.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="bd" title="" data-original-title="Bangladesh">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>191</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=191">
+              <span class="team_191">
+                kill_switch
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=it">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/it.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="it" title="" data-original-title="Italy">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>192</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=193">
+              <span class="team_193">
+                m1t0
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jp">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jp.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jp" title="" data-original-title="Japan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>193</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=194">
+              <span class="team_194">
+                shark
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=au">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/au.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="au" title="" data-original-title="Australia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>194</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=195">
+              <span class="team_195">
+                peepo
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>195</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=196">
+              <span class="team_196">
+                testingonly
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=gi">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/gi.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="gi" title="" data-original-title="Gibraltar">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>196</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=197">
+              <span class="team_197">
+                ihateweb3
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ax">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ax.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ax" title="" data-original-title="Aland Islands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>197</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=198">
+              <span class="team_198">
+                Team 915
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>198</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=199">
+              <span class="team_199">
+                Team Spiryt
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=pl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/pl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="pl" title="" data-original-title="Poland">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>199</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=200">
+              <span class="team_200">
+                IMF
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>200</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=203">
+              <span class="team_203">
+                desihackers
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>201</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=204">
+              <span class="team_204">
+                FL1TZ
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=dz">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/dz.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="dz" title="" data-original-title="Algeria">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>202</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=205">
+              <span class="team_205">
+                Waste
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=nl">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/nl.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="nl" title="" data-original-title="Netherlands">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>203</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=208">
+              <span class="team_208">
+                W&amp;nTzz!
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>204</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=209">
+              <span class="team_209">
+                cyb3rknight5
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>205</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=211">
+              <span class="team_211">
+                PacketPirates
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=my">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/my.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="my" title="" data-original-title="Malaysia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>206</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=212">
+              <span class="team_212">
+                dda
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=af">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/af.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="af" title="" data-original-title="Afghanistan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>207</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=213">
+              <span class="team_213">
+                ddaa
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=af">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/af.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="af" title="" data-original-title="Afghanistan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>208</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=214">
+              <span class="team_214">
+                hoadz74
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=vn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/vn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="vn" title="" data-original-title="Viet Nam">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>209</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=215">
+              <span class="team_215">
+                small
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=am">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/am.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="am" title="" data-original-title="Armenia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>210</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=216">
+              <span class="team_216">
+                cielo
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=it">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/it.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="it" title="" data-original-title="Italy">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>211</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=217">
+              <span class="team_217">
+                NevLeak
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=id">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/id.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="id" title="" data-original-title="Indonesia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>212</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=218">
+              <span class="team_218">
+                roshni
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>213</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=222">
+              <span class="team_222">
+                zerothsquad
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=in">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/in.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="in" title="" data-original-title="India">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>214</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=223">
+              <span class="team_223">
+                H7H
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jo">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jo.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jo" title="" data-original-title="Jordan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>215</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=224">
+              <span class="team_224">
+                sebastianpc
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=dk">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/dk.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="dk" title="" data-original-title="Denmark">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>216</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=226">
+              <span class="team_226">
+                botsy
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=ao">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/ao.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="ao" title="" data-original-title="Angola">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>217</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=227">
+              <span class="team_227">
+                33pyZombi3s
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=my">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/my.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="my" title="" data-original-title="Malaysia">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>218</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=228">
+              <span class="team_228">
+                SyntaxError
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=cn">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/cn.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="cn" title="" data-original-title="China">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>219</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=229">
+              <span class="team_229">
+                crop
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=af">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/af.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="af" title="" data-original-title="Afghanistan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>220</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=230">
+              <span class="team_230">
+                kgrzk2025
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jp">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jp.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jp" title="" data-original-title="Japan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>221</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=231">
+              <span class="team_231">
+                Eveheeero
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=kr">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/kr.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="kr" title="" data-original-title="Korea, Republic of">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>222</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=233">
+              <span class="team_233">
+                vlfvl
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=dj">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/dj.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="dj" title="" data-original-title="Djibouti">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+        <tr>
+          <td>223</td>
+          <td class="team-name">
+            <a href="https://ctf.why2025.org/user?id=235">
+              <span class="team_235">
+                koko
+              </span>
+            </a>
+          </td>
+          <td class="text-center">
+            
+    <a href="https://ctf.why2025.org/country?code=jo">
+        <img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jo.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" alt="jo" title="" data-original-title="Jordan">
+    </a>
+          </td>
+          <td>0</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+        </div>  <!-- / span6 -->
+
+        <div class="col-lg-6">
+        
+    <div class="row">
+        <div class="col-lg-12">
+          <h2 class="page-header">Challenges </h2>
+        </div>
+    </div>
+    
+        <table class="team-table table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Misc</th>
+              <th class="center">Points</th>
+              <th class="center"><span class="has-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="% of actively participating users">Solved by</span></th>
+              <th>First solvers</th>
+            </tr>
+          </thead>
+          <tbody>
+         
+            <tr>
+                <td>
+                    <a href="https://ctf.why2025.org/challenge?id=32">TZe-611</a>
+                </td>
+
+                <td class="center">
+                    200
+                </td>
+
+                <td class="center">
+                    8%
+                </td>
+
+                <td class="team-name"><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_gold_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="First to solve this challenge!" data-original-title="First to solve this challenge!"><a href="https://ctf.why2025.org/user?id=13">GOBBLES</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_silver_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Second to solve this challenge!" data-original-title="Second to solve this challenge!"><a href="https://ctf.why2025.org/user?id=84">Morbion</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_bronze_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Third to solve this challenge!" data-original-title="Third to solve this challenge!"><a href="https://ctf.why2025.org/user?id=77">ctdo</a><br>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        <table class="team-table table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Network</th>
+              <th class="center">Points</th>
+              <th class="center"><span class="has-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="% of actively participating users">Solved by</span></th>
+              <th>First solvers</th>
+            </tr>
+          </thead>
+          <tbody>
+         
+            <tr>
+                <td>
+                    <a href="https://ctf.why2025.org/challenge?id=37">Ransomware attack</a>
+                </td>
+
+                <td class="center">
+                    50
+                </td>
+
+                <td class="center">
+                    47%
+                </td>
+
+                <td class="team-name"><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_gold_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="First to solve this challenge!" data-original-title="First to solve this challenge!"><a href="https://ctf.why2025.org/user?id=20">5p4c3b4llz</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_silver_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Second to solve this challenge!" data-original-title="Second to solve this challenge!"><a href="https://ctf.why2025.org/user?id=13">GOBBLES</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_bronze_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Third to solve this challenge!" data-original-title="Third to solve this challenge!"><a href="https://ctf.why2025.org/user?id=19">bah</a><br>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        <table class="team-table table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Onsite</th>
+              <th class="center">Points</th>
+              <th class="center"><span class="has-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="% of actively participating users">Solved by</span></th>
+              <th>First solvers</th>
+            </tr>
+          </thead>
+          <tbody>
+         
+        </tbody>
+        </table>
+        <table class="team-table table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Pwnable</th>
+              <th class="center">Points</th>
+              <th class="center"><span class="has-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="% of actively participating users">Solved by</span></th>
+              <th>First solvers</th>
+            </tr>
+          </thead>
+          <tbody>
+         
+        </tbody>
+        </table>
+        <table class="team-table table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Web</th>
+              <th class="center">Points</th>
+              <th class="center"><span class="has-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="% of actively participating users">Solved by</span></th>
+              <th>First solvers</th>
+            </tr>
+          </thead>
+          <tbody>
+         
+            <tr>
+                <td>
+                    <a href="https://ctf.why2025.org/challenge?id=35">Planets</a>
+                </td>
+
+                <td class="center">
+                    50
+                </td>
+
+                <td class="center">
+                    64%
+                </td>
+
+                <td class="team-name"><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_gold_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="First to solve this challenge!" data-original-title="First to solve this challenge!"><a href="https://ctf.why2025.org/user?id=13">GOBBLES</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_silver_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Second to solve this challenge!" data-original-title="Second to solve this challenge!"><a href="https://ctf.why2025.org/user?id=19">bah</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_bronze_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Third to solve this challenge!" data-original-title="Third to solve this challenge!"><a href="https://ctf.why2025.org/user?id=14">Sorry</a><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://ctf.why2025.org/challenge?id=28">Festivals</a>
+                </td>
+
+                <td class="center">
+                    200
+                </td>
+
+                <td class="center">
+                    7%
+                </td>
+
+                <td class="team-name"><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_gold_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="First to solve this challenge!" data-original-title="First to solve this challenge!"><a href="https://ctf.why2025.org/user?id=13">GOBBLES</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_silver_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Second to solve this challenge!" data-original-title="Second to solve this challenge!"><a href="https://ctf.why2025.org/user?id=84">Morbion</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_bronze_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Third to solve this challenge!" data-original-title="Third to solve this challenge!"><a href="https://ctf.why2025.org/user?id=19">bah</a><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://ctf.why2025.org/challenge?id=29">Flyer</a>
+                </td>
+
+                <td class="center">
+                    200
+                </td>
+
+                <td class="center">
+                    8%
+                </td>
+
+                <td class="team-name"><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_gold_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="First to solve this challenge!" data-original-title="First to solve this challenge!"><a href="https://ctf.why2025.org/user?id=13">GOBBLES</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_silver_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Second to solve this challenge!" data-original-title="Second to solve this challenge!"><a href="https://ctf.why2025.org/user?id=34">team_kek</a><br><img src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/award_star_bronze_3.png" class="has-tooltip" data-toggle="tooltip" data-placement="right" title="" alt="Third to solve this challenge!" data-original-title="Third to solve this challenge!"><a href="https://ctf.why2025.org/user?id=18">backspace</a><br>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        </div> <!-- / span6 -->
+    </div> <!-- / row -->
+    
+
+     <div id="challenge-modal" class="modal">
+            <div id="challenge-content">
+            </div>
+        </div>
+    </div> <!-- / content container -->
+
+</div> <!-- /container -->
+</div> <!-- /page -->
+
+<div id="footer">
+    <div class="fade">
+        <div id="footer-logo">
+            <object data="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/mellivora.svg" type="image/svg+xml"></object>
+        </div>
+        <p>Powered by <a href="https://github.com/Nakiami/mellivora">Mellivora</a></p>
+    </div>
+</div>
+
+ <!-- /page -->
+
+<!-- JS -->
+<script src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/jquery-1.12.4.min.js.download" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/bootstrap.min.js.download" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/mellivora.js.download"></script>
+<script type="text/javascript" src="./Scoreboard _ WHY2025 CTF - The CTF hackers yearn!_files/why2025-ctf.js.download"></script>
+
+
+</body></html>
