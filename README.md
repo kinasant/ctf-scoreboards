@@ -290,5 +290,70 @@
             <td><a href="ctfs/WATCTF/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2727" target="_blank">CTFtime</a></td>
         </tr>
+             <tr>
+            <td rowspan=1><a href="ctfs/pingCTF">pingCTF</a></td>
+            <td><a href="ctfs/pingCTF/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2670" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/JerseyCTF">JerseyCTF</a></td>
+            <td><a href="ctfs/JerseyCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2667" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/TAMUctf">TAMUctf</a></td>
+            <td><a href="ctfs/TAMUctf/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2681" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/BreachCTF">BreachCTF</a></td>
+            <td><a href="ctfs/BreachCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2671" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/WHY">WHY</a></td>
+            <td><a href="ctfs/WHY/2025/Quals">2025 Quals</a></td>
+            <td><a href="https://ctftime.org/event/2679" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/WolvCTF">WolvCTF</a></td>
+            <td><a href="ctfs/WolvCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2579" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/DiceCTF">DiceCTF</a></td>
+            <td><a href="ctfs/DiceCTF/2025/Quals">2025 Quals</a></td>
+            <td><a href="https://ctftime.org/event/2617" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/FooBarCTF">FooBarCTF</a></td>
+            <td><a href="ctfs/FooBarCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2720" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/PlaidCTF">Plaid</a></td>
+            <td><a href="ctfs/PlaidCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2508" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/SillyCTF">SillyCTF</a></td>
+            <td><a href="ctfs/SillyCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2637" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/squ1rrel">squ1rrel</a></td>
+            <td><a href="ctfs/squ1rrel/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2708" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/SwampCTF">SwampCTF</a></td>
+            <td><a href="ctfs/SwampCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2573" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/Ulisse">Ulisse</a></td>
+            <td><a href="ctfs/Ulisse/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2735" target="_blank">CTFtime</a></td>
+        </tr>
   </tbody>
   </table>
