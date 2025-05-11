@@ -355,5 +355,77 @@
             <td><a href="ctfs/Ulisse/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2735" target="_blank">CTFtime</a></td>
         </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/1753CTF">1753CTF</a></td>
+            <td><a href="ctfs/1753CTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2639" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/TexSAW">TexSAW</a></td>
+            <td><a href="ctfs/TexSAW/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2736" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/MidnightFlag">Midnight Flag</a></td>
+            <td><a href="ctfs/MidnightFlag/2024">2024</a></td>
+            <td><a href="https://ctftime.org/event/2295" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/THCon">THCon</a></td>
+            <td><a href="ctfs/THCon/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2660" target="_blank">CTFtime</a></td>
+        </tr>
+        <tr>
+            <td rowspan=1><a href="ctfs/DawgCTF">DawgCTF</a></td>
+            <td><a href="ctfs/DawgCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2651" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/UMassCTF">UMassCTF</a></td>
+            <td><a href="ctfs/UMassCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2653" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/b01lers">b01lers</a></td>
+            <td><a href="ctfs/b01lers/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2652" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/THJCC">THJCC</a></td>
+            <td><a href="ctfs/THJCC/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2744" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/CTF@CIT">CTF@CIT</a></td>
+            <td><a href="ctfs/CTF@CIT/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2759" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/UMDCTF">UMDCTF</a></td>
+            <td><a href="ctfs/UMDCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2563" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/BSidesSF">BSidesSF</a></td>
+            <td><a href="ctfs/BSidesSF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2721" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/AzureAssassinAlliance">AzureAssassinAlliance</a></td>
+            <td><a href="ctfs/AzureAssassinAlliance/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2758" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/INCOGNITO">INCOGNITO</a></td>
+            <td><a href="ctfs/INCOGNITO/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2761" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/TsukuCTF">TsukuCTF</a></td>
+            <td><a href="ctfs/TsukuCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2769" target="_blank">CTFtime</a></td>
+        </tr>
+        
+      
   </tbody>
   </table>
