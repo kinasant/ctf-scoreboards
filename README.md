@@ -367,8 +367,8 @@
         </tr>
               <tr>
             <td rowspan=1><a href="ctfs/MidnightFlag">Midnight Flag</a></td>
-            <td><a href="ctfs/MidnightFlag/2024">2024</a></td>
-            <td><a href="https://ctftime.org/event/2295" target="_blank">CTFtime</a></td>
+            <td><a href="ctfs/MidnightFlag/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2687" target="_blank">CTFtime</a></td>
         </tr>
               <tr>
             <td rowspan=1><a href="ctfs/THCon">THCon</a></td>
