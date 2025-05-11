@@ -356,11 +356,6 @@
             <td><a href="https://ctftime.org/event/2735" target="_blank">CTFtime</a></td>
         </tr>
               <tr>
-            <td rowspan=1><a href="ctfs/1753CTF">1753CTF</a></td>
-            <td><a href="ctfs/1753CTF/2025">2025</a></td>
-            <td><a href="https://ctftime.org/event/2639" target="_blank">CTFtime</a></td>
-        </tr>
-              <tr>
             <td rowspan=1><a href="ctfs/TexSAW">TexSAW</a></td>
             <td><a href="ctfs/TexSAW/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2736" target="_blank">CTFtime</a></td>
