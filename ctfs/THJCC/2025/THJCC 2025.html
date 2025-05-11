@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://ctf.scint.org/scoreboard -->
+<html data-bs-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ll-nam{color:#2196f3}.ll-num{color:#ec407a}.ll-str{color:#43a047}.ll-rex{color:#ef6c00}.ll-pct{color:#666}.ll-key{color:#555;font-weight:bold}.ll-com{color:#aaa;font-style:italic}</style>
+  <title>THJCC 2025</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://ctf.scint.org/themes/core-beta/static/img/favicon.ico?d=7639ae43" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="./THJCC 2025_files/main.0c7144ba.css">
+  
+
+  
+
+  <script src="./THJCC 2025_files/color_mode_switcher.52334129.js.download"></script>
+
+  <script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "e7202bf151a0efb959b4dfb8f88c548413cb21511884eea337d582580c3c90d6",
+          'userMode': "users",
+          'userId': 0,
+          'userName': null,
+          'userEmail': null,
+          'teamId': null,
+          'teamName': null,
+          'start': 1745020800,
+          'end': 1745150400,
+          'themeSettings': {"challenge_category_order": "function compare(a, b) {\r\n  const order = [\"WarmUp\", \"Web\", \"Misc\", \"Pwn\", \"Crypto\", \"Reverse\", \"Insane\"];\r\n\r\n  const indexA = order.indexOf(a);\r\n  const indexB = order.indexOf(b);\r\n\r\n  // \u82e5\u627e\u4e0d\u5230\u7684\u5c31\u653e\u6700\u5f8c\r\n  const finalIndexA = indexA === -1 ? order.length : indexA;\r\n  const finalIndexB = indexB === -1 ? order.length : indexB;\r\n\r\n  return finalIndexA - finalIndexB;\r\n}", "challenge_order": "", "challenge_window_size": "norm", "use_builtin_code_highlighter": true},
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preload" href="https://ctf.scint.org/files/7850d8fb1105a84affa98770041de2ed/thjcc_logo.svg" as="image">
+<link rel="preload" href="https://ctf.scint.org/files/07984e4fe03514619d2c6a8ce799ee52/scint_logo.svg" as="image">
+<link rel="preload" href="https://ctf.scint.org/files/5afb808429b78b277ee59c0f6125777a/scaict_logo.svg" as="image">
+<link rel="preload" href="https://ctf.scint.org/files/587c3220152bb52a3f91cefc5dfc03ce/scist_logo.svg" as="image">
+<link rel="preload" href="https://ctf.scint.org/files/fd2e423f5173a7b5872b172187bff0fa/hit_logo_black.png" as="image">
+<link rel="preload" href="https://ctf.scint.org/files/6794a7eecbbab872414db20c0944be70/cdx_logo.jpg" as="image">
+<link rel="preload" href="https://ctf.scint.org/files/eaa1862b0403401ab440c76938af1115/ncse_logo.png" as="image">
+
+<style>
+/* 隱藏主題切換按鈕 */
+.theme-switch {
+    display: none !important;
+}
+
+:root {
+    /* --primary-color: #2196f3; */
+    --primary-color: #ffffffe7;
+    --secondary-color: #ff4081;
+    --background-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --gray-dark: #343a40;
+}
+
+body {
+    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, var(--background-dark) 0%, #2d2d2d 100%);
+    color: var(--text-light);
+}
+
+/* 導航欄 */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(33, 33, 33, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+/* 按鈕樣式 */
+.btn {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #007bff, #64b5f6);
+    border: none;
+    box-shadow: 0 2px 5px rgba(33, 150, 243, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+}
+
+.btn-close{
+    margin-top: 5px;
+    /* margin-right: 5px; */
+}
+
+/* 卡片樣式 */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 表格優化 */
+.table {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    /* background: rgba(33, 150, 243, 0.1); */
+    color: var(--primary-color);
+}
+  
+/* 動畫效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-content {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* 自定義滾動條 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-dark);
+    border-radius: 4px;
+}
+</style>
+
+<style>
+    /* 修正圖片與連結超出題目的bug */
+    p>a{
+        white-space: pre-wrap;
+	    word-wrap: break-word;
+	    overflow-wrap: break-word;
+    }
+    p>img{
+        max-width: 100%;
+    }
+</style>
+
+<script>
+  // BAN F12
+//  document.onkeydown = function (e) {
+//    if (e.keyCode === 123) {
+//      return false;
+//    }
+//    if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) {
+//      return false;
+//    }
+//    if (e.ctrlKey && e.keyCode === 85) {
+//      return false;
+//    }
+//  };
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+  (function () {
+    let warning = 'bad bad';
+    console.log(warning);
+    console.clear();
+  })();
+</script>
+</head>
+<body class="loaded">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="https://ctf.scint.org/" class="navbar-brand">
+      
+        <img class="img-responsive ctf_logo" src="./THJCC 2025_files/THJCC_logo_1.png" alt="THJCC 2025" height="25">
+      
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.scint.org/users">Users</a>
+          </li>
+
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.scint.org/scoreboard">Scoreboard</a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://ctf.scint.org/challenges">Challenges</a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://ctf.scint.org/register">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Register" data-bs-original-title="Register">
+                  <i class="fas fa-user-plus d-none d-md-inline d-lg-none"></i>
+                </span>
+                <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-user-plus pe-1"></i>
+                  Register
+                </span>
+              </a>
+            </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.scint.org/login">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Login" data-bs-original-title="Login">
+                <i class="fas fa-sign-in-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-in-alt pe-1"></i>
+                Login
+              </span>
+            </a>
+          </li>
+        
+        <li class="nav-item">
+          <button class="nav-link theme-switch" type="button" style="display: none;">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Toggle theme" data-bs-original-title="Toggle theme">
+              <i class="fas d-none d-md-inline fa-moon"></i>
+            </span>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-sun pe-1"></i>
+              Toggle theme
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Scoreboard</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div></div>
+
+    <div id="score-graph" class="align-items-center d-flex" :class="{&#39;d-flex&#39;: show, &#39;d-none&#39;: !show}" x-data="ScoreboardDetail" x-ref="scoregraph" @bracket-change.window="activeBracket=$event.detail; update();" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1746234851147"><div style="position: relative; width: 1296px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1620" height="500" style="position: absolute; left: 0px; top: 0px; width: 1296px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; will-change: transform; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(351px, 94px, 0px); border-color: rgb(255, 255, 255); pointer-events: none;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">2025-04-19 10:57:27</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:hsl(266, 96%, 46%);"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">THJCC_zKltch</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">2,490</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+
+    <div id="scoreboard" class="row" x-data="ScoreboardList">
+      <template x-if="brackets.length &amp;&amp; standings.length"></template><div class="col-md-12 py-3">
+          <nav class="nav nav-pills nav-fill">
+            <button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: !activeBracket}" @click="activeBracket=null" class="nav-link active">All</button>
+            <template x-for="bracket in brackets"></template><button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: activeBracket == bracket.id}" x-text="bracket.name" @click="activeBracket=bracket.id" class="nav-link">Open Division</button><button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: activeBracket == bracket.id}" x-text="bracket.name" @click="activeBracket=bracket.id" class="nav-link">Official Division</button>
+          </nav>
+        </div>
+
+      <div class="col-md-12" x-show="standings.length">
+        <table class="table table-striped align-middle">
+          <thead>
+          <tr>
+            <th style="width: 10px">Place</th>
+            <th class="text-start ps-3">User</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <template x-for="(standing, index) in standings.filter(i =&gt; activeBracket ? i.bracket_id==activeBracket : true)"></template><tr>
+                <th scope="row" class="text-center" x-text="index + 1">1</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/512">～(∠・ω&lt; )=U=</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">9270</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">2</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/417">THJCC_Xtrimi</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">7760</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">3</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/475">THJCC_umeow0716</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">7110</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">4</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/499">THJCC{SCINT_SCAICT_SCIST}</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">7010</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">5</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/438">THJCC_wangwww</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">5580</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">6</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/470">THJCC_not_Ro8in</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">5360</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">7</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/492">THJCC_wills1</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">5160</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">8</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/567">albert5888</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">5100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">9</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/452">THJCC_zKltch</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">4930</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">10</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/420">THJCC_LemonTea</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">4830</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">11</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/424">THJCC_young922</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">4800</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">12</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/429">THJCC_legendyang</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">4680</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">13</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/331">test</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">4060</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">14</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/505">THJCC_SilvA</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">4000</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">15</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/461">THJCC_愛新覺羅·新</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">3690</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">16</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/451">THJCC_viivie</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">3660</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">17</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/527">yunshiuan</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">3640</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">18</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/524">夜有夢</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">3490</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">19</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/503">PJ</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">3460</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">20</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/489">THJCC_h0u3e</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">3150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">21</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/491">THJCC_若米</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">3140</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">22</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/468">THJCC_r3xdj</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">3010</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">23</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/473">THJCC_ANYi</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">2980</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">24</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/521">jyu_911</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2970</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">25</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/435">THJCC_Elliot_404</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">2940</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">26</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/426">THJCC_nooblzc </a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">2920</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">27</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/448">THJCC_Frefreak </a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">2820</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">28</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/528">wtc</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">2750</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">29</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/543">yochan06</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2750</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">30</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/431">THJCC_Jared</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">2700</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">31</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/325">Yuto0226</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2670</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">32</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/487">THJCC_Jason_Chiu</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">2530</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">33</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/564">Zer000000000</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2460</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">34</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/525">bearrr</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2410</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">35</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/539">e0pwr</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">36</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/445">THJCC_Ping</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">2370</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">37</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/548">BNB</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2210</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">38</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/506">rain</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2140</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">39</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/318">zf</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2130</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">40</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/436">THJCC_Liar</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">2100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">41</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/523">bunda101</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2020</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">42</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/514">hsuan0223x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2020</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">43</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/497">FromKeyToEnd</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">2010</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">44</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/494">THJCC_Hamichi</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1980</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">45</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/554">flag{yAbo}</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1930</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">46</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/541">roger</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1860</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">47</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/555">nyanfox</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">48</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/476">THJCC_池尤你不行</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1840</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">49</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/459">THJCC_yuyou</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1830</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">50</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/467">THJCC_yoyo899843</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1740</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">51</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/520">x03e</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1700</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">52</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/472">THJCC_MaZon</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1640</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">53</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/474">THJCC_Eran</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1640</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">54</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/540">grace</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1600</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">55</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/434">THJCC_suila</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1560</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">56</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/544">Syuan</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1510</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">57</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/518">n44m_suz1</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">58</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/421">THJCC_syrup2718</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">59</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/562">chewu</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">60</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/447">THJCC_rnmeow</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">61</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/531">kclin</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1450</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">62</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/439">THJCC_Agong</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">63</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/490">THJCC_xXlFurrylXx</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">64</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/432">THJCC_諺諺只會C++</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">65</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/522">Sp01</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1390</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">66</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/450">THJCC_Weee</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">67</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/563">hlc23</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">68</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/433">THJCC_軒伯</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">69</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/516">jjhaoda</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">70</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/322">Kd</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1160</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">71</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/332">Barry Lyndon</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">72</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/515">yu</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">73</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/533">brinton</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">74</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/546">Passenger</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">75</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/416">THJCC_?</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">76</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/502">THJCC_WuPinLiang</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">77</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/453">THJCC_佑</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">78</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/319">CyberAngel_</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1080</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">79</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/495">siark</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">1050</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">80</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/456">THJCC_asdadad</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1020</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">81</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/466">THJCC_chao28661</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1000</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">82</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/462">THJCC_zathan</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">1000</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">83</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/530">我不知道還要考試</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">970</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">84</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/315">arccos60</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">950</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">85</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/437">THJCC_deadbeat</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">900</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">86</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/536">13</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">900</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">87</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/425">THJCC_Fearnot</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">88</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/556">目坦</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">89</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/333">JJin24</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">90</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/517">TT</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">91</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/560">xzhiyouu</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">92</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/469">THJCC_SIRIUS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">850</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">93</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/532">bk</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">800</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">94</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/458">THJCC_chiehhhhh</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">800</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">95</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/538">Tim0513</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">800</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">96</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/504">cheese_ge</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">750</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">97</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/460">THJCC_IaintHamburger</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">750</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">98</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/509">THJCC_0723</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">750</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">99</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/500">www</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">750</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">100</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/480">THJCC_湊數！</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">700</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">101</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/321">Joanne</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">650</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">102</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/329">想進女婕思決賽</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">650</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">103</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/440">THJCC_Sissi</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">650</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">104</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/423">THJCC_noef</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">600</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">105</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/422">THJCC_YD</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">600</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">106</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/549">groundhog</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">600</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">107</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/547">CXPh03n1x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">560</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">108</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/484">THJCC_Tong33</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">109</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/566">yoyo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">110</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/307">cc647</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">450</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">111</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/418">THJCC_13000</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">350</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">112</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/529">Kazusa</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">113</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/557">yukai</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">114</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/323">bb</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">115</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/568">kapiso</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">116</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/542">Stanley1106</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">117</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/535">Ripper reverse</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">118</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/306">Jaslayer</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">119</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/561">hank_lemon</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">120</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/553">bobob0</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">121</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/496">sliver</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">122</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/488">THJCC_NAln</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">123</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/444">THJCC_yun</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">124</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/477">THJCC_bo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">125</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/558">Wanasgheo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">126</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/442">THJCC_borong</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">127</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/428">THJCC_雪餅</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">128</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/443">THJCC_EHDW</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">129</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/501">THJCC_Jun</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">130</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/441">THJCC_wei</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">131</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/465">THJCC_Charger</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">132</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/565">廣告位招租中</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Open Division</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">133</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.scint.org/users/419">THJCC_JerryL</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Official Division</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12" x-show="! standings.length" style="display: none;">
+        <h3 class="text-center text-muted">Scoreboard is empty</h3>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io/" class="text-secondary">
+      <small class="text-muted">Powered by CTFd</small>
+    </a>
+  </div>
+</footer>
+
+<div x-data="">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html"></div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data="">
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module" src="./THJCC 2025_files/index.2e31e3b8.js.download"></script><script type="module" src="./THJCC 2025_files/index.1cf73b05.js.download"></script><script type="module" src="./THJCC 2025_files/echarts.128204f2.js.download"></script><script type="module" src="./THJCC 2025_files/scoreboard.b1c04d97.js.download"></script>
+
+
+
+
+<script>const translationMap = {
+        "參賽者": "參賽者",
+        "排行榜": "排行榜",
+        "挑戰": "挑戰",
+        "註冊": "註冊",
+        "登錄": "登錄"
+    };
+
+    function translateToTraditional() {
+        document.querySelectorAll("body *").forEach(elem => {
+            if (elem.hasChildNodes() && elem.childNodes.length === 1 && elem.childNodes[0].nodeType === Node.TEXT_NODE) {
+                let text = elem.textContent.trim();
+                Object.keys(translationMap).forEach(simplified => {
+                    if (text.includes(simplified)) {
+                        text = text.replace(new RegExp(simplified, "g"), translationMap[simplified]);
+                    }
+                });
+                elem.textContent = text;
+            }
+        });
+    }
+    document.addEventListener('DOMContentLoaded', translateToTraditional);</script>
+
+
+<script>// 強制設定暗色主題
+function forceDarkTheme() {
+    document.documentElement.setAttribute('data-bs-theme', 'dark');
+    
+    // 移除主題切換按鈕的事件監聽器
+    const themeSwitch = document.querySelector('.theme-switch');
+    if (themeSwitch) {
+        themeSwitch.style.display = 'none';
+        const clone = themeSwitch.cloneNode(true);
+        themeSwitch.parentNode.replaceChild(clone, themeSwitch);
+    }
+}
+
+// 監控主題變化
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'data-bs-theme' && 
+            document.documentElement.getAttribute('data-bs-theme') !== 'dark') {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+        }
+    });
+});
+
+// 配置觀察器
+observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-bs-theme']
+});
+
+// 添加平滑滾動效果
+document.addEventListener('DOMContentLoaded', function() {
+    // 立即強制設定暗色主題
+    forceDarkTheme();
+    // 為所有內部鏈接添加平滑滾動
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // 添加載入動畫
+    document.body.classList.add('loaded');
+
+    // 優化導航欄響應
+    const nav = document.querySelector('.navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll <= 0) {
+            nav.classList.remove('scroll-up');
+            return;
+        }
+        
+        if (currentScroll > lastScroll && !nav.classList.contains('scroll-down')) {
+            nav.classList.remove('scroll-up');
+            nav.classList.add('scroll-down');
+        } else if (currentScroll < lastScroll && nav.classList.contains('scroll-down')) {
+            nav.classList.remove('scroll-down');
+            nav.classList.add('scroll-up');
+        }
+        lastScroll = currentScroll;
+    });
+});</script>
+
+
+<script>document.addEventListener('DOMContentLoaded', function() {
+        var headerElement = document.querySelector("body > main > div.container > div:nth-child(3) > div > table > thead > tr > th:nth-child(2)");
+
+        if (headerElement && headerElement.textContent.trim() === "網站") {
+            headerElement.style.width = '120px';  // 用於修正欄位寬度錯誤
+        }
+    });</script>
+
+<script defer="" src="./THJCC 2025_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;939be66be9e083f3&quot;,&quot;version&quot;:&quot;2025.4.0-1-g37f21b1&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;0d30a5d7a9cd4c11b8f945aaee82772a&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}}}" crossorigin="anonymous"></script>
+
+</body></html>

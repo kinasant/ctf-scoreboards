@@ -1,0 +1,1263 @@
+/* --- NOTIFICATIONS --- */
+function response(e) {
+  e = (e + "000").substring(0, 3);
+  if (e in codes) {
+    var v = codes[e];
+    pn(v[3]*1000, v[0], v[1], v[2], 0.9);
+  } else {
+    pn("Error!", "A server error has occurred, please notify an administrator", "error", 5);
+  }
+}
+
+function atou(b64) {
+  return decodeURIComponent(escape(atob(b64)));
+}
+
+function utoa(data) {
+  return btoa(unescape(encodeURIComponent(data)));
+}
+
+function pn(tim, titl, txt, tp, op) {
+  PNotify.prototype.options.delay = tim;
+  PNotify.prototype.options.styling = 'bootstrap3';
+  PNotify.prototype.options.icons = 'fontawesome5';
+
+  new PNotify({
+      title: titl,
+      text: txt,
+      type: tp,
+      opacity: op,
+      icon: false,
+      nonblock: {
+          nonblock: true,
+          nonblock_opacity: .4
+      }
+  });
+}
+
+function logout(boo) {
+  $.ajax({
+    url: "/api/logout",
+    success: function(data) {
+      response(data);
+    }
+  });
+  setTimeout(function() {
+    location.reload();
+  }, 1000);
+}
+
+/* --- UI --- */
+function randomize(a) {
+  var i = a.length-1;
+  var t, r;
+  while (i > 0) {
+    r = Math.floor(Math.random() * i);
+    t = a[i];
+    a[i] = a[r];
+    a[r] = t;
+    i--;
+  }
+  return a;
+}
+
+function getModal(id, name, content) {
+  return '<div class="modal fade" id="' + id + '">\
+          <div class="modal-dialog modal-lg">\
+            <div class="modal-content">\
+              <div class="modal-header">\
+                <h4 class="modal-title" id="' + id + 'Title"><b>' + name + '</b></h4>\
+                <button type="button" class="close" data-dismiss="modal">&times;</button>\
+                </div>\
+            <div class="modal-body" id="' + id + 'Content">' + content + '</div>\
+          </div>\
+        </div>\
+        </div>'
+}
+
+function getBonusesFound(data) {
+  var bonuses_found = ""
+  if (data["bonus"].length > 0) {
+    bonuses_found += '<div style="margin-bottom:20px"><h1 style="font-size:1.3em;margin-top:0px;margin-bottom:10px;">Your bonus submissions:</h1><ul>';
+    $.each(data["bonus"], function(i, v) {
+      bonuses_found += '<li style="font-size:15px;">' + v["points"] + " - " + v["name"] + "</li>";
+    });
+    bonuses_found += '</ul></div>';
+  } else {
+    bonuses_found += '<h1 style="font-size:1.3em;margin-top:0px;margin-bottom:15px;">You have no bonus flag submissions.</h1>';
+  }
+  return bonuses_found;
+}
+
+function getModalButton(id, name) {
+  return '<button style="color:#2C3E50;background-color:white;margin-right:10px;margin-bottom:15px;font-weight:500;box-shadow: 1px 1px 2px #a0a0a0;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#' + id + '">' + name + '</button>';
+}
+
+function getOutlinedLabel(content) {
+  return '<div class="label-outline">' + content + '</div>';
+}
+
+function redirect_team(id) {
+  window.location.href = "./view_team?tid=" + id;
+}
+
+function redirect_problem(id) {
+  window.location.href = "./view_problem?pid=" + id;
+}
+
+function submit_bonus() {
+  //event.preventDefault();
+  //$('#bonusModal').modal('hide');
+  var flag = $("#bonusFlag").val();
+  $.post(
+    "api/bonus.php", {
+      answer: flag
+    },
+    function(data, status) {
+      if (data.charAt(0) == "0") {
+        pn(3000, "Yayy!", data.substring(1), "success", 0.9);
+        $('#bonusModal').fadeOut(500,function(){
+          $('#bonusModal').modal('hide');
+          $('body').removeClass('modal-open');
+          $('.modal-backdrop').remove();
+        });
+        setTimeout(function() {
+          problems.update_modals();
+        }, 500);
+      } else if (data == "11") {
+        pn(3000, "Sorry!", "The competition has already ended!", "error", 0.9);
+      } else if (data == "12") {
+        pn(3000, "Error!", "The competition has not yet started!", "error", 0.9);
+      } else if (data == "13") {
+        pn(3000, "Error!", "You must be logged in!", "error", 0.9);
+      } else if (data == "14") {
+        pn(3000, "An error has occurred. Please tell an administrator.", "error", 0.9);
+      } else if (data == "15") {
+        pn(3000, "Nope!", "Your bonus flag was not correct.", "error", 0.9);
+      } else if (data == "16") {
+        pn(3000, "Error!", "You already received points for this bonus.", "error", 0.9);
+      } else if (data == "17") {
+        pn(3000, "Error!", "You must wait 15 seconds from previous wrong attempt before trying again.", "error", 0.9);
+      } else {
+        pn(3000, "Nope!", "An error occured.", "error", 0.9);
+      }
+    });
+}
+
+function load_solutions(pid) {
+  $.getJSON("./api/get_solutions.php?pid="+pid,function(result){
+    var cnt = 0;
+    var out = `<div id="accordion">`;
+    var solutions = JSON.parse(result["public_solutions"]);
+    if(solutions!=null) {
+      $.each(solutions["solutions"],function(i,s) {
+        if(s.visible==1 && true) {
+          //<!--                 <a target="_blank" href = "` + s.entry + `">` + s.entry + `</a> -->
+              out += `    <div class="card">
+              <div class = "card-header" style="padding:0;padding-left:2%;padding-top:2%" id = "heading` + i + `"><h5 class="mb-0" >
+              <button style="width:100%;padding:0;text-align:left"class="btn btn-link" data-toggle="collapse" data-target="#collapse` + i + `" aria-expanded="` + (i==0) + `" aria-controls="collapse` + i + `"><b style="color:` + ($("#prb" + pid).children().css("border-color")=='rgb(44, 62, 80)' ? `#56799C`:$("#prb" + pid).children().css("border-color"))  + `">
+               ` + (i+1) + ` | ` + s.title + ` </b><p class='themeP'style='margin-left:2px;display:inline-block;'> by </p><b style='margin-left:5px;color:` + ($("#prb" + pid).children().css("border-color")=='rgb(44, 62, 80)' ? `#56799C`:$("#prb" + pid).children().css("border-color")) + `'>`  + s.author + ` </b></button></h5></div><div id="collapse` + i + `" class="collapse ` + (i==0?`show`:``) + `" aria-labelledby="heading` + i + `" data-parent="#accordion">
+              <div class="card-body">
+              <!--<h2>Solution ` + (i+1) + `</h2>-->
+              ` +
+              (s.type==1 ? '<a target="_blank" href = "' + s.entry + '">' + s.entry + '</a>' : s.entry)
+               + `
+              </div>
+              </div>
+              </div>`;
+          cnt ++;
+
+        }
+
+
+      });
+    }
+      out += '</div>';
+      if(cnt == 0) {
+        out = "<p><i>Sorry, there are no solutions available for this problem.</i></p>";
+      } else {
+        out = "<p>There are " + cnt + " solutions available at this time.</p>" + out;
+
+      }
+
+    $("#sols_tab_" + pid).html(out);
+  });
+}
+
+function load_submissions(pid) {
+  $.getJSON("./api/get_submissions.php?pid="+pid, function(result){
+    // console.log(result);
+    var out = "<p>You've used up " + result.total + " of " + result.max + " available submissions so far.</p>";
+    var cnt = 0;
+    out += `<table class="table table-sm"><tbody>`;
+    $.each(result.submissions, function(i, s){
+      out += `    <tr>
+      <td scope="row"><span>` + moment(s.timestamp * 1000).format("YYYY-MM-DD hh:mm:ss") + `</td>
+      <td>` + s.alias + `</td>
+      <td style="word-wrap: break-word;">` + s.input + `</td>
+      <td>` + (s.correct ? '<span class="badge bg-success">Correct</span>' : '<span class="badge bg-danger">Incorrect</span>') + `</td>
+    </tr>`;
+      // console.log(s);
+      cnt ++;
+    });
+    out += '</tbody></table>';
+    if (cnt == 0) {
+      out = "<p><i>Your team hasn't made any submissions for this problem just yet. You have " + result.max + " attempts.</i></p>";
+    }
+    $("#subs_tab_" + pid).html(out);
+  });
+}
+
+
+function html_replace(id, new_html) {
+  $(id).fadeOut("fast",
+    function() {
+      $(id).html(new_html);
+      $(id).fadeIn("slow");
+      if (id == "#problems_page") {
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+          var target = $(e.target).attr("data-problem-id");
+          if (target) {
+            load_submissions(target);
+          }
+        });
+      }
+    }
+  );
+}
+
+
+/* --- PROBLEMS --- */
+
+class Problem {
+
+  constructor(pdata, options={}) {
+    this.solved = false;
+    this.recorded = false;
+    this.hidden = false;
+    this.info_color = "#3498DB";
+    this.success_color = "#18bc9c";
+    this.danger_color = "#e74c3c";
+    this.primary_color = "#2C3E50";
+    // console.log(options);
+    this.show_new_page = ("show_new_page" in options) ? options.show_new_page : true;
+    this.settings = {};
+    this.p = pdata;
+    this.id = pdata["id"];
+    this.options = options;
+  }
+
+  generate_problem_header() {
+    // Open header
+    var out = '<a style="text-decoration:none;" data-toggle="collapse" href="#problem' + this.id + '" aria-expanded="false" class="collapsed">';
+
+    
+    if ([316, 385].includes(this.options["contest_id"])) {
+      out += '<div class="panel-heading" style="background:linear-gradient(90deg, rgba(56,11,89,1) 2%, rgba(139,56,213,1) 80.4%, rgba(244,115,165,1) 100%);color:' + this.p["text_color"] + ';height:37px;">';
+    } else {
+      out += '<div class="panel-heading" style="background-color:' + (this.settings.plain ? this.primary_color : this.p["color"]) + ';color:' + this.p["text_color"] + ';height:37px;">';
+
+    }
+    // 
+
+
+    // Add problem title
+    out += '<h3 class="panel-title float-left">';
+    out += '<span style="font-weight:400">' + this.p["title"].replace("'","&#39;") + '</span> ';
+    if ((![322].includes(this.options["contest_id"]) || this.p["points"] > 0) && !this.options["is_certification_environment"]) {
+      out += '<span style="font-size:12px">(solved by ' + this.p.solved_by + ' team' + ((this.p.solved_by == 1) ? '' : 's') + ')</span>';
+    }
+    out += '</h3>';
+
+    // Add points
+    out += '<h3 class="panel-title float-right" style="font-weight:400">';
+    if (!this.settings.hide && !this.options["is_certification_environment"]) {
+      out += '<strong>' + (this.p["penalty"] > 0 ? (this.p["points"] - this.p["penalty"]) + "/" : "") + this.p["points"] + (this.p["penalty"] > 0 ? (" (-" + this.p["penalty"] + " for hints)") : "") + (this.p["manual_grade"] == 2 ? (" (" + this.p["teammates_solved"] + "% of team solved)") : "") + '</strong>';
+    }
+    if (!this.options["is_certification_environment"]) {
+      out += '<span id="psolvecheck' + this.id + '">' + (this.solved ? ' <i class="fas fa-check-circle"></i>' : (this.p.solvable != 1 ? ' <i class="fas fa-times-circle"></i>' : "")) + "</span>";
+    } else {
+    }
+
+    out += '</h3>';
+
+    // Close
+    out += '</div>';
+    out += '</a>';
+
+    return out;
+  }
+
+  generate_problem_text() {
+    var out = this.p["description"];
+    if (this.p["extra_description"]) {
+      if (this.p["extra_description"].endsWith(" Session")) {
+        out += '<p><a data-toggle="collapse" class="text-reset" href="#trivia' + this.id + '" role="button" aria-expanded="true" aria-controls="trivia' + this.id + '">Info <i class="fas fa-caret-down"></i></a></p><div class="collapse show" id="trivia' + this.id + '"><div class="alert alert-light">' + this.p["extra_description"] + '</div></div>';
+      } else if (this.p["extra_description"].includes("Flash CTF")) {
+        out += '<div class="alert alert-light">' + this.p["extra_description"] + '</div>';
+      } else {
+        out += '<p><a data-toggle="collapse" class="text-reset" href="#trivia' + this.id + '" role="button" aria-expanded="false" aria-controls="trivia' + this.id + '">Info <i class="fas fa-caret-down"></i></a></p><div class="collapse" id="trivia' + this.id + '"><div class="alert alert-light">' + this.p["extra_description"] + '</div></div>';
+        console.log(this.p["extra_description"]);
+        console.log(this.p["extra_description"].includes("Flash CTF"));
+      }
+    }
+    return out;
+  }
+
+  generate_submit_form() {
+    // Opening the div & form
+    var out = '<div class="form-group" id="form' + this.id + '" style="margin-bottom:3px;">';
+
+
+    var submit_func = 'javascript:problems.get(' + this.id + ').submit();';
+    if (typeof this.settings.custom_submit !== 'undefined') {
+      submit_func = this.settings.custom_submit;
+    }
+
+    out += '<form action="' + submit_func + '">';
+    out += '<div class="input-group">';
+
+    // Show hint if exists
+    if (this.p["hint"]) {
+      out += '<a class="input-group-prepend input-group-text hint-button" style="text-decoration: none;" href="javascript:problems.get(' + this.id + ').show_hints();"><b>?</b></a>';
+    }
+
+    // Input field
+    out += '<input type="text" maxlength="300" id="inp' + this.id + '" class="form-control" />';
+
+    // Submit button
+    out += '<span class="input-group-btn"><button class="btn submit-button" style="color:' + this.p["text_color"] + '; background-color:' + (this.settings.plain ? this.primary_color : this.p["color"]) + '; border-color:' + (this.settings.plain ? this.primary_color : this.p["color"]) + ';" onclick="' + submit_func + '" type="button">Submit!</button></span>';
+
+    // Closing div & form
+    out += '</div></form></div>';
+
+    return out;
+  }
+
+  generate_submit_button() {
+    var submit_func = 'javascript:problems.get(' + this.id + ').submit();';
+    if (typeof this.settings.custom_submit !== 'undefined') {
+      submit_func = this.settings.custom_submit;
+    }
+
+    if (this.options["is_certification_environment"]) {
+      var out = 
+      out = '<button class="btn" style="color:' + this.p["text_color"] + '; background-color:' + (this.settings.plain ? this.primary_color : this.p["color"]) + '; border-color:' + (this.settings.plain ? this.primary_color : this.p["color"]) + ';" onclick="' + submit_func + '" type="button">Save Answer</button>';
+      if (this.recorded) {
+        out += ' &nbsp;<small><span id="psolvecheck' + this.id + '"><span class="text-success font-italic">(answer saved <i class="fas fa-check-circle"></i>)</span></span></small>';
+        // problems.update_answered_count();
+      } else {
+        out += ' &nbsp;<small><span id="psolvecheck' + this.id + '"><span class="text-danger font-italic">(no answer saved)</span></span></small>';
+      }
+
+      return out;
+
+    }
+    var out = "";
+
+    out += '<button class="btn" style="color:' + this.p["text_color"] + '; background-color:' + (this.settings.plain ? this.primary_color : this.p["color"]) + '; border-color:' + (this.settings.plain ? this.primary_color : this.p["color"]) + ';" onclick="' + submit_func + '" type="button">Submit</button>';
+    if (this.p["hint"]) {
+      out += '<a class="ml-2" style="text-decoration: none;" href="javascript:problems.get(' + this.id + ').show_hints();"><u>(view hints)</u></a>';
+    }
+    return out;
+  }
+
+  generate_rating_stars() {
+    var out = '<div id="star' + this.id + '">Please rate this problem:&nbsp;&nbsp;&nbsp;';
+    for (var i = 1; i <= 5; i++) {
+      var onclick_attr = 'onclick="javascript:problems.get(' + this.id + ').submit_review(' + i + ')"';
+      var star_class = (this.p.rating < 0) ? "far" : ((i <= this.p["rating"]) ? "fas checked" : "fas unchecked");
+      out += '<i style="cursor: pointer;" class="fa-star ' + star_class + '" ' + onclick_attr +'></i>';
+      // out += '<i class="fas fa-star"></i>';
+      out += ' ';
+    }
+    out += "</div>";
+    return out;
+  }
+
+  generate_claim_button() {
+    var result = $.ajax({
+		    url: 'api/get_claim_button',
+		    type: 'post',
+        async: false,
+		    data: { problem_id: this.id, contest_id: p["contest_id"]},
+        success: function(data) {
+          return data;
+        }
+		});
+    return result["responseText"];
+  }
+
+  generate_problem_footer() {
+    return '<span style="margin-top:10px;display:block;">' + this.generate_rating_stars() + '</span>';
+  }
+
+  hide() {
+    if (!this.hidden) {
+      $('#prb' + this.id).slideUp("slow");
+    }
+    this.hidden = true;
+  }
+
+  show() {
+    if (this.hidden) {
+      $('#prb' + this.id).slideDown("slow");
+    }
+    this.hidden = false;
+  }
+
+  render(settings) {
+    this.settings = settings;
+    // Open panel
+    var out = '<div class="col-lg-12" id="prb' + this.id + '" style="' + (this.hidden ? "display:none" : "") + '">';
+    // if ([316].includes(this.options["contest_id"])) {
+    //   out += '<div class="panel" style="border-image: linear-gradient(90deg, rgba(56,11,89,1) 2%, rgba(139,56,213,1) 80.4%, rgba(244,115,165,1) 100%); border-style: solid; border-width: 1px;">';
+    // } else {
+      out += '<div class="panel" style="border-color:' + (this.settings.plain ? this.primary_color : this.p["color"]) + ';">';
+
+    // }
+    out += this.generate_problem_header();
+
+    // Generate body
+    var show_class = (settings.col == 'a' || (settings.col == 's' && (this.solved || this.p.solvable!=1))) ? '' : ' show';
+    out += '<div id="problem' + this.id + '" class="panel-collapse collapse' + show_class + '">';
+    out += '<div class="panel-body problem-content">';
+    if (this.options["contest_id"] != 285 && this.options["contest_id"] != 391 && (this.options["contest_id"] != 322 || this.p["points"] > 0)) {
+
+      out += `<ul class="nav nav-tabs mb-3" role="tablist" id="navtabs">
+            <li class="nav-item">
+              <a class="nav-link active py-1 px-2" role="tab" data-toggle="tab" href="#problem_tab_` + this.id + `">Problem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-1" role="tab" data-toggle="tab" data-problem-id="` + this.id + `" href="#subs_tab_` + this.id + `">Previous Submissions</a>
+            </li>`;
+            if (this.show_new_page) {
+              out += `<li class="nav-item ml-auto mt-1">
+                    <a target="_blank" class="mt-1 py-1" href="./problem?p=` + this.id + `"><i class="fas fa-external-link-alt"></i></a>
+                  </li>`;
+            }
+            out += `</ul>`;
+    }
+    out +=
+    `<div class="tab-content">
+      <div class="tab-pane fade show active" id="problem_tab_` + this.id + `">`;
+
+    out += this.generate_problem_text();
+    
+    if (this.options["contest_id"] != 285 && this.options["contest_id"] != 391) {
+      if (!this.solved && this.p.solvable==1 && this.p.submittable) {
+        // console.log(this.p);
+        if ((this.p["description"]).includes("<!-- mc -->")) {
+          out += this.generate_submit_button();
+        } else {
+          out += this.generate_submit_form();
+        }
+      }
+    } else {
+      out += this.generate_submit_button();
+    }
+    // console.log(this.options);
+    if (!([193, 267, 268, 269, 270, 271, 381, 285, 294, 316, 322, 385, 391].includes(this.options["contest_id"])) && this.options["extra"]["enable_challenge_ratings"]) {
+      out += this.generate_problem_footer();
+    }
+    out += `</div>
+      <div class="tab-pane fade show" id="subs_tab_` + this.id + `">
+        <p><i class="fas fa-spinner"></i> Loading...</p>
+      </div>
+    </div>`;
+    out += '</div></div>';
+
+    // Close outer
+    out += '</div></div>';
+
+    return out;
+  }
+
+  submit_review(score) {
+    this.p.rating = score;
+    $.ajax({
+      url: "api/record_rating",
+      data: {id: this.id, rating: score},
+      type: "post",
+      context: this
+    }).done(function(data, status) {
+      response(data);
+      var new_stars = this.generate_rating_stars();
+      $('#star' + this.id).replaceWith(new_stars);
+    });
+  }
+
+  submit() {
+    var submission = $('#inp' + this.id).val();
+    if ([285, 294, 322, 334, 391].includes(this.options["contest_id"]) && this.p.description.includes("<!-- mc -->")) {
+      var submission = $('input[name="inp' + this.id + '"]:checked').val();
+    }
+    if (submission == "" || submission==undefined) {
+      pn(1500, "Warning!", "Your answer cannot be empty", "info", 0.9);
+    } else {
+      var initText = this.generate_submit_form();
+      $('#form' + this.id).html('<h5><span class="fas fa-spinner fa-spin"></span>&nbsp;&nbsp;Submitting</h5>');
+      $.ajax({
+        url: "api/submit.php",
+        data: {id: this.id, answer: submission},
+        type: "post",
+        context: this
+      }).done(
+        function(data, status) {
+
+          var mesA = '<blockquote style="border-left: 5px solid #';
+          var mesB = ';font-size: 14.75px;padding: 0px 12px;"><p class="text-';
+          var mesC = '">';
+          var mesD = '</p></blockquote>';
+
+          var json = $.parseJSON(data);
+
+          if (json.status == "info") {
+            pn(5000, json.title, json.mes, "info", 0.9);
+            html_replace('#form' + this.id, mesA + "3498DB" + mesB + "info" + mesC + json.mes + mesD);
+            setTimeout(function() {
+              window.location.replace("./problems.php");
+            }, 2000);
+          } else if (json.status == "success") {
+            pn(5000, json.title, json.mes, "success", 0.9);
+            this.solved = true;
+            this.recorded = true;
+            html_replace('#form' + this.id, mesA + "18bc9c" + mesB + "success" + mesC + json.mes + mesD);
+            if (this.options["is_certification_environment"]) {
+              if (this.recorded) {
+                html_replace('#psolvecheck' + this.id, '<span class="text-success font-italic">(answer saved <i class="fas fa-check-circle"></i>)</span>');
+                problems.update_answered_count();
+              } else {
+                html_replace('#psolvecheck' + this.id, '<span class="text-danger font-italic">(no answer saved)</span>');
+              }        
+            } else {
+              html_replace('#psolvecheck' + this.id, ' <i class="fas fa-check-circle"></i>');
+            }
+            setTimeout(function(that) {
+              $('#form' + that.id).fadeOut("slow");
+            }, 2000, this);
+          } else if (json.status == "error") {
+            pn(3000, json.title, json.mes, "error", 0.9);
+            html_replace('#form' + this.id, mesA + "e74c3c" + mesB + "danger" + mesC + json.mes + mesD);
+            setTimeout(function(that) {
+              html_replace('#form' + that.id, initText);
+            }, 2000, this);
+          }
+        }
+      );
+    }
+  }
+
+  show_hints() {
+    // Open the modal
+    $("#hintModalTitle").html("Hints for \"" + this.p["title"] + "\"")
+    $("#hintModalContent").html('<div class="text-center" style="margin:20px;"><div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div></div>')
+    $('#hintModal').modal('show');
+
+    // Fetch the hints
+    $.ajax({
+        url: "api/api.php?a=showhints",
+        data: {id: this.id},
+        context: this,
+        method: "post",
+        dataType: "json",
+      }).done(function(data, status) {
+        if (data["error"]) {
+          $("#hintModalContent").html("<h4>Error:</h4><p>" + data["error_message"] + "</p>");
+        } else {
+          var out = "";
+          var paid = false;
+          var c = 0;
+          for (var i = 0; i < data["hints"].length; i++) {
+            if (data["hints"][i]["id"] == "-1") {
+              out += "<p>" + data["hints"][i]["text"] + "</p>";
+              out += "<hr>";
+            } else {
+              c++;
+              var penalty = Math.round(this.p["points"] * data["hints"][i]["penalty_p"]) == 0 ? "no penalty" : (Math.round(this.p["points"] * data["hints"][i]["penalty_p"]) + ' points penalty');
+              if (data["hints"][i]["penalty_p"] > 0) {
+                paid = true;
+              }
+              // Display hints
+              if (data["hints"][i]["viewed"]) {
+                out += '<h4>Hint ' + c + ' (' + penalty + '):</h4>';
+                // Check if they're in old style
+                if (data["hints"][i]["text"].indexOf("<p>") >= 0) {
+                  out += data["hints"][i]["text"];
+                } else {
+                  out += "<p>" + data["hints"][i]["text"] + "</p>";
+                }
+              } else {
+                out += '<div class="text-center"><button onclick="problems.get(' + this.id + ').request_hint(\'' + data["hints"][i]["id"] + '\')" type="button" style="margin-top:5px;margin-bottom:5px;" class="btn btn-primary">Unlock Hint ' + (i + 1) + ' (' + penalty + ')</button></div>';
+              }
+              out += i == (data["hints"].length - 1) ? "" : "<hr>";
+
+            }
+          }
+          if (paid) {
+            out += "<p class=\"mt-4\"><em>Note that the points will only be deducted once you solve this problem. They'll have no effect on your current score until you submit the correct flag.</em></p>";
+          }
+        }
+        $("#hintModalContent").html(out);
+      }, "json"
+    );
+  }
+
+  request_hint(hint_id) {
+    $.ajax({
+      url: "api/api.php?a=request_hint",
+      data: {id: this.id, hint_ref_id: hint_id},
+      context: this,
+      method: "post",
+      dataType: "json",
+    }).done(
+      function(data, status) {
+        $("#hintModalContent").html('<div class="text-center" style="margin:20px;"><div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div></div>');
+        setTimeout(function(that) {
+          that.show_hints();
+        }, 500, this);
+      }, "json"
+    );
+  }
+}
+
+
+class Problems {
+  constructor(options={}) {
+    this.data = null;
+    this.primary_color = "#2C3E50";
+    this.problems = {};
+    this.problem_ids = [];
+    this.settings = {};
+    this.loaded = false;
+    this.show_categories = ("show_categories" in options) ? options.show_categories : true;
+    this.show_menu = ("show_menu" in options) ? options.show_menu : true;
+    this.show_ids = ("show_ids" in options) ? options.show_ids : false;
+    this.show_extra = ("show_extra" in options) ? options.show_extra : true;
+    this.options = options;
+    this.options["is_certification_environment"] = false;
+    if (document.getElementById("is_certification_environment")) {
+      this.options["is_certification_environment"] = document.getElementById("is_certification_environment").value == "true";
+    }
+    var get_data = { "show_ids": this.show_ids, "module" : new URLSearchParams(window.location.search).get("module")};
+    $.ajax({
+      url: './api/problems_json.php',
+      type: 'get',
+      dataType: 'json',
+      data: get_data,
+      async: false,
+      context: this,
+      success: function(data, status) {
+        this.data = data;
+        this.data.contest_id = parseInt(this.data.contest_id);
+        this.load_settings();
+        if (!this.data.error && !this.data.alert) {
+          this.load_modals();
+          if (this.data.contest_id != 1337) {
+            setInterval(() => { this.refresh_solves(); }, 30000); 
+          }
+          
+        }
+        this.options["contest_id"] = this.data.contest_id;
+        this.options["extra"] = this.data.extra_options;
+
+        this.generate_problems();
+        this.generate_page();
+      }
+    });
+  }
+
+  update_modals() {
+    $.ajax({
+      url: './api/problems_json.php',
+      type: 'get',
+      dataType: 'json',
+      async: false,
+      context: this,
+      success: function(data, status) {
+        this.data = data;
+        this.load_modals();
+      }
+    });
+  }
+
+  refresh_solves() {
+    $.ajax({
+      url: './api/problem_solves.php',
+      type: 'get',
+      dataType: 'json',
+      async: false,
+      context: this,
+      success: function(result, status) {
+        result.forEach((value) => {
+          if (!this.data.solved.includes(value[0])) {
+            this.data.solved.push(value[0]);
+            const notice = new PNotify({
+              text: "<i>" + value[1] + "</i> has been solved by " + value[2] + ". You may want to refresh this page.",
+              type: "info",
+              styling: {
+                container: "alert",
+                info: "alert-info",
+                closer: "fas fa-times"
+              },
+              hide: true,
+              hide: 10000,
+              buttons: {
+                closer: true,
+                closer_hover: false
+              }
+            });
+          }
+        });
+      }
+    });
+  }
+
+  load_settings() {
+    //this.settings = Cookies.getJSON('mcs_' + this.data.contest_id);
+    if ([87, 149, 150, 152, 167, 183, 186, 193, 201, 219, 233, 262, 267, 268, 269, 270, 271, 381, 285, 292, 316, 322, 373, 385, 387, 391].includes(this.data.contest_id)) {
+      try {
+        this.settings = JSON.parse(Cookies.get('MCS_OPTIONS', { path: "/" + this.data.contest_id + "/" }));
+      }
+      catch(err) {
+        if ([150, 322].includes(this.data.contest_id)) {
+          this.settings = { "sort": "c" };
+        } else {
+          this.settings = { "sort": "t" };
+        }
+        
+      }
+    } else {
+      try {
+        this.settings = JSON.parse(Cookies.get('MCS_OPTIONS'));
+      }
+      catch(err) {
+        this.settings = {};
+      }
+
+    }
+
+    if ([316, 385].includes(this.data.contest_id)) {
+      this.settings = { "sort": "t" };
+    }
+
+    if ([267, 268, 269, 270, 271, 381].includes(this.data.contest_id)) {
+      this.settings = { "sort": "t" };
+    }
+
+    this.save_settings_cookie();
+  }
+
+  save_settings_cookie() {
+    if (this.settings === undefined || this.settings == "undefined") {
+      this.settings = {};
+      this.settings['cat'] = [];
+    }
+    if (!('cat' in this.settings)) {
+      this.settings['cat'] = [];
+    }
+    if (!('col' in this.settings)) {
+      this.settings['col'] = 's';
+    }
+    if (!('solv' in this.settings)) {
+      this.settings['solv'] = true;
+    }
+    if (!('unsolv' in this.settings)) {
+      this.settings['unsolv'] = true;
+    }
+    if (!('hide' in this.settings)) {
+      this.settings['hide'] = false;
+    }
+    if (!('plain' in this.settings)) {
+      this.settings['plain'] = false;
+    }
+    if (!('modified' in this.settings)) {
+      this.settings['modified'] = false;
+    }
+    // Cookies.set('mcs_' + this.data.contest_id, this.settings);
+    // this.settings_backup = Cookies.getJSON('mcs_' + this.data.contest_id);
+    if ([87, 149, 150, 152, 167, 183, 186, 193, 201, 219, 233, 262, 267, 268, 269, 270, 271, 381, 285, 292, 316, 322, 373, 385, 387, 391].includes(this.data.contest_id)) {
+      Cookies.set('MCS_OPTIONS', JSON.stringify(this.settings), { path: "/" + this.data.contest_id + "/"});
+    } else {
+      Cookies.set('MCS_OPTIONS', JSON.stringify(this.settings));
+    }
+  }
+
+  load_modals() {
+    var modals = getModal("helpModal", "Help", this.data.help);
+    modals += getModal("connectModal", "Connection Info", this.data.connection);
+    modals += getModal("storyModal", "Storyline", this.data.storyline);
+    modals += getModal("scenarioModal", "Scenarios", this.data.scenarios);
+    modals += getModal("hintModal", "Hint", "");
+    modals += getModal("settingsModal", "UI Settings", this.generate_settings_modal());
+    modals += getModal("bonusModal", "Bonus",
+      ''  + getBonusesFound(this.data) +
+        '<form action="javascript:submit_bonus();"><div class="form-group">\
+          <label for="bonusFlag">Enter Bonus Flag:</label>\
+          <input type="text" class="form-control" id="bonusFlag">\
+        </div>\
+        <button type="submit" class="btn btn-success">Submit</button></form>');
+    $("#allmodals").html(modals);
+
+    var form = document.querySelector('#ui_settings_form');
+    var self = this;
+    form.addEventListener('change', function() {
+        self.update_ui_settings()
+    });
+    /*
+    $('#settingsModal').on('hidden.bs.modal', function () {
+      self.reset_ui_settings();
+    });
+    */
+  }
+
+  generate_page() {
+    var out = "";
+    if (this.data.error) {
+      out = '<div class="col-lg-12"><div class="alert alert-danger">An error has occurred. Please tell an administrator. Error ' + this.data.code + '.</div></div>';
+    } else if (this.data.alert) {
+      out = '<div class="col-lg-12"><div class="alert alert-warning">' + this.data["message"] + '</div></div>';
+    } else {
+      if (this.data["page_title"]) {
+        // out += '<div class="col-lg-12"><h3 tyle="display:inline-block">' + this.data["page_title"] + ' Module&nbsp;&nbsp;<a href="https://compete.caroline.metactf.com/1337/problems" target="_blank" class="button btn btn-sm btn-primary">View All Challenges</a></h3><hr></div>';
+        // out += '<div class="col-lg-12"><h3 tyle="display:inline-block"><a href="https://compete.caroline.metactf.com/1337/problems" target="_blank" class="button btn btn-sm btn-primary">&larr;</a>' + this.data["page_title"] + ' Module&nbsp;&nbsp;</h3><hr></div>';
+        out += `<div class="col-lg-12"><ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./"><i class="fas fa-home"></i> Home</a></li>
+        <li class="breadcrumb-item active">` + this.data["page_title"] + ` Module</li>
+      </ol>
+      <hr></div>`;
+      }
+      if (this.show_categories && this.data.contest_id != 285 && this.data.contest_id != 391 && this.options["extra"]["enable_category_selection"]) {
+        out += this.generate_categories_table();
+      }
+      if (this.show_menu && this.data.contest_id != 285 && this.data.contest_id != 391 && this.data.contest_id != 316 && this.data.contest_id != 385 && this.options["extra"]["enable_challenge_ui_buttons"]) {
+
+        if (this.data.contest_id != 76) {
+
+          out += '<div id="toolbar" class="col-lg-12">';
+          if (this.data.contest_id != 78 && this.data.contest_id != 92 && this.data.contest_id != 138  && this.data.contest_id != 146 && this.data.contest_id != 267 && this.data.contest_id != 268 && this.data.contest_id != 268) {
+
+            if (this.data.contest_id != 105 && this.data.contest_id != 120) {
+              out += getModalButton("bonusModal", '<i class="fas fa-star"></i>&nbsp;&nbsp;Bonus');
+            }
+            if (this.data.contest_id != 192) {
+              out += getModalButton("helpModal", '<i class="fas fa-life-ring"></i>&nbsp;&nbsp;Help');
+            }
+            
+            if (!this.data["connection_on"].localeCompare("true")) {
+              out += getModalButton("connectModal", '<i class="fas fa-server"></i>&nbsp;&nbspConnection Info');
+            }
+            if (!this.data["storyline_on"].localeCompare("true")) {
+              out += getModalButton("storyModal", '<i class="fas fa-book"></i>&nbsp;&nbspStoryline');
+            }
+            if (!this.data["scenarios_on"].localeCompare("true")) {
+              out += getModalButton("scenarioModal", '<i class="fas fa-user-tie"></i>&nbsp;&nbspScenarios');
+            }
+          }
+          // out += '<a href="./stats" style="color:black;margin-right:10px;margin-bottom:15px;background-color:white;font-weight:500;box-shadow: 1px 1px 2px #a0a0a0;" class="button btn btn-primary"><i class="far fa-chart-bar"></i>&nbsp;&nbsp;Stats</a>';
+          if (this.data.contest_id != 267 && this.data.contest_id != 268 && this.data.contest_id != 269 && this.data.contest_id != 270 && this.data.contest_id != 271 && this.data.contest_id != 381) {
+
+            out += getModalButton("settingsModal", '<i class="fas fa-cogs"></i>&nbsp;&nbspUI Settings');
+            out += '<a href="https://gchq.github.io/CyberChef/" target="_blank" style="color:white;margin-right:10px;margin-bottom:15px;font-weight:500;box-shadow: 1px 1px 2px #a0a0a0;" class="button btn btn-primary"><i class="fas fa-tools"></i>&nbsp;&nbsp;CyberChef</a>';
+          }
+          out += '</div>';
+        }
+      }
+
+      if (this.show_extra) {
+        out += this.data.extra;
+
+        if (this.data.intro.length != 0) {
+            out += '<div class="col-lg-12"><div style="box-shadow: 1px 1px 2px #a0a0a0;border-radius:3px;margin-bottom: 20px;display:block;" class="card card-body bg-light">' + this.data.intro + '</div></div>';
+        }
+      }
+
+      out += this.render_problems();
+    }
+    html_replace("#problems_page", out);
+    this.update_text_bottom();
+    this.loaded = true;
+  }
+
+  update_text_bottom() {
+    var cnt_solv = 0;
+    var cnt_usolv = 0;
+    var self = this;
+    $.each(this.problem_ids, function(i, v) {
+      if ($.inArray(self.problems[v].p.category, self.settings.cat) < 0) {
+        if (self.problems[v].solved) {
+          cnt_solv ++;
+        }
+        if (self.problems[v].p.solvable != 1 && !self.problems[v].solved) {
+          cnt_usolv ++;
+        }
+      }
+    });
+    if (this.settings.solv && cnt_solv > 0) {
+      $("#solv_text").slideDown("slow");
+    } else {
+      $("#solv_text").slideUp("slow");
+    }
+    if (this.settings.usolv && cnt_usolv > 0) {
+      $("#usolv_text").slideDown("slow");
+    } else {
+      $("#usolv_text").slideUp("slow");
+    }
+  }
+
+  toggle_category(cat) {
+    if ($.inArray(cat, this.settings.cat) >= 0) {
+      this.settings.cat = jQuery.grep(this.settings.cat, function(value) {
+        return value != cat;
+      });
+    } else {
+      this.settings.cat.push(cat);
+    }
+    this.save_settings_cookie();
+    $("#categories_tbl").html(this.generate_categories_table());
+
+    $("[data-toggle='tooltip']").tooltip();
+
+    var self = this;
+    $.each(this.problems, function(i, v) {
+      if ($.inArray(v.p.category, self.settings.cat) >= 0) {
+        v.hide();
+      } else {
+        v.show();
+      }
+    });
+    this.update_text_bottom();
+  }
+
+  toggle_only_category(event, cat) {
+    event.preventDefault();
+
+    var hidden_cats = [];
+    $.each(this.data["categories"], function (i, v) {
+      if (cat != v["id"]) {
+        hidden_cats.push(v["id"]);
+      }
+    });
+    if (JSON.stringify(this.settings.cat.sort()) === JSON.stringify(hidden_cats.sort())) {
+      this.settings.cat = [];
+    } else {
+      this.settings.cat = hidden_cats;
+    }
+    
+    this.save_settings_cookie();
+    $("#categories_tbl").html(this.generate_categories_table());
+
+    $("[data-toggle='tooltip']").tooltip();
+    var self = this;
+    $.each(this.problems, function (i, v) {
+      if ($.inArray(v.p.category, self.settings.cat) >= 0) {
+        v.hide();
+      } else {
+        v.show();
+      }
+    });
+    this.update_text_bottom();
+    return false;
+  }
+
+  generate_radio_button(type, name, id, value, checked, label) {
+    var out = '<div class="form-check"><label class="form-check-label">';
+    out += '<input type="' + type + '" class="form-check-input" name="' + name + '" id="' + id + '" value="' + value + '" ' + checked + '>';
+    out += label;
+    out += '</label></div>';
+    return out;
+  }
+
+  update_ui_settings() {
+    this.settings.col = $("input[name='ui_collapse']:checked").val();
+    this.settings.sort = $("input[name='ui_sort']:checked").val();
+    this.settings.solv = $("#ui_solved_b").is(":checked");
+    this.settings.usolv = $("#ui_unsolv_b").is(":checked");
+    this.settings.plain = $("#ui_plain").is(":checked");
+    this.settings.hide = $("#ui_hide").is(":checked");
+    this.settings.modified = true;
+    this.save_settings_cookie();
+    this.generate_page();
+    this.update_text_bottom();
+  }
+
+
+  /*
+  save_ui_settings() {
+    this.save_settings_cookie();
+  }
+
+  reset_ui_settings() {
+    this.settings = this.settings_backup;
+    this.save_settings_cookie();
+    this.generate_page();
+    this.update_text_bottom();
+  }
+  */
+
+  generate_settings_modal() {
+    //var out = '<form id="ui_settings_form" action="javascript:problems.save_ui_settings();">';
+    var out = '<form id="ui_settings_form">';
+
+    out += '<fieldset class="form-group">';
+    out += '<legend>Problem display:</legend>';
+    out += this.generate_radio_button('radio', 'ui_collapse', 'ui_collapse_1', 'a', this.settings.col == "a" ? "checked" : "", 'Auto-collapse all problems');
+    out += this.generate_radio_button('radio', 'ui_collapse', 'ui_collapse_2', 's', this.settings.col == "s" ? "checked" : "", 'Auto-collapse solved and unsolvable problems');
+    out += this.generate_radio_button('radio', 'ui_collapse', 'ui_collapse_3', 'e', this.settings.col == "e" ? "checked" : "", 'Expand all problems');
+    out += '</fieldset>';
+
+    out += '<fieldset class="form-group">';
+    out += '<legend>Sort problems by:</legend>';
+    out += this.generate_radio_button('radio', 'ui_sort', 'ui_sort_1', 't', this.settings.sort == "t" ? "checked" : "", 'Problem title');
+    out += this.generate_radio_button('radio', 'ui_sort', 'ui_sort_2', 'p', this.settings.sort == "p" ? "checked" : "", 'Point value (ascending)');
+    out += this.generate_radio_button('radio', 'ui_sort', 'ui_sort_3', 'd', this.settings.sort == "d" ? "checked" : "", 'Point value (descending)');
+    out += this.generate_radio_button('radio', 'ui_sort', 'ui_sort_4', 's', this.settings.sort == "s" ? "checked" : "", 'Number of solves');
+    out += this.generate_radio_button('radio', 'ui_sort', 'ui_sort_5', 'c', this.settings.sort == "c" ? "checked" : "", 'Category');
+    out += this.generate_radio_button('radio', 'ui_sort', 'ui_sort_6', 'r', this.settings.sort == "r" ? "checked" : "", 'Random');
+    out += '</fieldset>';
+
+    out += '<fieldset class="form-group">';
+    out += '<legend>Other:</legend>';
+    out += this.generate_radio_button('checkbox', 'ui_solved_b', 'ui_solved_b', '1', this.settings.solv ? "checked" : "", 'Move solved problems to the bottom');
+    out += this.generate_radio_button('checkbox', 'ui_unsolv_b', 'ui_unsolv_b', '1', this.settings.unsolv ? "checked" : "", 'Move problems with exceeded attempts to the bottom');
+    out += this.generate_radio_button('checkbox', 'ui_hide', 'ui_hide', '1', this.settings.hide ? "checked" : "", 'Hide point values');
+    out += this.generate_radio_button('checkbox', 'ui_plain', 'ui_plain', '1', this.settings.plain ? "checked" : "", 'I like it boring');
+    out += '</fieldset>';
+    out += '</form>';
+    return out;
+  }
+
+  generate_problems() {
+    var probs = this.data.problems;
+    var self = this;
+    var probs_solved = this.data.solved;
+    $.each(this.data.problems, function(i, v) {
+        self.problems[v["id"]] = new Problem(v, self.options);
+        self.problem_ids.push(v["id"]);
+        if (v["points"] == v["points_graded"] || $.inArray(v["id"], probs_solved) >= 0) {
+          self.problems[v["id"]].solved = true;
+        }
+        if ($.inArray(v["category"], self.settings.cat) >= 0) {
+          self.problems[v["id"]].hidden = true;
+        }
+        if ($.inArray(v["id"], self.data.recorded) >= 0) {
+          self.problems[v["id"]].recorded = true;
+        }
+    });
+    if (this.options["is_certification_environment"]) {
+      this.update_answered_count();
+    } 
+  }
+
+  render_problems() {
+    var self = this;
+    if (this.settings.sort == 'r') {
+      this.problem_ids = randomize(this.problem_ids);
+    } else {
+      // this.problem_ids.sort(function (a, b) {
+      //   return self.problems[a].p["title"].localeCompare(self.problems[b].p["title"], undefined, {
+      //     numeric: true,
+      //     sensitivity: 'base'
+      //   });
+      // });
+      // this.problem_ids.sort(function (a, b) {
+      //     var x = self.problems[a].p["title"].toLowerCase();
+      //     var y = self.problems[b].p["title"].toLowerCase();
+      //     return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+      // });
+
+      var descending = this.settings.sort == 'd' ? -1 : 1;
+      this.problem_ids.sort(function (a, b) {
+          var x = self.problems[a].p["points"];
+          var y = self.problems[b].p["points"];
+          // var x = self.problems[a].p["points"]-self.problems[a].p["penalty"];
+          // var y = self.problems[b].p["points"]-self.problems[b].p["penalty"];
+          return ((x < y) ? -1*descending : ((x > y) ? 1*descending : 0));
+      });
+
+      if (this.settings.sort == 't') {
+        this.problem_ids.sort(function (a, b) {
+            var x = self.problems[a].p["title"].toLowerCase();
+            var y = self.problems[b].p["title"].toLowerCase();
+            return x.localeCompare(y, undefined, { numeric: true, sensitivity: 'base' });
+            // return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        });
+      } else if (this.settings.sort == 's') {
+        this.problem_ids.sort(function (a, b) {
+            var y = self.problems[a].p["solved_by"];
+            var x = self.problems[b].p["solved_by"];
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        });
+      } else if (this.settings.sort == 'c') {
+        this.problem_ids.sort(function (a, b) {
+            var x = self.problems[a].p["category"];
+            var y = self.problems[b].p["category"];
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        });
+      }
+    }
+
+    var out = "";
+    if (this.data.problems.length == 0) {
+      out += '<div class="col-lg-12"><div class="alert alert-secondary">No problems are available yet.</div></div>';
+    } else {
+      if ((this.data.problems.length - this.data.solved.length) < 1) {
+          out += '<div class="col-lg-12"><div class="alert alert-success"><strong>Hey!</strong> You solved all of the available problems.</div></div>';
+      }
+      var cnt_solv = 0;
+      var cnt_usolv = 0;
+      $.each(this.problem_ids, function(i, v) {
+
+        if (self.problems[v].solved) {
+          cnt_solv ++;
+        }
+        if (self.problems[v].p.solvable != 1 && !self.problems[v].solved) {
+          cnt_usolv ++;
+        }
+        if ((!self.settings.solv || !self.problems[v].solved) && (!self.settings.usolv || self.problems[v].p.solvable == 1)) {
+          out += self.problems[v].render(self.settings);
+        }
+      });
+
+      if (this.settings.solv && cnt_solv > 0) {
+        out += '<div class="col-lg-12" id="solv_text"><h2 style="font-size:2em;margin-top:25px;margin-bottom:15px;">Solved:</h2></div>';
+        $.each(this.problem_ids, function(i, v) {
+          if (self.problems[v].solved) {
+            out += self.problems[v].render(self.settings);
+          }
+        });
+      }
+
+      if (this.settings.usolv && cnt_usolv > 0) {
+        out += '<div class="col-lg-12" id="usolv_text"><h2 style="font-size:2em;margin-top:25px;margin-bottom:15px;">Maximum attempts exceeded:</h2></div>';
+        $.each(this.problem_ids, function(i, v) {
+          if (self.problems[v].p.solvable != 1 && !self.problems[v].solved) {
+            out += self.problems[v].render(self.settings);
+          }
+        });
+      }
+
+    }
+    return out;
+  }
+
+  generate_categories_table() {
+    var out = '<div id="categories_tbl"; style="width:100%">';
+    out += '<div class="col-lg-12" style="margin-bottom:15px">';
+    out += '<h5 class="inline-block" data-toggle="tooltip" data-placement="left" title="Left-click to select/deselect a category. Right-click to show only this category. Right-clicking a second time will reset and show all categories.">Challenge categories: <span><i class="fas fa-question-circle"></i></span></h5>';
+    out += '<div style="padding:0px 13px !important;" class="row">';
+    var that = this;
+    var i = 0;
+    var cols = [];
+    switch (this.data["categories"].length) {
+      case 3:
+        cols = ["col-sm-4","col-sm-4","col-sm-4"];
+        break;
+      case 4:
+        cols = ["col-sm-3","col-sm-3","col-sm-3","col-sm-3"];
+        break;
+      case 7:
+        cols = ["col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-4","col-sm-4","col-sm-4"];
+        break;
+      case 8:
+        cols = ["col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3"];
+        break;
+      case 9:
+        cols = ["col-sm-3","col-sm-3","col-sm-3","col-sm-3","col","col","col","col","col"];
+        break;
+      case 11:
+        cols = ["col-sm-2","col-sm-2","col-sm-2","col-sm-2","col-sm-2","col-sm-2","col","col","col","col","col"];
+        break;
+      case 12:
+        cols = ["col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3","col-sm-3"];
+        break;
+      case 13:
+        cols = ["col-sm-2","col-sm-2","col-sm-2","col-sm-2","col-sm-2","col-sm-2","col","col","col","col","col","col","col"];
+        break;
+      case 14:
+        cols = ["col-sm-2","col-sm-2","col-sm-2","col-sm-2","col-sm-2","col-sm-2","col","col","col","col","col","col","col","col"];
+        break;
+      case 14:
+        cols = ["col-sm-2","col-sm-2","col-sm-2","col-sm-2","col-sm-2","col-sm-2","col","col","col","col","col","col","col","col"];
+        break;
+      default:
+        for (var j=0;j<this.data["categories"].length;j++) {
+          cols.push("col");
+        }
+        //cols = ["col","col","col","col","col","col","col","col","col","col"];
+        break;
+    }
+
+    this.data["categories"].sort(function (a, b) {
+        if (a.name.toLowerCase() == "other") {
+          return 1;
+        }
+        if (b.name.toLowerCase() == "other") {
+          return -1;
+        }
+        var x = a.name.toLowerCase();
+        var y = b.name.toLowerCase();
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+
+    // Sort categories, moving those starting with "Pep -" to the end
+    this.data["categories"].sort(function (a, b) {
+        const aPep = a.name.toLowerCase().startsWith("pep -");
+        const bPep = b.name.toLowerCase().startsWith("pep -");
+        
+        if (aPep && !bPep) return 1;
+        if (!aPep && bPep) return -1;
+        
+        if (a.name.toLowerCase() == "other") return 1;
+        if (b.name.toLowerCase() == "other") return -1;
+        
+        const x = a.name.toLowerCase();
+        const y = b.name.toLowerCase();
+        return x < y ? -1 : x > y ? 1 : 0;
+    });
+
+    $.each(this.data["categories"], function(i, v) {
+      var extra_css = "";
+      if ($.inArray(v["id"], that.settings.cat) >= 0) {
+        extra_css = 'background-color:#a6a6a6;color:white;text-decoration:line-through;';
+      } else {
+        extra_css = 'background-color:' + (that.settings.plain ? that.primary_color : v["color"]) + ';color:' + v["text_color"] + ';';
+      }
+      out += '<div class="text-center ' + cols[i] + '" style="padding:2px;"><div class="category_toggle" onclick="problems.toggle_category(\'' + v["id"] + '\')" oncontextmenu="problems.toggle_only_category(event, \'' + v["id"] + '\')" style="' + extra_css + '"><p style="width:100%;padding:0px 5px;margin:auto;display:block;"><b>' + v["name"] + '</b></p></div></div>';
+      i++;
+    });
+    out += '</div></div></div>';
+    return out;
+  }
+
+  get(id) {
+    return this.problems[id];
+  }
+
+  update_answered_count() {
+    var answered_count = 0;
+    if (this.options["is_certification_environment"]) {
+      $.each(this.problems, function(i, v) {
+        if (v.recorded) {
+          answered_count++;
+        }
+      });
+      $("#answered_count").text(answered_count);
+      $("#answered_progress").css("width", (answered_count / this.data.problems.length * 100) + "%");
+    }
+  }
+}
+
+var problems = null;
+function load_problems(options={}) {
+  problems = new Problems(options);
+}
+
+
+
+
+function toggleDark() {
+  Cookies.set('theme', Cookies.get('theme')=="dark" ? "regular" : "dark");
+  location.reload();
+
+}

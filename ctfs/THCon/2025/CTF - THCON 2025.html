@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://ctf.thcon.party/scoreboard -->
+<html data-bs-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ll-nam{color:#2196f3}.ll-num{color:#ec407a}.ll-str{color:#43a047}.ll-rex{color:#ef6c00}.ll-pct{color:#666}.ll-key{color:#555;font-weight:bold}.ll-com{color:#aaa;font-style:italic}</style>
+  <title>CTF - THCON 2025</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://ctf.thcon.party/files/9afaf41a8eeab46a03db10a5ab404ac7/favicon.png" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="./CTF - THCON 2025_files/main.ade5af41.css">
+  
+
+  
+
+  <script src="./CTF - THCON 2025_files/color_mode_switcher.50d0e5a9.js.download"></script>
+
+
+  <!-- HTML Meta Tags -->
+<title>THCON 2025 CTF - The XSS strikes back</title>
+<meta name="description" content="Hello Investigator, we hope you are ready : The SNAFU (the secret services of THCity) requires your help to withstand the attack from the Xtreme Scavengers Squad !">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:url" content="http://ctf.thecon.party">
+<meta property="og:type" content="website">
+<meta property="og:title" content="THCON 2025 CTF - The XSS strikes back">
+<meta property="og:description" content="Hello Investigator, we hope you are ready : The SNAFU (the secret services of THCity) requires your help to withstand the attack from the Xtreme Scavengers Squad !">
+<meta property="og:image" content="https://ctf.thcon.party/files/images/ai.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="ctf.thecon.party">
+<meta property="twitter:url" content="http://ctf.thecon.party">
+<meta name="twitter:title" content="THCON 2025 CTF - The XSS strikes back">
+<meta name="twitter:description" content="Hello Investigator, we hope you are ready : The SNAFU (the secret services of THCity) requires your help to withstand the attack from the Xtreme Scavengers Squad !">
+<meta name="twitter:image" content="https://ctf.thcon.party/files/images/ai.png">
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+<body class="vsc-initialized">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="https://ctf.thcon.party/" class="navbar-brand">
+      
+        <img class="img-responsive ctf_logo" src="./CTF - THCON 2025_files/aurora-initiative-gentil-gouvernement-small.png" alt="CTF - THCON 2025" height="25">
+      
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.thcon.party/briefing">
+              Briefing Room
+            </a>
+          </li>
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.thcon.party/users">
+              Users
+            </a>
+          </li>
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://ctf.thcon.party/teams">
+                Teams
+              </a>
+            </li>
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.thcon.party/scoreboard">
+              Scoreboard
+            </a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://ctf.thcon.party/challenges">
+            Challenges
+          </a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://ctf.thcon.party/register">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Register" data-bs-original-title="Register">
+                  <i class="fas fa-user-plus d-none d-md-inline d-lg-none"></i>
+                </span>
+                <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-user-plus pe-1"></i>
+                  Register
+                </span>
+              </a>
+            </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.thcon.party/login">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Login" data-bs-original-title="Login">
+                <i class="fas fa-sign-in-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-in-alt pe-1"></i>
+                Login
+              </span>
+            </a>
+          </li>
+        
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-language d-none d-md-inline"></i>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-language pe-1"></i>
+              Change language
+            </span>
+          </button>
+          <form x-data="LanguageForm">
+            <ul class="dropdown-menu dropdown-menu-end">
+              
+              <li>
+                  <span class="dropdown-item bg-primary text-white" @click="set" value="en">
+                    English
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="de">
+                    Deutsch
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pl">
+                    Polski
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="es">
+                    Español
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ar">
+                    اَلْعَرَبِيَّةُ
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_CN">
+                    简体中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_TW">
+                    繁體中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fr">
+                    Français
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ko">
+                    한국어
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ru">
+                    русский язык
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pt_BR">
+                    Português do Brasil
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sk">
+                    Slovenský jazyk
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ja">
+                    日本語
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="it">
+                    Italiano
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="vi">
+                    tiếng Việt
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ca">
+                    Català
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="el">
+                    Ελληνικά
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fi">
+                    Suomi
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ro">
+                    Română
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sl">
+                    Slovenščina
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sv">
+                    Svenska
+                  </span>
+              </li>
+            </ul>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="scanlines"></div>
+<div class="scanline"></div>
+<main role="main">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Scoreboard
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+  
+
+  
+</div>
+
+    <div id="score-graph" class="align-items-center d-flex" :class="{&#39;d-flex&#39;: show, &#39;d-none&#39;: !show}" x-data="ScoreboardDetail" x-ref="scoregraph" @bracket-change.window="activeBracket=$event.detail; update();" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1744553118183"><div style="position: relative; width: 1296px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1620" height="500" style="position: absolute; left: 0px; top: 0px; width: 1296px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(464px, 278px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">2025-04-12 20:02:58</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:hsl(205, 75%, 45%);"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">ret2louse</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">3,762</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+
+    <div id="scoreboard" class="row" x-data="ScoreboardList">
+      <template x-if="brackets.length &amp;&amp; standings.length"></template><div class="col-md-12 py-3">
+          <nav class="nav nav-pills nav-fill">
+            <button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: !activeBracket}" @click="activeBracket=null" class="nav-link active">All</button>
+            <template x-for="bracket in brackets"></template><button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: activeBracket == bracket.id}" x-text="bracket.name" @click="activeBracket=bracket.id" class="nav-link">Online / Distanciel</button><button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: activeBracket == bracket.id}" x-text="bracket.name" @click="activeBracket=bracket.id" class="nav-link">On-site / Présentiel</button>
+          </nav>
+        </div>
+
+      <div class="col-md-12" x-show="standings.length">
+        <table class="table table-striped align-middle">
+          <thead>
+          <tr>
+            <th style="width: 10px">Place</th>
+            <th class="text-start ps-3">Team</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <template x-for="(standing, index) in standings.filter(i =&gt; activeBracket ? i.bracket_id==activeBracket : true)"></template><tr>
+                <th scope="row" class="text-center" x-text="index + 1">1</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/15">DeathByCoconut</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">9116</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">2</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/43">v1r4lv0rt3x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">8631</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">3</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/200">Caliphal Hounds</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">8364</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">4</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/181">HCS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">7680</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">5</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/281">InfoSecIITR</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">7143</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">6</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/129">ret2louse</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">6462</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">7</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/262">Thread in the Needle</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">6324</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">8</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/152">f13ldf0lks</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">6322</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">9</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/205">YCC</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">4624</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">10</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/53">CPT</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">4120</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">11</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/63">SI'lvain</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">3898</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">12</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/70">Scuderia EPITA</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">3517</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">13</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/335">flame</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">3432</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">14</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/8">Toto</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">3409</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">15</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/206">I Don't Know</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">3235</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">16</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/199">Ynov Cyber Crew</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">3182</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">17</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/204">BreizhStorm</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">2819</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">18</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/182">r00ster</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">2807</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">19</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/110">kiaB kataB</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2804</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">20</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/59">ESGI</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">2708</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">21</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/212">Les Pires Hat</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">2639</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">22</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/220">Bl4ckSh33p</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">2572</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">23</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/30">Rogue Bytes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2490</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">24</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/100">Anonymous Animals</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2457</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">25</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/108">holyhexor</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2444</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">26</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/138">BITSkrieg</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2440</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">27</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/112">Cyblex</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">2426</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">28</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/146">ByteSized</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2283</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">29</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/217">sp00nBomb</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">2281</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">30</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/326">ICC UH</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2149</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">31</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/87">Cyber Straw Hats</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2113</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">32</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/188">Supwn</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2103</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">33</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/191">The Penetrators</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">2091</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">34</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/105">CyberUnicorn</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2057</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">35</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/286">theflash2k-solo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">2007</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">36</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/223">Belugang</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">1972</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">37</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/46">Gertrude</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1932</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">38</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/238">Cryptonite</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1870</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">39</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/172">CTF_SCS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1842</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">40</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/213">fL0ck</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1823</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">41</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/119">YouCanBeDo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1807</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">42</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/245">TF141</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1780</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">43</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/285">Pokemon</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1750</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">44</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/7">beussay</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1728</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">45</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/13">LesMenaces</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">1712</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">46</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/198">DSO</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">1698</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">47</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/178">Hash Slinging Hackers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1694</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">48</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/139">French Corp</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1562</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">49</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/4">n00b_Sec</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1546</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">50</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/144">French Corp       bis</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1540</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">51</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/80">With_love_from_RU</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">1475</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">52</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/301">Gh0stBytes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1434</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">53</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/210">N0t_f13ldf0lks</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1417</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">54</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/365">Addy'sDaddies</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1364</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">55</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/10">AP</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1292</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">56</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/233">pony7</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">1226</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">57</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/12">FlagaDoS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">1214</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">58</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/215">ValHack</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">1180</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">59</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/356">__.__</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1072</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">60</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/145">INF600</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1056</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">61</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/386">blobli_team</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">1027</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">62</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/195">RTPD</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">957</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">63</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/303">nobodyaaaa</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">944</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">64</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/387">16j</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">944</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">65</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/214">Caliphal Cubs</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">898</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">66</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/160">crabs</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">895</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">67</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/279">rfc2323</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">864</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">68</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/131">BlitzHack</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">854</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">69</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/222">CBD</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">819</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">70</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/155">r3pka</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">800</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">71</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/120">Crazer's</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">795</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">72</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/96">FPTU Ethical Hackers Club</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">779</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">73</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/52">CyberCh1ck</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">765</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">74</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/209">NotSerious</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">755</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">75</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/142">Team Bitsec</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">754</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">76</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/23">Hacktarus</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">740</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">77</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/116">Davidpb</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">732</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">78</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/269">Sevgillim</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">692</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">79</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/164">Banu Hashim Hackers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">687</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">80</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/171">NullByteNinjas</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">686</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">81</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/158">Dormir</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">637</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">82</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/193">ouais</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">633</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">83</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/47">Lok7</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">587</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">84</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/173">Maze Breakers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">579</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">85</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/288">Puzzled</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">568</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">86</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/382">athaw</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">560</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">87</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/104">NO</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">559</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">88</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/268">Ur4nu5</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">550</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">89</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/391">Cybertroll</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">550</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">90</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/327">kza</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">536</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">91</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/153">f4n_n3r0</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">533</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">92</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/157">kam19</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">532</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">93</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/325">GiJoe</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">522</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">94</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/89">5cyt4l3</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">519</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">95</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/122">B1n4ry By73s</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">518</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">96</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/22">Sea~</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">518</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">97</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/225">P4rad0x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">98</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/151">canard</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">499</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">99</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/241">THéCon</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">486</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">100</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/357">TuX</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">450</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">101</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/252">Martial_Law_Enforcer</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">450</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">102</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/331">acs</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">429</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">103</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/393">M3x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">429</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">104</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/68">Bits &amp; Pieces</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">425</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">105</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/37">VSL_P4rad0x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">400</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">106</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/130">Jaipasdideedenom</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">396</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">107</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/82">0xDFIR</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">379</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">108</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/103">B1N4RY01</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">350</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">109</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/310">statiskillingme</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">333</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">110</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/227">Pastis Tempest</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">310</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">111</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/203">Bring Back Pizzas</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">112</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/78">les foufou du 77</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">113</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/275">WAGNAX</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">114</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/50">cass0ulet</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">115</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/121">Blue Lock Eleven</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">116</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/34">cq</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">300</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">117</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/261">KXTI_rayn1</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">286</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">118</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/186">shionista</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">286</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">119</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/136">Zenith</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">275</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">120</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/79">SoloThoms</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">275</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">121</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/184">bungkus</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">273</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">122</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/239">beos_nub</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">123</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/162">Grant Us Eyes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">124</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/231">overfl0w</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">125</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/24">KXTI_NIKITA</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">126</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/361">neuron</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">127</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/363">c0d3_r3d</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">128</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/352">4567890</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">129</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/380">wote</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">233</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">130</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/73">Man-in-the-Pwn</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">218</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">131</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/185">bungkus2</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">132</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/196">arracheurs2flags</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">133</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/322">D6ath E9ters</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">134</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/333">k0kos</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">135</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/90">D0tGO</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">136</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/253">Z3r0&gt;0Rd3r</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">137</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/368">Code Potatoes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">138</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/134">knights oF_cydonIA</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">139</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/28">VSL</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">140</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/224">example_pipeline</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">180</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">141</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/88">Rounding Error</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">168</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">142</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/143">CaptureTheSass</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">168</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">143</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/102">shark</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">168</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">144</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/374">Hellojkw</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">154</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">145</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/192">Mantap</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">146</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/265">aviral</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">147</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/92">!!_crypto_envoys_!!</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">148</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/183">fr334aks-mini</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">149</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/284">Ostrich</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">150</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/291">BorderOfLife</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">151</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/293">D4y_S0ci3ty</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">152</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/312">PTIT.Lugia</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">153</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/64">5TR4W H4T5</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">154</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/94">r34dy0rn0t</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">155</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/332">LAZARUS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">156</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/109">ctfrrteam</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">157</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/159">KERNELDOOM</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">158</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/348">N4D</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">159</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/344">hezeonestand</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">160</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/292">nuts</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">161</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/349">cbs moment</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">162</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/379">IDA BIHI DAR MAMAS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">163</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/388">zer0toh3ro</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">164</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/111">linguo_ok</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">165</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/362">Aptf!R3wA11</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">166</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/56">tester</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">167</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/317">lol</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">139</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">168</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/240">ds4x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">125</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">169</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/273">Apollo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">111</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">170</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/26">4n6</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">171</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/207">solo shubunty</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">172</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/221">trippyzoro</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">173</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/194">StealthByte</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">174</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/230">BoMDay</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">175</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/236">MelR00t</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">176</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/179">F0ur_H0rs3m3n</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">177</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/244">The Hacktivists</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">178</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/248">IMF</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">179</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/77">breachfest</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">180</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/91">!!__script_kiddie__!!</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">181</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/246">ancd</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">182</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/86">Not_SDE</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">183</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/258">STELK_CSC</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">184</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/256">PH4NT0M</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">185</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/266">Glory Glory FPTU</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">186</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/169">WQTX</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">187</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/260">SegFault</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">188</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/283">T_T</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">189</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/305">hombing</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">190</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/307">0neTim3</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">191</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/309">0ne_p13C3</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">192</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/318">yololmao</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">193</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/126">BerKhoas</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">194</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/330">Siuuuuuuu</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">195</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/314">Mozzarella</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">196</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/17">gigachad des 3 sources~</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">197</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/347">AmritGhata</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">On-site / Présentiel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">198</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/249">bdhxgrp</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">199</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/353">Crypt0Kn!ght$</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">200</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/113">0x1337</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">201</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/83">Aw4k3n</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">202</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/389">carbonara</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">203</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/61">KXTI_RED</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">204</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/401">Chimpanzee Warriors</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">205</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/405">hackratic</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">206</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/409">Hello_YOU</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">207</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/355">Zora</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">80</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">208</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/276">lelouch</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">75</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">209</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/287">Rotro</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">75</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">210</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/311">WH173_D3V1L</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">75</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">211</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/385">j3bou9</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">75</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">212</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/390">ghidra</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">75</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">213</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/175">SC</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">68</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">214</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/168">felipetamburrimerlo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">68</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">215</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/226">tes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">216</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/351">damnbro</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">217</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/394">aaaaaaa</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">218</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/137">XUD-Z3R0FL1GHT</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">55</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">219</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/190">tourDeControle</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">220</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/216">iamjustplayingforfun</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">221</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/16">Team Rocket</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">222</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/254">gio</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">223</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/74">Skid</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">224</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/308">cooper_solo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">225</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/320">leoumfteam</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">226</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/274">aze123</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">227</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/341">KXTI_AK</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">228</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/297">Ev1l734ch3r</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">229</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/289">bytes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">230</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/375">**************</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">231</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/402">Hellobaby</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">232</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/406">al0ne_ch33mz</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">233</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/407">17wss</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">234</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/316">aa</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">46</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">235</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/296">Ittaliano Brainrot</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">36</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">236</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/267">myphuoc</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">35</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">237</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/189">Ubb</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">35</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">238</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/228">g00p</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">239</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/321">ttyusb</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">240</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/360">testers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">241</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/364">H43dM4trix</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">242</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/383">mit</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">25</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">243</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/345">DEFENDER</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">21</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">244</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/218">jv57_0n3</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">15</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">245</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/366">koukif</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">246</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/408">totobis</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">0</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">247</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.thcon.party/teams/278">Totototototo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Online / Distanciel</span>
+                </td>
+                <td x-text="standing.score">-65</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12" x-show="! standings.length" style="display: none;">
+        <h3 class="text-center text-muted">Scoreboard is empty</h3>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io/" class="text-secondary">
+      <small class="text-muted">
+        Powered by CTFd
+      </small>
+    </a>
+  </div>
+</footer>
+
+<div x-data="">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html"></div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data="">
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module" src="./CTF - THCON 2025_files/index.d3192d99.js.download"></script><script type="module" src="./CTF - THCON 2025_files/index.86a4c4d6.js.download"></script><script type="module" src="./CTF - THCON 2025_files/echarts.7a5d4174.js.download"></script><script type="module" src="./CTF - THCON 2025_files/scoreboard.e867ad0e.js.download"></script>
+
+
+
+
+
+
+</body></html>

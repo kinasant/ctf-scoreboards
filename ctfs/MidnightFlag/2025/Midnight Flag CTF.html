@@ -1,0 +1,2833 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html data-bs-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ll-nam{color:#2196f3}.ll-num{color:#ec407a}.ll-str{color:#43a047}.ll-rex{color:#ef6c00}.ll-pct{color:#666}.ll-key{color:#555;font-weight:bold}.ll-com{color:#aaa;font-style:italic}</style>
+  <title>Midnight Flag CTF</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://ctf.midnightflag.fr/files/567bbf0f30a1302e686a3ee45bb3fa7b/favicon-32x32.png" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="./Midnight Flag CTF_files/main.0c7144ba.css">
+    <link rel="stylesheet" href="./Midnight Flag CTF_files/cyberpunk.9e4e3e9f.css">
+  
+
+  
+
+  <script src="./Midnight Flag CTF_files/color_mode_switcher.52334129.js.download"></script>
+
+
+  
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-midnight fixed-top cyber-razor-bottom p-10">
+  <div class="container">
+    <a href="https://ctf.midnightflag.fr/" class="navbar-brand">
+      
+        Midnight Flag CTF
+      
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.midnightflag.fr/rules">
+              Rules
+            </a>
+          </li>
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.midnightflag.fr/users">
+              Users
+            </a>
+          </li>
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://ctf.midnightflag.fr/teams">
+                Teams
+              </a>
+            </li>
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.midnightflag.fr/scoreboard">
+              Scoreboard
+            </a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://ctf.midnightflag.fr/challenges">
+            Challenges
+          </a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://ctf.midnightflag.fr/register">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Register" data-bs-original-title="Register">
+                  <i class="fas fa-user-plus d-none d-md-inline d-lg-none"></i>
+                </span>
+                <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-user-plus pe-1"></i>
+                  Register
+                </span>
+              </a>
+            </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.midnightflag.fr/login">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Login" data-bs-original-title="Login">
+                <i class="fas fa-sign-in-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-in-alt pe-1"></i>
+                Login
+              </span>
+            </a>
+          </li>
+        
+        <li class="nav-item">
+          <button class="nav-link theme-switch" type="button">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Toggle theme" data-bs-original-title="Toggle theme">
+              <i class="fas d-none d-md-inline fa-moon"></i>
+            </span>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-sun pe-1"></i>
+              Toggle theme
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Scoreboard
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+  
+
+  
+</div>
+
+    <div id="score-graph" class="align-items-center d-flex" :class="{&#39;d-flex&#39;: show, &#39;d-none&#39;: !show}" x-data="ScoreboardDetail" x-ref="scoregraph" @bracket-change.window="activeBracket=$event.detail; update();" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1744630446739"><div style="position: relative; width: 1296px; height: 400px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="1620" height="500" style="position: absolute; left: 0px; top: 0px; width: 1296px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+
+    <div id="scoreboard" class="row" x-data="ScoreboardList">
+      <template x-if="brackets.length &amp;&amp; standings.length"></template><div class="col-md-12 py-3">
+          <nav class="nav nav-pills nav-fill">
+            <button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: !activeBracket}" @click="activeBracket=null" class="nav-link active">All</button>
+            <template x-for="bracket in brackets"></template><button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: activeBracket == bracket.id}" x-text="bracket.name" @click="activeBracket=bracket.id" class="nav-link">Students</button><button :class="{&#39;nav-link&#39;: true, &#39;active&#39;: activeBracket == bracket.id}" x-text="bracket.name" @click="activeBracket=bracket.id" class="nav-link">Professionals</button>
+          </nav>
+        </div>
+
+      <div class="col-md-12" x-show="standings.length" style="">
+        <table class="table table-striped align-middle">
+          <thead>
+          <tr>
+            <th style="width: 10px">Place</th>
+            <th class="text-start ps-3">Team</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <template x-for="(standing, index) in standings.filter(i =&gt; activeBracket ? i.bracket_id==activeBracket : true)"></template><tr>
+                <th scope="row" class="text-center" x-text="index + 1">1</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/307">The Flat Network Society</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">12163</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">2</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/76">fibonhack</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">9889</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">3</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/135">BunkyoWesterns</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">8414</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">4</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/36">Télécom Imp'hackt</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">8104</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">5</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/167">PsychoBash</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">7462</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">6</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/171">Hack@Sec</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">6823</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">7</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/286">Touran5Places</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">6457</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">8</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/17">Inglorious Flagsterds</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">6165</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">9</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/303">Tung Tung Tung Sahur</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">6163</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">10</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/119">SleepyHollow</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">6152</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">11</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/4">Meowcorp</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">5917</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">12</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/15">BlackCypher</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">5660</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">13</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/217">404 Noob Found</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">5500</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">14</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/94">Hellsonic fan club</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">5487</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">15</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/273">f4n_n3r0</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">5321</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">16</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/127">N0_1D3A</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">5170</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">17</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/238">Arni</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">5059</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">18</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/18">No Flag Ctf</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">5040</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">19</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/143">🐧ApériTux🐧</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">4855</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">20</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/168">CTFREI BLACK 🖤</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">4744</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">21</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/7">Goodwill Mischief</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">4717</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">22</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/445">🦫</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">4693</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">23</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/24">OteriaBack</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">4651</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">24</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/39">CYPHERPUNKACHIEN</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">4584</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">25</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/52">Brouette Rouge</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">4460</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">26</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/10">Valorant</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">4423</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">27</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/237">m01nm01n</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">4411</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">28</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/204">Hexagate</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">4335</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">29</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/63">Qu'Hack</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">4144</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">30</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/194">Les petits légumes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">3976</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">31</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/136">CTFREI PURPLE 💜</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3829</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">32</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/80">Oterihack RawBat</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3803</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">33</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/597">crocodilo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3695</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">34</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/268">Onion Phreaks 2600</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3621</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">35</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/45">Securimag</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3523</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">36</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/254">les cafetières en root</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">3475</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">37</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/38">CatTheFlag</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3309</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">38</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/211">ASIS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">3281</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">39</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/67">Les Honey'Potes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3187</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">40</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/104">0xD3C0D3</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">3138</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">41</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/311">IITBreachers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3114</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">42</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/6">404.N4m3NotF0Und</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3097</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">43</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/308">mhack</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">3075</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">44</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/450">Marcio Herobrine</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">3050</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">45</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/11">ΦShell-M-HackÅ</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">2948</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">46</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/5">Boberjager</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2810</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">47</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/16">ForenSick</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2780</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">48</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/264">Cryptonite</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2753</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">49</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/107">Poulet Phreaks 2600</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">2731</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">50</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/537">M0NST3RDECK</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">2712</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">51</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/73">Martine apprend le C</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2664</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">52</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/37">405.N4m3NotAll0w3d</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2632</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">53</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/56">Neuille</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2516</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">54</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/221">CTFRAUDE</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">2445</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">55</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/84">Eauterria</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2401</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">56</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/373">MEOW MEOW MEOW MEOW MEOW</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2374</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">57</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/202">frerejHACK</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">2356</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">58</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/198">Justlikethat</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2321</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">59</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/319">APT42Korporate</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2298</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">60</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/32">Chmod667</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2295</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">61</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/172">DaVinciCode</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">2266</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">62</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/137">gLaR3g3x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">2175</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">63</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/3">Team XOR</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2162</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">64</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/162">G1nius3s</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">2039</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">65</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/282">Téma la taille du r'hack</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1921</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">66</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/272">Call the Team</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1917</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">67</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/499">Gh0stBytes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1909</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">68</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/90">systemctf</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1870</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">69</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/323">Spritz</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1868</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">70</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/146">エルフ</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1730</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">71</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/195">coldboot</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1707</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">72</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/193">AutoRoot</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1685</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">73</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/328">Pand'Hack</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1680</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">74</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/570">sebastianpcc</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1672</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">75</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/23">0nlyH4ck5</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1652</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">76</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/177">Trop_de_Cafe</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1628</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">77</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/321">Vulcain</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1601</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">78</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/574">Sea~</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1597</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">79</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/19">Malwin</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1564</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">80</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/224">Flags Catchers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1542</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">81</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/227">freep0nx</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1520</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">82</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/133">six p'hack</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1512</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">83</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/55">TeamAxat</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1493</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">84</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/284">Team Name</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1455</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">85</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/184">unlock</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1435</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">86</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/475">epilehpsy-solo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1398</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">87</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/377">Anti_anti_debug</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1359</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">88</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/362">H0meAlone</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1354</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">89</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/474">IMEsec: RELOADED</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1328</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">90</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/21">RADJ</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1234</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">91</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/418">Farfadet Viré</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1179</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">92</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/316">wubwubdubdubdub</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1153</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">93</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/124">Railsploit</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">94</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/350">moonetics</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1097</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">95</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/108">L'Ordre des Devs</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1061</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">96</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/357">weewoo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">1038</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">97</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/89">Brhackeuses</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1029</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">98</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/13">0xc0ffee</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">1009</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">99</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/541">notplayer</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">985</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">100</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/543">uytr</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">953</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">101</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/469">S4m4r14n5</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">947</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">102</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/256">MrMcAdams</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">944</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">103</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/492">fwefwef</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">941</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">104</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/228">CTFREI GREEN 💚</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">921</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">105</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/169">CTFREI RED ❤️</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">906</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">106</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/71">supadev</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">878</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">107</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/436">Me, Myself and Moi</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">875</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">108</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/325">TFG 🐺🦊🦌🐺</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">875</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">109</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/79">DOOM patrol</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">874</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">110</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/147">Les Potes a la compote</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">866</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">111</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/47">Ghost in the kernel</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">852</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">112</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/87">Looney Tuunz</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">836</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">113</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/343">Harddisk6958</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">816</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">114</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/511">JeanJeanLeHaxorMaisSeul</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">804</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">115</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/95">VSL_P4rad0x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">797</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">116</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/226">Les_Hackeurs_Depressif</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">750</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">117</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/145">Les vieux de la vieille</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">734</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">118</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/332">1231</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">721</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">119</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/351">Xploit-Men</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">719</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">120</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/183">Sn0wh4ck</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">682</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">121</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/456">PostFix</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">663</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">122</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/229">SecurityFact</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">655</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">123</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/210">FlagaDOS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">647</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">124</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/312">Hex0rcists</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">632</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">125</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/189">Level0 🐣</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">632</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">126</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/603">0xSky</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">614</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">127</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/161">MYS404</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">605</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">128</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/176">Cryptis25</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">601</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">129</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/318">nasri</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">587</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">130</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/181">CyberUnicorn</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">584</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">131</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/233">WQTX</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">579</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">132</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/363">Davidpb</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">554</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">133</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/428">zerotout</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">554</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">134</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/151">1MemberTeam</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">547</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">135</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/271">gio</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">534</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">136</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/101">Tiens Tiens Tiens</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">532</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">137</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/231">cyb3r_neuilles</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">504</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">138</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/164">B1N4RY01</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">504</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">139</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/487">CroissantAuChocolat</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">504</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">140</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/302">toto</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">495</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">141</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/397">Lone Wolf</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">484</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">142</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/425">Tôi là lolicon đấy thì sao ?</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">484</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">143</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/533">21</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">484</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">144</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/118">Team SeeTF</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">482</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">145</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/353">lntt</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">482</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">146</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/489">Hacklabor</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">482</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">147</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/102">Hash:Tek</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">470</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">148</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/125">KXTI_RED</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">470</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">149</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/621">decl</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">455</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">150</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/344">Faut une équipe ?</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">454</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">151</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/434">rehot</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">440</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">152</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/214">Overf1ow</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">430</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">153</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/433">jahman</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">424</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">154</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/8">ispaki</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">422</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">155</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/72">TNCALM</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">422</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">156</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/493">Sanspression</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">404</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">157</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/421">SyntaxTerrons</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">383</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">158</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/403">Pashupatastra</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">380</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">159</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/634">Attack On Hash Function</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">380</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">160</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/113">NetRunner</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">380</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">161</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/245">hmotyl</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">374</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">162</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/526">Gogogo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">374</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">163</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/552">CCLEMON</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">374</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">164</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/365">BorderOfLife</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">370</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">165</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/355">Apollo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">354</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">166</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/412">hijir</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">354</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">167</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/585">TRIKKSS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">354</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">168</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/93">Crackers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">354</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">169</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/551">Psybertrons</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">350</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">170</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/288">HessNA</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">333</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">171</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/580">rdm</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">324</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">172</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/591">Bengsky</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">324</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">173</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/619">Teams are limited to 5 members</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">324</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">174</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/451">Chicken Thugz</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">320</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">175</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/199">Rapido's</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">320</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">176</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/53">Lakabot</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">312</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">177</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/188">Malwin solo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">310</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">178</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/361">dum</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">304</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">179</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/416">zzzzzz</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">304</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">180</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/470">........</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">304</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">181</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/504">h&lt;ERTFDWCQHBGWFTG</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">304</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">182</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/600">ga_rungVN</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">304</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">183</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/429">qwer</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">304</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">184</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/446">B1n4ry By73s</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">274</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">185</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/473">aa</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">270</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">186</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/558">nononono</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">270</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">187</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/257">Hackali</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">260</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">188</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/139">Bltn</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">189</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/394">k0kos</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">250</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">190</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/277">shkoloCTF_RU</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">233</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">191</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/471">1337_ugateam</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">220</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">192</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/488">sdc</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">220</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">193</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/632">Jolly</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">220</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">194</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/114">Rising</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">210</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">195</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/322">hivacruz</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">196</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/212">BITSkrieg</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">197</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/380">athaw</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">198</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/215">kiaB kataB</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">199</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/442">Spaghet</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">200</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/66">F14G1T</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">201</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/606">LastMinute</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">202</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/49">KXTI_NIKITA</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">200</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">203</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/518">cyberholon</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">160</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">204</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/148">Second_Chance</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">160</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">205</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/274">.</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">206</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/315">TS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">207</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/283">teamnameabc123</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">208</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/235">CSU Maze Breakers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">209</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/372">ThePrisoner</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">210</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/191">Red Flags</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">211</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/70">0xDewey</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">212</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/27">sigmaboy~root me</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">213</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/46">Hackpocalypse</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">214</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/527">27</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">215</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/453">Aptf!R3wA11</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">216</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/393">0xdeadbeef</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">217</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/329">tes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">218</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/547">Rogue Bytes</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">219</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/583">Kheshig</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">220</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/299">Solo Bolo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">221</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/595">Rolandas</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">222</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/347">snickerdoodle</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">223</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/130">Bits &amp; Pieces</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">150</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">224</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/581">shulupusu</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">110</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">225</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/404">marcop</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">110</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">226</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/290">Random</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">227</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/178">FF</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">228</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/232">testing</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">229</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/301">undefined</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">230</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/216">fL0ck</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">231</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/337">FlagFlagFlag</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">232</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/327">SC@</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">233</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/364">224Team</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">234</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/384">fr0mars</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">235</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/388">5290809509</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">236</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/77">HackademINT</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">237</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/390">bobo_gli_11_giocatori_più_forte_che_tu_hai_giocato</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">238</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/413">Squams</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">239</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/369">oOne</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">240</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/60">cq</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">241</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/150">42NiceStud</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">242</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/427">Aligator</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">243</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/461">riwejaw</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">244</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/462">MojoMaster</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">245</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/170">Krako</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">246</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/480">************</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">247</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/116">r3dt34m_pr0j3ct</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">248</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/175">@j0l0t35</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">249</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/509">happypotato</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">250</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/498">khetu</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">251</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/510">tagproers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">252</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/524">TARAN</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">253</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/122">ANONYMOUS</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">254</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/538">Blue Lock Eleven</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">255</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/548">solup</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">256</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/564">JE suis une tribu !</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">257</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/550">Kr[HACK]en</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">258</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/559">H4ckn3derl1</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">259</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/324">FrenchCorp</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">260</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/573">ctrl-alt-elite</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">261</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/279">fr334aks-mini</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">262</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/306">Dindin</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">263</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/309">4fun</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">264</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/234">NullByteNinjas</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">265</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/294">aviral</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">266</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/258">MelR00t</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">267</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/317">BreakSys</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">268</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/156">!!_crypto_envoy_!!</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">269</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/91">/FL4GEXCEPTI0N</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">270</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/111">st3p</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">271</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/165">LeetSh4d0ws</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">272</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/331">0xAmgoda</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">273</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/180">Ninja</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">274</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/208">The dangers of my heart</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">275</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/341">FFF</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">276</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/152">IMF</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">277</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/259">RandomNumbers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">278</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/173">WH173_D3V1</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">279</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/149">Epicyber</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">280</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/354">hombing</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">281</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/123">あかつき</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">282</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/262">Monte Pascoli</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">283</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/247">R1yhtp</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">284</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/366">C0n</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">285</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/252">helloiamjustplayingforfun</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">286</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/371">Obsidian Howlers</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">287</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/352">Hex'Pl0it</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">288</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/376">YSA</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">289</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/379">c00c00</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">290</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/381">Crow Team</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">291</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/385">zeroethics</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">292</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/402">NECC</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">293</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/106">1+1=0</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">294</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/406">devfault</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">295</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/407">Seeking Alpha</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">296</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/410">B34C0x</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">297</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/405">MONSTER PECHE</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">298</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/415">LABZH</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">299</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/417">mu5_r4h</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">300</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/414">b1p0lyar0chk@</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">301</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/225">KERNELDOOM</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">302</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/422">Codedogs</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">303</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/103">soimon</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">304</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/401">Kernel_Sanders</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">305</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/81">CewlKimds</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">306</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/423">LeagueNerds</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">307</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/30">redAliens</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">308</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/439">noname</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">309</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/444">we-are-nix</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">310</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/448">Haxxor</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">311</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/449">Ev1l734ch3r</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">312</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/424">KXTI_21</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">313</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/454">Daemons of hacking</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">314</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/466">Riku</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">315</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/334">nuts</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">316</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/479">CyberUNIT</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">317</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/491">wote</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">318</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/497">daniel</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">319</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/206">APEiTek</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">320</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/367">midnightbliss</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">321</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/507">not_stm</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">322</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/508">TEAM</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">323</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/506">moi123</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">324</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/495">BAR</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">325</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/516">shyn3ss</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">326</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/521">dinhvan</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">327</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/197">Mystery</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">328</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/532">beep3xo</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">329</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/535">VSL</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">330</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/536">The Hacktivists</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">331</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/447">0bscuri7y</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">332</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/520">anon</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">333</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/544">hnp</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">334</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/546">Uchiha</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">335</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/88">TeamMiteuse</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">336</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/333">GB</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">337</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/562">letmeseepls</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">338</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/563">theOrbit</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">339</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/568">shebang</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">340</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/400">pipipipipipiipipipipiipipipi@gmail.com</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">341</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/569">skibidiSigmas</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">342</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/572">mamont</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">343</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/289">N0T1C3</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">344</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/577">REDPAW</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">345</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/575">Cool Team</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">346</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/578">hona</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">347</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/549">erewe</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">348</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/584">GU22S</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">349</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/166">HIgh_table</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">350</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/467">dummy69</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">351</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/586">sasso</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">352</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/590">mdteam</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">353</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/594">kgrzk2025</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">354</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/602">kovexi2274</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">355</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/598">aaa</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">356</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/610">sdf</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">357</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/61">topfenstrudel</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">358</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/609">FHD_5</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">359</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/626">Team123</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">360</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/244">kaps</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">361</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/631">TCH</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">362</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/44">fzhshzh</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Professionals</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">363</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/636">sandwhich</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">364</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://ctf.midnightflag.fr/teams/637">adminadmin</a>
+                  <template x-if="standing.bracket_name"></template><span class="badge bg-secondary ms-2" x-text="standing.bracket_name">Students</span>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12" x-show="! standings.length" style="display: none;">
+        <h3 class="text-center text-muted">Scoreboard is empty</h3>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io/" class="text-secondary">
+      <small class="text-muted">
+        Powered by CTFd
+      </small>
+    </a>
+  </div>
+</footer>
+
+<div x-data="">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html"></div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data="">
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module" src="./Midnight Flag CTF_files/index.2e31e3b8.js.download"></script><script type="module" src="./Midnight Flag CTF_files/index.1cf73b05.js.download"></script><script type="module" src="./Midnight Flag CTF_files/echarts.128204f2.js.download"></script><script type="module" src="./Midnight Flag CTF_files/scoreboard.b1c04d97.js.download"></script>
+
+
+
+
+<hr>
+<div class="sponsors text-center">
+  <div class="sponsor-logos solo">
+  	<img src="./Midnight Flag CTF_files/exoscale-RGB-poweredby-negative-horizontal-blanc.png" alt="Exoscale">
+  </div>
+  <div class="sponsor-logos grouped">
+    <img src="./Midnight Flag CTF_files/dga.png" alt="DGA" style="width:100px">
+    <img src="./Midnight Flag CTF_files/dgse.png" alt="DGSE" style="width:100px">
+    <img src="./Midnight Flag CTF_files/Logo Flag Root-Me PRO Blanc.svg" alt="Root-Me PRO">
+    <img src="./Midnight Flag CTF_files/synacktiv-logo-blanc.png" alt="Synacktiv">
+    <img src="./Midnight Flag CTF_files/AIRBUS_Blue.jpg" alt="Airbus">
+    <img src="./Midnight Flag CTF_files/LOGO_FDJ_UNITED-blanc.png" alt="FDJ United">
+    <img src="./Midnight Flag CTF_files/logo-osint_industries-blanc.png" alt="Osint Industries">
+    <img src="./Midnight Flag CTF_files/logo-google.png" alt="Google" style="width:100px">
+  </div>
+</div>
+
+<style>
+  .sponsors {
+    padding: 50px 0;
+  }
+
+  .sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .sponsor-logos img {
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .grouped img:nth-child(odd) {
+    transform: translateX(-5px);
+  }
+
+  .grouped img:nth-child(even) {
+    transform: translateX(5px);
+  }
+
+  .solo img {
+    max-width: 300px;
+    transform: none !important;
+  }
+
+  @media (max-width: 600px) {
+    .sponsor-logos img {
+      max-width: 100px;
+    }
+
+    .solo img {
+      max-width: 160px;
+    }
+  }
+</style>
+
+</body></html>

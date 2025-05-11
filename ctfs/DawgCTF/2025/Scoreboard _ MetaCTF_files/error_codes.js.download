@@ -1,0 +1,31 @@
+codes = {
+   "103": ["Error!","Database connection failed, please notify an administrator","error",5],
+
+   "201": ["Success!","Login successful!","success",3],
+   "202": ["Success!","Logout successful!","success",3],
+   "203": ["Success!","Successfully added to newsletter!","success",5],
+   "204": ["Success!","Registration successful! New team has been created.","success",5],
+   "205": ["Success!","Registration successful! You have been added to an existing team","success",5],
+   "206": ["Success!","Your information has been updated.","success",5],
+   "210": ["Success!","Your password has been updated. You may now log in.","success",5],
+   "211": ["Error!","The token is incorrect. It might have expired. If the problem persists, please contact and administrator.","error",5],
+   "212": ["Error!","An error has occured. If the problem persists, please contact and administrator.","error",5],
+
+   "302": ["Warning!","Incorrect user name or password","error",5],
+   "303": ["Error!","Registration failed","error",5],
+   "304": ["Warning!","Invalid join code","error",5],
+   "305": ["Warning!","Invalid email or alias","error",5],
+   "306": ["Warning!","Invalid team name","error",5],
+   "307": ["Warning!","The team with entered registration key is already full","error",5],
+   "308": ["Warning!","Registration key is of invalid length","error",5],
+   "309": ["Warning!","reCAPTCHA validation failed","error",5],
+   "310": ["Warning!","Invalid Shirt Size","error",5],
+   "311": ["Error!","Update of account information failed","error",5],
+   "312": ["Warning!","Incorrect user name or password","error",5],
+   "313": ["Success!","If found in the database, an email with a reset link has been sent.","success",300],
+
+   "401": ["Success!","Your rating has been recorded. Thanks!","success",1],
+   "402": ["Error!","A server has occured. Please contact an administrator","error",5],
+
+   "701": ["Error!","Invalid event join code. Please try again.","error",5],
+};
