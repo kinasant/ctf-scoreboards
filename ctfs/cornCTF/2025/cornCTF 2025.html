@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://play.cornc.tf/scoreboard -->
+<html data-bs-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ll-nam{color:#2196f3}.ll-num{color:#ec407a}.ll-str{color:#43a047}.ll-rex{color:#ef6c00}.ll-pct{color:#666}.ll-key{color:#555;font-weight:bold}.ll-com{color:#aaa;font-style:italic}</style>
+  <title>cornCTF 2025</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://play.cornc.tf/files/a12f15322315a04a7588afe250924967/cob.png" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="./cornCTF 2025_files/main.e9ec7884.css">
+  
+
+  
+
+  <script src="./cornCTF 2025_files/color_mode_switcher.52334129.js.download"></script>
+
+  
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="https://play.cornc.tf/" class="navbar-brand">
+      
+        cornCTF 2025
+      
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://play.cornc.tf/rules">
+              Rules
+            </a>
+          </li>
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://play.cornc.tf/users">
+              Users
+            </a>
+          </li>
+
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://play.cornc.tf/scoreboard">
+              Scoreboard
+            </a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://play.cornc.tf/challenges">
+            Challenges
+          </a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://play.cornc.tf/register">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Register" data-bs-original-title="Register">
+                  <i class="fas fa-user-plus d-none d-md-inline d-lg-none"></i>
+                </span>
+                <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-user-plus pe-1"></i>
+                  Register
+                </span>
+              </a>
+            </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://play.cornc.tf/login">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Login" data-bs-original-title="Login">
+                <i class="fas fa-sign-in-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-in-alt pe-1"></i>
+                Login
+              </span>
+            </a>
+          </li>
+        
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-language d-none d-md-inline"></i>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-language pe-1"></i>
+              Change language
+            </span>
+          </button>
+          <form x-data="LanguageForm">
+            <ul class="dropdown-menu dropdown-menu-end">
+              
+              <li>
+                  <span class="dropdown-item bg-primary text-white" @click="set" value="en">
+                    English
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="de">
+                    Deutsch
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pl">
+                    Polski
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="es">
+                    Español
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ar">
+                    اَلْعَرَبِيَّةُ
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_CN">
+                    简体中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_TW">
+                    繁體中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fr">
+                    Français
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ko">
+                    한국어
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ru">
+                    русский язык
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pt_BR">
+                    Português do Brasil
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sk">
+                    Slovenský jazyk
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ja">
+                    日本語
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="it">
+                    Italiano
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="vi">
+                    tiếng Việt
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ca">
+                    Català
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="el">
+                    Ελληνικά
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fi">
+                    Suomi
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ro">
+                    Română
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sl">
+                    Slovenščina
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sv">
+                    Svenska
+                  </span>
+              </li>
+            </ul>
+          </form>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-link theme-switch" type="button">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Toggle theme" data-bs-original-title="Toggle theme">
+              <i class="fas d-none d-md-inline fa-moon"></i>
+            </span>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-sun pe-1"></i>
+              Toggle theme
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1>
+        Scoreboard
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+  
+
+  
+</div>
+
+    <div id="score-graph" class="align-items-center d-flex" :class="{&#39;d-flex&#39;: show, &#39;d-none&#39;: !show}" x-data="ScoreboardDetail" x-ref="scoregraph" @bracket-change.window="activeBracket=$event.detail; update();" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1750769272340"><div style="position: relative; width: 1296px; height: 400px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="1620" height="500" style="position: absolute; left: 0px; top: 0px; width: 1296px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+
+    <div id="scoreboard" class="row" x-data="ScoreboardList">
+      <template x-if="brackets.length &amp;&amp; standings.length"></template>
+
+      <div class="col-md-12" x-show="standings.length">
+        <table class="table table-striped align-middle">
+          <thead>
+          <tr>
+            <th style="width: 10px">Place</th>
+            <th class="text-start ps-3">User</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <template x-for="(standing, index) in standings.filter(i =&gt; activeBracket ? i.bracket_id==activeBracket : true)"></template><tr>
+                <th scope="row" class="text-center" x-text="index + 1">1</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/94">Srdnlen</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">7282</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">2</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/143">ARESx</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">5862</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">3</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/279">TRX</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3590</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">4</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/85">RSC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3342</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">5</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/211">uncavohdmi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3342</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">6</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/71">K!nd4SUS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">3334</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">7</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/18">napwnli</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">2846</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">8</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/17">MindCrafters</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1976</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">9</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/22">ByteTheCookies</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1966</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">10</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/186">0xE0F</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1642</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">11</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/118">Pwnissa</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1566</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">12</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/252">Ulisse</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1296</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">13</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/130">twosheep</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1290</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">14</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/235">hakjerzy</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1192</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">15</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/576">deathwing</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1098</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">16</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/88">HCS</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1092</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">17</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/364">aaaaa</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1056</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">18</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/228">MadrHacks</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">1046</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">19</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/140">biggerbomber</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">986</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">20</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/125">Pwncetta e Pecorino</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">968</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">21</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/468">Nc{Cat}</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">886</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">22</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/24">m0nkeysgobrrrrrr</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">868</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">23</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/21">fibonhack</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">770</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">24</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/129">How I Met Your Malware</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">758</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">25</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/23">bhackari</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">752</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">26</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/26">HjärterHex</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">752</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">27</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/13">samuelsiv</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">752</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">28</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/168">jsusyehfhaowu</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">712</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">29</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/231">aetruria</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">670</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">30</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/522">J8N</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">596</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">31</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/131">danadevito</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">588</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">32</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/333">муйхар хүчний мөлжлөг</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">538</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">33</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/470">NoENV</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">538</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">34</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/217">World Wide Flags</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">518</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">35</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/425">sophea</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">518</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">36</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/561">krkrdkdk</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">518</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">37</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/549">ylz</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">488</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">38</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/403">CRUx BPHC</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">472</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">39</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/310">d3xter</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">440</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">40</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/132">70M470_50UP</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">390</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">41</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/463">HoleInBottle</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">390</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">42</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/187">ThePlayer372</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">380</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">43</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/227">ncodeks</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">380</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">44</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/206">LilNick0101</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">380</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">45</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/210">GalSafe</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">380</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">46</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/480">lkyc137</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">330</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">47</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/396">khalil</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">280</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">48</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/598">Lysithea</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">280</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">49</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/102">mrkr@bs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">110</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">50</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/109">unkn3wnDB</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">110</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">51</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/208">lethalz</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">52</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/203">0x5W1TCH</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">53</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/98">SSM</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">54</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/342">Unemployed Nerds</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">55</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/377">hellokitty</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">56</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/163">Flag Sharing</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">57</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/414">NY4MUK</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">58</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/397">nhl4000</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">59</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/466">Chaoyue</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">60</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/30">Cy3er_Gh0st</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">61</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/452">HxN0n3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">62</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/25">J4ck4l</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">63</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/50">1nf1n1ty</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">64</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/486">c0unt</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">65</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/384">Sticky Bits</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">66</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/318">cookspaghetti</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">67</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/550">benzo</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">68</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/323">L00n9</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">69</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/78">Nayanko</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">70</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/606">SiBears</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">71</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/370">Giddy</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">72</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/460">Evil Tux</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">100</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">73</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/173">e3qsz</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">74</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/644">D1r3_W0lF</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">75</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/671">shaylatyagi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">76</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/105">Sytnax Error</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">77</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/74">0xfun</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">78</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/571">ZeroLight</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">79</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/515">7heK0w3r</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">80</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/151">Kada</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">81</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/225">APISec Avengers</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">82</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/683">зhyscorgi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">83</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/573">cypherforce</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">84</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/675">SmoothOperator</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">60</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">85</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/69">$cr1pt_K1dd13$</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">86</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/128">SyntaxTerrons</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">87</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/240">0xLunar292</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">88</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/12">Psyche</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">89</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/28">Nurul0603</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">90</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/136">ThePhantomPhreak</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">91</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/86">Xorg-worship</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">92</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/159">0xFre3Pls</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">93</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/236">nguyendinhanh1508</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">94</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/204">NZN</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">95</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/234">Andrew</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">96</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/195">wel0vemilfs</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">97</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/100">Malekith</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">98</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/245">wizard</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">99</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/87">Sexist_69</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">100</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/54">silent_hacker</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">101</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/66">FCML</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">102</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/238">cyR3N</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">103</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/62">Mr.N1nj4H4ck3r</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">104</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/244">Ameya314</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">105</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/248">mel</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">106</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/67">jan</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">107</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/219">HawkDevil</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">108</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/256">ThePirate42</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">109</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/253">b0ru</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">110</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/241">Lutris</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">111</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/107">lntm2006</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">112</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/182">R1yhtp</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">113</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/261">Avifrin</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">114</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/75">Dp1H3R0x</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">115</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/259">kisu</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">116</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/46">r00tn3p@!</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">117</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/267">Spinel99</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">118</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/264">Davy</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">119</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/174">aweaver</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">120</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/164">do not the car</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">121</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/104">kiri</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">122</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/268">aceTUN</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">123</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/122">404 Brain Not Found!</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">124</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/273">Cascroot</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">125</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/215">CodeChef</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">126</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/156">tim</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">127</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/274">ak2148</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">128</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/275">paduck</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">129</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/272">BackMoon</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">130</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/284">TheMaverick</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">131</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/285">opera</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">132</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/101">CyberUNIT</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">133</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/134">%random%</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">134</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/166">kBxAc</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">135</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/287">jakehu2020</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">136</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/175">k3rn3l32</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">137</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/220">gkarchemsky</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">138</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/291">l3v1__</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">139</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/298">YMD</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">140</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/276">lllllllllllll</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">141</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/301">ayushch</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">142</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/306">youngkevin</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">143</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/296">mati_tanam</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">144</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/243">jjroccss</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">145</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/197">IgelsCTF</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">146</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/307">itzendgame</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">147</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/221">sinktor</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">148</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/29">C0N4N</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">149</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/319">H4t3m</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">150</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/91">marla_singer</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">151</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/183">LUCKY_Lucc4n0</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">152</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/141">Fc8</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">153</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/331">KVV</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">154</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/224">Charlie001</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">155</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/334">Marsh</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">156</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/110">g1rliep0p</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">157</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/165">j3tr4y</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">158</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/258">3HLD</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">159</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/332">gyun</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">160</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/207">cake</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">161</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/351">theranger815</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">162</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/68">Z3r0Bl00d</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">163</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/353">doomr</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">164</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/133">Byte Me Maybe</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">165</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/349">JSP4RKY</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">166</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/38">299</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">167</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/193">Massan</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">168</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/356">ch1p</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">169</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/358">iamgreedy</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">170</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/359">GR33NB0Y</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">171</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/341">helixjoe</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">172</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/368">A2Zog</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">173</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/34">fzhshzh</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">174</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/363">jacksonB</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">175</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/369">zer0</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">176</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/11">maxrenke</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">177</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/371">newbie12</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">178</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/373">dr.ix</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">179</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/383">Tadlos</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">180</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/386">R4v3ncl4w_P3ngu1n</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">181</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/389">JinHann</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">182</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/135">C0rn_Cr4ck3r</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">183</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/387">Cryptonite</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">184</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/116">lovebug</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">185</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/400">r00tbyt3</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">186</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/410">pzjpzy</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">187</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/72">1c3Gh3tt0</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">188</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/419">fox</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">189</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/427">labu</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">190</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/428">danielagatan</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">191</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/391">N1KO</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">192</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/429">k4r7h1k</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">193</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/431">hieu_lan</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">194</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/436">los ratones</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">195</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/438">Zer0da7</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">196</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/443">AarushG</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">197</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/454">n00b</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">198</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/453">bananamilkshake</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">199</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/31">meeribeeri</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">200</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/412">Pink Banshi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">201</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/459">hadakoi</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">202</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/446">Monarch</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">203</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/155">horizontal</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">204</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/465">Alexius</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">205</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/464">113c53043</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">206</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/37">ctfrrteam</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">207</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/477">AyyyCn</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">208</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/479">t4t3012</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">209</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/405">byt3r00t</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">210</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/43">SRIHARISH V J</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">211</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/482">f4n_n3r0</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">212</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/481">yeknom</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">213</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/485">marv1nh</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">214</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/487">Mikulas</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">215</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/39">ULAN</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">216</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/490">zleaff</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">217</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/476">Sm1ley</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">218</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/27">Expl0itMy4ss</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">219</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/494">yellowriver81</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">220</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/498">h7sn</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">221</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/496">sh8tan</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">222</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/493">ali33422</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">223</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/524">ozwiz</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">224</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/526">TheRealQewave</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">225</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/530">KAK4SH1</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">226</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/536">MADSKiLLZ</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">227</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/539">pwn.charity</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">228</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/545">Oranges&amp;Bananas</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">229</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/551">zeus</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">230</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/552">Unknown</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">231</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/553">vlsr</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">232</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/569">WHITE_SOULE</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">233</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/568">jardgruv</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">234</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/575">kgrzk2025</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">235</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/577">Dxrie</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">236</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/580">JP_sakura</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">237</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/591">xzhiyouu</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">238</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/594">gobbledy</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">239</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/593">yasoikawa2</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">240</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/172">ahamed01</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">241</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/596">Ketchup(Catch-up)</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">242</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/55">Sohamd619</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">243</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/600">Minimenter</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">244</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/588">hanto</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">245</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/603">-_-</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">246</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/607">c901315f1f1a52b0</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">247</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/604">Lee Tzyy Kae</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">248</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/198">Qu4nt1x</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">249</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/624">gcmaximus</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">250</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/340">4n4gh4</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">251</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/612">ClassicNerd</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">252</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/628">linguo</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">253</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/633">watkornReal</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">254</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/634">vedha73varshini</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">255</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/638">D@koo</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">256</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/647">ad3n</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">257</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/648">calin</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">258</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/655">H3MMY</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">259</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/656">bssjh125842</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">260</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/658">GlitchMatrix</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">261</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/660">ghjnuyujty</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">262</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/661">CyberFlux</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">263</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/662">zer0trace</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">264</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/663">heapwr3cker69</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">265</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/664">okml265p</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">266</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/665">Na_g1404</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">267</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/666">heapwr3cker</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">268</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/667">pwntential</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">50</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">269</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/674">omar</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr><tr>
+                <th scope="row" class="text-center" x-text="index + 1">270</th>
+                <td class="text-start">
+                  <a :href="standing.account_url" x-text="standing.name" href="https://play.cornc.tf/users/146">boogeyman</a>
+                  <template x-if="standing.bracket_name"></template>
+                </td>
+                <td x-text="standing.score">10</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12" x-show="! standings.length" style="display: none;">
+        <h3 class="text-center text-muted">Scoreboard is empty</h3>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io/" class="text-secondary">
+      <small class="text-muted">
+        Powered by CTFd
+      </small>
+    </a>
+  </div>
+</footer>
+
+<div x-data="">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html"></div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data="">
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module" src="./cornCTF 2025_files/index.8a9f494f.js.download"></script><script type="module" src="./cornCTF 2025_files/index.1cf73b05.js.download"></script><script type="module" src="./cornCTF 2025_files/echarts.128204f2.js.download"></script><script type="module" src="./cornCTF 2025_files/scoreboard.899daf28.js.download"></script>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,226 @@
+document.addEventListener("DOMContentLoaded", function() {
+    let classesAdded = {};
+
+    function manipulateChallengeBridge() {
+        const challengeButtons = document.querySelectorAll('.challenge-button');
+        challengeButtons.forEach(button => {
+            if (button.textContent.includes('foire')) {
+                button.classList.add('bridge');
+            }
+        });
+    }
+
+    function addClassToInstances() {
+        const categoryHeaders = document.querySelectorAll('.category-header h3');
+        const categoryChallenges = document.querySelectorAll('.category-challenges');
+
+        categoryHeaders.forEach((header, index) => {
+            const headerText = header.innerText.trim().toLowerCase();
+            const instancesDiv = categoryChallenges[index];
+
+            if (instancesDiv && !classesAdded[index]) {
+                if (headerText === 'instances') {
+                    instancesDiv.classList.add('instances');
+                    instancesDiv.classList.remove('jojo_path');
+                    classesAdded[index] = true;
+                } else if (headerText === 'babytopia') {
+                    instancesDiv.classList.add('babytopia');
+                    classesAdded[index] = true;
+                    console.log(instancesDiv.childNodes);
+                } else if (headerText === 'n0pstopia') {
+                    instancesDiv.classList.add('nopstopia');
+                    classesAdded[index] = true;
+                    console.log(instancesDiv.childNodes);
+                } else if (headerText === 'pwntopia') {
+                    instancesDiv.classList.add('pwntopia');
+                    classesAdded[index] = true;
+                    console.log(instancesDiv.childNodes);
+                } else if (headerText === 'webtopia') {
+                    instancesDiv.classList.add('webtopia');
+                    classesAdded[index] = true;
+                    console.log(instancesDiv.childNodes);
+                } else if (headerText === 'cryptopia') {
+                    instancesDiv.classList.add('cryptopia');
+                    classesAdded[index] = true;
+                    console.log(instancesDiv.childNodes);
+                } else if (headerText === 'osintopia') {
+                    instancesDiv.classList.add('osintopia');
+                    classesAdded[index] = true;
+                    console.log(instancesDiv.childNodes);
+                }
+                
+            }
+            manipulateChallengeBridge();
+        });
+
+        const buttons = document.querySelectorAll('.category-challenges.jojo_path .challenges-row.row button.challenge-button');
+
+        buttons.forEach((button, index) => {
+            const className = `button_${index + 1}`;
+            if (!button.classList.contains(className)) {
+                button.classList.add(className);
+            }
+        });
+    }
+
+    function manipulateChallengeElements() {
+        const modalContent = document.querySelector('.modal-content');
+        if (modalContent) {
+            const challengeName = document.querySelector('.challenge-name');
+            if (challengeName && challengeName.textContent.includes('Instance')) {
+                const challengeValue = document.querySelector('.challenge-value');
+                const submitRow = document.querySelector('.submit-row');
+                if (challengeValue) {
+                    challengeValue.style.display = 'none';
+                }
+                if (submitRow) {
+                    submitRow.style.display = 'none';
+                }
+            }
+        }
+    }
+
+
+    function addCharacters() {
+        const modalContent = document.querySelector('.modal-content');
+        const modal = document.querySelector('#challenge-window');
+        if (!modalContent) return;
+    
+        const challengeNameElement = document.querySelector('.challenge-name');
+        if (!challengeNameElement) return;
+    
+        const challengeName = challengeNameElement.textContent.toLowerCase();
+    
+        let imgSrc = '';
+        let imgAlt = '';
+        let imgClass = '';
+    
+        if (
+            challengeName.includes('pwntopiashl') ||
+            challengeName.includes('invaders') ||
+            challengeName.includes('looneydroid') ||
+            challengeName.includes('validtor') ||
+            challengeName.includes('a515') ||
+            challengeName.includes('pwnfield') ||
+            challengeName.includes('under attack') ||
+            challengeName.includes('missing piece')
+        ) {
+            imgSrc = '/files/static/ladybug.png';
+            imgAlt = 'ladybug';
+            imgClass = 'ladybug';
+            divClass = 'pwndiv';
+        } else if (
+            challengeName.includes('3v3ntl0g') ||
+            challengeName.includes('big phone') ||
+            challengeName.includes('press me if u can') ||
+            challengeName.includes('xss lab') ||
+            challengeName.includes('blog') ||
+            challengeName.includes('casin0ps') ||
+            challengeName.includes('game boy') ||
+            challengeName.includes('game boy advance') ||
+            challengeName.includes('plotwist')) 
+        {
+            imgSrc = '/files/static/lordhttp.png';
+            imgAlt = 'lordhttp';
+            imgClass = 'lordhttp';
+            divClass = 'webdiv';
+
+        } else if (
+            challengeName.includes('break my stream') || 
+            challengeName.includes('cryptopiashell') ||
+            challengeName.includes('key exchange') ||
+            challengeName.includes('n0psichu') ||
+            challengeName.includes('free n00psy') ||
+            challengeName.includes('meago')
+        ) {
+            imgSrc = '/files/static/donkey.png'; 
+            imgAlt = 'donkey';
+            imgClass = 'donkey';
+            divClass = 'cryptodiv';
+        }else if (
+            challengeName.includes('the emperor') || 
+            challengeName.includes('unknown file') ||
+            challengeName.includes('read the bytes') ||
+            challengeName.includes('tak tak')
+        ) {
+            imgSrc = '/files/static/baby.png'; 
+            imgAlt = 'baby';
+            imgClass = 'baby';
+            divClass = 'babydiv';
+        }else if (
+            challengeName.includes('welcome to n') || 
+            challengeName.includes('g-bee-s') ||
+            challengeName.includes('the cardmaster') ||
+            challengeName.includes('musical encounter') ||
+            challengeName.includes('maze cup') ||
+            challengeName.includes('selfie memory') ||
+            challengeName.includes('moshy moshy')
+        ) {
+            imgSrc = '/files/static/noopsy.png'; 
+            imgAlt = 'noopsy';
+            imgClass = 'noopsy';
+            divClass = 'noopsydiv';
+        } else {
+            return; 
+        }
+    
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('nopstopiacharacters');
+        newDiv.classList.add(divClass);
+    
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = imgAlt;
+        img.classList.add(imgClass);
+    
+        img.onload = () => {
+            img.classList.add('loaded');
+        };
+    
+        newDiv.appendChild(img);
+        document.body.appendChild(newDiv);
+    
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (
+                    mutation.attributeName === 'role' &&
+                    modal.getAttribute('role') !== 'dialog'
+                ) {
+                    newDiv.style.transition = 'none';
+                    newDiv.style.opacity = '0';
+                    newDiv.remove();
+                    observer.disconnect();
+                }
+            });
+        });
+    
+        observer.observe(modal, { attributes: true, attributeFilter: ['role'] });
+    }
+    
+
+
+    // Function to check if body has class 'modal-open'
+    function checkBodyClass(mutationsList) {
+        mutationsList.forEach(mutation => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                if (document.body.classList.contains('modal-open')) {
+                    manipulateChallengeElements();
+                    addCharacters();
+                }
+            }
+        });
+    }
+
+
+
+    
+
+    // Create a new MutationObserver to monitor changes to the body's class attribute
+    const observer = new MutationObserver(checkBodyClass);
+
+    // Start observing changes to the body's class attribute
+    observer.observe(document.body, { attributes: true });
+
+    // Call addClassToInstances every second
+    setInterval(addClassToInstances, 100);
+});
