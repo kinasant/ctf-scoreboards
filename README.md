@@ -420,7 +420,45 @@
             <td><a href="ctfs/TsukuCTF/2025">2025</a></td>
             <td><a href="https://ctftime.org/event/2769" target="_blank">CTFtime</a></td>
         </tr>
-        
-      
+        <tr>
+            <td rowspan=1><a href="ctfs/N0PSctf">N0PSctf</a></td>
+            <td><a href="ctfs/N0PSctf/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2486" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/TJCTF">TJCTF</a></td>
+            <td><a href="ctfs/TJCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2809" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/smileyCTF">smileyCTF</a></td>
+            <td><a href="ctfs/smileyCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2591" target="_blank">CTFtime</a></td>
+        </tr>
+        <tr>
+            <td rowspan=1><a href="ctfs/GPN">GPN</a></td>
+            <td><a href="ctfs/GPN/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2694" target="_blank">CTFtime</a></td>
+        </tr>
+        <tr>
+            <td rowspan=1><a href="ctfs/IERAE">IERAE</a></td>
+            <td><a href="ctfs/IERAE/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2655" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/MaltaCTF">MaltaCTF</a></td>
+            <td><a href="ctfs/MaltaCTF/2025">2025 Quals</a></td>
+            <td><a href="https://ctftime.org/event/2776/" target="_blank">CTFtime</a></td>
+        </tr>
+                <tr>
+            <td rowspan=1><a href="ctfs/cornCTF">cornCTF</a></td>
+            <td><a href="ctfs/cornCTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2762" target="_blank">CTFtime</a></td>
+        </tr>
+              <tr>
+            <td rowspan=1><a href="ctfs/BCACTF">BCACTF</a></td>
+            <td><a href="ctfs/BCACTF/2025">2025</a></td>
+            <td><a href="https://ctftime.org/event/2836" target="_blank">CTFtime</a></td>
+        </tr>
   </tbody>
   </table>
